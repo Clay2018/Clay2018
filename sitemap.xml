@@ -3,21 +3,21 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2020-06-21T14:56:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/hellow/</loc>
-    <lastmod>2020-06-21T14:56:03+08:00</lastmod>
+    <lastmod>2020-06-21T15:51:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-06-21T14:56:03+08:00</lastmod>
+    <lastmod>2020-06-21T15:51:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/%E6%90%AD%E5%BB%BAhugo%E7%AB%99%E7%82%B9/</loc>
+    <lastmod>2020-06-21T15:51:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
