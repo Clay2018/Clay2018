@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/%E6%A0%B8%E9%85%B8%E8%AF%95%E5%89%82%E7%9A%84%E5%A4%8D%E5%90%88%E6%A3%80%E6%B5%8B/</loc>
+    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/build_hugo_site/</loc>
     <lastmod>2020-07-04T14:51:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -9,15 +16,43 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tags/algorithm/</loc>
+    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/algorithm/</loc>
+    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2020-07-04T14:51:03+08:00</lastmod>
+    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2020-07-04T14:51:03+08:00</lastmod>
+    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,20 +73,6 @@
   
   <url>
     <loc>http://localhost:1313/categories/pages/</loc>
-    <lastmod>2020-07-04T14:51:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-07-04T14:51:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2020-07-04T14:51:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
