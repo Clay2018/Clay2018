@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Linux线程 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="Linux线程 Linux线程的发展 1991年1月发布的Linux2.2内核中，进程是通过系统调用fork创建的，新的进程是原来进程的子进程。" /><meta name="keywords" content="thread" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/linuxthread/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Linux线程" />
+<meta property="og:description" content="Linux线程 Linux线程的发展 1991年1月发布的Linux2.2内核中，进程是通过系统调用fork创建的，新的进程是原来进程的子进程。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/linuxthread/" />
+<meta property="article:published_time" content="2020-07-14T23:45:44+08:00" />
+<meta property="article:modified_time" content="2020-07-14T23:45:44+08:00" />
+<meta itemprop="name" content="Linux线程">
+<meta itemprop="description" content="Linux线程 Linux线程的发展 1991年1月发布的Linux2.2内核中，进程是通过系统调用fork创建的，新的进程是原来进程的子进程。">
+<meta itemprop="datePublished" content="2020-07-14T23:45:44&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-14T23:45:44&#43;08:00" />
+<meta itemprop="wordCount" content="1536">
+
+
+
+<meta itemprop="keywords" content="thread,linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux线程"/>
+<meta name="twitter:description" content="Linux线程 Linux线程的发展 1991年1月发布的Linux2.2内核中，进程是通过系统调用fork创建的，新的进程是原来进程的子进程。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Linux线程</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-14 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta"> 1536 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linux线程">Linux线程</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="linux线程">Linux线程</h3>
+<ul>
+<li>
+<p>Linux线程的发展</p>
+<p>1991年1月发布的Linux2.2内核中，进程是通过系统调用fork创建的，新的进程是原来进程的子进程。在2.2x版本中，不存在真正意义上的线程。Linux中常用的线程Pthread实际是通过进程来模拟的，即LWP。Linux2.2仅默认允许4096个进程/线程同时运行。</p>
+<p>2001年1月发布的Linux2.4内核消除了这个限制，并且允许在系统运行中动态调整进程数上限。因此进程数只受制于物理内存的多少。</p>
+<p>2003年12月发布的Linux2.6内核，NPTL线程模型出现。线程框架的改变包含Linux线程空间中许多新的概念，包括线程组、线程各自的本地存储区、POSIX风格信号</p>
+</li>
+<li>
+<p>什么是Linux线程</p>
+<p>线程是在共享内存空间中并发的多道执行路径，是linux系统中的最小执行单元。</p>
+<ul>
+<li>
+<p>线程的标识</p>
+<p>和进程一样，每个线程也都有属于自己的ID，称为TID，在进程内唯一。Linux系统的线程实现确保了每个TID在系统范围内唯一，并且当线程不复存在后，其线程ID可以被其它线程复用</p>
+</li>
+<li>
+<p>线程管理</p>
+<p>线程管理包括创建线程(pthread_create)、终止线程(pthread_exit\pthread_cancel)、连接已终止的线程(pthread_join)、分离线程(pthread_detach)</p>
+<p>在主线程中调用pthread_exit函数，那么只有主线程自己会被终止，而其它线程仍然会照常运行。此时父进程是僵尸进程，当其它线程退出后，僵尸进程被回收。</p>
+</li>
+<li>
+<p>线程调度</p>
+<p>线程的动态优先级是可以被调度器实时调整的，而与之对应的线程静态优先级则只能由应用程序指定，如果应用程序没有显示指定一个线程的静态优先级，那么它将被设定为0.调度器并不会改变线程的静态优先级，线程的动态优先级是调度器在其静态优先级的基础上调整得出的，它在线程的运行顺序上起到了关键作用。而线程的静态优先级则决定了线程单次在CPU上运行的最长时间，也就是调度器分配给它的时间片大小。</p>
+<p>所有等待CPU的线程按照动态优先级从高到低顺序排列。每一个CPU的运行队列中都包含两个优先级阵列：其中一个用于存放正在等待运行的线程(激活的优先级阵列)；而另一个则用于存放已经运行过但还未完成的线程(过期的优先级阵列)。下一个运行的线程总是从激活的优先级阵列中选出。如果调度器发现某个线程已经占用了CPU很长时间(该时间只会小于或等于给予该线程的时间片)，并且激活的优先级阵列中还有优先级与它相同的线程在等待运行，那么调度器就会让那个等待的线程在CPU上运行，而被换下的线程会被排入过期的优先级阵列。当激活的优先级阵列中没有待运行的线程时，调度器会把这两个优先级阵列的身份互换，即之前的激活的优先级阵列成为新的过期的优先级阵列</p>
+</li>
+<li>
+<p>线程和进程中文件描述符的影响</p>
+<p>一个线程拥有自己的线程栈，并以此存储自己的私有数据。一个进程中的代码段、数据段、堆、信号处理函数，以及当前进程所持有的文件描述符</p>
+</li>
+</ul>
+</li>
+<li>
+<p>线程模型</p>
+<p>线程实现模型主要有3个，分别是：用户级线程模型、内核级线程模型和两级线程模型。它们之间最大的差异在于线程与内核调度实体(Kernel Scheduling Entity)</p>
+<p>查看当前系统线程模型: getconf GNU_LIBPTHREAD_VERSION</p>
+<ul>
+<li>
+<p>NPTL</p>
+<p>NPTL是一个内核级线程模型线程库，当使用pthread_create创建一个线程，在内核相应创建一个调度实体</p>
+<p>NPTL没有使用管理线程</p>
+</li>
+</ul>
+</li>
+<li>
+<p>多线程下的编程经验</p>
+<ul>
+<li>同步</li>
+<li>过载保护：多线程场景处理任务，常用到队列，即多线程从任务队列中取出任务，然后并发处理。当任务量大，线程来不及处理，需要及时丢弃队列中的任务，以保证高吞吐和低延迟。</li>
+<li>公平调度：使得某个线程负载过高</li>
+<li>析构出core: 线程退出时析构出core的问题，一个线程释放了还在被使用的资源</li>
+</ul>
+</li>
+<li>
+<p>Reference:</p>
+<ul>
+<li>&lt;Go并发编程实战&gt;:105 pages</li>
+<li><a href="http://blog.chinaunix.net/uid-25909722-id-3026451.html">http://blog.chinaunix.net/uid-25909722-id-3026451.html</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-07-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/thread/">thread</a>
+          <a href="/tags/linux/">linux</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/celerynote/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Celery笔记</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/hashalgorithmandkeypreservation/">
+            <span class="next-text nav-default">哈希算法和密钥保存</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

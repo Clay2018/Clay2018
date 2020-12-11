@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>哈希算法和密钥保存 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="本文章翻译自Pradeep Loganathan，如有侵权，请联系作者进行删除 什么是哈希?哈希算法和密钥保存 哈希 哈希是一个单向函数，它将任意长" /><meta name="keywords" content="hash algorithm" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/hashalgorithmandkeypreservation/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="哈希算法和密钥保存" />
+<meta property="og:description" content="本文章翻译自Pradeep Loganathan，如有侵权，请联系作者进行删除 什么是哈希?哈希算法和密钥保存 哈希 哈希是一个单向函数，它将任意长" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/hashalgorithmandkeypreservation/" />
+<meta property="article:published_time" content="2020-07-12T21:49:52+08:00" />
+<meta property="article:modified_time" content="2020-07-12T21:49:52+08:00" />
+<meta itemprop="name" content="哈希算法和密钥保存">
+<meta itemprop="description" content="本文章翻译自Pradeep Loganathan，如有侵权，请联系作者进行删除 什么是哈希?哈希算法和密钥保存 哈希 哈希是一个单向函数，它将任意长">
+<meta itemprop="datePublished" content="2020-07-12T21:49:52&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-12T21:49:52&#43;08:00" />
+<meta itemprop="wordCount" content="3279">
+
+
+
+<meta itemprop="keywords" content="blockchain," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="哈希算法和密钥保存"/>
+<meta name="twitter:description" content="本文章翻译自Pradeep Loganathan，如有侵权，请联系作者进行删除 什么是哈希?哈希算法和密钥保存 哈希 哈希是一个单向函数，它将任意长"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">哈希算法和密钥保存</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-12 </span>
+        <div class="post-category">
+            <a href="/categories/blockchain/"> blockchain </a>
+            </div>
+          <span class="more-meta"> 3279 words </span>
+          <span class="more-meta"> 7 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#什么是哈希哈希算法和密钥保存">什么是哈希?哈希算法和密钥保存</a></li>
+        <li><a href="#文末小问题请问哈希函数是怎样从一个输入得到一个散列值的">文末小问题:请问哈希函数是怎样从一个输入得到一个散列值的？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <hr>
+<p>本文章翻译自<a href="https://pradeeploganathan.com/blockchain/hashing/">Pradeep Loganathan</a>，如有侵权，请联系<a href="wuvhui@163.com">作者</a>进行删除</p>
+<hr>
+<h3 id="什么是哈希哈希算法和密钥保存">什么是哈希?哈希算法和密钥保存</h3>
+<p><img src="/image/HashAlgorithmAndKeyPreservation/hash_function_book.jpg" alt=""></p>
+<ul>
+<li>
+<p>哈希</p>
+<p>哈希是一个单向函数，它将任意长度的数据映射到固定长度的输出摘要，在这种情况下，从输出中查找输入在计算上是不可行的。哈希函数返回的值通常被称为消息摘要、哈希值、哈希代码、哈希和、校验和，或者简单地称为哈希。</p>
+<p>散列函数是无密钥的，提供数据完整性服务。它们通常使用迭代和专用的哈希函数构造技术来构建。哈希函数将数据压缩到固定大小，这可以看作是对原始数据的缩短引用。散列函数应该易于计算，但是很难为压缩而反转，哈希函数通常使用数论的单向函数，因此它们是不可逆的。因此，当哈希值已知时，重构特定数据是不可行的。</p>
+<p>散列是单向函数，因为它不能反转。我们可以把散列看作是输入其中的数据的数字指纹。这些类型的散列函数有很多种用法。它们可以用于身份验证、将数据索引到哈希表、校验和和和数字签名。SHA256散列的一个示例如下所示：4usow2gkuwzwpy2uh8cdnfmoqhm7gv5zbfxdnv4ww。</p>
+<p>最常用的两个加密哈希函数是MD5和SHA。每种算法在一个或多个参数方面与其他算法不同</p>
+</li>
+<li>
+<p>MD5</p>
+<p>MD5于1991年由罗纳德·里维斯特创建。MD5使用128位散列值。起初它被认为是安全的，但现在大多数专家建议不要使用MD5进行身份验证，因为多年来发现了许多漏洞。MD5的工作原理是获取可变长度的数据并将其转换为128位的固定长度哈希字符串。</p>
+</li>
+<li>
+<p>SHA</p>
+<p>SHA比MD5更安全。SHA的创造者是Guido Bertoni、Joan Daemen、Michael Peeters和Gilles Van Assche，安全哈希算法，或SHA哈希，由美国国家标准与技术研究所（NIST）发布，作为美国联邦信息处理标准——FIPS PUB 180-3，其中规定了SHA算法的三种风格：</p>
+<ul>
+<li>SHA-0: 不再被使用</li>
+<li>SHA-1: 最广泛使用的版本</li>
+<li>SHA-2: 有四种不同的变体:SHA-224, SHA-256, SHA-384和SHA-512</li>
+</ul>
+<p>当长度小于264位（SHA-1、SHA-224和SHA-256）或小于2128位（SHA-384和SHA-512）的消息输入哈希算法时，结果是一个称为消息摘要的输出。消息摘要的长度范围从160到512位不等，具体取决于算法。</p>
+<p>本标准中指定的五种哈希算法称为安全算法，因为对于给定算法，查找与给定消息摘要相对应的消息或查找生成同一消息摘要的两个不同消息在计算上是不可行的。对消息的任何更改都很可能导致不同的消息摘要。当安全哈希算法与数字签名算法或密钥哈希消息验证算法一起使用时，这将导致验证失败。</p>
+<ul>
+<li>
+<p>SHA-1</p>
+<p>该算法的原始规范于1993年在FIPS PUB 180-1中发布。这是现有的SHA哈希函数中使   用最广泛的一种，并被应用于一些广泛使用的安全应用程序和协议中，例如传输层安全   性（TLS）、安全套接字层（SSL）、相当好的隐私性（PGP）、安全外壳（SSH）、安 全/多用途互联网邮件扩展（S/MIME）和互联网协议安全性（IPSEC）。SHA-1哈希还用  于分布式修订控制系统，如Arch、Mercurial、Monotone和BitKeeper，以识别修订  并检测数据损坏或篡改。而且，是的，即使你在家里享受着通过任天堂在互联网上杀死  一个完全陌生的人或者用你的Wii来保持健康的快乐，SHA-1散列也被用来在你启动过程  中进行签名验证。SHA-1于2005年被破解。</p>
+</li>
+<li>
+<p>SHA-2</p>
+<p>2001年8月，NIST发布了FIPS PUB 180-2，向普通民众介绍了SHA-2。SHA-2与它的前身SHA-1相比有了很大的变化。SHA-2是一个由四个具有不同摘要长度的类似散列函数组成的家族，它们被称为SHA-224、SHA-384、SHA-256和SHA-512。这些算法统称为SHA-2。与2005年在SHA-1中发现的漏洞相同，这些相同的攻击并没有扩展到SHA-2或其变种。与它的前身一样，SHA-2散列函数已经在TLS和SSL、PGP、SSH、S/MIME和IPsec中实现。目前，SHA-256用于某些Linux软件包的认证；SHA-512也是卢旺达种族灭绝问题国际刑事法庭存档视频认证系统的一部分。UNIX和Linux供应商正在推动使用SHA-256和SHA-512进行安全的密码哈希。</p>
+<p>最新的哈希版本是SHA-3，它被发布在2015年。</p>
+<p>哈希摘要的长度不依赖于输入长度。无论输入长度是什么，哈希长度都是相同的。这是一个时间问题和可用的处理能力和资源。下表包含一些著名的哈希函数及其摘要长度：</p>
+<p><img src="/image/HashAlgorithmAndKeyPreservation/hash_function_and_digest_length.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+<li>
+<p>HMAC</p>
+<p>在对消息签名时，应该使用专用的消息验证代码（MAC），例如基于哈希的MAC（HMAC），这样可以避免哈希函数的一次传递中出现漏洞。可与任何已批准的密码函数共享的HMAC密码组合使用。HMAC的加密强度取决于底层哈希函数的属性。基本上，基于SHA-1的HMAC（HMAC-SHA-1-96）在消息上运行SHA-1两次。这自动意味着哈希值更好，但仍然没有经过身份验证。然而，在HMAC中，秘密密钥被添加到消息中，这样HMAC就成为可认证的摘要。您知道HMAC的发送者是实际的发送者，因为当您比较HMAC的摘要时，传递的密钥将被自动验证为可信的。这是独立的结构，因此无论您遇到了什么消息，以及传递的密钥是什么，您都无法确定即将到来的机密的信息。如上所述，这提供了额外级别的保证，即您的消息没有被更改。</p>
+</li>
+<li>
+<p>PASSWORD HASHING</p>
+<p>密码哈希算法是一种特殊情况，通用的哈希算法由于速度太快而不适合它。事实上，如今字典攻击速度极快，这要归功于图形中GPU的巨大并行性卡。算法专门为密码哈希设计的应该是缓慢和自适应的。一些最好的密码哈希算法是基于密码的密钥派生函数（PBKDF2）、<a href="https://en.wikipedia.org/wiki/Bcrypt">BCrypt</a>和<a href="https://en.wikipedia.org/wiki/Scrypt">SCrypt</a>。</p>
+</li>
+<li>
+<p>PBKDF2</p>
+<p>PBKDF2是基于密码的密钥派生函数的第二个版本，它是基于密码的密码标准的一部分。PBKDF2的一个强大特性是它生成了数千倍以上的散列。多次迭代散列可以增强加密，指数级地增加由初始值产生的可能结果的数量，以至于生成或存储所有可能哈希值所需的硬件变得不可行。pbkda方法的四个参数值，需要加密的密码、一个盐值、需要迭代的次数和描述哈希结果的长度。当PBKDF2标准化时，建议的迭代次数为1000次。然而，我们需要更多的迭代来考虑技术进步和设备成本的降低。</p>
+<p>PBKDF2算法是在.NET核心的Rfc2898DeriveBytes类中实现的，可用于生成如下密码哈希。</p>
+<p><a href="https://github.com/PradeepLoganathan/Blockchain-Basics">Github-PradeepLoganathan</a>提供了一个使用PBKDF2生成salt用户密码并对其进行验证的完整工作示例。</p>
+</li>
+<li>
+<p>RAINBOW TABLES</p>
+<p>彩虹表是预先计算的表，用于使用窃取的哈希查找密码。它们是使用哈希值而不是标准字典密码的特殊字典表来实现攻击。现在有彩虹表，可以发现几乎每一个可能的密码多达14个字符。Rainbow表大大减少了查找密码散列值所需的时间，但以内存为代价，但使用太字节硬盘和千兆字节RAM，这是一种很容易实现的折衷。字典攻击是我们试图用这些工具完成的攻击类型。字典攻击使用预计算的字典文件（如彩虹表）来尝试猜测密码。像OphCrack和Rainbowcrack这样的工具使用彩虹表来破解密码哈希。</p>
+</li>
+<li>
+<p>HASH COLLISION</p>
+<p>当两个不同的输入在应用于同一个哈希函数时创建相同的哈希时，会发生哈希冲突。</p>
+</li>
+<li>
+<p>HASHING VS ENCRYPTION</p>
+<p>大多数人把加密和散列混为一谈。重要的是要理解哈希是摘要而不是加密。摘要由散列用来汇总已编译的数据流。哈希也是一个单向函数。加密将明文数据转换为密文，然后在给出正确密钥时将其转换回明文。这是一个与哈希不同的双向函数，哈希不能反转。这是一个重要的区别。</p>
+</li>
+<li>
+<p>HASHING AND BLOCKCHAIN</p>
+<p>哈希在区块链技术生态系统中起着关键作用。区块链中的每个区块都由一个哈希标识，该哈希是在区块头上使用SHA256加密哈希算法生成的。</p>
+<p>每个块还通过块头中的“previous block hash”字段引用前一个块，称为父块。换句话说，每个块在它自己的头中包含其父块的哈希。将每个块链接到其父块的哈希序列创建一个链，一直追溯到有史以来创建的第一个块，称为genesis块。</p>
+</li>
+</ul>
+<h3 id="文末小问题请问哈希函数是怎样从一个输入得到一个散列值的">文末小问题:请问哈希函数是怎样从一个输入得到一个散列值的？</h3>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-07-12
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/blockchain/">blockchain</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/linuxthread/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Linux线程</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/compounddetectionofnucleicacidreagent/">
+            <span class="next-text nav-default">核酸试剂的复合检测</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

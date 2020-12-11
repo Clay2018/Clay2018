@@ -6,35 +6,44 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Jul 2020 23:45:44 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2020 15:57:23 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Celery笔记</title>
+      <link>http://localhost:1313/post/celerynote/</link>
+      <pubDate>Thu, 26 Nov 2020 15:57:23 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/celerynote/</guid>
+      <description>Getting Started celery is flexible. Almost every part of Celry can be extended or used on its own, Custom pool implementations, serializers, compression schemes, logging, schedulers, consumers, producers, broker transports, and much more. celery中current_app的指向 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # main.py</description>
+    </item>
+    
+    <item>
       <title>Linux线程</title>
-      <link>http://localhost:1313/post/linux%E7%BA%BF%E7%A8%8B/</link>
+      <link>http://localhost:1313/post/linuxthread/</link>
       <pubDate>Tue, 14 Jul 2020 23:45:44 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/linux%E7%BA%BF%E7%A8%8B/</guid>
+      <guid>http://localhost:1313/post/linuxthread/</guid>
       <description>Linux线程 Linux线程的发展 1991年1月发布的Linux2.2内核中，进程是通过系统调用fork创建的，新的进程是原来进程的子进程。</description>
     </item>
     
     <item>
       <title>哈希算法和密钥保存</title>
-      <link>http://localhost:1313/post/%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95%E5%92%8C%E5%AF%86%E9%92%A5%E4%BF%9D%E5%AD%98/</link>
+      <link>http://localhost:1313/post/hashalgorithmandkeypreservation/</link>
       <pubDate>Sun, 12 Jul 2020 21:49:52 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95%E5%92%8C%E5%AF%86%E9%92%A5%E4%BF%9D%E5%AD%98/</guid>
+      <guid>http://localhost:1313/post/hashalgorithmandkeypreservation/</guid>
       <description>本文章翻译自Pradeep Loganathan，如有侵权，请联系作者进行删除 什么是哈希?哈希算法和密钥保存 哈希 哈希是一个单向函数，它将任意长</description>
     </item>
     
     <item>
       <title>核酸试剂的复合检测</title>
-      <link>http://localhost:1313/post/%E6%A0%B8%E9%85%B8%E8%AF%95%E5%89%82%E7%9A%84%E5%A4%8D%E5%90%88%E6%A3%80%E6%B5%8B/</link>
+      <link>http://localhost:1313/post/compounddetectionofnucleicacidreagent/</link>
       <pubDate>Sun, 05 Jul 2020 23:46:52 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E6%A0%B8%E9%85%B8%E8%AF%95%E5%89%82%E7%9A%84%E5%A4%8D%E5%90%88%E6%A3%80%E6%B5%8B/</guid>
+      <guid>http://localhost:1313/post/compounddetectionofnucleicacidreagent/</guid>
       <description>问题: 100个人，其中一个人是患者；一个人使用一支酸剂测试，患者产生反应，否则不产生反应，至少用几只酸剂可以测试出患者是谁？ 答: 1支酸剂测试</description>
     </item>
     

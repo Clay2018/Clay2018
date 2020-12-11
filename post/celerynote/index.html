@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Celery笔记 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="Getting Started celery is flexible. Almost every part of Celry can be extended or used on its own, Custom pool implementations, serializers, compression schemes, logging, schedulers, consumers, producers, broker transports, and much more. celery中current_app的指向 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # main.py" /><meta name="keywords" content="celery" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/celerynote/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Celery笔记" />
+<meta property="og:description" content="Getting Started celery is flexible. Almost every part of Celry can be extended or used on its own, Custom pool implementations, serializers, compression schemes, logging, schedulers, consumers, producers, broker transports, and much more. celery中current_app的指向 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # main.py" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/celerynote/" />
+<meta property="article:published_time" content="2020-11-26T15:57:23+08:00" />
+<meta property="article:modified_time" content="2020-11-26T15:57:23+08:00" />
+<meta itemprop="name" content="Celery笔记">
+<meta itemprop="description" content="Getting Started celery is flexible. Almost every part of Celry can be extended or used on its own, Custom pool implementations, serializers, compression schemes, logging, schedulers, consumers, producers, broker transports, and much more. celery中current_app的指向 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # main.py">
+<meta itemprop="datePublished" content="2020-11-26T15:57:23&#43;08:00" />
+<meta itemprop="dateModified" content="2020-11-26T15:57:23&#43;08:00" />
+<meta itemprop="wordCount" content="1533">
+
+
+
+<meta itemprop="keywords" content="python,celery," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Celery笔记"/>
+<meta name="twitter:description" content="Getting Started celery is flexible. Almost every part of Celry can be extended or used on its own, Custom pool implementations, serializers, compression schemes, logging, schedulers, consumers, producers, broker transports, and much more. celery中current_app的指向 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # main.py"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Celery笔记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-11-26 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 1533 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#celery进阶">celery进阶</a></li>
+        <li><a href="#celery源码解析">celery源码解析</a></li>
+        <li><a href="#附录">附录</a></li>
+        <li><a href="#reference">Reference:</a></li>
+        <li><a href="#problem">Problem:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="getting-started">Getting Started</h3>
+<p>celery is flexible. Almost every part of Celry can be extended or used on its own, Custom pool implementations, serializers, compression schemes, logging, schedulers, consumers, producers, broker transports, and much more.</p>
+<ul>
+<li>
+<p>celery中current_app的指向</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># main.py
+from celery import current_app
+from celery import Celery
+
+
+cel = Celery(&#34;lll&#34;)
+cel2 = Celery(&#34;bbb&#34;)
+cel2 = Celery(&#34;ddd&#34;)
+cel2 = Celery(&#34;fff&#34;)
+
+print(current_app.main)
+cel2 = Celery(&#34;ddd&#34;)
+print(current_app.main)
+pr
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># result of running main.py
+fff
+ddd
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Running the Celery worker server</p>
+<p><!-- raw HTML omitted -->demo1.py<!-- raw HTML omitted --></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">from celery import Celery
+
+from celery.utils.log import get_task_logger
+logger = get_task_logger(__name__)
+
+app = Celery(&#39;hello&#39;, broker=&#39;amqp://guest:guest@127.0.0.1:5672//&#39;,
+         backend=&#39;redis://127.0.0.1:6379/0&#39;)
+
+@app.task
+def hello():
+logger.info(&#34;task hello&#34;)
+return &#39;hello&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>运行<a href="#demo1">demo1.py</a>命令:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">celery -A main worker
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="/image/CeleryNote/a.jpg" alt=""></p>
+<p>默认celery队列，exchange为direct类型的celery, binding_key为celery</p>
+</li>
+<li>
+<p>Calling the task</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">from main import hello
+
+a = hello.delay()
+print(a.id)
+a = a.get()
+print(a)
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="/image/CeleryNote/b.jpg" alt=""></p>
+<p>delay函数发送任务，a.id获取其任务ID，a.get阻塞获取异步任务结果</p>
+<p>消息发送到rabbitmq中，rabbitmq消息内容为:</p>
+<p><img src="/image/CeleryNote/celery_rabbitmq_message_content.jpg" alt=""></p>
+<p>如果以redis作为broker，其消息内容为:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{\&#34;body\&#34;: \&#34;W1sxLCAyXSwge30sIHsiY2FsbGJhY2tzIjogbnVsbCwgImVycmJhY2tzIjogbnVsbCwgImNoYWluIjogbnVsbCwgImNob3JkIjogbnVsbH1d\&#34;, \&#34;content-encoding\&#34;: \&#34;utf-8\&#34;, \&#34;content-type\&#34;: \&#34;application/json\&#34;, \&#34;headers\&#34;: {\&#34;lang\&#34;: \&#34;py\&#34;, \&#34;task\&#34;: \&#34;main.add\&#34;, \&#34;id\&#34;: \&#34;95eb2c01-437e-40e6-9b15-e9b6c9218e99\&#34;, \&#34;shadow\&#34;: null, \&#34;eta\&#34;: null, \&#34;expires\&#34;: null, \&#34;group\&#34;: null, \&#34;group_index\&#34;: null, \&#34;retries\&#34;: 0, \&#34;timelimit\&#34;: [null, null], \&#34;root_id\&#34;: \&#34;95eb2c01-437e-40e6-9b15-e9b6c9218e99\&#34;, \&#34;parent_id\&#34;: null, \&#34;argsrepr\&#34;: \&#34;[1, 2]\&#34;, \&#34;kwargsrepr\&#34;: \&#34;{}\&#34;, \&#34;origin\&#34;: \&#34;gen226466@iZ8vb4rhbik3h9nvaj42m2Z\&#34;}, \&#34;properties\&#34;: {\&#34;correlation_id\&#34;: \&#34;95eb2c01-437e-40e6-9b15-e9b6c9218e99\&#34;, \&#34;reply_to\&#34;: \&#34;e227c785-cc00-35d9-b52a-5062bfcf22ce\&#34;, \&#34;delivery_mode\&#34;: 2, \&#34;delivery_info\&#34;: {\&#34;exchange\&#34;: \&#34;\&#34;, \&#34;routing_key\&#34;: \&#34;celery\&#34;}, \&#34;priority\&#34;: 0, \&#34;body_encoding\&#34;: \&#34;base64\&#34;, \&#34;delivery_tag\&#34;: \&#34;9a140915-c69d-40b7-a895-7978a8cc077a\&#34;}}
+</code></pre></td></tr></table>
+</div>
+</div><p>get函数获取任务执行结果,以redis为backend,其结果如下:</p>
+<p><img src="/image/CeleryNote/d.jpg" alt=""></p>
+</li>
+<li>
+<p>Configuration</p>
+<p>有多种配置方式，本配置介绍采用app.conf.update(**kwargs)，格式为<a href="#configuration">celery configuration</a></p>
+<p>配置参数在不同版本有不同的key值。例如CELERY_ACCEPT_CONTENT &ndash;&gt; accept_content，请参考<a href="https://docs.celeryproject.org/en/stable/userguide/configuration.html#configuration">Configration and defaults</a></p>
+<ul>
+<li>
+<p>Basic configuration</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># task serializer (json, pickle, yaml, msgpack)
+task_serailizer = [&#39;json&#39;]
+# using serializer name, default[&#39;json&#39;]
+accept_content = [&#39;json&#39;]
+
+# using seralizer name
+result_accept_content = [&#39;json&#39;]
+
+# enable_utc
+enable_utc = True
+
+# pytz
+timezone = &#34;UTC&#34;
+
+# consumer rate limit
+task_annotations = {&#39;tasks.add&#39;: {&#39;rate_limit&#39;: &#39;10/s&#39;}}
+task_annotations = {&#39;*&#39;: {&#39;rate_limit&#39;: &#39;10/s&#39;}}
+
+# If this is True, all tasks will be executed locally by blocking until the task    returns
+task_always_eager = False
+
+task_ignore_result = False
+
+task_store_errors_even_if_ignored = False
+
+# task_acks_late = False
+
+# default 1 day, unit in seconds
+result_expires = 86400
+result_persistent = False
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Task failure handling</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">def my_on_failure(self, exc, task_id, args, kwargs, einfo):
+print(&#39;Oh no! Task failed: {0!r}&#39;.format(exc))
+
+task_annotations = {&#39;*&#39;: {&#39;on_failure&#39;: my_on_failure}}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>Message routing</p>
+<p>celery任务可以通过delay(tuple, **kwargs)和apply_async(tuple, **kwargs)进行。apply_async中kwargs支持更多的参数</p>
+<ul>
+<li>
+<p>任务投放</p>
+<p>按routing_key投放</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">from main import hello, add
+from kombu import Exchange
+
+a = hello.apply_async((), exchange=Exchange(&#39;celery&#39;), routing_key=&#39;celery&#39;)
+print(a.id)
+</code></pre></td></tr></table>
+</div>
+</div><p>按队列投放，如果队列不存在将建立exchange和queue并绑定routing_key</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">from main import hello, add
+from kombu import Exchange
+
+a = hello.apply_async((), queue=&#39;celery&#39;)
+print(a.id)
+</code></pre></td></tr></table>
+</div>
+</div><p>task_routes配置用于任务投放，当delay()和applay_async()没有描述相关参数时，按照task_routes投放至队列</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">app.conf.update(task_routes=[
+    {&#39;main.hello&#39;: &#39;hello&#39;},
+    {&#39;*&#39;: &#39;celery&#39;}
+])
+</code></pre></td></tr></table>
+</div>
+</div><p>celery定时任务, celery -A main beat</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">from celery import Celery
+from kombu import Queue, Exchange
+from datetime import timedelta
+
+from celery.utils.log import get_task_logger
+logger = get_task_logger(__name__)
+
+app = Celery(&#39;hello&#39;, broker=&#39;amqp://guest:guest@127.0.0.1:5672//&#39;,
+            backend=&#39;redis://127.0.0.1:6379/0&#39;)
+
+app.conf.update(task_routes=[
+    {&#39;main.hello&#39;: &#39;hello&#39;},
+    {&#39;*&#39;: &#39;celery&#39;}
+])
+
+app.conf.update(beat_schedule={
+    &#39;bbb&#39;: {
+        &#39;task&#39;: &#39;main.add&#39;,
+        &#39;schedule&#39;: timedelta(seconds=1),
+        &#39;args&#39;: [1, 2]
+    }
+})
+
+@app.task(name=&#39;main.hello&#39;)
+def hello():
+    logger.info(&#34;task hello&#34;)
+    return &#39;hello&#39;
+
+@app.task(name=&#39;main.add&#39;)
+def add(x, y :int):
+    return x + y
+
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>任务消费</p>
+<p>task_queues参数负责worker启动时消费的队列，如未指定Exchange，key均使用celery</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># demo2.py
+from celery import Celery
+from kombu import Queue, Exchange
+
+from celery.utils.log import get_task_logger
+logger = get_task_logger(__name__)
+
+app = Celery(&#39;hello&#39;, broker=&#39;amqp://guest:guest@127.0.0.1:5672//&#39;,
+             backend=&#39;redis://127.0.0.1:6379/0&#39;)
+
+app.conf.update(task_routes=[
+    {&#39;main.hello&#39;: &#39;hello&#39;},
+    {&#39;*&#39;: &#39;celery&#39;}
+])
+
+app.conf.update(task_queues=[
+    Queue(&#39;normal&#39;, Exchange(&#39;normal&#39;), routing_key=&#39;normal&#39;),
+    Queue(&#39;exception&#39;, Exchange(&#39;exception&#39;), routing_key=&#39;exception&#39;)
+])
+
+@app.task(name=&#39;main.hello&#39;)
+def hello():
+    logger.info(&#34;task hello&#34;)
+    return &#39;hello&#39;
+
+@app.task
+def add(x, y :int):
+    return x + y
+
+</code></pre></td></tr></table>
+</div>
+</div><p>celelry -A main worker -Q normal中 -Q 参数指定worker消费队列</p>
+<p>A worker instance can consume from any number of queues. By default it will consume from all queues defined in the task_queues setting (that if not specified falls back to the default queue named celery).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>celery中使用logging记录日志</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">from celery.utils.log import get_task_logger
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="celery进阶">celery进阶</h3>
+<ul>
+<li>
+<p>celery定时任务的实现</p>
+</li>
+<li>
+<p>celery任务消费速度限制</p>
+</li>
+<li>
+<p>celery工作流实现</p>
+</li>
+<li>
+<p>Extensions and Bootsteps</p>
+<p><a href="https://docs.celeryproject.org/en/stable/userguide/extending.html">https://docs.celeryproject.org/en/stable/userguide/extending.html</a></p>
+</li>
+</ul>
+<h3 id="celery源码解析">celery源码解析</h3>
+<h3 id="附录">附录</h3>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->celery configuration<!-- raw HTML omitted --></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">app.conf.update(
+    task_serializer=&#39;json&#39;,
+    task_annotations = {&#39;consumer.hello&#39;: {&#39;rate_limit&#39;: &#39;100/s&#39;}},
+    timezone=&#39;UTC&#39;,
+    result_persistent=False,
+    celery_default_queue=&#39;bbb&#39;,
+    celery_default_routing_key=&#39;default&#39;,
+    task_routes = [
+        {&#39;consumer.hello&#39;:  {&#39;queue&#39;: &#39;hello_celec&#39;}},
+    ], # 一个用语描述task.name与队列关系的字典
+    task_queues = {
+        Queue(&#39;hello&#39;),
+        Queue(&#39;hello_celec&#39;, exchange=Exchange(&#39;hello_celec&#39;), routing_key=&#39;hello_celec&#39;)
+    },
+    beat_schedule={
+        &#39;bbb&#39;: {
+            &#39;task&#39;: &#39;consumer.hello&#39;,
+            &#39;schedule&#39;: timedelta(seconds=1),
+            &#39;args&#39;: [1, 2]
+        }
+    }
+)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="reference">Reference:</h3>
+<ul>
+<li><a href="https://www.jianshu.com/p/db4fead7a56c">https://www.jianshu.com/p/db4fead7a56c</a></li>
+<li><a href="https://www.jianshu.com/p/581fd8f92509">https://www.jianshu.com/p/581fd8f92509</a></li>
+<li>celery源码解析: <a href="https://liqiang.io/post/kombu-source-code-analysis-part-2?lang=ZH_CN">https://liqiang.io/post/kombu-source-code-analysis-part-2?lang=ZH_CN</a></li>
+</ul>
+<h3 id="problem">Problem:</h3>
+<ul>
+<li>
+<p>celery为何是高可用的?</p>
+<p>worker和beat具有重试机制当连接断开或丢失时，borker本身高可用，具有主从复制或双主可用</p>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-11-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          <a href="/tags/celery/">celery</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/linuxthread/">
+            <span class="next-text nav-default">Linux线程</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
