@@ -2,8 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/base58check_encoding/</loc>
+    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/the_usage_of_channel_in_go/</loc>
-    <lastmod>2020-12-10T21:05:24+00:00</lastmod>
+    <lastmod>2020-12-10T21:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44,43 +51,57 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/categories/blockchain/</loc>
+    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2020-12-10T21:05:24+00:00</lastmod>
+    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/encoding/</loc>
+    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2020-12-10T21:05:24+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/go/</loc>
-    <lastmod>2020-12-10T21:05:24+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/go/</loc>
-    <lastmod>2020-12-10T21:05:24+00:00</lastmod>
+    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-12-10T21:05:24+00:00</lastmod>
+    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2020-12-10T21:05:24+00:00</lastmod>
+    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/go/</loc>
+    <lastmod>2020-12-10T21:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/go/</loc>
+    <lastmod>2020-12-10T21:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -129,13 +150,6 @@
   
   <url>
     <loc>http://localhost:1313/tags/blockchain/</loc>
-    <lastmod>2020-07-12T21:49:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/blockchain/</loc>
     <lastmod>2020-07-12T21:49:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
