@@ -6,10 +6,19 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Dec 2020 15:16:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Dec 2020 15:59:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BTC devguide(3)</title>
+      <link>http://localhost:1313/post/btc_devguide_3/</link>
+      <pubDate>Wed, 30 Dec 2020 15:59:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/btc_devguide_3/</guid>
+      <description>Operating Modes 比特币软件具有不同级别的安全性和权衡，以验证区块链 Introduction 当前，有两种主要的方法来验证区块链作为客户端：完整节点和SPV客户端。 由于不建议使用</description>
+    </item>
     
     <item>
       <title>BTC devguide(2)</title>
