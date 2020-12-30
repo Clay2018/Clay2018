@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>BTC devguide(2) - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="Transactions 交易让用户花了satoshis。 每笔交易都由几部分组成，既可以进行简单的直接付款，也可以进行复杂的交易。 Introduction 本节将描述每个部分并演示如何一起" /><meta name="keywords" content="blockchain" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/btc_devguide_2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="BTC devguide(2)" />
+<meta property="og:description" content="Transactions 交易让用户花了satoshis。 每笔交易都由几部分组成，既可以进行简单的直接付款，也可以进行复杂的交易。 Introduction 本节将描述每个部分并演示如何一起" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/btc_devguide_2/" />
+<meta property="article:published_time" content="2020-12-30T15:16:00+08:00" />
+<meta property="article:modified_time" content="2020-12-30T15:16:00+08:00" />
+<meta itemprop="name" content="BTC devguide(2)">
+<meta itemprop="description" content="Transactions 交易让用户花了satoshis。 每笔交易都由几部分组成，既可以进行简单的直接付款，也可以进行复杂的交易。 Introduction 本节将描述每个部分并演示如何一起">
+<meta itemprop="datePublished" content="2020-12-30T15:16:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-30T15:16:00&#43;08:00" />
+<meta itemprop="wordCount" content="7188">
+
+
+
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BTC devguide(2)"/>
+<meta name="twitter:description" content="Transactions 交易让用户花了satoshis。 每笔交易都由几部分组成，既可以进行简单的直接付款，也可以进行复杂的交易。 Introduction 本节将描述每个部分并演示如何一起"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">BTC devguide(2)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-12-30 </span>
+        <div class="post-category">
+            <a href="/categories/blockchain/"> blockchain </a>
+            </div>
+          <span class="more-meta"> 7188 words </span>
+          <span class="more-meta"> 15 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#transactions"><strong>Transactions</strong></a>
+      <ul>
+        <li><a href="#introduction"><strong>Introduction</strong></a></li>
+        <li><a href="#p2pkh-script-validation"><strong>P2PKH Script Validation</strong></a></li>
+        <li><a href="#p2sh-scripts"><strong>P2SH Scripts</strong></a></li>
+        <li><a href="#standard-transactions"><strong>Standard Transactions</strong></a></li>
+        <li><a href="#signature-hash-type"><strong>Signature Hash Type</strong></a></li>
+        <li><a href="#locktime-and-sequence-number"><strong>Locktime And Sequence Number</strong></a></li>
+        <li><a href="#transaction-fees-and-change"><strong>Transaction Fees And Change</strong></a></li>
+        <li><a href="#segwit"><strong>Segwit</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="transactions"><strong>Transactions</strong></h2>
+<p>交易让用户花了satoshis。 每笔交易都由几部分组成，既可以进行简单的直接付款，也可以进行复杂的交易。</p>
+<h3 id="introduction"><strong>Introduction</strong></h3>
+<p>本节将描述每个部分并演示如何一起使用它们来构建完整的交易</p>
+<p>为简单起见，本节假装不存在coinbase交易。 Coinbase交易只能由比特币矿工创建，并且是下面列出的许多规则的例外。 我们邀请您阅读本指南的区块链部分中的coinbase交易</p>
+<p><img src="/image/btc_devguide_2/a.jpg" alt=""></p>
+<p>上图显示了比特币交易的主要部分。 每笔交易至少有一个输入和一个输出。 每个输入都会花费支付给先前输出的satoshis。 然后，每个输出都将作为未花费的交易输出（UTXO）等待，直到以后的输入将其花费为止。 当您的比特币钱包告诉您您有10,000个satoshi余额时，实际上意味着您在一个或多个UTXO中有10,000个satoshis等待。</p>
+<p>每笔交易都以一个四字节交易版本号为前缀，该版本号告诉比特币同行和矿工用来验证它的规则集。 这使开发人员可以为将来的交易创建新规则，而不会使以前的交易无效。</p>
+<p><img src="/image/btc_devguide_2/b.jpg" alt=""></p>
+<p>根据输出在事务中的位置，输出具有隐式索引号-第一个输出的索引为零。 输出中还有一定数量的satoshi，它会支付给有条件的pubkey脚本。 可以满足该pubkey脚本条件的任何人都可以花费支付给它的satoshis数量。</p>
+<p>输入使用事务标识符（txid）和输出索引号（通常将输出向量称为“ vout”）来标识要使用的特定输出。 它还具有一个签名脚本，该签名脚本允许它提供满足pubkey脚本中条件的数据参数。 （序列号和锁定时间是相关的，将在后面的小节中一起介绍。）</p>
+<p>下图通过显示爱丽丝用来向鲍勃发送交易的工作流以及鲍勃后来用来花费该交易的工作流来说明如何使用这些功能。 爱丽丝（Alice）和鲍勃（Bob）都将使用标准的“付款到公共密钥哈希（P2PKH）”交易类型的最常见形式。 P2PKH让爱丽丝（Alice）在一个典型的比特币地址上花费了聪子，然后让鲍勃（Bob）使用一个简单的加密密钥对进一步花费了那些satohis。</p>
+<p><img src="/image/btc_devguide_2/c.jpg" alt=""></p>
+<p>在Alice创建第一个交易之前，Bob必须首先生成一个私钥/公钥对。比特币使用带有secp256k1曲线的椭圆曲线数字签名算法（ECDSA）； secp256k1私钥是256位随机数据​​。该数据的副本确定地转换为secp256k1公钥。因为可以在以后可靠地重复进行转换，所以不需要存储公用密钥。</p>
+<p>然后，对公钥（pubkey）进行加密散列。此pubkey哈希也可以在以后可靠地重复，因此也不需要存储。哈希缩短和混淆了公共密钥，使手动转录更加容易，并提供了针对未预料到的问题的安全性，这些问题可能允许稍后从公共密钥数据中重建私钥。</p>
+<p>鲍勃将公钥哈希提供给爱丽丝。 Pubkey散列几乎总是以比特币地址编码的形式发送的，它们是base58编码的字符串，包含地址版本号，哈希值和错误检测校验和，以捕获错别字。该地址可以通过任何介质进行传输，包括阻止支出者与接收方通信的单向介质，并且可以将其进一步编码为另一种格式，例如包含“ bitcoin：” URI的QR码。</p>
+<p>爱丽丝获得地址并将其解码回标准哈希后，便可以创建第一个交易。 她创建了一个标准的P2PKH交易输出，其中包含指令，如果任何人证明自己可以控制与鲍勃的哈希公钥相对应的私钥，则任何人都可以使用该输出。 这些指令称为pubkey脚本或scriptPubKey。</p>
+<p>爱丽丝广播交易，并将其添加到区块链。 网络将其分类为未用交易输出（UTXO），而Bob的钱包软件将其显示为可支配余额。</p>
+<p>稍后，当Bob决定使用UTXO时，他必须创建一个输入，该输入引用由其哈希创建的事务Alice（称为事务标识符（txid）），以及由索引号（输出索引）使用的特定输出。 。 然后，他必须创建一个签名脚本-满足爱丽丝在上一个输出的pubkey脚本中放置的条件的一组数据参数。 签名脚本也称为scriptSigs。</p>
+<p>Pubkey脚本和签名脚本将secp256k1 pubkey和签名与条件逻辑结合在一起，从而创建了可编程的授权机制。</p>
+<p><img src="/image/btc_devguide_2/d.jpg" alt=""></p>
+<p>对于P2PKH样式的输出，Bob的签名脚本将包含以下两个数据：</p>
+<ul>
+<li>他的完整（未散列）公共密钥，因此，公共密钥脚本可以检查其散列值是否与alice提供的公共密钥散列值相同</li>
+<li>通过使用ECDSA加密公式将某些交易数据（如下所述）与Bob的私钥结合在一起而构成的secp256k1签名。 这使pubkey脚本可以验证Bob拥有创建公钥的私钥。</li>
+</ul>
+<p>Bob的secp256k1签名不仅证明Bob控制了他的私钥， 它还使交易的非签名脚本部分受到防篡改，因此Bob可以在对等网络上安全地广播它们。</p>
+<p><img src="/image/btc_devguide_2/e.jpg" alt=""></p>
+<p>如上图所示，鲍勃（Bob）签名的数据包括上一个交易的txid和输出索引，上一个输出的pubkey脚本，鲍勃创建的pubkey脚本（将使下一个接收者花费此交易的输出）以及 花给下一个收件人。 本质上，除了包含完整公钥和secp256k1签名的任何签名脚本之外，整个事务都是经过签名的。</p>
+<p>将签名和公共密钥放入签名脚本后，Bob通过对等网络将交易广播给比特币矿工。 每个对等方和矿工在进一步广播交易或尝试将其包括在新的交易块中之前独立验证交易</p>
+<h3 id="p2pkh-script-validation"><strong>P2PKH Script Validation</strong></h3>
+<p>验证过程需要评估签名脚本和pubkey脚本。在P2PKH输出中，pubkey脚本为：</p>
+<p>OP_DUP OP_HASH160 <!-- raw HTML omitted --> OP_EQUALVERIFY OP_CHECKSIG
+将评估支出者的签名脚本，并在脚本开头添加前缀。在P2PKH事务中，签名脚本包含secp256k1签名（sig）和完整的公共密钥（pubkey），从而创建以下串联：</p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --> OP_DUP OP_HASH160 <!-- raw HTML omitted --> OP_EQUALVERIFY OP_CHECKSIG</p>
+<p>脚本语言是一种类似于Forth的基于堆栈的语言，故意将其设计为无状态而不是图灵完整的。无状态性确保一旦将交易添加到区块链，就不会出现使其永久无法使用的情况。图灵不完整（特别是缺少循环或混乱）使脚本语言的灵活性和可预测性降低，从而大大简化了安全模型。</p>
+<p>为了测试交易是否有效，签名脚本和pubkey脚本操作一次执行一次，从Bob的签名脚本开始，一直到Alice的pubkey脚本结束。下图显示了对标准P2PKH公钥脚本的评估；图下方是该过程的说明。</p>
+<p><img src="/image/btc_devguide_2/f.jpg" alt=""></p>
+<ul>
+<li>
+<p>The signature (from Bob’s signature script) is added (pushed) to an empty stack. Because it’s just data, nothing is done except adding it to the stack. The public key (also from the signature script) is pushed on top of the signature.</p>
+</li>
+<li>
+<p>From Alice’s pubkey script, the “OP_DUP” operation is executed. “OP_DUP” pushes onto the stack a copy of the data currently at the top of it—in this case creating a copy of the public key Bob provided.</p>
+</li>
+<li>
+<p>The operation executed next, “OP_HASH160”, pushes onto the stack a hash of the data currently on top of it—in this case, Bob’s public key. This creates a hash of Bob’s public key.</p>
+</li>
+<li>
+<p>Alice’s pubkey script then pushes the pubkey hash that Bob gave her for the first transaction. At this point, there should be two copies of Bob’s pubkey hash at the top of the stack.</p>
+</li>
+<li>
+<p>Now it gets interesting: Alice’s pubkey script executes “OP_EQUALVERIFY”. “OP_EQUALVERIFY” is equivalent to executing “OP_EQUAL” followed by “OP_VERIFY” (not shown).</p>
+<p>“OP_EQUAL” (not shown) checks the two values at the top of the stack; in this case, it checks whether the pubkey hash generated from the full public key Bob provided equals the pubkey hash Alice provided when she created transaction #1. “OP_EQUAL” pops (removes from the top of the stack) the two values it compared, and replaces them with the result of that comparison: zero (false) or one (true).</p>
+<p>“OP_VERIFY” (not shown) checks the value at the top of the stack. If the value is false it immediately terminates evaluation and the transaction validation fails. Otherwise it pops the true value off the stack</p>
+</li>
+<li>
+<p>Finally, Alice’s pubkey script executes “OP_CHECKSIG”, which checks the signature Bob provided against the now-authenticated public key he also provided. If the signature matches the public key and was generated using all of the data required to be signed, “OP_CHECKSIG” pushes the value true onto the top of the stack.</p>
+</li>
+</ul>
+<h3 id="p2sh-scripts"><strong>P2SH Scripts</strong></h3>
+<p>Pubkey脚本是由不感兴趣该脚本功能的用户创建的。 接收者确实关心脚本条件，并且，如果需要，他们可以要求支出者使用特定的pubkey脚本。 不幸的是，自定义的pubkey脚本不如短的比特币地址方便，并且在广泛使用现已弃用的BIP70支付协议之前，还没有一种标准的方法可以在程序之间进行通信。</p>
+<p>为了解决这些问题，2012年创建了按脚本哈希（P2SH）交易，使支出者可以创建包含第二个脚本（即赎回脚本）的哈希值的公钥脚本。</p>
+<p>基本的P2SH工作流程，如下图所示，看起来几乎与P2PKH工作流程相同。 鲍勃使用所需的脚本创建赎回脚本，对赎回脚本进行哈希处理，然后将赎回脚本哈希提供给爱丽丝。 爱丽丝创建了一个包含鲍勃的兑换脚本哈希值的P2SH风格的输出。</p>
+<p><img src="/image/btc_devguide_2/g.jpg" alt=""></p>
+<h3 id="standard-transactions"><strong>Standard Transactions</strong></h3>
+<p>当Bob想要花费输出时，他在签名脚本中提供了他的签名以及完整的（序列化）redeem脚本。 对等网络确保完整的赎回脚本哈希值与Alice在其输出中放入的脚本哈希值相同； 然后，它会完全像处理主pubkey脚本那样处理赎回脚本，如果赎回脚本未返回false，则让Bob花费输出。</p>
+<p>在早期版本的比特币中发现了几个危险的错误之后，添加了一项测试，该测试仅在其公钥脚本和签名脚本与一小部分被认为是安全的模板匹配的情况下才接受来自网络的交易，并且该交易未违反另一套强制执行良好网络行为的规则。这是IsStandard（）测试，通过它的事务称为标准事务。</p>
+<p>不使用默认比特币核心设置的节点可以接受非标准交易（未通过测试的交易）。如果它们包含在块中，它们还将避免进行IsStandard测试并进行处理。</p>
+<p>除了通过广播有害交易使某人更难免费攻击比特币外，标准交易测试还有助于防止用户今天创建交易，这会使将来增加新的交易功能更加困难。例如，如上所述，每个事务都包含一个版本号-如果用户开始随意更改版本号，则该版本作为引入向后不兼容功能的工具将变得毫无用处。</p>
+<p>As of Bitcoin Core 0.9, the standard pubkey script types are:</p>
+<ul>
+<li>
+<p>Pay To Public Key Hash (P2PKH)</p>
+<p>P2PKH是最常用的pubkey脚本形式，用于将交易发送到一个或多个比特币地址。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Pubkey script: OP_DUP OP_HASH160 &lt;PubKeyHash&gt; OP_EQUALVERIFY OP_CHECKSIG
+Signature script: &lt;sig&gt; &lt;pubkey&gt;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Pay To Script Hash (P2SH)</p>
+<p>P2SH用于将事务发送到脚本哈希。 除P2SH本身以外，每个标准的pubkey脚本都可以用作P2SH兑换脚本。 从Bitcoin Core 0.9.2开始，P2SH交易可以包含任何有效的redeemScript，从而使P2SH标准更加灵活，并可以尝试许多新颖而复杂的交易类型。 P2SH的最常见用法是标准的multisig pubkey脚本，第二最常见的用法是“开放资产协议”。</p>
+<p>用于P2SH的另一个常见的redeemScript是将文本数据存储在区块链上。 有史以来的第一个比特币交易包括文本，P2SH是一种在区块链上存储文本的便捷方法，因为它可以存储多达1.5kb的文本数据。 在此存储库中可以找到使用P2SH在区块链上存储文本的<a href="https://github.com/petertodd/checklocktimeverify-demos/blob/master/lib/python-bitcoinlib/examples/publish-text.py">示例</a>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Pubkey script: OP_HASH160 &lt;Hash160(redeemScript)&gt; OP_EQUAL
+Signature script: &lt;sig&gt; [sig] [sig...] &lt;redeemScript&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>只要脚本哈希与赎回脚本匹配，此脚本组合对于旧节点而言看起来就很好。 但是，在激活软叉之后，新节点将对赎回脚本执行进一步的验证。 他们将从签名脚本中提取赎回脚本，对其进行解码，然后使用其余的堆栈项（<!-- raw HTML omitted --> [sig] [sig ..]部分）执行该脚本。 因此，要赎回P2SH交易，除正确的赎回脚本外，支出者还必须提供有效的签名或答案。</p>
+</li>
+<li>
+<p>Multisig</p>
+<p>尽管现在通常将P2SH多重签名用于多重签名事务，但此基本脚本可用于在使用UTXO之前要求多个签名。</p>
+<p>在称为m-of-n的multisig pubkey脚本中，m是必须与公钥匹配的最小签名数。 n是提供的公共密钥的数量。 m和n都应该是OP_1到OP_16的操作码，对应于所需的数字。</p>
+<p>由于必须保留原始比特币实现中的一位错误，以确保兼容性，因此“ OP_CHECKMULTISIG”从堆栈中消耗的值比m指示的值多，因此，签名脚本中的secp256k1签名列表必须带有前缀 将会消耗但不使用的额外值（OP_0）。</p>
+<p>签名脚本必须按照与相应的公共密钥出现在pubkey脚本或赎回脚本中相同的顺序提供签名。 有关详细信息，请参见“ OP_CHECKMULTISIG”中的描述。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Pubkey script: &lt;m&gt; &lt;A pubkey&gt; [B pubkey] [C pubkey...] &lt;n&gt; OP_CHECKMULTISIG
+Signature script: OP_0 &lt;A sig&gt; [B sig] [C sig...]
+</code></pre></td></tr></table>
+</div>
+</div><p>Although it’s not a separate transaction type, this is a P2SH multisig with 2-of-3:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Pubkey script: OP_HASH160 &lt;Hash160(redeemScript)&gt; OP_EQUAL
+Redeem script: &lt;OP_2&gt; &lt;A pubkey&gt; &lt;B pubkey&gt; &lt;C pubkey&gt; &lt;OP_3&gt; OP_CHECKMULTISIG
+Signature script: OP_0 &lt;A sig&gt; &lt;C sig&gt; &lt;redeemScript&gt;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Pubkey</p>
+<p>公钥输出是P2PKH公钥脚本的简化形式，但是它们不如P2PKH安全，因此通常不再在新交易中使用它们。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Pubkey script: &lt;pubkey&gt; OP_CHECKSIG
+Signature script: &lt;sig&gt;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Null Data</p>
+</li>
+</ul>
+<h3 id="signature-hash-type"><strong>Signature Hash Type</strong></h3>
+<p>“OP_CHECKSIG” 从评估的每个签名提取一个non-stack 参数。允许签名者决定要在交易的哪个部分进行签名。 由于签名保护交易的这些部分免于修改，因此签名者可以有选择地选择让其他人修改其交易</p>
+<p>用于签名的各种选项称为签名哈希类型。 当前有三种基本的SIGHASH类型：</p>
+<ul>
+<li>&ldquo;SIGHASH_ALL&rdquo;,对所有输入和输出进行签名，保护除签名脚本以外的所有内容，防止其被修改。</li>
+<li>&ldquo;SIGHASH_NONE&rdquo;,签名所有输入，但不签名任何输出，允许任何人更改satoshi的行进方向，除非使用其他签名哈希标志的其他签名保护输出。</li>
+<li>&ldquo;SIGHASH_SINGLE&rdquo;, 唯一已签名的输出是与此输入相对应的输出（与该输入具有相同输出索引号的输出），以确保没有人可以更改您的交易部分，但允许其他签名者更改其交易部分。 必须存在相应的输出，否则将对值“ 1”进行签名，从而破坏了安全性方案。 此输入以及其他输入都包含在签名中。 其他输入的序列号不包括在签名中，并且可以更新。</li>
+</ul>
+<p>因为每个输入都经过签名，所以具有多个输入的事务可以具有多个签名哈希类型，用于对事务的不同部分进行签名。 例如，用NONE签名的单输入交易可能会被采矿者更改其输出，并将其添加到区块链中。 另一方面，如果一个两输入交易具有一个用NONE签名的输入和一个用ALL签名的输入，则ALL签名者可以在不咨询NONE签名者的情况下选择在哪里使用satoshis，但是其他人都不能修改该交易。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">BTC
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="locktime-and-sequence-number"><strong>Locktime And Sequence Number</strong></h3>
+<p>所有签名哈希类型都签名的一件事是交易的锁定时间。 （在比特币核心源代码中称为nLockTime。）锁定时间表示可以将事务添加到区块链的最早时间。</p>
+<p>Locktime允许签名者创建时间锁定的交易，该交易只有在将来才有效，从而使签名者有机会改变主意。</p>
+<p>如果任何签名者改变了主意，他们可以创建一个新的非锁定时间交易。 新交易将使用与锁定时间事务的输入相同的输出作为其输入之一。 如果在时间锁定到期之前将新交易添加到块链中，这会使锁定时间事务无效。</p>
+<p>在时间锁定的到期时间附近必须小心。 对等网络允许区块时间比实时时间最多提前两个小时，因此可以在其时间锁定正式到期之前的两个小时内将锁定时间事务添加到区块链中。 另外，不会以保证的时间间隔创建块，因此任何取消有价值的交易的尝试都应在时间锁定到期前几个小时进行。</p>
+<p>早期版本的Bitcoin Core提供了一项功能，该功能可防止交易签名者使用上述方法取消有时间限制的交易，但该功能的必要部分已禁用，以防止拒绝服务攻击。 该系统的传统是在每个输入中包含四个字节的序列号。 序列号旨在允许多个签名者同意更新交易。 当他们完成交易更新时，他们可以同意将每个输入的序列号设置为最大四个字节的无符号（0xffffffff），即使该交易的时间锁未过期，也可以将其添加到一个区块中。</p>
+<p>即使在今天，将所有序列号设置为0xffffffff（Bitcoin Core中的默认值）仍然可以禁用时间锁定，因此，如果要使用锁定时间，至少一个输入的序列号必须低于最大序列号。 由于网络不会将序列号用于任何其他目的，因此将任何序列号设置为零就足以启用锁定时间。</p>
+<p>锁定时间本身是一个无符号的4字节整数，可以通过两种方式解析：</p>
+<ul>
+<li>如果小于5亿，则将锁定时间解析为块高度。 可以将交易添加到具有此高度或更高高度的任何块中。</li>
+<li>如果大于或等于5亿，则使用Unix纪元时间格式（自1970-01-01T00：00 UTC以来经过的秒数-当前超过13.95亿）来解析锁定时间。 可以将事务添加到块时间大于锁定时间的任何块中</li>
+</ul>
+<h3 id="transaction-fees-and-change"><strong>Transaction Fees And Change</strong></h3>
+<p>交易根据已签名交易的总字节大小支付费用。每字节的费用是根据采矿块中当前的空间需求来计算的，费用随着需求的增加而增加。正如区块链部分中所述，交易费是提供给比特币矿工的，因此最终由每个矿工选择他们将接受的最低交易费。</p>
+<p>还有一个所谓的“高优先级交易”的概念，它花费了很长时间没有动静的聪子。</p>
+<p>过去，这些“优先”交易通常无需支付常规费用。在Bitcoin Core 0.12之前，将为这些高优先级事务保留每个块50 KB，但是现在默认将其设置为0 KB。在优先级区域之后，将根据每个字节的费用对所有交易进行优先级排序，并依次添加高薪交易，直到所有可用空间都被填满。</p>
+<p>从Bitcoin Core 0.9开始，在网络上广播交易需要最低费用（目前为1,000聪）。任何仅需支付最低费用的交易，都应准备等待很长时间才能在块中有足够的可用空间来包含它。请参阅“验证付款”部分以了解为什么这很重要。</p>
+<p>由于每笔交易都花费未使用的交易输出（UTXO），并且因为UTXO只能使用一次，所以必须花费所包含的UTXO的全部价值或将其作为交易费提供给矿工。很少有人会拥有与他们想要支付的金额完全匹配的UTXO，因此大多数交易都包含变更输出。</p>
+<p>变更输出是常规输出，将多余的satoshis从UTXO花费回花费者。 他们可以重用与UTXO中相同的P2PKH pubkey哈希或P2SH脚本哈希，但是出于下一节所述的原因，强烈建议将更改输出发送到新的P2PKH或P2SH addres</p>
+<h3 id="segwit"><strong>Segwit</strong></h3>
+<p>比特币网络区块链每秒处理7笔交易。增加TPS的方法有增大区块容量和隔离见证、侧链</p>
+<p>隔离见证的主要思想是重组区块链数据，使签名不再与交易数据存储在一起。换句话说，Segwit升级包括将验证人(签名)与交易数据隔离，这就能够将更多交易存储在单个区块中，从而增加网络的交易TPS</p>
+<p>事物包括两个主要部分：输入和输出。本质上，输入包含发送者的公共地址，而输出包含接收者的公共地址。但是发送者必须证明他们已经转移了资金，并且必须使用数字签名。</p>
+<p>如果没有隔离见证，则签名数据最多可占用一个区块的65%。使用隔离见证，会把签名数据从交易的输入中移除。实际区块大小仍为1MB，但有效块大小限制为4MB</p>
+<p>隔离见证还引入了区块权重的概念。我们可以将区块权重视为替代区块大小的概念。本质上，区块权重是一种度量单位，它包括所有的区块数据：包括交易数据（1MB）和签名数据（最大3MB）。</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/1207298049439968/1207366165169216">交易延展性</a></p>
+<p>此修复程序支持在区块链社区内进行进一步的创新，包括二层协议和智能合约</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-12-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/btc_devguide_1/">
+            <span class="next-text nav-default">BTC devguide(1)</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

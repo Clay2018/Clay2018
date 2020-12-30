@@ -6,13 +6,22 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Dec 2020 18:12:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Dec 2020 15:16:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>BTC blockchain</title>
+      <title>BTC devguide(2)</title>
+      <link>http://localhost:1313/post/btc_devguide_2/</link>
+      <pubDate>Wed, 30 Dec 2020 15:16:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/btc_devguide_2/</guid>
+      <description>Transactions 交易让用户花了satoshis。 每笔交易都由几部分组成，既可以进行简单的直接付款，也可以进行复杂的交易。 Introduction 本节将描述每个部分并演示如何一起</description>
+    </item>
+    
+    <item>
+      <title>BTC devguide(1)</title>
       <link>http://localhost:1313/post/btc_devguide_1/</link>
       <pubDate>Tue, 29 Dec 2020 18:12:00 +0800</pubDate>
       
