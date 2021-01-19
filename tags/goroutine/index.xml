@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/categories/go/</link>
-    <description>Recent content in Go on Even - A super concise theme for Hugo</description>
+    <title>goroutine on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/goroutine/</link>
+    <description>Recent content in goroutine on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 18 Jan 2021 21:05:24 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/goroutine/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>http://localhost:1313/post/deadlock_in_goroutine/</guid>
       <description>一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { ch := make(chan int) go fmt.Println(&amp;lt;-ch) ch &amp;lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关</description>
-    </item>
-    
-    <item>
-      <title>Channel在Go中运用</title>
-      <link>http://localhost:1313/post/the_usage_of_channel_in_go/</link>
-      <pubDate>Thu, 10 Dec 2020 21:05:24 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/the_usage_of_channel_in_go/</guid>
-      <description>basic usage of channel 使用channel发送接收 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 package main import &amp;#34;fmt&amp;#34; func main() { jobs := make(chan int, 5) done := make(chan bool) go func() { for { j, more</description>
     </item>
     
   </channel>

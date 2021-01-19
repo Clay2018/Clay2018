@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Dec 2020 15:59:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 Jan 2021 21:05:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一道关于gorotine的死锁问题</title>
+      <link>http://localhost:1313/post/deadlock_in_goroutine/</link>
+      <pubDate>Mon, 18 Jan 2021 21:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/deadlock_in_goroutine/</guid>
+      <description>一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { ch := make(chan int) go fmt.Println(&amp;lt;-ch) ch &amp;lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关</description>
+    </item>
     
     <item>
       <title>BTC devguide(3)</title>

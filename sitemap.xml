@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/deadlock_in_goroutine/</loc>
+    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/btc_devguide_3/</loc>
     <lastmod>2020-12-30T15:59:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -72,28 +79,49 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/blockchain/</loc>
-    <lastmod>2020-12-30T15:59:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2020-12-30T15:59:00+08:00</lastmod>
+    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2020-12-30T15:59:00+08:00</lastmod>
+    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/go/</loc>
+    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/goroutine/</loc>
+    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
+    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/blockchain/</loc>
     <lastmod>2020-12-30T15:59:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -107,21 +135,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/tags/go/</loc>
-    <lastmod>2020-12-10T21:05:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/go/</loc>
     <lastmod>2020-12-10T21:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
