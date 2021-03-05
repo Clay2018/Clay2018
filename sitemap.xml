@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/huffman_coding/</loc>
+    <lastmod>2021-03-05T15:45:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/deadlock_in_goroutine/</loc>
     <lastmod>2021-01-18T21:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -79,15 +86,43 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tags/algorithm/</loc>
+    <lastmod>2021-03-05T15:45:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/algorithm/</loc>
+    <lastmod>2021-03-05T15:45:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
+    <lastmod>2021-03-05T15:45:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
+    <lastmod>2021-03-05T15:45:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2021-03-05T15:45:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2021-03-05T15:45:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -101,20 +136,6 @@
   
   <url>
     <loc>http://localhost:1313/tags/goroutine/</loc>
-    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2021-01-18T21:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -186,20 +207,6 @@
   <url>
     <loc>http://localhost:1313/tags/blockchain/</loc>
     <lastmod>2020-07-12T21:49:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/algorithm/</loc>
-    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/algorithm/</loc>
-    <lastmod>2020-07-05T23:46:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
