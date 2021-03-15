@@ -6,10 +6,28 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Mar 2021 14:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Mar 2021 14:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java线程池实现原理及其在美团业务中的实践</title>
+      <link>http://localhost:1313/post/thread_pooling_practice_in_meituan/</link>
+      <pubDate>Mon, 15 Mar 2021 14:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/thread_pooling_practice_in_meituan/</guid>
+      <description>Java线程池实现原理及其在美团业务中的实践 Portal: https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html</description>
+    </item>
+    
+    <item>
+      <title>为什么TCP协议有粘包问题</title>
+      <link>http://localhost:1313/post/why_the_design_tcp_message_frame-%E5%89%AF%E6%9C%AC/</link>
+      <pubDate>Mon, 15 Mar 2021 14:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/why_the_design_tcp_message_frame-%E5%89%AF%E6%9C%AC/</guid>
+      <description>为什么TCP协议有粘包问题 Portal: https://draveness.me/whys-the-design-tcp-message-frame/</description>
+    </item>
     
     <item>
       <title>NAT 穿透</title>

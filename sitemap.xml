@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/thread_pooling_practice_in_meituan/</loc>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/why_the_design_tcp_message_frame-%E5%89%AF%E6%9C%AC/</loc>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/nat_in_tcp/</loc>
     <lastmod>2021-03-11T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,41 +108,62 @@
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-03-11T14:47:44+08:00</lastmod>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2021-03-11T14:47:44+08:00</lastmod>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/network/</loc>
-    <lastmod>2021-03-11T14:47:44+08:00</lastmod>
+    <loc>http://localhost:1313/categories/linux/</loc>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/network/</loc>
-    <lastmod>2021-03-11T14:47:44+08:00</lastmod>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2021-03-11T14:47:44+08:00</lastmod>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/tcp/</loc>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/thread/</loc>
+    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/network/</loc>
     <lastmod>2021-03-11T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -206,20 +241,6 @@
   
   <url>
     <loc>http://localhost:1313/tags/linux/</loc>
-    <lastmod>2020-07-14T23:45:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/linux/</loc>
-    <lastmod>2020-07-14T23:45:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/thread/</loc>
     <lastmod>2020-07-14T23:45:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
