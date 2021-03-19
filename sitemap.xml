@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/binary_search/</loc>
+    <lastmod>2021-03-19T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/thread_pooling_practice_in_meituan/</loc>
     <lastmod>2021-03-15T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -107,15 +114,29 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/categories/algorithm/</loc>
+    <lastmod>2021-03-19T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
+    <lastmod>2021-03-19T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
+    <lastmod>2021-03-19T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2021-03-19T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -129,13 +150,6 @@
   
   <url>
     <loc>http://localhost:1313/categories/network/</loc>
-    <lastmod>2021-03-15T14:47:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/</loc>
     <lastmod>2021-03-15T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -171,13 +185,6 @@
   
   <url>
     <loc>http://localhost:1313/tags/algorithm/</loc>
-    <lastmod>2021-03-05T15:45:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/algorithm/</loc>
     <lastmod>2021-03-05T15:45:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

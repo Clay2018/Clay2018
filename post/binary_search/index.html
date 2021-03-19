@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Java线程池实现原理及其在美团业务中的实践 - Even - A super concise theme for Hugo</title>
+  <title>二分查找 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Java线程池实现原理及其在美团业务中的实践 Portal: https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html" /><meta name="keywords" content="design, thread pool" />
+<meta name="author" content="Clayton" /><meta name="description" content="二分查找 从一个从小到大的序列中找寻数goal, 采用二分查找。 思路：选择两个变量，分别赋值区间的首尾；选取区间的中间值与goal相比较，如果g" /><meta name="keywords" content="" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/thread_pooling_practice_in_meituan/" />
+<link rel="canonical" href="http://localhost:1313/post/binary_search/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Java线程池实现原理及其在美团业务中的实践" />
-<meta property="og:description" content="Java线程池实现原理及其在美团业务中的实践 Portal: https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html" />
+<meta property="og:title" content="二分查找" />
+<meta property="og:description" content="二分查找 从一个从小到大的序列中找寻数goal, 采用二分查找。 思路：选择两个变量，分别赋值区间的首尾；选取区间的中间值与goal相比较，如果g" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/thread_pooling_practice_in_meituan/" />
-<meta property="article:published_time" content="2021-03-15T14:47:44+08:00" />
-<meta property="article:modified_time" content="2021-03-15T14:47:44+08:00" />
-<meta itemprop="name" content="Java线程池实现原理及其在美团业务中的实践">
-<meta itemprop="description" content="Java线程池实现原理及其在美团业务中的实践 Portal: https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html">
-<meta itemprop="datePublished" content="2021-03-15T14:47:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-03-15T14:47:44&#43;08:00" />
-<meta itemprop="wordCount" content="24">
+<meta property="og:url" content="http://localhost:1313/post/binary_search/" />
+<meta property="article:published_time" content="2021-03-19T00:00:44+08:00" />
+<meta property="article:modified_time" content="2021-03-19T00:00:44+08:00" />
+<meta itemprop="name" content="二分查找">
+<meta itemprop="description" content="二分查找 从一个从小到大的序列中找寻数goal, 采用二分查找。 思路：选择两个变量，分别赋值区间的首尾；选取区间的中间值与goal相比较，如果g">
+<meta itemprop="datePublished" content="2021-03-19T00:00:44&#43;08:00" />
+<meta itemprop="dateModified" content="2021-03-19T00:00:44&#43;08:00" />
+<meta itemprop="wordCount" content="438">
 
 
 
-<meta itemprop="keywords" content="thread," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Java线程池实现原理及其在美团业务中的实践"/>
-<meta name="twitter:description" content="Java线程池实现原理及其在美团业务中的实践 Portal: https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html"/>
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="二分查找"/>
+<meta name="twitter:description" content="二分查找 从一个从小到大的序列中找寻数goal, 采用二分查找。 思路：选择两个变量，分别赋值区间的首尾；选取区间的中间值与goal相比较，如果g"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,14 +118,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Java线程池实现原理及其在美团业务中的实践</h1>
+      <h1 class="post-title">二分查找</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-03-15 </span>
+        <span class="post-time"> 2021-03-19 </span>
         <div class="post-category">
-            <a href="/categories/linux/"> linux </a>
+            <a href="/categories/algorithm/"> algorithm </a>
             </div>
-          <span class="more-meta"> 24 words </span>
+          <span class="more-meta"> 438 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -138,7 +138,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#java线程池实现原理及其在美团业务中的实践">Java线程池实现原理及其在美团业务中的实践</a></li>
+        <li><a href="#二分查找">二分查找</a></li>
+        <li><a href="#resource">resource</a></li>
       </ul>
     </li>
   </ul>
@@ -146,8 +147,52 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="java线程池实现原理及其在美团业务中的实践">Java线程池实现原理及其在美团业务中的实践</h3>
-<p>Portal: <a href="https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html">https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html</a></p>
+      <h3 id="二分查找">二分查找</h3>
+<p>从一个从小到大的序列中找寻数goal, 采用二分查找。</p>
+<p>思路：选择两个变量，分别赋值区间的首尾；选取区间的中间值与goal相比较，如果goal较大，那么将begin = middle, 如果goal较小, 那么 end = middle;考虑到begin和end可能相等，goal会在边界被找到，那么循环条件为begin &lt;= end</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func binarySearch(arr []int, goal int) (index int) {
+	begin := 0
+	end := len(arr)-1
+	for ;begin &lt;= end; {
+		middle := (end + begin) / 2
+		if arr[middle] &lt; goal {
+			begin = middle
+		} else if arr[middle] &gt; goal {
+			end = middle
+		} else {
+			return middle
+		}
+	}
+	return -1
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>上述思路未考虑到边界条件中这种情况。例如区间为[5, 6],goal&gt;arr[5]的情况，此时区间此后将一直是[5,6]不会向前移动。（此种情况不会出现左边界，即goal == arr[5])</p>
+<p>思路：当arr[middle] &lt; goal时，应该向前移动；当arr[middle] &gt; goal时， end = middle or end = middle - 1。加1或减1不会使过程中出现界限被超出</p>
+<p>二分查找中个人认为区间应该始终为左闭右闭区间。不应该使循环代码中begin,end变量来维持区间的开闭性质</p>
+<h3 id="resource">resource</h3>
+<ul>
+<li><a href="http://www.cppblog.com/converse/archive/2009/10/05/97905.html">http://www.cppblog.com/converse/archive/2009/10/05/97905.html</a></li>
+</ul>
 
     </div>
 
@@ -159,7 +204,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-03-15
+        2021-03-19
         
     </span>
   </p>
@@ -182,16 +227,12 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/thread/">thread</a>
+          <a href="/tags//"></a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/binary_search/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">二分查找</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/why_the_design_tcp_message_frame-%E5%89%AF%E6%9C%AC/">
-            <span class="next-text nav-default">为什么TCP协议有粘包问题</span>
+        
+        <a class="next" href="/post/thread_pooling_practice_in_meituan/">
+            <span class="next-text nav-default">Java线程池实现原理及其在美团业务中的实践</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
