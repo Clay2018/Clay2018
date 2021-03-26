@@ -49,7 +49,7 @@
 <meta itemprop="description" content="排序算法复杂度 冒泡排序 将第一个数A跟第二个数B相比较，如果A&gt;B，那么交换A，B位置，接下来将第二个数跟第三个数比较 1 2 3 4 5 6 7 8 9">
 <meta itemprop="datePublished" content="2021-03-22T00:00:44&#43;08:00" />
 <meta itemprop="dateModified" content="2021-03-22T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="3098">
+<meta itemprop="wordCount" content="3647">
 
 
 
@@ -125,8 +125,8 @@
         <div class="post-category">
             <a href="/categories/algorithm/"> algorithm </a>
             </div>
-          <span class="more-meta"> 3098 words </span>
-          <span class="more-meta"> 7 mins read </span>
+          <span class="more-meta"> 3647 words </span>
+          <span class="more-meta"> 8 mins read </span>
         
       </div>
     </header>
@@ -146,6 +146,7 @@
         <li><a href="#堆排序">堆排序</a></li>
         <li><a href="#2-路归并排序">2-路归并排序</a></li>
         <li><a href="#快速排序">快速排序</a></li>
+        <li><a href="#20201214">20201214</a></li>
         <li><a href="#reference">Reference</a></li>
       </ul>
     </li>
@@ -913,7 +914,309 @@ for ;i &lt; j; {
 </code></pre></td></tr></table>
 </div>
 </div><p>i+1 这一步有可能 i == right,导致数组溢出</p>
-<h3 id="reference">Reference</h3>
+<h3 id="20201214">20201214</h3>
+<ul>
+<li>
+<p>插入排序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void insertSort(int arr[], int n) {
+    for(int i = 0; i &lt; n-1; i++) {
+        int j = i;
+        int tmp = arr[j+1];
+        for(; j &gt;= 0; j--) {
+            if(tmp &gt;= arr[j]) {
+                break;
+            }
+            arr[j+1] = arr[j];
+        }
+        arr[j+1] = tmp;
+        print(arr, n);
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>归并排序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void merge(int arr[], int low, int mid, int high) {
+    int *tmp = new int[high-low+1];
+    int i = low, j = mid + 1;
+    int k = 0;
+    for(; i &lt;= mid &amp;&amp; j &lt;= high;) {
+        if(arr[i] &lt; arr[j]) {
+            tmp[k++] = arr[i++];
+        } else if(arr[i] &gt; arr[j]) {
+            tmp[k++] = arr[j++];
+        } else {
+            tmp[k++] = arr[i++];
+            tmp[k++] = arr[j++];
+        }
+    }
+
+    while(i &lt;= mid) {
+        tmp[k++] = arr[i++];
+    }
+
+    for(int i = low, j = 0; j &lt; k; i++,j++) {
+        arr[i] = tmp[j];
+    }
+}
+
+void mergeSort(int arr[], int low, int high) {
+    if(low &gt;= high) {
+        return;
+    }
+    int mid = low + (high - low)/2;
+    mergeSort(arr, low, mid);
+    mergeSort(arr, mid+1, high);
+    merge(arr, low, mid, high);
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>快速排序</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void Qsort(int arr[], int low, int high) {
+    if(high &lt;= low) return;
+    int i = low, j = high + 1;
+    int key = arr[low];
+
+    while(true) {
+        while(arr[++i] &lt; key) {
+            if (i == high) {
+                break;
+            }
+        }
+
+        while(arr[--j] &gt; key) {
+            if(j == low) {
+                break;
+            }
+        }
+        if(i &gt;= j) {
+            break;
+        }
+        swap(arr[i], arr[j]);
+    }
+    swap(arr[j], arr[low]);
+    Qsort(arr, low, j-1);
+    Qsort(arr, j+1, high);
+}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>冒泡排序</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void bulbSort(int arr[], int n) {
+    int i = 0;
+    int len = n-1;
+    for(; i &lt; n; i++) {
+        int flag = true;
+        int tmp;
+        for(int j = 0; j &lt; len; j++) {
+            if(arr[j] &gt; arr[j+1]) {
+                swap(arr[j], arr[j+1]);
+                flag = false;
+                tmp = j;
+            }
+        }
+        len = tmp;
+        if(flag) {
+            break;
+        }
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>基数排序</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void radixSort(int *arr, int n) {
+    int maxBit = 2;
+    for(int i = 0; i &lt; maxBit; i++) {
+        int buf[10][100] = {0};
+        int pow = 1;
+        for(int j = 0 ; j &lt; i; j++) {
+            pow *= 10;
+        }
+        for(int i = 0; i &lt; n; i++) {
+            int index = (arr[i] / pow) % 10;
+            for (int j = 0; j &lt; 100; j++) {
+                if (buf[index][j] == 0) {
+                    buf[index][j] = arr[i];
+                    break;
+                }
+            }
+        }
+
+        for(int i = 9, k = 0; i &gt;= 0; i--) {
+            for(int j = 0; j &lt; 100; j++) {
+                if(buf[i][j] != 0) {
+                    arr[k++] = buf[i][j];
+                }
+            }
+        }
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="reference">Reference</h3>
 <ul>
 <li>十大经典排序算法(动图演示): <a href="https://www.cnblogs.com/onepixel/articles/7674659.html">https://www.cnblogs.com/onepixel/articles/7674659.html</a></li>
 <li>冒泡排序的改进: <a href="https://blog.csdn.net/tjunxin/article/details/8711389">https://blog.csdn.net/tjunxin/article/details/8711389</a></li>
