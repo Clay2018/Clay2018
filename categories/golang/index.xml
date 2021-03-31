@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/golang/</link>
+    <description>Recent content in golang on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 31 Mar 2021 01:01:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golang哈希表</title>
+      <link>http://localhost:1313/post/hashmap_in_golang/</link>
+      <pubDate>Wed, 31 Mar 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/hashmap_in_golang/</guid>
+      <description>Reference 理解Golang哈希表的原理： https://juejin.cn/post/6844903793927143438 golang哈希表： https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-hashmap/ golang的for-range(哈希表的遍历): https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-for-range/</description>
+    </item>
+    
+  </channel>
+</rss>

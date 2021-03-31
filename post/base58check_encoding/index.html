@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Base58Check 编码 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="本文章翻译自Base58Check encoding，如有侵权，请联系作者进行删除 Background Base58Check 是一种被用来编码比特币地址的协议 这原始比特币源码解释了为" /><meta name="keywords" content="base58, base58Check" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/base58check_encoding/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Base58Check 编码" />
+<meta property="og:description" content="本文章翻译自Base58Check encoding，如有侵权，请联系作者进行删除 Background Base58Check 是一种被用来编码比特币地址的协议 这原始比特币源码解释了为" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/base58check_encoding/" />
+<meta property="article:published_time" content="2020-12-29T10:28:00+08:00" />
+<meta property="article:modified_time" content="2020-12-29T10:28:00+08:00" />
+<meta itemprop="name" content="Base58Check 编码">
+<meta itemprop="description" content="本文章翻译自Base58Check encoding，如有侵权，请联系作者进行删除 Background Base58Check 是一种被用来编码比特币地址的协议 这原始比特币源码解释了为">
+<meta itemprop="datePublished" content="2020-12-29T10:28:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-29T10:28:00&#43;08:00" />
+<meta itemprop="wordCount" content="625">
+
+
+
+<meta itemprop="keywords" content="encoding," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Base58Check 编码"/>
+<meta name="twitter:description" content="本文章翻译自Base58Check encoding，如有侵权，请联系作者进行删除 Background Base58Check 是一种被用来编码比特币地址的协议 这原始比特币源码解释了为"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Base58Check 编码</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-12-29 </span>
+        <div class="post-category">
+            <a href="/categories/blockchain/"> blockchain </a>
+            </div>
+          <span class="more-meta"> 625 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#features-of-base58check">Features of Base58Check</a></li>
+        <li><a href="#creating-a-base58check-string">Creating a Base58Check string</a></li>
+        <li><a href="#encoding-a-bitcoin-address">Encoding a Bitcoin address</a></li>
+        <li><a href="#version-bytes">Version bytes</a></li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <hr>
+<p>本文章翻译自<a href="https://en.bitcoin.it/wiki/Base58Check_encoding">Base58Check encoding</a>，如有侵权，请联系<a href="wuvhui@163.com">作者</a>进行删除</p>
+<hr>
+<h3 id="background">Background</h3>
+<p>Base58Check 是一种被用来编码比特币地址的协议</p>
+<p>这原始比特币源码解释了为何使用base58而不是base64</p>
+<ul>
+<li>不想在某些字体中看起来相同的0OIl字符，可用于创建外观相同的帐号</li>
+<li>具有非字母数字字符的字符串不像帐号那样容易被接受</li>
+<li>如果没有标点符号中断，电子邮件通常不会换行</li>
+<li>如果全为字母数字，则双击将整个数字选择为一个单词</li>
+</ul>
+<h3 id="features-of-base58check">Features of Base58Check</h3>
+<p>Base58Check有如下特点:</p>
+<ul>
+<li>一个任意大小的payload</li>
+<li>一组58个字母数字符号，由容易区分的大写和小写字母组成</li>
+<li>比特币地址使用一个字节保存版本信息， 0x00</li>
+<li>基于SHA256的错误检查代码的四个字节（32位）。此代码可用于自动检测并可能纠正印刷错误</li>
+<li>一个额外的步骤用来保存数据中的先导零</li>
+</ul>
+<h3 id="creating-a-base58check-string">Creating a Base58Check string</h3>
+<p>一个base58Check字符串从版本号和附加字段被创建:</p>
+<ul>
+<li>
+<ol>
+<li>带有版本字节和payload字节，级联在一起</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>得到sha256(result of step 1)的前四个字节</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>将step1和step2的结果级联在一起</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>将step3结果作为一个大端大整数转换为base58字符串</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>前导零被保存为字符1，</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>级联step5和step4的结果，This is the Base58Check</li>
+</ol>
+</li>
+</ul>
+<h3 id="encoding-a-bitcoin-address">Encoding a Bitcoin address</h3>
+<p>比特币地址被实现为Base58Check编码</p>
+<ul>
+<li>Pay-to-script-hash(p2sh): payload is:RIPEMD160(SHA256(redeemScript)) where redeemScript is a script the wallet knows how to spend; version 0x05(these addresses begin with the digit &lsquo;3&rsquo;)</li>
+<li>Pay-to-pubkey-hash (p2pkh): payload is RIPEMD160(SHA256(ECDSA_publicKey)) where ECDSA_publicKey is a public key the wallet knows the private key for; version 0x00 (these addresses begin with the digit &lsquo;1&rsquo;)</li>
+</ul>
+<p>这结果一直是20个字节</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">code_string = &#34;123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz&#34;
+x = convert_bytes_to_big_integer(hash_result)
+
+output_string = &#34;&#34;
+while(x &gt; 0) {
+    x, remainder = divide(x, 58)
+    output_string.append(code_string[remainder])
+}
+
+repeat(number_of_leading_zero_bytes_in_hash) {
+    output_string.append(code_string[0])
+}
+
+output_string.reverse()
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="version-bytes">Version bytes</h3>
+<p><img src="/image/base58check_encoding/a.jpg" alt=""></p>
+<h3 id="reference">Reference</h3>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-12-29
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/encoding/">encoding</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/btc_devguide_1/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">BTC devguide(1)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/the_usage_of_channel_in_go/">
+            <span class="next-text nav-default">Channel在Go中运用</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>encoding on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/encoding/</link>
+    <description>Recent content in encoding on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Dec 2020 10:28:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/encoding/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Base58Check 编码</title>
+      <link>http://localhost:1313/post/base58check_encoding/</link>
+      <pubDate>Tue, 29 Dec 2020 10:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/base58check_encoding/</guid>
+      <description>本文章翻译自Base58Check encoding，如有侵权，请联系作者进行删除 Background Base58Check 是一种被用来编码比特币地址的协议 这原始比特币源码解释了为</description>
+    </item>
+    
+  </channel>
+</rss>

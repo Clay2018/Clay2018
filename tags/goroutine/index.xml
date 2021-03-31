@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>goroutine on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/goroutine/</link>
+    <description>Recent content in goroutine on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 Jan 2021 21:05:24 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/goroutine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一道关于gorotine的死锁问题</title>
+      <link>http://localhost:1313/post/deadlock_in_goroutine/</link>
+      <pubDate>Mon, 18 Jan 2021 21:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/deadlock_in_goroutine/</guid>
+      <description>一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { ch := make(chan int) go fmt.Println(&amp;lt;-ch) ch &amp;lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关</description>
+    </item>
+    
+  </channel>
+</rss>

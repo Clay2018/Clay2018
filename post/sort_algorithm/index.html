@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>sort algorithm - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="排序算法复杂度 冒泡排序 将第一个数A跟第二个数B相比较，如果A&amp;gt;B，那么交换A，B位置，接下来将第二个数跟第三个数比较 1 2 3 4 5 6 7 8 9" /><meta name="keywords" content="sort" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/sort_algorithm/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="sort algorithm" />
+<meta property="og:description" content="排序算法复杂度 冒泡排序 将第一个数A跟第二个数B相比较，如果A&gt;B，那么交换A，B位置，接下来将第二个数跟第三个数比较 1 2 3 4 5 6 7 8 9" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/sort_algorithm/" />
+<meta property="article:published_time" content="2021-03-22T00:00:44+08:00" />
+<meta property="article:modified_time" content="2021-03-22T00:00:44+08:00" />
+<meta itemprop="name" content="sort algorithm">
+<meta itemprop="description" content="排序算法复杂度 冒泡排序 将第一个数A跟第二个数B相比较，如果A&gt;B，那么交换A，B位置，接下来将第二个数跟第三个数比较 1 2 3 4 5 6 7 8 9">
+<meta itemprop="datePublished" content="2021-03-22T00:00:44&#43;08:00" />
+<meta itemprop="dateModified" content="2021-03-22T00:00:44&#43;08:00" />
+<meta itemprop="wordCount" content="3647">
+
+
+
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="sort algorithm"/>
+<meta name="twitter:description" content="排序算法复杂度 冒泡排序 将第一个数A跟第二个数B相比较，如果A&gt;B，那么交换A，B位置，接下来将第二个数跟第三个数比较 1 2 3 4 5 6 7 8 9"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">sort algorithm</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-03-22 </span>
+        <div class="post-category">
+            <a href="/categories/algorithm/"> algorithm </a>
+            </div>
+          <span class="more-meta"> 3647 words </span>
+          <span class="more-meta"> 8 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#排序算法复杂度">排序算法复杂度</a></li>
+        <li><a href="#冒泡排序">冒泡排序</a></li>
+        <li><a href="#插入排序">插入排序</a></li>
+        <li><a href="#希尔排序">希尔排序</a></li>
+        <li><a href="#选择排序">选择排序</a></li>
+        <li><a href="#堆排序">堆排序</a></li>
+        <li><a href="#2-路归并排序">2-路归并排序</a></li>
+        <li><a href="#快速排序">快速排序</a></li>
+        <li><a href="#20201214">20201214</a></li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="排序算法复杂度">排序算法复杂度</h3>
+<p><img src="/image/sort_algorithm/sort_algorithm.jpg" alt=""></p>
+<h3 id="冒泡排序">冒泡排序</h3>
+<p>将第一个数A跟第二个数B相比较，如果A&gt;B，那么交换A，B位置，接下来将第二个数跟第三个数比较</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func bubbleSort(array []int) {
+    length := len(array)
+    for i := 0; i &lt; length; i++ {
+    	for j := 0; j &lt; length-1-i; j++ {
+    		if (array[j] &gt; array[j+1]) {
+    			array[j], array[j+1] = array[j+1], array[j]
+    		}
+    	}
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>第一次遍历, n-1这个数已经有序,第i次遍历，n-1-i后续数已经有序。外围for循环判断式可改为 i &lt;lenght-1,因为当i=length-1时,只剩下第0个数本身，不需要再比较
+冒泡排序第一次执行，arr[n-1]为最大数值,较大的数不断往后冒泡。
+第i次排序后，[n-i, n-1]有序,如果在第i次中没有发生交换，那么说明整个序列已经有序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func bubbleSort(array []int) {
+length := len(array)
+for i := 0; i &lt; length; i++ {
+	flag := false
+	for j := 0; j &lt; length-1-i; j++ {
+		if (array[j] &gt; array[j+1]) {
+			array[j], array[j+1] = array[j+1], array[j]
+			flag = true
+		}
+	}
+	if !flag {
+		break
+	}
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>第i次排序后，[n-i, n-1]有序,如果第i次排序中,在[lastPos, n-i]也没有发生交换，那么说明[lastPos, n-1]已经有序，下次循环区间可由[0, n-i-1]变为[0, n-lastPos-1]，缩小了循环空间</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func bubbleSort(array []int) {
+    length := len(array)
+    for i := 0; i &lt; length; i++ {
+    	flag := false
+    	lastPos := i
+    	tmp := 0
+    	for j := 0; j &lt; length-1-lastPos; j++ {
+    		if (array[j] &gt; array[j+1]) {
+    			array[j], array[j+1] = array[j+1], array[j]
+    			flag = true
+    			tmp = j
+    		}
+    	}
+    	lastPos = tmp
+    	if !flag {
+    		break
+    	}
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="插入排序">插入排序</h3>
+<p>向一个已经排序的序列中插入一个新值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func insertSort(array []int) {
+    length := len(array)
+    for i := 1; i &lt; length; i++ {
+    	j := i-1
+    	for ; j &gt;= 0; j-- {
+    		if array[j] &gt; array[j+1] {
+    			array[j], array[j+1] = array[j+1], array[j]
+    		}
+    	}
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>插入排序时间复杂度: 1 + 2 + &hellip; + n = O(n^2),空间复杂度O(1)。它的平均时间复杂度、最差复杂度、最好复杂度都是一样的。
+在排序过程中，如果数组元素不与排序规则一致，会导致大量元素交换。对于数组形式没有优化，如果元素以链表形式，那么可以将索引记住，在合适的地方才插入</p>
+<h3 id="希尔排序">希尔排序</h3>
+<p>将整个待排序的记录序列分割成为若干个子序列分别进行直接插入排序
+错误实现：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func shellSort(array []int) {
+    length := len(array)
+    d := length / 2
+    for ; d &gt; 0; d /= 2 {
+    	i := d
+    	for ; i &lt; length; i += d {
+    		j := i - d
+    		for ; j &gt;=0; j -=d {
+    			if array[j] &gt; array[j+d] {
+    				array[j], array[j+d] = array[j+d], array[j]
+    			}
+    		}
+    	}
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>上述实现仅是在插入排序前增加了部分元素的交换，没有运用到分组思想
+正确实现：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func shellSort(array []int) {
+    length := len(array)
+    d := length / 2
+    for ; d &gt; 0; d /= 2 {
+    	i := d
+    	for ; i &lt; length; i ++ {
+    		j := i - d
+    		for ; j &gt;=0; j -=d {
+    			if array[j] &gt; array[j+d] {
+    				array[j], array[j+d] = array[j+d], array[j]
+    			}
+    		}
+    	}
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="选择排序">选择排序</h3>
+<pre><code>在一个序列中搜索最小的数，在排除此数的序列中搜索最小的数，如此反复
+```
+func selectSort(array []int) {
+    length := len(array)
+    for i := 0; i &lt; length; i++ {
+        minIndex := i
+        for j := i+1; j &lt; length; j++ {
+            if array[minIndex] &gt; array[j] {
+                minIndex = j
+            }
+        }
+        array[i], array[minIndex] = array[minIndex], array[i] }
+}
+```
+选择排序是不稳定的，在交换时相对顺序会更改，例如序列(5, 5, 2, 3)
+</code></pre>
+<h3 id="堆排序">堆排序</h3>
+<h3 id="2-路归并排序">2-路归并排序</h3>
+<p>归并排序时一个分治法典型应用，将已有序的子序列合并，得到完全有序的序列。
+将长度为n的输入序列分成两个长度为n/2的子序列；对这两个子序列分别采用归并排序；将两个排序好的子序列合并成一个最终的序列
+边界条件确定：当子序列有且仅有一个元素时，直接返回子序列</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func merge(array []int, low, mid, high int) {
+	var tmp []int
+	i, j := low, mid
+	for ; i &lt;= mid &amp;&amp; j &lt;= high; {
+		if (array[i] &lt; array[j]) {
+			tmp = append(tmp, array[i])
+			i++
+		} else if (array[i] &gt; array[j]) {
+			tmp = append(tmp, array[j])
+			j++
+		} else {
+			tmp = append(tmp, array[i])
+			tmp = append(tmp, array[j])
+			i++
+			j++
+		}
+	}
+	if i &gt; mid {
+		tmp = append(tmp, array[j:]...)
+	}
+	if j &gt; high {
+		tmp = append(tmp, array[i:mid+1]...)
+	}
+	if high-low+1 != len(tmp) {
+		printArray(array)
+		println(low)
+		println(mid)
+		println(high)
+	}
+	for k := 0; k &lt; len(tmp); k++ {
+		array[low] = tmp[k]
+		low++
+	}
+}
+func mergeSort(array []int, low, high int) {
+	if low &gt;= high {
+		return
+	}
+	mid := (high + low) / 2
+	mergeSort(array, low, mid)
+	mergeSort(array, mid+1, high)
+	merge(array, low, mid, high)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>在第一遍实现时，没有注意到merge合并的条件必须时[low,mid]和[mid+1,high]</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func merge(array []int, low, mid, high int) {
+    var tmp []int
+    i, j := low, mid+1
+    for ; i &lt;= mid &amp;&amp; j &lt;= high; {
+		if (array[i] &lt; array[j]) {
+			tmp = append(tmp, array[i])
+			i++
+		} else if (array[i] &gt; array[j]) {
+			tmp = append(tmp, array[j])
+			j++
+		} else {
+			tmp = append(tmp, array[i])
+    			tmp = append(tmp, array[j])
+    			i++
+    			j++
+    		}
+    	}
+    	if i &gt; mid &amp;&amp; j &lt;= high{
+    		tmp = append(tmp, array[j:high+1]...)
+    	}
+    	if j &gt; high &amp;&amp; i &lt;= mid {
+    		tmp = append(tmp, array[i:mid+1]...)
+    	}
+    	fmt.Println(&#34;--------------------------------&#34;)
+    	fmt.Println(array[low:high+1])
+    	fmt.Println(low, mid, high)
+    	fmt.Println(tmp)
+    	fmt.Println(&#34;--------------------------------&#34;)
+    for k := 0; k &lt; len(tmp); k++ {
+    	array[low] = tmp[k]
+    	low++
+    }
+}   
+
+    func mergeSort(array []int, low, high int) {
+        if low &gt;= high {
+            return
+        }
+        mid := (high + low) / 2
+        mergeSort(array, low, mid)
+        mergeSort(array, mid+1, high)
+        merge(array, low, mid, high)
+    }
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="快速排序">快速排序</h3>
+<p>快速排序同样时运用分治法来排序。从序列中挑出一个元素，称为基准；小于基准值的元素放在左边，大于则放在右边，得到两个序列和一个基准值；对子序列做同样工作；当子序列仅有1个元素或0个时，结束</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func quicSort(array []int, l, r int) {
+    if l &gt;= r {
+	    return
+	}
+	i, j := l, r
+	pviot := array[l]
+	for ; i &lt;= j; {
+		for ; i &lt; j &amp;&amp; array[i] &lt;= pviot; i++ {
+		}
+		for ; i &lt; j &amp;&amp; array[j] &gt; pviot; j-- {
+		}
+		if i &lt; j {
+			array[i], array[j] = array[j], array[i]
+            i++
+		    j--
+		} else {
+			break
+		}
+		
+	}
+	array[i], array[l] = array[l], array[i]
+	fmt.Println(&#34;-------------------------------&#34;)
+	printArray(array)
+	fmt.Println(i, j, l, r)
+	fmt.Println(&#34;-------------------------------&#34;)
+	quicSort(array, l, i-1)
+	quicSort(array, i+1, r)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>上述算法思路：以pviot（array[l])为基准，从左找小于或等于pviot的数，找到后记下索引i值；从右找大于pviot的数,找到后记下索引j值；如果i &lt; j，那么交换i,j的值；如果 i找到或j找到，但另一个没有找到，此时i==j，跳出循环,将i,l对应值互换（显然，这一步时错误的，如果找到j但没找到i，互换后pviot值左边有一个比它大的数）。
+那么，找到索引i值，k := l, 将arr[k] = arr[i]; k = i，留下空位k，找到索引j值，arr[k] = arr[j]; k = j, 索引k一直在区间[i, j]中变动，直到i == j，此时 k == i,将 arr[k] = pviot。之后再快排左右两个子序列。(必须从右边寻找起，因为开始k起始值在左边)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func quicSort(array []int, l, r int) {
+	if l &gt;= r {
+		return
+	}
+	i, j := l, r
+	k := l
+	pviot := array[l]
+	fmt.Println(&#34;++++++++++++++++++++++++++++++++&#34;)
+	fmt.Println(i, j, k, pviot)
+	for ; i &lt; j; {
+		for ; i &lt; j &amp;&amp; array[j] &gt; pviot; j-- {
+		}
+		if i &lt; j {
+			array[k] = array[j]
+			k = j
+			j--
+		}
+		fmt.Println(array[l:r+1])
+		for ; i &lt; j &amp;&amp; array[i] &lt;= pviot; i++ {
+		}
+		if i &lt; j {
+			array[k] = array[i]
+			k = i
+			i++
+		}
+		fmt.Println(array[l:r+1])
+	}
+	fmt.Println(&#34;++++++++++++++++++++++++++++++++&#34;)
+	array[k] = pviot
+	fmt.Println(&#34;----------------------------&#34;)
+	fmt.Println(k, i, j)
+	fmt.Println(pviot)
+	printArray(array)
+	fmt.Println(&#34;----------------------------&#34;)
+	quicSort(array, l, k-1)
+	quicSort(array, k+1, r)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>上述算法{10, 4, 3}通过,{10, 4, 7,2, 13, 89, 4, 3}没有通。实验数据对比得出，k值变动并不会一直在区间[i,j]，这是因为每次交换数值时，k值会被移动到区间外，发现i &lt; j条件改为 i &lt; k可能可行，理论推导不可行，k值变动中会有如下情况{14, 89, 3}这个序列中k = 0, j = 2, 于是k, j 交换对应值, k=2,此时 元素89不能被移动到k值右边。脑已经有些乱了，推倒重新开始实现</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func quickSort(arr []int, left, right int) {
+	if left &gt;= right {
+		return
+	}
+	//分子序列
+	pviot := arr[left]
+	i, j := left+1, right
+	for ;i &lt; j; {
+		for ; i &lt; j &amp;&amp; arr[i] &lt;= pviot; i++ {
+		}
+		for ; i &lt; j &amp;&amp; arr[j] &gt; pviot; j-- {
+		}
+		if i &lt; j {
+			arr[i], arr[j] = arr[j], arr[i]
+			i++
+			j--
+		}
+	}
+	if arr[i] &lt;= pviot {
+		arr[left], arr[i] = arr[i], arr[left]
+	} else {
+		for k := left; k &lt; i-1-left; k++ {
+			arr[k] = arr[k+1]
+		}
+		i = i-1
+		arr[i] = pviot
+	}
+	quickSort(arr, left, i-1)
+	quickSort(arr, i+1, right)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>上述实现正确，但i==j这个元素处理会导致过多的数组移动，能否在一开始就将数组移动，那么必须利用空位pviot</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">k := left
+for ;i &lt; j; {
+	for ; i &lt; j &amp;&amp; arr[i] &lt;= pviot; i++ {
+	}
+	for ; i &lt; j &amp;&amp; arr[j] &gt; pviot; j-- {
+	}
+	if i &lt; j {
+		arr[k] = arr[j]
+		arr[j] = arr[i]
+		k = i
+		i++
+		j--
+	}
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>使用k表示空位索引，如果从左找起，找到的i==j值远离k，一样存在区间[k, i]的移动；所以需要从右开始找起,同样会存在[k, i]区间，那么从一遍找起</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func quickSort(arr []int, left, right int) {
+	if left &gt;= right {
+		return
+	}
+	//分子序列
+	pviot := arr[right]
+	i := left-1
+	for j := left; j &lt;= right-1; j++ {
+		if arr[j] &lt; pviot {
+			i++
+			arr[i], arr[j] = arr[j], arr[i]
+		}
+	}
+	arr[i+1], arr[right] = arr[right], arr[i+1]
+	quickSort(arr, left, i)
+	quickSort(arr, i+2, right)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>上述实现如果将pviot := arr[left], j := left+1，此实现如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func quickSort(arr []int, left, right int) {
+	if left &gt;= right {
+		return
+	}
+	//分子序列
+	pviot := arr[left]
+	i := left
+	for j := left+1; j &lt;= right; j++ {
+		if arr[j] &lt; pviot {
+			i++
+			arr[i], arr[j] = arr[j], arr[i]
+		}
+	}
+	arr[i+1], arr[left] = arr[left], arr[i+1]
+	quickSort(arr, left, i)
+	quickSort(arr, i+2, right)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>i+1 这一步有可能 i == right,导致数组溢出</p>
+<h3 id="20201214">20201214</h3>
+<ul>
+<li>
+<p>插入排序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void insertSort(int arr[], int n) {
+    for(int i = 0; i &lt; n-1; i++) {
+        int j = i;
+        int tmp = arr[j+1];
+        for(; j &gt;= 0; j--) {
+            if(tmp &gt;= arr[j]) {
+                break;
+            }
+            arr[j+1] = arr[j];
+        }
+        arr[j+1] = tmp;
+        print(arr, n);
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>归并排序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void merge(int arr[], int low, int mid, int high) {
+    int *tmp = new int[high-low+1];
+    int i = low, j = mid + 1;
+    int k = 0;
+    for(; i &lt;= mid &amp;&amp; j &lt;= high;) {
+        if(arr[i] &lt; arr[j]) {
+            tmp[k++] = arr[i++];
+        } else if(arr[i] &gt; arr[j]) {
+            tmp[k++] = arr[j++];
+        } else {
+            tmp[k++] = arr[i++];
+            tmp[k++] = arr[j++];
+        }
+    }
+
+    while(i &lt;= mid) {
+        tmp[k++] = arr[i++];
+    }
+
+    for(int i = low, j = 0; j &lt; k; i++,j++) {
+        arr[i] = tmp[j];
+    }
+}
+
+void mergeSort(int arr[], int low, int high) {
+    if(low &gt;= high) {
+        return;
+    }
+    int mid = low + (high - low)/2;
+    mergeSort(arr, low, mid);
+    mergeSort(arr, mid+1, high);
+    merge(arr, low, mid, high);
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>快速排序</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void Qsort(int arr[], int low, int high) {
+    if(high &lt;= low) return;
+    int i = low, j = high + 1;
+    int key = arr[low];
+
+    while(true) {
+        while(arr[++i] &lt; key) {
+            if (i == high) {
+                break;
+            }
+        }
+
+        while(arr[--j] &gt; key) {
+            if(j == low) {
+                break;
+            }
+        }
+        if(i &gt;= j) {
+            break;
+        }
+        swap(arr[i], arr[j]);
+    }
+    swap(arr[j], arr[low]);
+    Qsort(arr, low, j-1);
+    Qsort(arr, j+1, high);
+}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>冒泡排序</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void bulbSort(int arr[], int n) {
+    int i = 0;
+    int len = n-1;
+    for(; i &lt; n; i++) {
+        int flag = true;
+        int tmp;
+        for(int j = 0; j &lt; len; j++) {
+            if(arr[j] &gt; arr[j+1]) {
+                swap(arr[j], arr[j+1]);
+                flag = false;
+                tmp = j;
+            }
+        }
+        len = tmp;
+        if(flag) {
+            break;
+        }
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>基数排序</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">void radixSort(int *arr, int n) {
+    int maxBit = 2;
+    for(int i = 0; i &lt; maxBit; i++) {
+        int buf[10][100] = {0};
+        int pow = 1;
+        for(int j = 0 ; j &lt; i; j++) {
+            pow *= 10;
+        }
+        for(int i = 0; i &lt; n; i++) {
+            int index = (arr[i] / pow) % 10;
+            for (int j = 0; j &lt; 100; j++) {
+                if (buf[index][j] == 0) {
+                    buf[index][j] = arr[i];
+                    break;
+                }
+            }
+        }
+
+        for(int i = 9, k = 0; i &gt;= 0; i--) {
+            for(int j = 0; j &lt; 100; j++) {
+                if(buf[i][j] != 0) {
+                    arr[k++] = buf[i][j];
+                }
+            }
+        }
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="reference">Reference</h3>
+<ul>
+<li>十大经典排序算法(动图演示): <a href="https://www.cnblogs.com/onepixel/articles/7674659.html">https://www.cnblogs.com/onepixel/articles/7674659.html</a></li>
+<li>冒泡排序的改进: <a href="https://blog.csdn.net/tjunxin/article/details/8711389">https://blog.csdn.net/tjunxin/article/details/8711389</a></li>
+<li>归并排序的递归和迭代解法：https://zhuanlan.zhihu.com/p/124356219</li>
+<li><a href="https://www.geeksforgeeks.org/quick-sort/">https://www.geeksforgeeks.org/quick-sort/</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-03-22
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/hashmap_in_golang/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">golang哈希表</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/binary_search/">
+            <span class="next-text nav-default">二分查找</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

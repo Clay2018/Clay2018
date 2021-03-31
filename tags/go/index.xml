@@ -6,7 +6,7 @@
     <description>Recent content in Go on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Dec 2020 21:05:24 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Dec 2020 21:05:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Channel在Go中运用</title>
       <link>http://localhost:1313/post/the_usage_of_channel_in_go/</link>
-      <pubDate>Thu, 10 Dec 2020 21:05:24 +0000</pubDate>
+      <pubDate>Thu, 10 Dec 2020 21:05:24 +0800</pubDate>
       
       <guid>http://localhost:1313/post/the_usage_of_channel_in_go/</guid>
       <description>basic usage of channel 使用channel发送接收 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 package main import &amp;#34;fmt&amp;#34; func main() { jobs := make(chan int, 5) done := make(chan bool) go func() { for { j, more</description>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>BTC devguide(3) - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="Operating Modes 比特币软件具有不同级别的安全性和权衡，以验证区块链 Introduction 当前，有两种主要的方法来验证区块链作为客户端：完整节点和SPV客户端。 由于不建议使用" /><meta name="keywords" content="blockchain" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/btc_devguide_3/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="BTC devguide(3)" />
+<meta property="og:description" content="Operating Modes 比特币软件具有不同级别的安全性和权衡，以验证区块链 Introduction 当前，有两种主要的方法来验证区块链作为客户端：完整节点和SPV客户端。 由于不建议使用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/btc_devguide_3/" />
+<meta property="article:published_time" content="2020-12-30T15:59:00+08:00" />
+<meta property="article:modified_time" content="2020-12-30T15:59:00+08:00" />
+<meta itemprop="name" content="BTC devguide(3)">
+<meta itemprop="description" content="Operating Modes 比特币软件具有不同级别的安全性和权衡，以验证区块链 Introduction 当前，有两种主要的方法来验证区块链作为客户端：完整节点和SPV客户端。 由于不建议使用">
+<meta itemprop="datePublished" content="2020-12-30T15:59:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-30T15:59:00&#43;08:00" />
+<meta itemprop="wordCount" content="2008">
+
+
+
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BTC devguide(3)"/>
+<meta name="twitter:description" content="Operating Modes 比特币软件具有不同级别的安全性和权衡，以验证区块链 Introduction 当前，有两种主要的方法来验证区块链作为客户端：完整节点和SPV客户端。 由于不建议使用"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">BTC devguide(3)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-12-30 </span>
+        <div class="post-category">
+            <a href="/categories/blockchain/"> blockchain </a>
+            </div>
+          <span class="more-meta"> 2008 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#operating-modes"><strong>Operating Modes</strong></a>
+      <ul>
+        <li><a href="#introduction"><strong>Introduction</strong></a></li>
+        <li><a href="#full-node">Full Node</a></li>
+        <li><a href="#simplified-payment-verificationspv"><strong>Simplified Payment Verification(SPV)</strong></a></li>
+        <li><a href="#bloom-filters"><strong>Bloom Filters</strong></a></li>
+        <li><a href="#p2p-network">P2P Network</a></li>
+        <li><a href="#reference"><strong>Reference</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="operating-modes"><strong>Operating Modes</strong></h2>
+<p>比特币软件具有不同级别的安全性和权衡，以验证区块链</p>
+<h3 id="introduction"><strong>Introduction</strong></h3>
+<p>当前，有两种主要的方法来验证区块链作为客户端：完整节点和SPV客户端。 由于不建议使用其他方法，例如服务器信任方法，因此不予讨论</p>
+<h3 id="full-node">Full Node</h3>
+<p>第一个也是最安全的模型，其次是Bitcoin Core，也就是“加厚型”或“全链”客户端。 该安全模型通过从创世区块一直下载到最新发现的区块并对其进行验证来确保区块链的有效性。 这被称为使用特定块的高度来验证客户端对网络的看法。</p>
+<p>为了使客户蒙骗，对手将需要给出完整的替代区块链历史记录，其历史难度要大于当前的“真实”链，这在计算上是昂贵的（如果不是不可能的话），原因是带有 根据定义，最累积的工作证明是“真实”链。 由于在链的最末端生成新块所需的计算难度，在经过6次确认后，使整个节点处于愚弄状态的能力变得非常昂贵。 这种形式的验证高度抵御sybil攻击-只需一个诚实的网络对等方即可接收和验证“真实”区块链的完整状态。</p>
+<p><img src="/image/btc_devguide_3/a.jpg" alt=""></p>
+<h3 id="simplified-payment-verificationspv"><strong>Simplified Payment Verification(SPV)</strong></h3>
+<p>原始比特币论文中详细介绍的另一种方法是，客户端仅在初始同步过程中下载块的标头，然后根据需要从完整节点请求交易。 这与块链的高度成线性关系，每个块头仅80字节，或者每年高达4.2MB（与块总大小无关）。</p>
+<p>如白皮书中所述，区块头中的merkle根以及merkle分支可以向SPV客户端证明所涉及的事务已嵌入到区块链中的一个区块中。 这不能保证所嵌入事务的有效性。 相反，它演示了执行双花攻击所需的工作量。</p>
+<p>区块链中区块的深度对应于在特定区块之上构建的累计难度。 SPV客户端知道merkle根和相关的交易信息，并从完整节点请求相应的merkle分支。 一旦检索到merkle分支，证明了该交易存在于区块中，SPV客户端便可以将区块深度视为交易有效性和安全性的代理。 插入无效交易的恶意节点对用户的攻击成本随着在该块之上构建的累积难度而增加，因为仅恶意节点将挖掘此伪造链</p>
+<h3 id="bloom-filters"><strong>Bloom Filters</strong></h3>
+<p>布隆过滤器是一种节省空间的概率数据结构，用于测试元素的成员资格。数据结构以规定的误报率为代价实现了很好的数据压缩。</p>
+<p>布隆过滤器以n位均设置为0的数组开始。选择了一组k个随机哈希函数，每个函数都输出一个介于1和n之间的整数。</p>
+<p>将元素添加到Bloom过滤器时，该元素将分别散列k次，并且对于k个输出中的每一个，该索引处的对应Bloom过滤器位都设置为1。</p>
+<p>通过使用与以前相同的哈希函数来查询Bloom筛选器。如果将在Bloom Bloom过滤器中访问的所有k位都设置为1，则很有可能证明该元素位于该集中。显然，可以通过在域中添加其他元素的组合将k个索引设置为1，但是参数允许用户选择可接受的误报率。</p>
+<p>元素的删除只能通过废弃Bloom Bloom过滤器并从头开始重新创建来完成</p>
+<h3 id="p2p-network">P2P Network</h3>
+<p>首次启动时，程序不知道任何活动的完整节点的IP地址。 为了发现一些IP地址，他们查询一个或多个硬编码到Bitcoin Core和BitcoinJ中的DNS名称（称为DNS种子）。 对查询的响应应包括一个或多个DNS A记录，其中包含可以接受新的传入连接的完整节点的IP地址</p>
+<p>DNS种子由比特币社区成员维护：其中一些提供动态DNS种子服务器，该服务器通过扫描网络自动获取活动节点的IP地址。其他提供静态的DNS种子，这些种子可以手动更新，并且更有可能为非活动节点提供IP地址。无论哪种情况，如果节点在默认的比特币端口（主网络8333或测试网络18333）上运行，都将添加到DNS种子中。</p>
+<p>DNS种子结果未经身份验证，恶意种子运营商或网络中间人攻击者只能返回由攻击者控制的节点的IP地址，从而隔离了攻击者自己网络上的程序，并允许攻击者提供虚假交易和块。因此，程序不应仅依赖DNS种子。</p>
+<p>一旦程序连接到网络，它的对等方就可以开始向其发送addr（地址）消息以及网络上其他对等方的IP地址和端口号，从而提供了一种完全分散的对等方发现方法。 Bitcoin Core在永久的磁盘数据库中保留了已知对等项的记录，该数据库通常允许它在后续启动中直接连接到那些对等项，而不必使用DNS种子。</p>
+<p>但是，对等方通常会离开网络或更改IP地址，因此在成功建立连接之前，程序可能需要在启动时进行几次不同的连接尝试。这会大大增加连接网络所需的时间，从而迫使用户在发送交易或检查付款状态之前要等待。</p>
+<p>为了避免这种可能的延迟，BitcoinJ始终使用动态DNS种子来获取被认为当前处于活动状态的节点的IP地址。比特币核心还试图在最小化延迟和避免不必要的DNS种子使用之间寻求平衡：如果比特币核心在其对等数据库中有条目，则它会花费长达11秒的时间尝试连接至少其中之一，然后再返回种子。如果在此时间内建立连接，则不会查询任何种子。</p>
+<p>比特币核心和比特币J都还包含到几十个节点的IP地址和端口号的硬编码列表，这些节点在该软件的特定版本首次发布时就处于活动状态。如果没有任何DNS种子服务器在60秒内响应查询，则Bitcoin Core将开始尝试连接到这些节点，并提供自动回退选项。</p>
+<h3 id="reference"><strong>Reference</strong></h3>
+<ul>
+<li><a href="https://developer.bitcoin.org/reference/index.html">https://developer.bitcoin.org/reference/index.html</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-12-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/deadlock_in_goroutine/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">一道关于gorotine的死锁问题</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/btc_devguide_2/">
+            <span class="next-text nav-default">BTC devguide(2)</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
