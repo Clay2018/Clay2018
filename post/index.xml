@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Apr 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 02 Apr 2021 01:01:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>golang中的defer</title>
+      <link>http://localhost:1313/post/defer_in_golang/</link>
+      <pubDate>Fri, 02 Apr 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/defer_in_golang/</guid>
+      <description>Reference defer分析: https://studygolang.com/articles/742</description>
+    </item>
+    
+    <item>
+      <title>golang中的error</title>
+      <link>http://localhost:1313/post/error_in_goalng/</link>
+      <pubDate>Fri, 02 Apr 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/error_in_goalng/</guid>
+      <description>Reference wrapp error解析: https://studygolang.com/articles/23346?fr=sidebar</description>
+    </item>
     
     <item>
       <title>golang中的select</title>
