@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>database on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/database/</link>
+    <description>Recent content in database on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Apr 2021 00:00:44 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>redis集锦</title>
+      <link>http://localhost:1313/post/redis/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/redis/</guid>
+      <description>Redis命令 redis命令目录: http://doc.redisfans.com/ Redis五种数据结构原理 redis数据结构: https://zhuanlan.zhihu.com/p/148562122 quicklist实现: https://blog.csdn.net/zwx900102/article/details109595508 https://i6448038.github.io/2019/12/01/redis-data-struct/ Redis用作分布式锁 https://www.jianshu.com/p/83224c0f3bb9 Re</description>
+    </item>
+    
+  </channel>
+</rss>
