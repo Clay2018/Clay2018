@@ -6,12 +6,17 @@
     <description>Recent content in Go on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+<<<<<<< HEAD
     <lastBuildDate>Fri, 02 Apr 2021 01:01:00 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Mon, 18 Jan 2021 21:05:24 +0800</lastBuildDate>
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
     
 	<atom:link href="http://localhost:1313/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>golang中的defer</title>
       <link>http://localhost:1313/post/defer_in_golang/</link>
       <pubDate>Fri, 02 Apr 2021 01:01:00 +0800</pubDate>
@@ -48,6 +53,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
       <title>一道关于gorotine的死锁问题</title>
       <link>http://localhost:1313/post/deadlock_in_goroutine/</link>
       <pubDate>Mon, 18 Jan 2021 21:05:24 +0800</pubDate>

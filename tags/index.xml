@@ -6,15 +6,79 @@
     <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+<<<<<<< HEAD
     <lastBuildDate>Thu, 15 Apr 2021 00:00:44 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Mon, 15 Mar 2021 14:47:44 +0800</lastBuildDate>
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
     
 	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>redis</title>
       <link>http://localhost:1313/tags/redis/</link>
       <pubDate>Thu, 15 Apr 2021 00:00:44 +0800</pubDate>
+=======
+      <title>tcp</title>
+      <link>http://localhost:1313/tags/tcp/</link>
+      <pubDate>Mon, 15 Mar 2021 14:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/tcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thread</title>
+      <link>http://localhost:1313/tags/thread/</link>
+      <pubDate>Mon, 15 Mar 2021 14:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/thread/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>http://localhost:1313/tags/network/</link>
+      <pubDate>Thu, 11 Mar 2021 14:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>http://localhost:1313/tags/algorithm/</link>
+      <pubDate>Fri, 05 Mar 2021 15:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>goroutine</title>
+      <link>http://localhost:1313/tags/goroutine/</link>
+      <pubDate>Mon, 18 Jan 2021 21:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/goroutine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encoding</title>
+      <link>http://localhost:1313/tags/encoding/</link>
+      <pubDate>Tue, 29 Dec 2020 10:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/encoding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/tags/go/</link>
+      <pubDate>Thu, 10 Dec 2020 21:05:24 +0800</pubDate>
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
       
       <guid>http://localhost:1313/tags/redis/</guid>
       <description></description>
@@ -48,6 +112,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>goroutine</title>
       <link>http://localhost:1313/tags/goroutine/</link>
       <pubDate>Mon, 18 Jan 2021 21:05:24 +0800</pubDate>
@@ -60,12 +125,18 @@
       <title>encoding</title>
       <link>http://localhost:1313/tags/encoding/</link>
       <pubDate>Tue, 29 Dec 2020 10:28:00 +0800</pubDate>
+=======
+      <title>blockchain</title>
+      <link>http://localhost:1313/tags/blockchain/</link>
+      <pubDate>Sun, 12 Jul 2020 21:49:52 +0800</pubDate>
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
       
       <guid>http://localhost:1313/tags/encoding/</guid>
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>celery</title>
       <link>http://localhost:1313/tags/celery/</link>
       <pubDate>Thu, 26 Nov 2020 15:57:23 +0800</pubDate>
@@ -75,6 +146,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
       <title>hugo</title>
       <link>http://localhost:1313/tags/hugo/</link>
       <pubDate>Sat, 04 Jul 2020 14:51:03 +0800</pubDate>

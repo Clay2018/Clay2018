@@ -6,12 +6,17 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+<<<<<<< HEAD
     <lastBuildDate>Thu, 15 Apr 2021 00:00:44 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Mon, 22 Mar 2021 00:00:44 +0800</lastBuildDate>
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>database</title>
       <link>http://localhost:1313/categories/database/</link>
       <pubDate>Thu, 15 Apr 2021 00:00:44 +0800</pubDate>
@@ -24,26 +29,53 @@
       <title>Go</title>
       <link>http://localhost:1313/categories/go/</link>
       <pubDate>Fri, 02 Apr 2021 01:01:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
+=======
       <title>algorithm</title>
       <link>http://localhost:1313/categories/algorithm/</link>
       <pubDate>Mon, 22 Mar 2021 00:00:44 +0800</pubDate>
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
       
       <guid>http://localhost:1313/categories/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
+      <title>algorithm</title>
+      <link>http://localhost:1313/categories/algorithm/</link>
+      <pubDate>Mon, 22 Mar 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/algorithm/</guid>
+=======
       <title>linux</title>
       <link>http://localhost:1313/categories/linux/</link>
       <pubDate>Mon, 15 Mar 2021 14:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/linux/</guid>
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD
+      <title>linux</title>
+      <link>http://localhost:1313/categories/linux/</link>
+=======
+      <title>network</title>
+      <link>http://localhost:1313/categories/network/</link>
+>>>>>>> 00fa1a2b15c03e4b19508931b60c150c5ef9f80e
+      <pubDate>Mon, 15 Mar 2021 14:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/categories/go/</link>
+      <pubDate>Mon, 18 Jan 2021 21:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/go/</guid>
       <description></description>
     </item>
     
