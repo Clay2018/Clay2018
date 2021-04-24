@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/design/</link>
+    <description>Recent content in design on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Apr 2021 01:47:44 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>分布式锁</title>
+      <link>http://localhost:1313/post/distributed_lock/</link>
+      <pubDate>Mon, 19 Apr 2021 01:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/distributed_lock/</guid>
+      <description>实现 分布式锁redis锁和zookeeper锁: https://mp.weixin.qq.com/s/lrSQBK-Kihkj6994kQFpUQ 未分类 企业级高可用分布式锁原理剖析及设计实践 分布式锁应用场景 掌握分布式锁设计核心要点 能够根</description>
+    </item>
+    
+  </channel>
+</rss>
