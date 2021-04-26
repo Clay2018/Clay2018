@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Even - A super concise theme for Hugo</title>
+    <title>go on Even - A super concise theme for Hugo</title>
     <link>http://localhost:1313/categories/go/</link>
-    <description>Recent content in Go on Even - A super concise theme for Hugo</description>
+    <description>Recent content in go on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Apr 2021 01:01:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 27 Apr 2021 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>golang中的context</title>
+      <link>http://localhost:1313/post/context_in_golang/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/context_in_golang/</guid>
+      <description>Reference: context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;amp;mid=2247486310&amp;amp;idx=1&amp;amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;amp;scene=21#wechat_redirect</description>
+    </item>
     
     <item>
       <title>golang中的defer</title>
