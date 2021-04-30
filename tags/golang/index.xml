@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/golang/</link>
+    <description>Recent content in golang on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 27 Apr 2021 00:00:44 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golang中的context</title>
+      <link>http://localhost:1313/post/context_in_golang/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/context_in_golang/</guid>
+      <description>Reference: context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;amp;mid=2247486310&amp;amp;idx=1&amp;amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;amp;scene=21#wechat_redirect</description>
+    </item>
+    
+    <item>
+      <title>golang中的defer</title>
+      <link>http://localhost:1313/post/defer_in_golang/</link>
+      <pubDate>Fri, 02 Apr 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/defer_in_golang/</guid>
+      <description>Reference defer分析: https://studygolang.com/articles/742</description>
+    </item>
+    
+    <item>
+      <title>golang中的error</title>
+      <link>http://localhost:1313/post/error_in_goalng/</link>
+      <pubDate>Fri, 02 Apr 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/error_in_goalng/</guid>
+      <description>Reference wrapp error解析: https://studygolang.com/articles/23346?fr=sidebar</description>
+    </item>
+    
+    <item>
+      <title>golang中的select</title>
+      <link>http://localhost:1313/post/select_in_golang/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/select_in_golang/</guid>
+      <description>Reference: select关键字: https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-select/</description>
+    </item>
+    
+    <item>
+      <title>Channel在Go中运用</title>
+      <link>http://localhost:1313/post/the_usage_of_channel_in_go/</link>
+      <pubDate>Thu, 10 Dec 2020 21:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/the_usage_of_channel_in_go/</guid>
+      <description>basic usage of channel 使用channel发送接收 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 package main import &amp;#34;fmt&amp;#34; func main() { jobs := make(chan int, 5) done := make(chan bool) go func() { for { j, more</description>
+    </item>
+    
+  </channel>
+</rss>

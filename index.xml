@@ -6,10 +6,19 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Apr 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Apr 2021 01:01:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>write an rpc from scratch</title>
+      <link>http://localhost:1313/post/write_an_rpc_from_scratch/</link>
+      <pubDate>Fri, 30 Apr 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/write_an_rpc_from_scratch/</guid>
+      <description>Reference  write an rpc from scratch: https://alexanderell.is/posts/rpc-from-scratch/  </description>
+    </item>
     
     <item>
       <title>golang中的context</title>

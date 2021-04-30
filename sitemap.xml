@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/write_an_rpc_from_scratch/</loc>
+    <lastmod>2021-04-30T01:01:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/context_in_golang/</loc>
     <lastmod>2021-04-27T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -171,27 +178,55 @@
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-04-27T00:00:44+08:00</lastmod>
+    <lastmod>2021-04-30T01:01:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/communication/</loc>
+    <lastmod>2021-04-30T01:01:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2021-04-27T00:00:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/go/</loc>
-    <lastmod>2021-04-27T00:00:44+08:00</lastmod>
+    <lastmod>2021-04-30T01:01:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
+    <lastmod>2021-04-30T01:01:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/rpc/</loc>
+    <lastmod>2021-04-30T01:01:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2021-04-30T01:01:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/golang/</loc>
+    <lastmod>2021-04-27T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/language/</loc>
     <lastmod>2021-04-27T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -213,13 +248,6 @@
   
   <url>
     <loc>http://localhost:1313/tags/redis/</loc>
-    <lastmod>2021-04-19T01:47:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2021-04-19T01:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -275,6 +303,13 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/categories/go/</loc>
+    <lastmod>2021-01-18T21:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/tags/goroutine/</loc>
     <lastmod>2021-01-18T21:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -297,13 +332,6 @@
   
   <url>
     <loc>http://localhost:1313/tags/celery/</loc>
-    <lastmod>2020-11-26T15:57:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/python/</loc>
     <lastmod>2020-11-26T15:57:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
