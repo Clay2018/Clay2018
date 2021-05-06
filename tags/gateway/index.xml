@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gateway on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/gateway/</link>
+    <description>Recent content in gateway on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 May 2021 00:00:44 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/gateway/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>microservice</title>
+      <link>http://localhost:1313/post/microservice_gateway/</link>
+      <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/microservice_gateway/</guid>
+      <description>Resources  https://mp.weixin.qq.com/s/So_HYu90vGcvE4qU5D9m4g  </description>
+    </item>
+    
+  </channel>
+</rss>
