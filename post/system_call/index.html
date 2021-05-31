@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>microservice - Even - A super concise theme for Hugo</title>
+  <title>System Call - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Resources  https://mp.weixin.qq.com/s/So_HYu90vGcvE4qU5D9m4g  " /><meta name="keywords" content="gateway" />
+<meta name="author" content="Clayton" /><meta name="description" content="Resource 系统调用原理和实现: https://blog.csdn.net/gatieme/article/details/50779184 用户态模式和内核态模式区分: https://blog.csdn.net/github_37382319/article/details/111833529 增加系统调用的方法: https://www.cnblogs.com/yongheng20/p/4947702.html vdso技术: https://lishiwen4.github.io/linux/vdso-and-syscall" /><meta name="keywords" content="systemcall" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/microservice_gateway/" />
+<link rel="canonical" href="http://localhost:1313/post/system_call/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="microservice" />
-<meta property="og:description" content="Resources  https://mp.weixin.qq.com/s/So_HYu90vGcvE4qU5D9m4g  " />
+<meta property="og:title" content="System Call" />
+<meta property="og:description" content="Resource 系统调用原理和实现: https://blog.csdn.net/gatieme/article/details/50779184 用户态模式和内核态模式区分: https://blog.csdn.net/github_37382319/article/details/111833529 增加系统调用的方法: https://www.cnblogs.com/yongheng20/p/4947702.html vdso技术: https://lishiwen4.github.io/linux/vdso-and-syscall" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/microservice_gateway/" />
-<meta property="article:published_time" content="2021-05-06T00:00:44+08:00" />
-<meta property="article:modified_time" content="2021-05-06T00:00:44+08:00" />
-<meta itemprop="name" content="microservice">
-<meta itemprop="description" content="Resources  https://mp.weixin.qq.com/s/So_HYu90vGcvE4qU5D9m4g  ">
-<meta itemprop="datePublished" content="2021-05-06T00:00:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-05-06T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="2">
+<meta property="og:url" content="http://localhost:1313/post/system_call/" />
+<meta property="article:published_time" content="2021-05-29T00:00:44+08:00" />
+<meta property="article:modified_time" content="2021-05-29T00:00:44+08:00" />
+<meta itemprop="name" content="System Call">
+<meta itemprop="description" content="Resource 系统调用原理和实现: https://blog.csdn.net/gatieme/article/details/50779184 用户态模式和内核态模式区分: https://blog.csdn.net/github_37382319/article/details/111833529 增加系统调用的方法: https://www.cnblogs.com/yongheng20/p/4947702.html vdso技术: https://lishiwen4.github.io/linux/vdso-and-syscall">
+<meta itemprop="datePublished" content="2021-05-29T00:00:44&#43;08:00" />
+<meta itemprop="dateModified" content="2021-05-29T00:00:44&#43;08:00" />
+<meta itemprop="wordCount" content="46">
 
 
 
-<meta itemprop="keywords" content="gateway," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="microservice"/>
-<meta name="twitter:description" content="Resources  https://mp.weixin.qq.com/s/So_HYu90vGcvE4qU5D9m4g  "/>
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="System Call"/>
+<meta name="twitter:description" content="Resource 系统调用原理和实现: https://blog.csdn.net/gatieme/article/details/50779184 用户态模式和内核态模式区分: https://blog.csdn.net/github_37382319/article/details/111833529 增加系统调用的方法: https://www.cnblogs.com/yongheng20/p/4947702.html vdso技术: https://lishiwen4.github.io/linux/vdso-and-syscall"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,14 +118,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">microservice</h1>
+      <h1 class="post-title">System Call</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-05-06 </span>
+        <span class="post-time"> 2021-05-29 </span>
         <div class="post-category">
-            <a href="/categories/system_design/"> system_design </a>
+            <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 2 words </span>
+          <span class="more-meta"> 46 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -138,7 +138,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#resources">Resources</a></li>
+        <li><a href="#resource">Resource</a></li>
       </ul>
     </li>
   </ul>
@@ -146,9 +146,12 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="resources">Resources</h3>
+      <h3 id="resource">Resource</h3>
 <ul>
-<li><a href="https://mp.weixin.qq.com/s/So_HYu90vGcvE4qU5D9m4g">https://mp.weixin.qq.com/s/So_HYu90vGcvE4qU5D9m4g</a></li>
+<li>系统调用原理和实现: <a href="https://blog.csdn.net/gatieme/article/details/50779184">https://blog.csdn.net/gatieme/article/details/50779184</a></li>
+<li>用户态模式和内核态模式区分: <a href="https://blog.csdn.net/github_37382319/article/details/111833529">https://blog.csdn.net/github_37382319/article/details/111833529</a></li>
+<li>增加系统调用的方法: <a href="https://www.cnblogs.com/yongheng20/p/4947702.html">https://www.cnblogs.com/yongheng20/p/4947702.html</a></li>
+<li>vdso技术: <a href="https://lishiwen4.github.io/linux/vdso-and-syscall">https://lishiwen4.github.io/linux/vdso-and-syscall</a></li>
 </ul>
 
     </div>
@@ -161,7 +164,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-05-06
+        2021-05-29
         
     </span>
   </p>
@@ -184,16 +187,16 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/gateway/">gateway</a>
+          <a href="/tags//"></a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/system_call/">
+        <a class="prev" href="/post/virtual_address/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">System Call</span>
+            <span class="prev-text nav-default">虚拟内存</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/mysql/">
-            <span class="next-text nav-default">MySQL</span>
+        <a class="next" href="/post/microservice_gateway/">
+            <span class="next-text nav-default">microservice</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
