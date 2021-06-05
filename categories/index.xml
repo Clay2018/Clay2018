@@ -21,11 +21,11 @@
     </item>
     
     <item>
-      <title>datebase</title>
-      <link>http://localhost:1313/categories/datebase/</link>
+      <title>database</title>
+      <link>http://localhost:1313/categories/database/</link>
       <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
       
-      <guid>http://localhost:1313/categories/datebase/</guid>
+      <guid>http://localhost:1313/categories/database/</guid>
       <description></description>
     </item>
     
@@ -62,15 +62,6 @@
       <pubDate>Mon, 19 Apr 2021 01:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>database</title>
-      <link>http://localhost:1313/categories/database/</link>
-      <pubDate>Thu, 15 Apr 2021 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/database/</guid>
       <description></description>
     </item>
     
