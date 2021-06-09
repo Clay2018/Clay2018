@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 31 May 2021 00:05:24 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Jun 2021 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blockchain</title>
+      <link>http://localhost:1313/categories/blockchain/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>language</title>
+      <link>http://localhost:1313/categories/language/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/language/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>linux</title>
@@ -48,24 +66,6 @@
     </item>
     
     <item>
-      <title>language</title>
-      <link>http://localhost:1313/categories/language/</link>
-      <pubDate>Tue, 27 Apr 2021 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/language/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>design</title>
-      <link>http://localhost:1313/categories/design/</link>
-      <pubDate>Mon, 19 Apr 2021 01:47:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>algorithm</title>
       <link>http://localhost:1313/categories/algorithm/</link>
       <pubDate>Mon, 22 Mar 2021 00:00:44 +0800</pubDate>
@@ -80,24 +80,6 @@
       <pubDate>Mon, 15 Mar 2021 14:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>http://localhost:1313/categories/go/</link>
-      <pubDate>Mon, 18 Jan 2021 21:05:24 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blockchain</title>
-      <link>http://localhost:1313/categories/blockchain/</link>
-      <pubDate>Wed, 30 Dec 2020 15:59:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/blockchain/</guid>
       <description></description>
     </item>
     

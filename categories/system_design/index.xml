@@ -29,5 +29,14 @@
       <description>Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651962050&amp;amp;idx=1&amp;amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了,怎样解决: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651964475&amp;amp;idx=1&amp;amp;sn=e452b648f52cb9a5deb711334b0bb354&amp;amp;chksm=bd2d71e78a5af8f163e7af84855a523e847732be4ba486f68a55a4a153764096b38cb60221e9&amp;amp;scene=21#wechat_redirect</description>
     </item>
     
+    <item>
+      <title>分布式锁</title>
+      <link>http://localhost:1313/post/distributed_lock/</link>
+      <pubDate>Mon, 19 Apr 2021 01:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/distributed_lock/</guid>
+      <description>实现 分布式锁redis锁和zookeeper锁: https://mp.weixin.qq.com/s/lrSQBK-Kihkj6994kQFpUQ 未分类 企业级高可用分布式锁原理剖析及设计实践 分布式锁应用场景 掌握分布式锁设计核心要点 能够根</description>
+    </item>
+    
   </channel>
 </rss>

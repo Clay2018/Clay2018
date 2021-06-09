@@ -6,10 +6,19 @@
     <description>Recent content in language on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Apr 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Jun 2021 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/language/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go中的内存分配</title>
+      <link>http://localhost:1313/post/new_and_malloc_in_go/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/new_and_malloc_in_go/</guid>
+      <description>Resource Go内存管理: https://mp.weixin.qq.com/s/PNRhtdS_gZVTtrkkRmx7yA</description>
+    </item>
     
     <item>
       <title>golang中的context</title>
@@ -54,6 +63,15 @@
       
       <guid>http://localhost:1313/post/hashmap_in_golang/</guid>
       <description>Reference 理解Golang哈希表的原理： https://juejin.cn/post/6844903793927143438 golang哈希表： https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-hashmap/ golang的for-range(哈希表的遍历): https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-for-range/</description>
+    </item>
+    
+    <item>
+      <title>一道关于gorotine的死锁问题</title>
+      <link>http://localhost:1313/post/deadlock_in_goroutine/</link>
+      <pubDate>Mon, 18 Jan 2021 21:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/deadlock_in_goroutine/</guid>
+      <description>一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { ch := make(chan int) go fmt.Println(&amp;lt;-ch) ch &amp;lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关</description>
     </item>
     
     <item>
