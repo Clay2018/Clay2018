@@ -16,6 +16,7 @@
   </url>
   
   <url>
+<<<<<<< HEAD
     <loc>http://localhost:1313/post/virtual_address/</loc>
     <lastmod>2021-05-31T00:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,6 +24,8 @@
   </url>
   
   <url>
+=======
+>>>>>>> 360f7c464ed869b1d6e9401a0dc8a950a918ea73
     <loc>http://localhost:1313/post/system_call/</loc>
     <lastmod>2021-05-29T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -249,6 +252,8 @@
   <url>
     <loc>http://localhost:1313/categories/language/</loc>
     <lastmod>2021-06-05T00:00:44+08:00</lastmod>
+<<<<<<< HEAD
+=======
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -262,7 +267,39 @@
   
   <url>
     <loc>http://localhost:1313/categories/linux/</loc>
+    <lastmod>2021-05-29T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/database/</loc>
+    <lastmod>2021-05-06T00:00:44+08:00</lastmod>
+>>>>>>> 360f7c464ed869b1d6e9401a0dc8a950a918ea73
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+<<<<<<< HEAD
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2021-06-05T00:00:44+08:00</lastmod>
+=======
+    <loc>http://localhost:1313/tags/gateway/</loc>
+    <lastmod>2021-05-06T00:00:44+08:00</lastmod>
+>>>>>>> 360f7c464ed869b1d6e9401a0dc8a950a918ea73
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+<<<<<<< HEAD
+    <loc>http://localhost:1313/categories/linux/</loc>
     <lastmod>2021-05-31T00:05:24+08:00</lastmod>
+=======
+    <loc>http://localhost:1313/tags/mysql/</loc>
+    <lastmod>2021-05-06T00:00:44+08:00</lastmod>
+>>>>>>> 360f7c464ed869b1d6e9401a0dc8a950a918ea73
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -303,6 +340,7 @@
   </url>
   
   <url>
+<<<<<<< HEAD
     <loc>http://localhost:1313/categories/communication/</loc>
     <lastmod>2021-04-30T01:01:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -312,6 +350,10 @@
   <url>
     <loc>http://localhost:1313/tags/rpc/</loc>
     <lastmod>2021-04-30T01:01:00+08:00</lastmod>
+=======
+    <loc>http://localhost:1313/categories/design/</loc>
+    <lastmod>2021-04-19T01:47:44+08:00</lastmod>
+>>>>>>> 360f7c464ed869b1d6e9401a0dc8a950a918ea73
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -380,6 +422,7 @@
   </url>
   
   <url>
+<<<<<<< HEAD
     <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2020-07-04T14:51:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -389,6 +432,10 @@
   <url>
     <loc>http://localhost:1313/tags/hugo2/</loc>
     <lastmod>2020-07-04T14:51:03+08:00</lastmod>
+=======
+    <loc>http://localhost:1313/tags/encoding/</loc>
+    <lastmod>2020-12-29T10:28:00+08:00</lastmod>
+>>>>>>> 360f7c464ed869b1d6e9401a0dc8a950a918ea73
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -414,6 +461,18 @@
   
   <url>
     <loc>http://localhost:1313/post/tcp_kernel_optimize_option/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/brownie_use/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/btc_address/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
