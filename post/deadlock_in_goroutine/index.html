@@ -53,7 +53,7 @@
 
 
 
-<meta itemprop="keywords" content="goroutine," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="一道关于gorotine的死锁问题"/>
 <meta name="twitter:description" content="一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { ch := make(chan int) go fmt.Println(&lt;-ch) ch &lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关"/>
 
@@ -123,7 +123,7 @@
       <div class="post-meta">
         <span class="post-time"> 2021-01-18 </span>
         <div class="post-category">
-            <a href="/categories/go/"> Go </a>
+            <a href="/categories/language/"> language </a>
             </div>
           <span class="more-meta"> 385 words </span>
           <span class="more-meta"> 1 min read </span>
@@ -288,7 +288,7 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/goroutine/">goroutine</a>
+          <a href="/tags/golang/">golang</a>
           </div>
       <nav class="post-nav">
         <a class="prev" href="/post/huffman_coding/">

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Jun 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jun 2021 14:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Upgradable Contract</title>
+      <link>http://localhost:1313/post/upgradable_contract/</link>
+      <pubDate>Mon, 14 Jun 2021 14:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/upgradable_contract/</guid>
+      <description>Resource  https://www.dtmao.cc/news_show_1340999.shtml  </description>
+    </item>
     
     <item>
       <title>brownie</title>
@@ -27,6 +36,15 @@
       
       <guid>http://localhost:1313/post/new_and_malloc_in_go/</guid>
       <description>Resource Go内存管理: https://mp.weixin.qq.com/s/PNRhtdS_gZVTtrkkRmx7yA</description>
+    </item>
+    
+    <item>
+      <title>Virtual memory</title>
+      <link>http://localhost:1313/post/virtual_address/</link>
+      <pubDate>Mon, 31 May 2021 00:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/virtual_address/</guid>
+      <description>Resource 虚拟内存: https://mp.weixin.qq.com/s/g5I7un3-lpffAk6UFes8DA</description>
     </item>
     
     <item>
@@ -306,6 +324,15 @@
       
       <guid>http://localhost:1313/post/btc_address/</guid>
       <description>btc地址生成 1 2 3 4 5 6 7 8 9 Get you public key Perform Sha256 on your Public key Perform RIPEMD160 hashing on the result of Sha256 hash Add version byte in front of RIPEMD160 hash (0x00 for main net, 0x6f for testnet) Perform Sha256 hash on the extended RIPEMD160 hash Perform Sha256 hash on the result of the previous step Take the</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/tcp_kernel_optimize_option/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/tcp_kernel_optimize_option/</guid>
+      <description>请求url</description>
     </item>
     
   </channel>
