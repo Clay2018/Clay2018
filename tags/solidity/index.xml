@@ -6,10 +6,19 @@
     <description>Recent content in solidity on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Jun 2021 14:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jun 2021 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/solidity/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Inheritance in solidity</title>
+      <link>http://localhost:1313/post/inheritance_in_solidity/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/inheritance_in_solidity/</guid>
+      <description>Reference 菱形继承问题: https://me.tryblockchain.org/blockchain-solidity-multi-inherit-and-call-chain.html</description>
+    </item>
     
     <item>
       <title>Upgradable Contract</title>
@@ -17,7 +26,7 @@
       <pubDate>Mon, 14 Jun 2021 14:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/upgradable_contract/</guid>
-      <description>Resource  https://www.dtmao.cc/news_show_1340999.shtml  </description>
+      <description>Resource 可升级合约: https://www.dtmao.cc/news_show_1340999.shtml 如何实现可升级合约: https://juejin.cn/post/6844903685776998407</description>
     </item>
     
   </channel>
