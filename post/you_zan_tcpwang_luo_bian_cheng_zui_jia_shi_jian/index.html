@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Inheritance in solidity - Even - A super concise theme for Hugo</title>
+  <title>有赞TCP网络编程最佳实践 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Reference 菱形继承问题: https://me.tryblockchain.org/blockchain-solidity-multi-inherit-and-call-chain.html" /><meta name="keywords" content="inheritance, solidity" />
+<meta name="author" content="Clayton" /><meta name="description" content="Reference https://tech.youzan.com/you-zan-tcpwang-luo-bian-cheng-zui-jia-shi-jian/?hmsr=toutiao.io&amp;amp;utm_campaign=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io" /><meta name="keywords" content="tcp" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/inheritance_in_solidity/" />
+<link rel="canonical" href="http://localhost:1313/post/you_zan_tcpwang_luo_bian_cheng_zui_jia_shi_jian/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Inheritance in solidity" />
-<meta property="og:description" content="Reference 菱形继承问题: https://me.tryblockchain.org/blockchain-solidity-multi-inherit-and-call-chain.html" />
+<meta property="og:title" content="有赞TCP网络编程最佳实践" />
+<meta property="og:description" content="Reference https://tech.youzan.com/you-zan-tcpwang-luo-bian-cheng-zui-jia-shi-jian/?hmsr=toutiao.io&amp;utm_campaign=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/inheritance_in_solidity/" />
-<meta property="article:published_time" content="2021-06-15T00:00:44+08:00" />
-<meta property="article:modified_time" content="2021-06-15T00:00:44+08:00" />
-<meta itemprop="name" content="Inheritance in solidity">
-<meta itemprop="description" content="Reference 菱形继承问题: https://me.tryblockchain.org/blockchain-solidity-multi-inherit-and-call-chain.html">
-<meta itemprop="datePublished" content="2021-06-15T00:00:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-06-15T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="9">
+<meta property="og:url" content="http://localhost:1313/post/you_zan_tcpwang_luo_bian_cheng_zui_jia_shi_jian/" />
+<meta property="article:published_time" content="2021-06-22T01:01:00+08:00" />
+<meta property="article:modified_time" content="2021-06-22T01:01:00+08:00" />
+<meta itemprop="name" content="有赞TCP网络编程最佳实践">
+<meta itemprop="description" content="Reference https://tech.youzan.com/you-zan-tcpwang-luo-bian-cheng-zui-jia-shi-jian/?hmsr=toutiao.io&amp;utm_campaign=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io">
+<meta itemprop="datePublished" content="2021-06-22T01:01:00&#43;08:00" />
+<meta itemprop="dateModified" content="2021-06-22T01:01:00&#43;08:00" />
+<meta itemprop="wordCount" content="2">
 
 
 
-<meta itemprop="keywords" content="solidity," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Inheritance in solidity"/>
-<meta name="twitter:description" content="Reference 菱形继承问题: https://me.tryblockchain.org/blockchain-solidity-multi-inherit-and-call-chain.html"/>
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="有赞TCP网络编程最佳实践"/>
+<meta name="twitter:description" content="Reference https://tech.youzan.com/you-zan-tcpwang-luo-bian-cheng-zui-jia-shi-jian/?hmsr=toutiao.io&amp;utm_campaign=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,14 +118,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Inheritance in solidity</h1>
+      <h1 class="post-title">有赞TCP网络编程最佳实践</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-06-15 </span>
+        <span class="post-time"> 2021-06-22 </span>
         <div class="post-category">
-            <a href="/categories/blockchain/"> blockchain </a>
+            <a href="/categories/network/"> network </a>
             </div>
-          <span class="more-meta"> 9 words </span>
+          <span class="more-meta"> 2 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -148,7 +148,7 @@
     <div class="post-content">
       <h3 id="reference">Reference</h3>
 <ul>
-<li>菱形继承问题: <a href="https://me.tryblockchain.org/blockchain-solidity-multi-inherit-and-call-chain.html">https://me.tryblockchain.org/blockchain-solidity-multi-inherit-and-call-chain.html</a></li>
+<li><a href="https://tech.youzan.com/you-zan-tcpwang-luo-bian-cheng-zui-jia-shi-jian/?hmsr=toutiao.io&amp;utm_campaign=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io">https://tech.youzan.com/you-zan-tcpwang-luo-bian-cheng-zui-jia-shi-jian/?hmsr=toutiao.io&amp;utm_campaign=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io</a></li>
 </ul>
 
     </div>
@@ -161,7 +161,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-06-15
+        2021-06-22
         
     </span>
   </p>
@@ -184,16 +184,12 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/solidity/">solidity</a>
+          <a href="/tags//"></a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/you_zan_tcpwang_luo_bian_cheng_zui_jia_shi_jian/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">有赞TCP网络编程最佳实践</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/upgradable_contract/">
-            <span class="next-text nav-default">Upgradable Contract</span>
+        
+        <a class="next" href="/post/inheritance_in_solidity/">
+            <span class="next-text nav-default">Inheritance in solidity</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
