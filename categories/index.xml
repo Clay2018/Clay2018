@@ -6,15 +6,43 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+<<<<<<< HEAD
     <lastBuildDate>Sun, 27 Jun 2021 00:47:44 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Tue, 22 Jun 2021 01:01:00 +0800</lastBuildDate>
+>>>>>>> c6c648b150133865426c074038cbe3b54705def6
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>career</title>
       <link>http://localhost:1313/categories/career/</link>
       <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
+=======
+      <title>network</title>
+      <link>http://localhost:1313/categories/network/</link>
+      <pubDate>Tue, 22 Jun 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blockchain</title>
+      <link>http://localhost:1313/categories/blockchain/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>language</title>
+      <link>http://localhost:1313/categories/language/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:44 +0800</pubDate>
+>>>>>>> c6c648b150133865426c074038cbe3b54705def6
       
       <guid>http://localhost:1313/categories/career/</guid>
       <description></description>
@@ -23,7 +51,11 @@
     <item>
       <title>linux</title>
       <link>http://localhost:1313/categories/linux/</link>
+<<<<<<< HEAD
       <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
+=======
+      <pubDate>Mon, 31 May 2021 00:05:24 +0800</pubDate>
+>>>>>>> c6c648b150133865426c074038cbe3b54705def6
       
       <guid>http://localhost:1313/categories/linux/</guid>
       <description></description>
@@ -57,6 +89,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>blockchain</title>
       <link>http://localhost:1313/categories/blockchain/</link>
       <pubDate>Tue, 15 Jun 2021 00:00:44 +0800</pubDate>
@@ -69,12 +102,18 @@
       <title>database</title>
       <link>http://localhost:1313/categories/database/</link>
       <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
+=======
+      <title>algorithm</title>
+      <link>http://localhost:1313/categories/algorithm/</link>
+      <pubDate>Mon, 22 Mar 2021 00:00:44 +0800</pubDate>
+>>>>>>> c6c648b150133865426c074038cbe3b54705def6
       
       <guid>http://localhost:1313/categories/database/</guid>
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>communication</title>
       <link>http://localhost:1313/categories/communication/</link>
       <pubDate>Fri, 30 Apr 2021 01:01:00 +0800</pubDate>
@@ -93,6 +132,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> c6c648b150133865426c074038cbe3b54705def6
       <title>pages</title>
       <link>http://localhost:1313/categories/pages/</link>
       <pubDate>Sat, 04 Jul 2020 14:51:03 +0800</pubDate>
