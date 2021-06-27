@@ -6,17 +6,12 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-<<<<<<< HEAD
     <lastBuildDate>Sun, 27 Jun 2021 00:47:44 +0800</lastBuildDate>
-=======
-    <lastBuildDate>Tue, 22 Jun 2021 01:01:00 +0800</lastBuildDate>
->>>>>>> c6c648b150133865426c074038cbe3b54705def6
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-<<<<<<< HEAD
       <title>Linux的五种io模型</title>
       <link>http://localhost:1313/post/io_model_in_linux/</link>
       <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
@@ -116,8 +111,6 @@
     </item>
     
     <item>
-=======
->>>>>>> c6c648b150133865426c074038cbe3b54705def6
       <title>有赞TCP网络编程最佳实践</title>
       <link>http://localhost:1313/post/you_zan_tcpwang_luo_bian_cheng_zui_jia_shi_jian/</link>
       <pubDate>Tue, 22 Jun 2021 01:01:00 +0800</pubDate>
