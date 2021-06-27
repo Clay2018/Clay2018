@@ -6,10 +6,28 @@
     <description>Recent content in linux on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 31 May 2021 00:05:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Jun 2021 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux的五种io模型</title>
+      <link>http://localhost:1313/post/io_model_in_linux/</link>
+      <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/io_model_in_linux/</guid>
+      <description>Resource Linux的五种io模型: https://mp.weixin.qq.com/s/qCZKTJB25kSGVhlAnGFaEQ</description>
+    </item>
+    
+    <item>
+      <title>虚拟内存</title>
+      <link>http://localhost:1313/post/virtual_memory/</link>
+      <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/virtual_memory/</guid>
+      <description>Resource 虚拟内存: https://mp.weixin.qq.com/s/g5I7un3-lpffAk6UFes8DA</description>
+    </item>
     
     <item>
       <title>Virtual memory</title>
