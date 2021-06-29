@@ -45,7 +45,7 @@
 <meta property="og:description" content="Clayton Blog site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/" />
-<meta property="og:updated_time" content="2021-06-22T01:01:00+08:00" />
+<meta property="og:updated_time" content="2021-06-29T00:00:44+08:00" />
 <meta itemprop="name" content="Even - A super concise theme for Hugo">
 <meta itemprop="description" content="Clayton Blog site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
@@ -112,86 +112,115 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/build_hugo_site/">Build_hugo_site</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/nat_in_tcp/">NAT 穿透</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2020-07-04 </span>
+      <span class="post-time"> 2021-03-11 </span>
       <div class="post-category">
-          <a href="/categories/pages/"> pages </a>
+          <a href="/categories/network/"> network </a>
           </div>
-        <span class="more-meta"> 44 words </span>
+        <span class="more-meta"> 15 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      搭建Hugo博客网站 1 测试语法 1 测试图片 API bbb 发布文章 hugo new post/xxxx.md 发布github hugo -t even Reference https://segmentfault.com/a/1190000012975914?utm_source=tag-newest https://juejin.im/post/5e9cf8bd51882538083fec4c#heading-1 https://www.jianshu.com/p/475110a1c811
+      NAT穿透在TCP中的运用 Portal: https://www.baseclass.io/huffman-coding/
     </div>
     <div class="read-more">
-      <a href="/post/build_hugo_site/" class="read-more-link">Read more...</a>
+      <a href="/post/nat_in_tcp/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/brownie_use/"></a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/huffman_coding/">Huffman-coding</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-        <span class="more-meta"> 13 words </span>
+      <span class="post-time"> 2021-03-05 </span>
+      <div class="post-category">
+          <a href="/categories/algorithm/"> algorithm </a>
+          </div>
+        <span class="more-meta"> 3 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Resource brownie使用: https://betterprogramming.pub/part-1-brownie-smart-contracts-framework-for-ethereum-basics-5efc80205413#:~:text=Brownie%20is%20a%20robust%2C%20easy,to%20initialize%20or%20integrate%20them. 0x3194cBDC3dbcd3E11a07892e7bA5c3394048Cc87
+      Huffman-coding Portal: https://www.baseclass.io/huffman-coding/
     </div>
     <div class="read-more">
-      <a href="/post/brownie_use/" class="read-more-link">Read more...</a>
+      <a href="/post/huffman_coding/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/btc_address/"></a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/deadlock_in_goroutine/">一道关于gorotine的死锁问题</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-        <span class="more-meta"> 130 words </span>
+      <span class="post-time"> 2021-01-18 </span>
+      <div class="post-category">
+          <a href="/categories/language/"> language </a>
+          </div>
+        <span class="more-meta"> 385 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      btc地址生成 1 2 3 4 5 6 7 8 9 Get you public key Perform Sha256 on your Public key Perform RIPEMD160 hashing on the result of Sha256 hash Add version byte in front of RIPEMD160 hash (0x00 for main net, 0x6f for testnet) Perform Sha256 hash on the extended RIPEMD160 hash Perform Sha256 hash on the result of the previous step Take the
+      一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { ch := make(chan int) go fmt.Println(&lt;-ch) ch &lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关
     </div>
     <div class="read-more">
-      <a href="/post/btc_address/" class="read-more-link">Read more...</a>
+      <a href="/post/deadlock_in_goroutine/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/tcp_kernel_optimize_option/"></a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/btc_devguide_3/">BTC devguide(3)</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-        <span class="more-meta"> 5 words </span>
-        <span class="more-meta"> 1 min read </span>
+      <span class="post-time"> 2020-12-30 </span>
+      <div class="post-category">
+          <a href="/categories/blockchain/"> blockchain </a>
+          </div>
+        <span class="more-meta"> 2008 words </span>
+        <span class="more-meta"> 5 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      请求url
+      Operating Modes 比特币软件具有不同级别的安全性和权衡，以验证区块链 Introduction 当前，有两种主要的方法来验证区块链作为客户端：完整节点和SPV客户端。 由于不建议使用
     </div>
     <div class="read-more">
-      <a href="/post/tcp_kernel_optimize_option/" class="read-more-link">Read more...</a>
+      <a href="/post/btc_devguide_3/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/btc_devguide_2/">BTC devguide(2)</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-12-30 </span>
+      <div class="post-category">
+          <a href="/categories/blockchain/"> blockchain </a>
+          </div>
+        <span class="more-meta"> 7188 words </span>
+        <span class="more-meta"> 15 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Transactions 交易让用户花了satoshis。 每笔交易都由几部分组成，既可以进行简单的直接付款，也可以进行复杂的交易。 Introduction 本节将描述每个部分并演示如何一起
+    </div>
+    <div class="read-more">
+      <a href="/post/btc_devguide_2/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -203,7 +232,10 @@
         <i class="iconfont icon-left"></i>
         <span class="prev-text">Prev</span>
       </a>
-    
+    <a class="next" href="/page/9/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         
