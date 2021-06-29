@@ -6,10 +6,19 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Jun 2021 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jun 2021 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>循环移动数组</title>
+      <link>http://localhost:1313/post/loop_move_array/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/loop_move_array/</guid>
+      <description>循环移动数组 给定一个数组和正整数n(n 小于数组长度), 请求此数组循环左移n个位置, 要求空间复杂度O(1) 例子: 输入: [1, 2, 3, 4, 5] 2 输出: [3, 4, 5,</description>
+    </item>
     
     <item>
       <title>Linux的五种io模型</title>
@@ -107,7 +116,7 @@
       <pubDate>Sun, 27 Jun 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/init_in_golang/</guid>
-      <description>Resource init函数: https://mp.weixin.qq.com/s/eHEvVzmpPYXAQgcdd_B55w</description>
+      <description>Resource init函数: https://studygolang.com/articles/13865?fr=sidebar</description>
     </item>
     
     <item>
