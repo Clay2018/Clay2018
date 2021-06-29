@@ -6,10 +6,19 @@
     <description>Recent content in algorithm on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Jun 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jun 2021 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tree</title>
+      <link>http://localhost:1313/post/tree/</link>
+      <pubDate>Tue, 29 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/tree/</guid>
+      <description>平衡二叉树 平衡二叉树: 二叉树的每个节点的左右子树的高度差的绝对值不超过1 判断一棵树是否是平衡二叉树 1 2 3 4 5 6 例子: 输入: 给定二叉树 [3,9,20,null,null,15,7] 输出:</description>
+    </item>
     
     <item>
       <title>循环移动数组</title>

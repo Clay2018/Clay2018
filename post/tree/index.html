@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Scheduling in Golang - Even - A super concise theme for Hugo</title>
+  <title>Tree - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="gopark and goready  https://blog.csdn.net/u010853261/article/details/85887948  " /><meta name="keywords" content="" />
+<meta name="author" content="Clayton" /><meta name="description" content="平衡二叉树 平衡二叉树: 二叉树的每个节点的左右子树的高度差的绝对值不超过1 判断一棵树是否是平衡二叉树 1 2 3 4 5 6 例子: 输入: 给定二叉树 [3,9,20,null,null,15,7] 输出:" /><meta name="keywords" content="" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/schdule_in_golang/" />
+<link rel="canonical" href="http://localhost:1313/post/tree/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Scheduling in Golang" />
-<meta property="og:description" content="gopark and goready  https://blog.csdn.net/u010853261/article/details/85887948  " />
+<meta property="og:title" content="Tree" />
+<meta property="og:description" content="平衡二叉树 平衡二叉树: 二叉树的每个节点的左右子树的高度差的绝对值不超过1 判断一棵树是否是平衡二叉树 1 2 3 4 5 6 例子: 输入: 给定二叉树 [3,9,20,null,null,15,7] 输出:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/schdule_in_golang/" />
-<meta property="article:published_time" content="2021-06-29T00:47:44+08:00" />
-<meta property="article:modified_time" content="2021-06-29T00:47:44+08:00" />
-<meta itemprop="name" content="Scheduling in Golang">
-<meta itemprop="description" content="gopark and goready  https://blog.csdn.net/u010853261/article/details/85887948  ">
-<meta itemprop="datePublished" content="2021-06-29T00:47:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-06-29T00:47:44&#43;08:00" />
-<meta itemprop="wordCount" content="4">
+<meta property="og:url" content="http://localhost:1313/post/tree/" />
+<meta property="article:published_time" content="2021-06-29T00:00:44+08:00" />
+<meta property="article:modified_time" content="2021-06-29T00:00:44+08:00" />
+<meta itemprop="name" content="Tree">
+<meta itemprop="description" content="平衡二叉树 平衡二叉树: 二叉树的每个节点的左右子树的高度差的绝对值不超过1 判断一棵树是否是平衡二叉树 1 2 3 4 5 6 例子: 输入: 给定二叉树 [3,9,20,null,null,15,7] 输出:">
+<meta itemprop="datePublished" content="2021-06-29T00:00:44&#43;08:00" />
+<meta itemprop="dateModified" content="2021-06-29T00:00:44&#43;08:00" />
+<meta itemprop="wordCount" content="168">
 
 
 
-<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Scheduling in Golang"/>
-<meta name="twitter:description" content="gopark and goready  https://blog.csdn.net/u010853261/article/details/85887948  "/>
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tree"/>
+<meta name="twitter:description" content="平衡二叉树 平衡二叉树: 二叉树的每个节点的左右子树的高度差的绝对值不超过1 判断一棵树是否是平衡二叉树 1 2 3 4 5 6 例子: 输入: 给定二叉树 [3,9,20,null,null,15,7] 输出:"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,14 +118,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Scheduling in Golang</h1>
+      <h1 class="post-title">Tree</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2021-06-29 </span>
         <div class="post-category">
-            <a href="/categories/language/"> language </a>
+            <a href="/categories/algorithm/"> algorithm </a>
             </div>
-          <span class="more-meta"> 4 words </span>
+          <span class="more-meta"> 168 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -138,7 +138,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#gopark-and-goready">gopark and goready</a></li>
+        <li><a href="#平衡二叉树">平衡二叉树</a></li>
       </ul>
     </li>
   </ul>
@@ -146,11 +146,78 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="gopark-and-goready">gopark and goready</h3>
+      <h3 id="平衡二叉树">平衡二叉树</h3>
+<p>平衡二叉树: 二叉树的每个节点的左右子树的高度差的绝对值不超过1</p>
 <ul>
-<li><a href="https://blog.csdn.net/u010853261/article/details/85887948">https://blog.csdn.net/u010853261/article/details/85887948</a></li>
+<li>判断一棵树是否是平衡二叉树</li>
 </ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">例子:
+输入: 给定二叉树 [3,9,20,null,null,15,7] 
+输出: true
 
+输入: 给定二叉树 [1,2,2,3,3,null,null,4,4]
+输出: false
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var heightArr  = map[*TreeNode]int32{}
+
+func isBalanced(root *TreeNode) bool {
+	if root == nil {
+		return true
+	} else {
+		return math.Abs(float64(height(root.Left) - height(root.Right))) &lt;= 1 &amp;&amp;
+			isBalanced(root.Left) &amp;&amp; isBalanced(root.Right)
+	}
+}
+
+func height(root *TreeNode) int32 {
+	if h, ok := heightArr[root]; ok {
+		return h
+	}
+	if root == nil {
+		return 0
+	} else {
+		return int32(math.Max(float64(height(root.Left)), float64(height(root.Right))) + 1)
+	}
+}
+</code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">
@@ -184,12 +251,16 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/golang/">golang</a>
+          <a href="/tags//"></a>
           </div>
       <nav class="post-nav">
-        
-        <a class="next" href="/post/tree/">
-            <span class="next-text nav-default">Tree</span>
+        <a class="prev" href="/post/schdule_in_golang/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Scheduling in Golang</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/loop_move_array/">
+            <span class="next-text nav-default">循环移动数组</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
