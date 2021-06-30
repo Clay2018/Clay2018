@@ -6,34 +6,30 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-<<<<<<< HEAD
-    <lastBuildDate>Tue, 29 Jun 2021 00:00:44 +0800</lastBuildDate>
-=======
     <lastBuildDate>Tue, 29 Jun 2021 00:47:44 +0800</lastBuildDate>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-<<<<<<< HEAD
-      <title>algorithm</title>
-      <link>http://localhost:1313/categories/algorithm/</link>
-      <pubDate>Tue, 29 Jun 2021 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/algorithm/</guid>
-=======
       <title>language</title>
       <link>http://localhost:1313/categories/language/</link>
       <pubDate>Tue, 29 Jun 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/language/</guid>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
       <description></description>
     </item>
     
     <item>
-<<<<<<< HEAD
+      <title>algorithm</title>
+      <link>http://localhost:1313/categories/algorithm/</link>
+      <pubDate>Tue, 29 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>career</title>
       <link>http://localhost:1313/categories/career/</link>
       <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
@@ -57,77 +53,15 @@
       <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/system_design/</guid>
-=======
-      <title>algorithm</title>
-      <link>http://localhost:1313/categories/algorithm/</link>
-      <pubDate>Tue, 29 Jun 2021 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/algorithm/</guid>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
       <description></description>
     </item>
     
     <item>
-<<<<<<< HEAD
-      <title>language</title>
-      <link>http://localhost:1313/categories/language/</link>
-      <pubDate>Sun, 27 Jun 2021 00:00:44 +0800</pubDate>
-=======
-      <title>career</title>
-      <link>http://localhost:1313/categories/career/</link>
-      <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
-      
-      <guid>http://localhost:1313/categories/career/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-<<<<<<< HEAD
-      <title>network</title>
-      <link>http://localhost:1313/categories/network/</link>
-      <pubDate>Tue, 22 Jun 2021 01:01:00 +0800</pubDate>
-=======
-      <title>linux</title>
-      <link>http://localhost:1313/categories/linux/</link>
-      <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
-      
-      <guid>http://localhost:1313/categories/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-<<<<<<< HEAD
-      <title>blockchain</title>
-      <link>http://localhost:1313/categories/blockchain/</link>
-      <pubDate>Tue, 15 Jun 2021 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/blockchain/</guid>
-=======
-      <title>system_design</title>
-      <link>http://localhost:1313/categories/system_design/</link>
-      <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/system_design/</guid>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
-      <description></description>
-    </item>
-    
-    <item>
-<<<<<<< HEAD
-      <title>database</title>
-      <link>http://localhost:1313/categories/database/</link>
-      <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/database/</guid>
-=======
       <title>network</title>
       <link>http://localhost:1313/categories/network/</link>
       <pubDate>Tue, 22 Jun 2021 01:01:00 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/network/</guid>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
       <description></description>
     </item>
     
@@ -141,8 +75,6 @@
     </item>
     
     <item>
-<<<<<<< HEAD
-=======
       <title>database</title>
       <link>http://localhost:1313/categories/database/</link>
       <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
@@ -161,7 +93,6 @@
     </item>
     
     <item>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
       <title>pages</title>
       <link>http://localhost:1313/categories/pages/</link>
       <pubDate>Sat, 04 Jul 2020 14:51:03 +0800</pubDate>

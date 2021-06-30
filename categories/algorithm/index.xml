@@ -21,8 +21,6 @@
     </item>
     
     <item>
-<<<<<<< HEAD
-=======
       <title>循环移动数组</title>
       <link>http://localhost:1313/post/loop_move_array/</link>
       <pubDate>Mon, 28 Jun 2021 00:00:44 +0800</pubDate>
@@ -32,7 +30,6 @@
     </item>
     
     <item>
->>>>>>> 753362f98d2b2939426676394611d740d7f5546d
       <title>sort algorithm</title>
       <link>http://localhost:1313/post/sort_algorithm/</link>
       <pubDate>Mon, 22 Mar 2021 00:00:44 +0800</pubDate>
