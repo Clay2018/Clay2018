@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Jun 2021 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 07 Jul 2021 01:01:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>golang</title>
       <link>http://localhost:1313/tags/golang/</link>
-      <pubDate>Tue, 29 Jun 2021 00:47:44 +0800</pubDate>
+      <pubDate>Wed, 07 Jul 2021 01:01:00 +0800</pubDate>
       
       <guid>http://localhost:1313/tags/golang/</guid>
       <description></description>
