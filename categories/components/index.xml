@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>components on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/components/</link>
+    <description>Recent content in components on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 31 Jul 2021 00:00:44 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/components/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>http://localhost:1313/post/elasticsearch/</link>
+      <pubDate>Sat, 31 Jul 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/elasticsearch/</guid>
+      <description>Resources elasticsearch亿级数据检索深度优化: https://mp.weixin.qq.com/s/Vp77RZpfnB4TJIg-DmwzUg</description>
+    </item>
+    
+    <item>
+      <title>ETCD</title>
+      <link>http://localhost:1313/post/etcd/</link>
+      <pubDate>Sat, 31 Jul 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/etcd/</guid>
+      <description>Resource 蚂蚁集团万级规模k8s集群etcd高可用建设之路: https://mp.weixin.qq.com/s/1A2GFwXlk6xua7vfqAaOlg</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://localhost:1313/post/mysql/</link>
+      <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/mysql/</guid>
+      <description>InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一致性:</description>
+    </item>
+    
+    <item>
+      <title>redis集锦</title>
+      <link>http://localhost:1313/post/redis/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/redis/</guid>
+      <description>Redis命令 redis命令目录: http://doc.redisfans.com/ Redis五种数据结构原理 redis数据结构: https://zhuanlan.zhihu.com/p/148562122 quicklist实现: https://juejin.cn/post/6844904023418486791 https://i6448038.github.io/2019/12/01/redis-data-struct/ Redis用作分布式锁 https://www.jianshu.com/p/83224c0f3bb9 Re</description>
+    </item>
+    
+  </channel>
+</rss>

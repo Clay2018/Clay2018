@@ -6,10 +6,37 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Jul 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Aug 2021 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>他人面试经历</title>
+      <link>http://localhost:1313/post/interview_experience_of_others/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/interview_experience_of_others/</guid>
+      <description>Resources 一个学渣的阿里之路: https://mp.weixin.qq.com/s/JT9e-inlL9F1bjT40sNaLA 渣渣菜鸡的蚂蚁金服面试经历(一): https://mp.weixin.qq.com/s/bNXyjo9ywdOkAbesNTrMoA 渣渣菜鸡的蚂蚁金服面试经历(一): https://mp.weixin.qq.com/s/D-tvQBRJbYPLwzj7KuvqHg 渣渣菜鸡的有赞面试经历: https://mp.weixin.qq.com/s/wDDsa5na4b3MSdsIgh3upw 面试过阿里等互联网</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>http://localhost:1313/post/elasticsearch/</link>
+      <pubDate>Sat, 31 Jul 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/elasticsearch/</guid>
+      <description>Resources elasticsearch亿级数据检索深度优化: https://mp.weixin.qq.com/s/Vp77RZpfnB4TJIg-DmwzUg</description>
+    </item>
+    
+    <item>
+      <title>ETCD</title>
+      <link>http://localhost:1313/post/etcd/</link>
+      <pubDate>Sat, 31 Jul 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/etcd/</guid>
+      <description>Resource 蚂蚁集团万级规模k8s集群etcd高可用建设之路: https://mp.weixin.qq.com/s/1A2GFwXlk6xua7vfqAaOlg</description>
+    </item>
     
     <item>
       <title>Go中的map</title>
