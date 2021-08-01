@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Elasticsearch - Even - A super concise theme for Hugo</title>
+  <title>虚拟机知识 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Resources elasticsearch亿级数据检索深度优化: https://mp.weixin.qq.com/s/Vp77RZpfnB4TJIg-DmwzUg" /><meta name="keywords" content="elasticsearch" />
+<meta name="author" content="Clayton" /><meta name="description" content="lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系统中可用LXC模板" /><meta name="keywords" content="" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/elasticsearch/" />
+<link rel="canonical" href="http://localhost:1313/post/lxc/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Elasticsearch" />
-<meta property="og:description" content="Resources elasticsearch亿级数据检索深度优化: https://mp.weixin.qq.com/s/Vp77RZpfnB4TJIg-DmwzUg" />
+<meta property="og:title" content="虚拟机知识" />
+<meta property="og:description" content="lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系统中可用LXC模板" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/elasticsearch/" />
-<meta property="article:published_time" content="2021-07-31T00:00:44+08:00" />
-<meta property="article:modified_time" content="2021-07-31T00:00:44+08:00" />
-<meta itemprop="name" content="Elasticsearch">
-<meta itemprop="description" content="Resources elasticsearch亿级数据检索深度优化: https://mp.weixin.qq.com/s/Vp77RZpfnB4TJIg-DmwzUg">
-<meta itemprop="datePublished" content="2021-07-31T00:00:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-07-31T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="26">
+<meta property="og:url" content="http://localhost:1313/post/lxc/" />
+<meta property="article:published_time" content="2021-08-01T00:00:44+08:00" />
+<meta property="article:modified_time" content="2021-08-01T00:00:44+08:00" />
+<meta itemprop="name" content="虚拟机知识">
+<meta itemprop="description" content="lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系统中可用LXC模板">
+<meta itemprop="datePublished" content="2021-08-01T00:00:44&#43;08:00" />
+<meta itemprop="dateModified" content="2021-08-01T00:00:44&#43;08:00" />
+<meta itemprop="wordCount" content="274">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Elasticsearch"/>
-<meta name="twitter:description" content="Resources elasticsearch亿级数据检索深度优化: https://mp.weixin.qq.com/s/Vp77RZpfnB4TJIg-DmwzUg"/>
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="虚拟机知识"/>
+<meta name="twitter:description" content="lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系统中可用LXC模板"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,14 +118,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Elasticsearch</h1>
+      <h1 class="post-title">虚拟机知识</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-07-31 </span>
+        <span class="post-time"> 2021-08-01 </span>
         <div class="post-category">
-            <a href="/categories/components/"> components </a>
+            <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 26 words </span>
+          <span class="more-meta"> 274 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -138,6 +138,9 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#lxc创建容器">lxc创建容器</a></li>
+        <li><a href="#qemu创建镜像">qemu创建镜像</a></li>
+        <li><a href="#virsh创建虚拟机">virsh创建虚拟机</a></li>
         <li><a href="#resources">Resources</a></li>
       </ul>
     </li>
@@ -146,9 +149,78 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="resources">Resources</h3>
+      <h3 id="lxc创建容器">lxc创建容器</h3>
+<pre><code>容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc
+
+```
+lxc-checkconfig
+
+lxc-create -n test -t none
+
+# 查看当前系统中可用LXC模板容器
+ls /usr/share/lxc/templates/
+
+# 会联网下载
+lxc-create -n test1 -t /usr/share/lxc/templates/lxc-centos 
+lxc-create -t centos -n test4
+
+# 安装libvirtd, 新增网卡virbrt0
+
+# 启动lxc(启动前先chroot)
+lxc-start -n test2 -d
+
+```
+</code></pre>
+<h3 id="qemu创建镜像">qemu创建镜像</h3>
+<pre><code>```
+qemu-img create -f qcow2 fed.img 2G
+
+wget http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2.xz
+
+qemu-img info CentOS-7-x86_64-GenericCloud.qcow2
+
+qemu-img create fed2.qcow2 2M
+
+qemu-img create -f qcow2 -b CentOS-7-x86_64-GenericCloud.qcow2 bb.qcow2
+
+qemu-img info bb.qcow2
+
+
+```
+</code></pre>
+<h3 id="virsh创建虚拟机">virsh创建虚拟机</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">virsh list --all
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="resources">Resources</h3>
 <ul>
-<li>elasticsearch亿级数据检索深度优化: <a href="https://mp.weixin.qq.com/s/Vp77RZpfnB4TJIg-DmwzUg">https://mp.weixin.qq.com/s/Vp77RZpfnB4TJIg-DmwzUg</a></li>
+<li>
+<p>lxc命令学习</p>
+<ul>
+<li>常用命令介绍: <a href="https://www.cnblogs.com/lisperl/archive/2012/04/13/2446179.html">https://www.cnblogs.com/lisperl/archive/2012/04/13/2446179.html</a></li>
+<li><a href="https://blog.csdn.net/shichaog/category_2413283.html">https://blog.csdn.net/shichaog/category_2413283.html</a></li>
+<li>lxc创建容器步骤: <a href="https://blog.csdn.net/zhanghui962623727/article/details/98623543">https://blog.csdn.net/zhanghui962623727/article/details/98623543</a></li>
+</ul>
+</li>
+<li>
+<p>virsh命令学习</p>
+<ul>
+<li>常用命令: <a href="https://www.cnblogs.com/cyleon/p/9816989.html">https://www.cnblogs.com/cyleon/p/9816989.html</a></li>
+<li>virsh创建虚拟机的两种方式区别: <a href="https://www.cnblogs.com/kouryoushine/p/8950393.html">https://www.cnblogs.com/kouryoushine/p/8950393.html</a></li>
+<li>virsh创建虚拟机: <a href="https://blog.csdn.net/qq_15437629/article/details/77827033">https://blog.csdn.net/qq_15437629/article/details/77827033</a></li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>修改qcow2镜像中文件: <a href="https://zhuanlan.zhihu.com/p/351633475">https://zhuanlan.zhihu.com/p/351633475</a></p>
+</li>
 </ul>
 
     </div>
@@ -161,7 +233,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-07-31
+        2021-08-01
         
     </span>
   </p>
@@ -183,15 +255,17 @@
       </label>
   </div>
 </div><footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/lxc/">
+        <a class="prev" href="/post/interview_experience_of_others/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">虚拟机知识</span>
+            <span class="prev-text nav-default">他人面试经历</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/etcd/">
-            <span class="next-text nav-default">ETCD</span>
+        <a class="next" href="/post/elasticsearch/">
+            <span class="next-text nav-default">Elasticsearch</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

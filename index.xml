@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>虚拟机知识</title>
+      <link>http://localhost:1313/post/lxc/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/lxc/</guid>
+      <description>lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系统中可用LXC模板</description>
+    </item>
+    
+    <item>
       <title>Elasticsearch</title>
       <link>http://localhost:1313/post/elasticsearch/</link>
       <pubDate>Sat, 31 Jul 2021 00:00:44 +0800</pubDate>

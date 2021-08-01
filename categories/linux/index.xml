@@ -6,10 +6,19 @@
     <description>Recent content in linux on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Jul 2021 01:01:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Aug 2021 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>虚拟机知识</title>
+      <link>http://localhost:1313/post/lxc/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/lxc/</guid>
+      <description>lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系统中可用LXC模板</description>
+    </item>
     
     <item>
       <title>内存访问</title>
