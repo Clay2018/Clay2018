@@ -6,10 +6,19 @@
     <description>Recent content in linux on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Aug 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Aug 2021 00:05:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>tcp泄漏操作系统信息</title>
+      <link>http://localhost:1313/post/get_os_by_tcp/</link>
+      <pubDate>Thu, 05 Aug 2021 00:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/get_os_by_tcp/</guid>
+      <description>Resources 哈哈！TCP泄露了操作系统信息···: https://mp.weixin.qq.com/s/FIUDFL6zd3Nkf4Vvb6ajLg</description>
+    </item>
     
     <item>
       <title>虚拟机知识</title>

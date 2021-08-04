@@ -6,10 +6,19 @@
     <description>Recent content in language on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Jul 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Aug 2021 23:05:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/language/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sync map在Go中运用</title>
+      <link>http://localhost:1313/post/sync_map_in_go/</link>
+      <pubDate>Wed, 04 Aug 2021 23:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/sync_map_in_go/</guid>
+      <description>Resource Go sync map 的内部实现: https://mp.weixin.qq.com/s/TGBSUYLiuBaoi3pNbN0BOQ sync map详解: https://blog.csdn.net/a348752377/article/details/104972194 RWMutex内部实现: https://sreramk.medium.com/go-sync-rwmutex-internals-and-usage-explained-9eb15865bba</description>
+    </item>
     
     <item>
       <title>Go中的map</title>
