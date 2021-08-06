@@ -6,10 +6,19 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Aug 2021 00:05:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Aug 2021 00:05:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>职业要求</title>
+      <link>http://localhost:1313/post/requirements/</link>
+      <pubDate>Fri, 06 Aug 2021 00:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/requirements/</guid>
+      <description>1 P5、P6被要求独立完成任务;P7要求前瞻性,能把不同点的事情串在一起，变成一条线;P8则需要有结构化的思维，能把不同的事、交错的线，变成</description>
+    </item>
     
     <item>
       <title>tcp泄漏操作系统信息</title>
