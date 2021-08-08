@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Aug 2021 00:05:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Aug 2021 01:01:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PA first lesson</title>
+      <link>http://localhost:1313/post/pa_first_lesson/</link>
+      <pubDate>Sun, 08 Aug 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pa_first_lesson/</guid>
+      <description>入职第一课堂 战略执行: 战略前瞻、商业以实、规划分析、规划执行 管理决策: 管理组织、管理他人、管理自我、管理业务 科技创新: 前言创新、敏捷开发、大</description>
+    </item>
     
     <item>
       <title>职业要求</title>
