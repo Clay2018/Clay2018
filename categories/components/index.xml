@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>write an rpc from scratch</title>
+      <link>http://localhost:1313/post/write_an_rpc_from_scratch/</link>
+      <pubDate>Fri, 30 Apr 2021 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/write_an_rpc_from_scratch/</guid>
+      <description>Reference  write an rpc from scratch: https://alexanderell.is/posts/rpc-from-scratch/  </description>
+    </item>
+    
+    <item>
       <title>redis集锦</title>
       <link>http://localhost:1313/post/redis/</link>
       <pubDate>Thu, 15 Apr 2021 00:00:44 +0800</pubDate>
