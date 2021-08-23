@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Golang语言遇到的bug - Even - A super concise theme for Hugo</title>
+  <title>NAS - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Resource 分析Go time.After 引起内存暴增OOM问题: https://mp.weixin.qq.com/s/jaIdqF0bFpHz_eyPsHjbwQ Go gctrace 引起runtime 调度阻塞: https://mp.weixin.qq.com/s/eHEvVzmpPYXAQgcdd_B55w 高并发场景下 disk io 引发的高时延问题: https://mp.weixin.qq.com/s/e3peaNGwIuNkldvnP0pDug 一个日志打点引发的OOM: https://mp.weixin.qq.com/s/8puLJSJ3GeXnmDlMxdzGgQ 为什" /><meta name="keywords" content="" />
+<meta name="author" content="Clayton" /><meta name="description" content="Resources nas服务器搭建与配置: https://blog.csdn.net/qq_38265137/article/details/83146421" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/bug_in_golang/" />
+<link rel="canonical" href="http://localhost:1313/post/nas/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Golang语言遇到的bug" />
-<meta property="og:description" content="Resource 分析Go time.After 引起内存暴增OOM问题: https://mp.weixin.qq.com/s/jaIdqF0bFpHz_eyPsHjbwQ Go gctrace 引起runtime 调度阻塞: https://mp.weixin.qq.com/s/eHEvVzmpPYXAQgcdd_B55w 高并发场景下 disk io 引发的高时延问题: https://mp.weixin.qq.com/s/e3peaNGwIuNkldvnP0pDug 一个日志打点引发的OOM: https://mp.weixin.qq.com/s/8puLJSJ3GeXnmDlMxdzGgQ 为什" />
+<meta property="og:title" content="NAS" />
+<meta property="og:description" content="Resources nas服务器搭建与配置: https://blog.csdn.net/qq_38265137/article/details/83146421" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/bug_in_golang/" />
-<meta property="article:published_time" content="2021-06-27T00:00:44+08:00" />
-<meta property="article:modified_time" content="2021-06-27T00:00:44+08:00" />
-<meta itemprop="name" content="Golang语言遇到的bug">
-<meta itemprop="description" content="Resource 分析Go time.After 引起内存暴增OOM问题: https://mp.weixin.qq.com/s/jaIdqF0bFpHz_eyPsHjbwQ Go gctrace 引起runtime 调度阻塞: https://mp.weixin.qq.com/s/eHEvVzmpPYXAQgcdd_B55w 高并发场景下 disk io 引发的高时延问题: https://mp.weixin.qq.com/s/e3peaNGwIuNkldvnP0pDug 一个日志打点引发的OOM: https://mp.weixin.qq.com/s/8puLJSJ3GeXnmDlMxdzGgQ 为什">
-<meta itemprop="datePublished" content="2021-06-27T00:00:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-06-27T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="113">
+<meta property="og:url" content="http://localhost:1313/post/nas/" />
+<meta property="article:published_time" content="2021-08-08T01:01:00+08:00" />
+<meta property="article:modified_time" content="2021-08-08T01:01:00+08:00" />
+<meta itemprop="name" content="NAS">
+<meta itemprop="description" content="Resources nas服务器搭建与配置: https://blog.csdn.net/qq_38265137/article/details/83146421">
+<meta itemprop="datePublished" content="2021-08-08T01:01:00&#43;08:00" />
+<meta itemprop="dateModified" content="2021-08-08T01:01:00&#43;08:00" />
+<meta itemprop="wordCount" content="14">
 
 
 
-<meta itemprop="keywords" content="bug," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Golang语言遇到的bug"/>
-<meta name="twitter:description" content="Resource 分析Go time.After 引起内存暴增OOM问题: https://mp.weixin.qq.com/s/jaIdqF0bFpHz_eyPsHjbwQ Go gctrace 引起runtime 调度阻塞: https://mp.weixin.qq.com/s/eHEvVzmpPYXAQgcdd_B55w 高并发场景下 disk io 引发的高时延问题: https://mp.weixin.qq.com/s/e3peaNGwIuNkldvnP0pDug 一个日志打点引发的OOM: https://mp.weixin.qq.com/s/8puLJSJ3GeXnmDlMxdzGgQ 为什"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NAS"/>
+<meta name="twitter:description" content="Resources nas服务器搭建与配置: https://blog.csdn.net/qq_38265137/article/details/83146421"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,14 +118,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Golang语言遇到的bug</h1>
+      <h1 class="post-title">NAS</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-06-27 </span>
+        <span class="post-time"> 2021-08-08 </span>
         <div class="post-category">
-            <a href="/categories/language/"> language </a>
+            <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 113 words </span>
+          <span class="more-meta"> 14 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -138,7 +138,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#resource">Resource</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </li>
   </ul>
@@ -146,14 +146,9 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="resource">Resource</h3>
+      <h3 id="resources">Resources</h3>
 <ul>
-<li>分析Go time.After 引起内存暴增OOM问题: <a href="https://mp.weixin.qq.com/s/jaIdqF0bFpHz_eyPsHjbwQ">https://mp.weixin.qq.com/s/jaIdqF0bFpHz_eyPsHjbwQ</a></li>
-<li>Go gctrace 引起runtime 调度阻塞: <a href="https://mp.weixin.qq.com/s/eHEvVzmpPYXAQgcdd_B55w">https://mp.weixin.qq.com/s/eHEvVzmpPYXAQgcdd_B55w</a></li>
-<li>高并发场景下 disk io 引发的高时延问题: <a href="https://mp.weixin.qq.com/s/e3peaNGwIuNkldvnP0pDug">https://mp.weixin.qq.com/s/e3peaNGwIuNkldvnP0pDug</a></li>
-<li>一个日志打点引发的OOM: <a href="https://mp.weixin.qq.com/s/8puLJSJ3GeXnmDlMxdzGgQ">https://mp.weixin.qq.com/s/8puLJSJ3GeXnmDlMxdzGgQ</a></li>
-<li>为什么Go模块在下游服务抖动恢复后，CPU占用无法恢复: <a href="https://mp.weixin.qq.com/s/398lcIRUBgVcWBqJTgQs8g">https://mp.weixin.qq.com/s/398lcIRUBgVcWBqJTgQs8g</a></li>
-<li>iptables redirect 劫持跳转引起Go服务故障: <a href="https://mp.weixin.qq.com/s/fmrw-33cbKLdAkkMHyOrbw">https://mp.weixin.qq.com/s/fmrw-33cbKLdAkkMHyOrbw</a></li>
+<li>nas服务器搭建与配置: <a href="https://blog.csdn.net/qq_38265137/article/details/83146421">https://blog.csdn.net/qq_38265137/article/details/83146421</a></li>
 </ul>
 
     </div>
@@ -166,7 +161,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-06-27
+        2021-08-08
         
     </span>
   </p>
@@ -188,17 +183,11 @@
       </label>
   </div>
 </div><footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/bug/">bug</a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/rate_limiter/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">限流器</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/init_in_golang/">
-            <span class="next-text nav-default">Go中的init函数</span>
+        
+        <a class="next" href="/post/pa_first_lesson/">
+            <span class="next-text nav-default">PA first lesson</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
