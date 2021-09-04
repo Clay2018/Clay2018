@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Aug 2021 01:01:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Aug 2021 00:00:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>interface in golang</title>
+      <link>http://localhost:1313/post/interface_in_golang/</link>
+      <pubDate>Tue, 31 Aug 2021 00:00:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/interface_in_golang/</guid>
+      <description>Resources []int能转换为[]interface吗: https://mp.weixin.qq.com/s/tqR5zMPobm20lao-2QNrVA</description>
+    </item>
     
     <item>
       <title>NAS</title>
@@ -215,7 +224,7 @@
       <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/career/</guid>
-      <description>Resource 结束12年深漂生活！武汉，我来了!: https://mp.weixin.qq.com/s/I5WbUUA2DEZvcFftEw6GrQ 大龄码农的新西兰移民之路: https://mp.weixin.qq.com/s/H49uoTrhWrFVlsgSaPLSBA 北漂8年，撤退杭州: https://mp.weixin.qq.com/s/o9-MkdBZ-7mg3jdRvOLXPg 持炬之人要内观自我: https://mp.weixin.qq.com/s/UL1yHctmVtIvz2PnmAAzNw</description>
+      <description>Resource 结束12年深漂生活！武汉，我来了!: https://mp.weixin.qq.com/s/I5WbUUA2DEZvcFftEw6GrQ 大龄码农的新西兰移民之路: https://mp.weixin.qq.com/s/H49uoTrhWrFVlsgSaPLSBA 北漂8年，撤退杭州: https://mp.weixin.qq.com/s/o9-MkdBZ-7mg3jdRvOLXPg 持炬之人要内观自我: https://mp.weixin.qq.com/s/UL1yHctmVtIvz2PnmAAzNw 你会正确与HR谈薪资吗: https://mp.weixin.qq.com/s/umlWthKW8Ij4jPy0GiCzGw Counter</description>
     </item>
     
     <item>

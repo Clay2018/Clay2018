@@ -6,10 +6,19 @@
     <description>Recent content in golang on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Aug 2021 23:05:24 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Aug 2021 00:00:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>interface in golang</title>
+      <link>http://localhost:1313/post/interface_in_golang/</link>
+      <pubDate>Tue, 31 Aug 2021 00:00:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/interface_in_golang/</guid>
+      <description>Resources []int能转换为[]interface吗: https://mp.weixin.qq.com/s/tqR5zMPobm20lao-2QNrVA</description>
+    </item>
     
     <item>
       <title>Sync map在Go中运用</title>
