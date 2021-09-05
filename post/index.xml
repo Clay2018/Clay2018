@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Aug 2021 00:00:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Sep 2021 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>panic in golang</title>
+      <link>http://localhost:1313/post/panic_in_golang/</link>
+      <pubDate>Sun, 05 Sep 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/panic_in_golang/</guid>
+      <description>Resources panic的三种触发方式: https://mp.weixin.qq.com/s/cs_jLLoaq4rweVYFbeJoFw panic实现: https://mp.weixin.qq.com/s/-tYjR9K6tWG3aNOeGFsT3Q</description>
+    </item>
+    
+    <item>
+      <title>sync in golang</title>
+      <link>http://localhost:1313/post/sync_in_golang/</link>
+      <pubDate>Sun, 05 Sep 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/sync_in_golang/</guid>
+      <description>Resources sync.Once()的妙用: https://mp.weixin.qq.com/s/7QyQS9DQj1czA6BVR6ywYA</description>
+    </item>
     
     <item>
       <title>interface in golang</title>
@@ -359,7 +377,7 @@
       <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/system_design/</guid>
-      <description>Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651962050&amp;amp;idx=1&amp;amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了,怎样解决: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651964475&amp;amp;idx=1&amp;amp;sn=e452b648f52cb9a5deb711334b0bb354&amp;amp;chksm=bd2d71e78a5af8f163e7af84855a523e847732be4ba486f68a55a4a153764096b38cb60221e9&amp;amp;scene=21#wechat_redirect</description>
+      <description>Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651962050&amp;amp;idx=1&amp;amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了,怎样解决: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651964475&amp;amp;idx=1&amp;amp;sn=e452b648f52cb9a5deb711334b0bb354&amp;amp;chksm=bd2d71e78a5af8f163e7af84855a523e847732be4ba486f68a55a4a153764096b38cb60221e9&amp;amp;scene=21#wechat_redirect 基于DAG</description>
     </item>
     
     <item>
