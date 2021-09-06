@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Sep 2021 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Sep 2021 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Delay Queue</title>
+      <link>http://localhost:1313/post/delay_queue/</link>
+      <pubDate>Mon, 06 Sep 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/delay_queue/</guid>
+      <description>Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw</description>
+    </item>
     
     <item>
       <title>panic in golang</title>
@@ -567,6 +576,15 @@
       
       <guid>http://localhost:1313/post/celerynote/</guid>
       <description>Getting Started celery is flexible. Almost every part of Celry can be extended or used on its own, Custom pool implementations, serializers, compression schemes, logging, schedulers, consumers, producers, broker transports, and much more. celery中current_app的指向 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # main.py</description>
+    </item>
+    
+    <item>
+      <title>Distributed Cloud Storage</title>
+      <link>http://localhost:1313/post/cloud_storage/</link>
+      <pubDate>Sat, 05 Sep 2020 10:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/cloud_storage/</guid>
+      <description>unkonw </description>
     </item>
     
     <item>
