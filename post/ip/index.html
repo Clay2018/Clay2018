@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Delay Queue - Even - A super concise theme for Hugo</title>
+  <title>IP - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw" /><meta name="keywords" content="" />
+<meta name="author" content="Clayton" /><meta name="description" content="Resources iproute2和net-tools比较: https://www.cnblogs.com/anliven/p/6041246.html iproute2和netstat比较: https://blog.csdn.net/weixin_42767604/article/details/106251844 iptables详解: https://www.zsythink.net/archives/1199 ip route相关知识: https://blog.csdn.net/zqixiao_09/article/details/53327074 ip rule, ip" /><meta name="keywords" content="ip" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/delay_queue/" />
+<link rel="canonical" href="http://localhost:1313/post/ip/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Delay Queue" />
-<meta property="og:description" content="Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw" />
+<meta property="og:title" content="IP" />
+<meta property="og:description" content="Resources iproute2和net-tools比较: https://www.cnblogs.com/anliven/p/6041246.html iproute2和netstat比较: https://blog.csdn.net/weixin_42767604/article/details/106251844 iptables详解: https://www.zsythink.net/archives/1199 ip route相关知识: https://blog.csdn.net/zqixiao_09/article/details/53327074 ip rule, ip" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/delay_queue/" />
-<meta property="article:published_time" content="2021-09-06T00:47:44+08:00" />
-<meta property="article:modified_time" content="2021-09-06T00:47:44+08:00" />
-<meta itemprop="name" content="Delay Queue">
-<meta itemprop="description" content="Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw">
-<meta itemprop="datePublished" content="2021-09-06T00:47:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-09-06T00:47:44&#43;08:00" />
-<meta itemprop="wordCount" content="16">
+<meta property="og:url" content="http://localhost:1313/post/ip/" />
+<meta property="article:published_time" content="2021-09-15T00:45:44+08:00" />
+<meta property="article:modified_time" content="2021-09-15T00:45:44+08:00" />
+<meta itemprop="name" content="IP">
+<meta itemprop="description" content="Resources iproute2和net-tools比较: https://www.cnblogs.com/anliven/p/6041246.html iproute2和netstat比较: https://blog.csdn.net/weixin_42767604/article/details/106251844 iptables详解: https://www.zsythink.net/archives/1199 ip route相关知识: https://blog.csdn.net/zqixiao_09/article/details/53327074 ip rule, ip">
+<meta itemprop="datePublished" content="2021-09-15T00:45:44&#43;08:00" />
+<meta itemprop="dateModified" content="2021-09-15T00:45:44&#43;08:00" />
+<meta itemprop="wordCount" content="87">
 
 
 
-<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Delay Queue"/>
-<meta name="twitter:description" content="Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="IP"/>
+<meta name="twitter:description" content="Resources iproute2和net-tools比较: https://www.cnblogs.com/anliven/p/6041246.html iproute2和netstat比较: https://blog.csdn.net/weixin_42767604/article/details/106251844 iptables详解: https://www.zsythink.net/archives/1199 ip route相关知识: https://blog.csdn.net/zqixiao_09/article/details/53327074 ip rule, ip"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,14 +118,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Delay Queue</h1>
+      <h1 class="post-title">IP</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-09-06 </span>
+        <span class="post-time"> 2021-09-15 </span>
         <div class="post-category">
-            <a href="/categories/system_design/"> system_design </a>
+            <a href="/categories/network/"> network </a>
             </div>
-          <span class="more-meta"> 16 words </span>
+          <span class="more-meta"> 87 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -148,7 +148,11 @@
     <div class="post-content">
       <h3 id="resources">Resources</h3>
 <ul>
-<li>delay queue的几种实现简介: <a href="https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw">https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw</a></li>
+<li>iproute2和net-tools比较: <a href="https://www.cnblogs.com/anliven/p/6041246.html">https://www.cnblogs.com/anliven/p/6041246.html</a></li>
+<li>iproute2和netstat比较: <a href="https://blog.csdn.net/weixin_42767604/article/details/106251844">https://blog.csdn.net/weixin_42767604/article/details/106251844</a></li>
+<li>iptables详解: <a href="https://www.zsythink.net/archives/1199">https://www.zsythink.net/archives/1199</a></li>
+<li>ip route相关知识: <a href="https://blog.csdn.net/zqixiao_09/article/details/53327074">https://blog.csdn.net/zqixiao_09/article/details/53327074</a></li>
+<li>ip rule, ip route, iptables三者之间关系: <a href="https://blog.csdn.net/qq_20817327/article/details/119148298">https://blog.csdn.net/qq_20817327/article/details/119148298</a></li>
 </ul>
 
     </div>
@@ -161,7 +165,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-09-06
+        2021-09-15
         
     </span>
   </p>
@@ -183,17 +187,15 @@
       </label>
   </div>
 </div><footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags//"></a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/ip/">
+        <a class="prev" href="/post/microservice/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">IP</span>
+            <span class="prev-text nav-default">microservice</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/panic_in_golang/">
-            <span class="next-text nav-default">panic in golang</span>
+        <a class="next" href="/post/delay_queue/">
+            <span class="next-text nav-default">Delay Queue</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

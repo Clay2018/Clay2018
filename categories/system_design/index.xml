@@ -6,10 +6,19 @@
     <description>Recent content in system_design on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Sep 2021 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Sep 2021 00:45:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/system_design/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>microservice</title>
+      <link>http://localhost:1313/post/microservice/</link>
+      <pubDate>Thu, 16 Sep 2021 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/microservice/</guid>
+      <description>Resources xx: 微服务解决了集中式架构的单体应用等不少问题，比如扩展性、弹性收缩能力、小规模团队的敏捷开发等待，但同时不少项目因为微服务拆分过度，导致项</description>
+    </item>
     
     <item>
       <title>Delay Queue</title>

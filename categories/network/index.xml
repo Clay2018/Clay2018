@@ -6,10 +6,19 @@
     <description>Recent content in network on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 18 Jul 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Sep 2021 00:45:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/network/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IP</title>
+      <link>http://localhost:1313/post/ip/</link>
+      <pubDate>Wed, 15 Sep 2021 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/ip/</guid>
+      <description>Resources iproute2和net-tools比较: https://www.cnblogs.com/anliven/p/6041246.html iproute2和netstat比较: https://blog.csdn.net/weixin_42767604/article/details/106251844 iptables详解: https://www.zsythink.net/archives/1199 ip route相关知识: https://blog.csdn.net/zqixiao_09/article/details/53327074 ip rule, ip</description>
+    </item>
     
     <item>
       <title>TCP</title>
