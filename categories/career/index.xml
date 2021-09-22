@@ -6,10 +6,19 @@
     <description>Recent content in career on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Aug 2021 01:01:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Sep 2021 23:45:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/career/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>how to talk about your project</title>
+      <link>http://localhost:1313/post/how_to_talk_about_your_project/</link>
+      <pubDate>Fri, 17 Sep 2021 23:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/how_to_talk_about_your_project/</guid>
+      <description>Resource 石墨文档基于K8S的Go微服务实践(上篇): https://mp.weixin.qq.com/s/2YrW_6My-20_DRyKRnT-tA</description>
+    </item>
     
     <item>
       <title>PA first lesson</title>
