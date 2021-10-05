@@ -39,12 +39,21 @@
     </item>
     
     <item>
-      <title>brownie</title>
-      <link>http://localhost:1313/post/use_brownie/</link>
-      <pubDate>Sat, 05 Jun 2021 00:00:44 +0800</pubDate>
+      <title>brownie使用</title>
+      <link>http://localhost:1313/post/brownie_use/</link>
+      <pubDate>Sun, 06 Jun 2021 10:28:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/use_brownie/</guid>
-      <description>使用brownie: https://betterprogramming.pub/part-1-brownie-smart-contracts-framework-for-ethereum-basics-5efc80205413</description>
+      <guid>http://localhost:1313/post/brownie_use/</guid>
+      <description>Resource brownie使用: https://betterprogramming.pub/part-1-brownie-smart-contracts-framework-for-ethereum-basics-5efc80205413#:~:text=Brownie%20is%20a%20robust%2C%20easy,to%20initialize%20or%20integrate%20them.</description>
+    </item>
+    
+    <item>
+      <title>btc地址生成</title>
+      <link>http://localhost:1313/post/btc_address/</link>
+      <pubDate>Sun, 06 Jun 2021 10:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/btc_address/</guid>
+      <description>btc地址生成 1 2 3 4 5 6 7 8 9 Get you public key Perform Sha256 on your Public key Perform RIPEMD160 hashing on the result of Sha256 hash Add version byte in front of RIPEMD160 hash (0x00 for main net, 0x6f for testnet) Perform Sha256 hash on the extended RIPEMD160 hash Perform Sha256 hash on the result of the previous step Take the</description>
     </item>
     
     <item>
