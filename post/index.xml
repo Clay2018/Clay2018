@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Oct 2021 10:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Oct 2021 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux内核网络</title>
+      <link>http://localhost:1313/post/linux_kernel_network/</link>
+      <pubDate>Wed, 06 Oct 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux_kernel_network/</guid>
+      <description>讨论Linux内核网络栈地实现及其原理，深入而详尽地分析网络子系统及其架构。讲解数据包在Linux内核网络栈中的传输过程，阐述其与网络各层及</description>
+    </item>
     
     <item>
       <title>Network interface card</title>
@@ -152,7 +161,7 @@
       <pubDate>Sun, 01 Aug 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/lxc/</guid>
-      <description>lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系统中可用LXC模板</description>
+      <description>源码安装lxc ``` ``` lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系</description>
     </item>
     
     <item>

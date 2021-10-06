@@ -6,10 +6,19 @@
     <description>Recent content in network on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Oct 2021 10:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Oct 2021 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/network/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux内核网络</title>
+      <link>http://localhost:1313/post/linux_kernel_network/</link>
+      <pubDate>Wed, 06 Oct 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux_kernel_network/</guid>
+      <description>讨论Linux内核网络栈地实现及其原理，深入而详尽地分析网络子系统及其架构。讲解数据包在Linux内核网络栈中的传输过程，阐述其与网络各层及</description>
+    </item>
     
     <item>
       <title>Network interface card</title>
