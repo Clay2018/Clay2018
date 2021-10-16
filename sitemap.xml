@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/business/</loc>
+    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/shenjian_channel/</loc>
+    <lastmod>2021-10-15T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/linux_kernel_network/</loc>
     <lastmod>2021-10-06T00:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -520,15 +534,43 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tags/business/</loc>
+    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/career/</loc>
+    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-10-06T00:47:44+08:00</lastmod>
+    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2021-10-06T00:47:44+08:00</lastmod>
+    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -543,27 +585,6 @@
   <url>
     <loc>http://localhost:1313/tags/origin/</loc>
     <lastmod>2021-10-06T00:47:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2021-10-06T00:47:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2021-10-06T00:47:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/career/</loc>
-    <lastmod>2021-09-17T23:45:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
