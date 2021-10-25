@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/floating_point/</loc>
+    <lastmod>2021-10-16T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/business/</loc>
     <lastmod>2021-10-16T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,7 +30,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/nics/</loc>
+    <loc>http://localhost:1313/post/data_link_layer/</loc>
+    <lastmod>2021-10-05T10:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/interview/</loc>
     <lastmod>2021-10-05T10:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -534,6 +548,34 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2021-10-16T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2021-10-16T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/linux/</loc>
+    <lastmod>2021-10-16T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2021-10-16T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/tags/business/</loc>
     <lastmod>2021-10-16T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -542,27 +584,6 @@
   
   <url>
     <loc>http://localhost:1313/categories/career/</loc>
-    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/</loc>
     <lastmod>2021-10-16T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -613,13 +634,6 @@
   <url>
     <loc>http://localhost:1313/categories/language/</loc>
     <lastmod>2021-09-05T00:47:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/linux/</loc>
-    <lastmod>2021-08-08T01:01:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

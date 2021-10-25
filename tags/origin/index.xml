@@ -21,11 +21,11 @@
     </item>
     
     <item>
-      <title>Network interface card</title>
-      <link>http://localhost:1313/post/nics/</link>
+      <title>Data Link Layer</title>
+      <link>http://localhost:1313/post/data_link_layer/</link>
       <pubDate>Tue, 05 Oct 2021 10:28:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/nics/</guid>
+      <guid>http://localhost:1313/post/data_link_layer/</guid>
       <description>什么是网卡 网卡是一块被设计用来允许在计算机网络上进行通讯的计算机硬件。其拥有MAC地址。 网卡的作用 网卡上面装有处理器和存储器, 网卡和局域网之</description>
     </item>
     

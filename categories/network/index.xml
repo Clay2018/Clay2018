@@ -21,11 +21,11 @@
     </item>
     
     <item>
-      <title>Network interface card</title>
-      <link>http://localhost:1313/post/nics/</link>
+      <title>Data Link Layer</title>
+      <link>http://localhost:1313/post/data_link_layer/</link>
       <pubDate>Tue, 05 Oct 2021 10:28:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/nics/</guid>
+      <guid>http://localhost:1313/post/data_link_layer/</guid>
       <description>什么是网卡 网卡是一块被设计用来允许在计算机网络上进行通讯的计算机硬件。其拥有MAC地址。 网卡的作用 网卡上面装有处理器和存储器, 网卡和局域网之</description>
     </item>
     
@@ -35,7 +35,7 @@
       <pubDate>Wed, 15 Sep 2021 00:45:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/ip/</guid>
-      <description>Resources iproute2和net-tools比较: https://www.cnblogs.com/anliven/p/6041246.html iproute2和netstat比较: https://blog.csdn.net/weixin_42767604/article/details/106251844 iptables详解: https://www.zsythink.net/archives/1199 ip route相关知识: https://blog.csdn.net/zqixiao_09/article/details/53327074 ip rule, ip</description>
+      <description>虚拟网桥 brctl命令 1 2 3 4 5 6 7 8 9 10 11 #查看网桥信息 brctl show #给网桥添加ip ifconfig brtest0 199.199.100.1 ifconfig brtest0 down brctl delbr brtest0 #不需要STP(生成树)协议 brctl stp br0 off 网桥配置</description>
     </item>
     
     <item>

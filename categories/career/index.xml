@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>interview</title>
+      <link>http://localhost:1313/post/interview/</link>
+      <pubDate>Tue, 05 Oct 2021 10:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/interview/</guid>
+      <description>Resources 海归软件工程师起飞指南: https://www.sohu.com/a/328902066_747492</description>
+    </item>
+    
+    <item>
       <title>how to talk about your project</title>
       <link>http://localhost:1313/post/how_to_talk_about_your_project/</link>
       <pubDate>Fri, 17 Sep 2021 23:45:44 +0800</pubDate>
@@ -45,15 +54,6 @@
       
       <guid>http://localhost:1313/post/pa_first_lesson/</guid>
       <description>入职第一课堂 战略执行: 战略前瞻、商业以实、规划分析、规划执行 管理决策: 管理组织、管理他人、管理自我、管理业务 科技创新: 前言创新、敏捷开发、大</description>
-    </item>
-    
-    <item>
-      <title>职业要求</title>
-      <link>http://localhost:1313/post/git/</link>
-      <pubDate>Fri, 06 Aug 2021 00:05:24 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/git/</guid>
-      <description>Resources git仓库操作: https://mp.weixin.qq.com/s/s_pNeT1lMlVDbjO37Fys4A</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/tech_speech/</guid>
-      <description>Resource 技术演讲,如何快速做到80分: https://mp.weixin.qq.com/s/u6gtUF5yz80vRpImVOloaw</description>
+      <description>Resource 技术演讲,如何快速做到80分: https://mp.weixin.qq.com/s/u6gtUF5yz80vRpImVOloaw 聊聊如何做技术分享: https://mp.weixin.qq.com/s/uyrQ528udyhydcB1mRMlOg</description>
     </item>
     
     <item>

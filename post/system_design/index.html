@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651962050&amp;amp;idx=1&amp;amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了,怎样解决: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651964475&amp;amp;idx=1&amp;amp;sn=e452b648f52cb9a5deb711334b0bb354&amp;amp;chksm=bd2d71e78a5af8f163e7af84855a523e847732be4ba486f68a55a4a153764096b38cb60221e9&amp;amp;scene=21#wechat_redirect 基于DAG" /><meta name="keywords" content="design" />
+<meta name="author" content="Clayton" /><meta name="description" content="系统设计开篇 &amp;lt;System Design Interview: An Insider&amp;rsquo;s Guide&amp;gt; Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651962050&amp;amp;idx=1&amp;amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了" /><meta name="keywords" content="design" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="system design" />
-<meta property="og:description" content="Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651962050&amp;idx=1&amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了,怎样解决: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651964475&amp;idx=1&amp;sn=e452b648f52cb9a5deb711334b0bb354&amp;chksm=bd2d71e78a5af8f163e7af84855a523e847732be4ba486f68a55a4a153764096b38cb60221e9&amp;scene=21#wechat_redirect 基于DAG" />
+<meta property="og:description" content="系统设计开篇 &lt;System Design Interview: An Insider&rsquo;s Guide&gt; Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651962050&amp;idx=1&amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/system_design/" />
 <meta property="article:published_time" content="2021-05-06T00:00:44+08:00" />
 <meta property="article:modified_time" content="2021-05-06T00:00:44+08:00" />
 <meta itemprop="name" content="system design">
-<meta itemprop="description" content="Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651962050&amp;idx=1&amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了,怎样解决: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651964475&amp;idx=1&amp;sn=e452b648f52cb9a5deb711334b0bb354&amp;chksm=bd2d71e78a5af8f163e7af84855a523e847732be4ba486f68a55a4a153764096b38cb60221e9&amp;scene=21#wechat_redirect 基于DAG">
+<meta itemprop="description" content="系统设计开篇 &lt;System Design Interview: An Insider&rsquo;s Guide&gt; Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651962050&amp;idx=1&amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了">
 <meta itemprop="datePublished" content="2021-05-06T00:00:44&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-06T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="82">
+<meta itemprop="wordCount" content="94">
 
 
 
 <meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="system design"/>
-<meta name="twitter:description" content="Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651962050&amp;idx=1&amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了,怎样解决: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651964475&amp;idx=1&amp;sn=e452b648f52cb9a5deb711334b0bb354&amp;chksm=bd2d71e78a5af8f163e7af84855a523e847732be4ba486f68a55a4a153764096b38cb60221e9&amp;scene=21#wechat_redirect 基于DAG"/>
+<meta name="twitter:description" content="系统设计开篇 &lt;System Design Interview: An Insider&rsquo;s Guide&gt; Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;mid=2651962050&amp;idx=1&amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -125,7 +125,7 @@
         <div class="post-category">
             <a href="/categories/system_design/"> system_design </a>
             </div>
-          <span class="more-meta"> 82 words </span>
+          <span class="more-meta"> 94 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -138,6 +138,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#系统设计开篇">系统设计开篇</a></li>
         <li><a href="#resources">Resources</a></li>
       </ul>
     </li>
@@ -146,7 +147,11 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="resources">Resources</h3>
+      <h3 id="系统设计开篇">系统设计开篇</h3>
+<ul>
+<li>&lt;System Design Interview: An Insider&rsquo;s Guide&gt;</li>
+</ul>
+<h3 id="resources">Resources</h3>
 <ul>
 <li>
 <p>亿级数据库秒级扩容: <a href="https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471">https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471</a></p>

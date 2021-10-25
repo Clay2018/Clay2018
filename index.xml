@@ -6,10 +6,19 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Oct 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Oct 2021 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Floating Point</title>
+      <link>http://localhost:1313/post/floating_point/</link>
+      <pubDate>Sat, 16 Oct 2021 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/floating_point/</guid>
+      <description>Resources 15张图带你深入理解浮点数: https://mp.weixin.qq.com/s/DGP4rENdy-N1VyZLS_uV4g 浮点数精度丢失问题详解: https://mp.weixin.qq.com/s/yjEkZrpIOAUAEknKTxC3YQ</description>
+    </item>
     
     <item>
       <title>Business</title>
@@ -39,12 +48,21 @@
     </item>
     
     <item>
-      <title>Network interface card</title>
-      <link>http://localhost:1313/post/nics/</link>
+      <title>Data Link Layer</title>
+      <link>http://localhost:1313/post/data_link_layer/</link>
       <pubDate>Tue, 05 Oct 2021 10:28:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/nics/</guid>
+      <guid>http://localhost:1313/post/data_link_layer/</guid>
       <description>什么是网卡 网卡是一块被设计用来允许在计算机网络上进行通讯的计算机硬件。其拥有MAC地址。 网卡的作用 网卡上面装有处理器和存储器, 网卡和局域网之</description>
+    </item>
+    
+    <item>
+      <title>interview</title>
+      <link>http://localhost:1313/post/interview/</link>
+      <pubDate>Tue, 05 Oct 2021 10:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/interview/</guid>
+      <description>Resources 海归软件工程师起飞指南: https://www.sohu.com/a/328902066_747492</description>
     </item>
     
     <item>
@@ -71,7 +89,7 @@
       <pubDate>Wed, 15 Sep 2021 00:45:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/ip/</guid>
-      <description>Resources iproute2和net-tools比较: https://www.cnblogs.com/anliven/p/6041246.html iproute2和netstat比较: https://blog.csdn.net/weixin_42767604/article/details/106251844 iptables详解: https://www.zsythink.net/archives/1199 ip route相关知识: https://blog.csdn.net/zqixiao_09/article/details/53327074 ip rule, ip</description>
+      <description>虚拟网桥 brctl命令 1 2 3 4 5 6 7 8 9 10 11 #查看网桥信息 brctl show #给网桥添加ip ifconfig brtest0 199.199.100.1 ifconfig brtest0 down brctl delbr brtest0 #不需要STP(生成树)协议 brctl stp br0 off 网桥配置</description>
     </item>
     
     <item>
@@ -129,7 +147,7 @@
     </item>
     
     <item>
-      <title>职业要求</title>
+      <title>git</title>
       <link>http://localhost:1313/post/git/</link>
       <pubDate>Fri, 06 Aug 2021 00:05:24 +0800</pubDate>
       
@@ -296,7 +314,7 @@
       <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/tech_speech/</guid>
-      <description>Resource 技术演讲,如何快速做到80分: https://mp.weixin.qq.com/s/u6gtUF5yz80vRpImVOloaw</description>
+      <description>Resource 技术演讲,如何快速做到80分: https://mp.weixin.qq.com/s/u6gtUF5yz80vRpImVOloaw 聊聊如何做技术分享: https://mp.weixin.qq.com/s/uyrQ528udyhydcB1mRMlOg</description>
     </item>
     
     <item>
@@ -458,7 +476,7 @@
       <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/system_design/</guid>
-      <description>Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651962050&amp;amp;idx=1&amp;amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了,怎样解决: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651964475&amp;amp;idx=1&amp;amp;sn=e452b648f52cb9a5deb711334b0bb354&amp;amp;chksm=bd2d71e78a5af8f163e7af84855a523e847732be4ba486f68a55a4a153764096b38cb60221e9&amp;amp;scene=21#wechat_redirect 基于DAG</description>
+      <description>系统设计开篇 &amp;lt;System Design Interview: An Insider&amp;rsquo;s Guide&amp;gt; Resources 亿级数据库秒级扩容: https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471 互联网架构高可用: https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&amp;amp;mid=2651962050&amp;amp;idx=1&amp;amp;sn=f60b8bb833fe3425f5227da42e3b3adf&amp;amp;chksm=bd2d0f1e8a5a8608f81d42a16eea476d0bd4763f84f9a008ed616d1cfa050a4015780f898eb1&amp;amp;scene=21#wechat_redirect 业务层，到底需不需要服务化: https://mp.weixin.qq.com/s/81Phkxg13ligFEWPTwpsfg 无锁缓存，每秒10万并发: https://mp.weixin.qq.com/s/BfuRWaB7RDjpGmQbZdmMZw 第三方服务挂了</description>
     </item>
     
     <item>
