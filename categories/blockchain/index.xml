@@ -6,10 +6,19 @@
     <description>Recent content in blockchain on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Jun 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 26 Oct 2021 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/blockchain/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BTC开发资料</title>
+      <link>http://localhost:1313/post/btc/</link>
+      <pubDate>Tue, 26 Oct 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/btc/</guid>
+      <description>Resources RPC API Reference: https://developer.bitcoin.org/reference/rpc/index.html btc explorer https://www.oklink.com/btc/address/33WswvHHQMVYUQQiuoN4MYXRrjTh8zuKbq tron api doc: https://developers.tron.network/reference#tronweb-object-1 eos testnet: https://www.alohaeos.com/zh/tools/testnets sign bitcoin cash/sv/abc transaction: https://apexpl.github.io/bitcoin_cash_sv_abc_transaction_signatures.html</description>
+    </item>
     
     <item>
       <title>Inheritance in solidity</title>
