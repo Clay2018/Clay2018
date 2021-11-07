@@ -6,10 +6,19 @@
     <description>Recent content in algorithm on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Jun 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Nov 2021 00:05:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>求解数组中唯二的两个数字</title>
+      <link>http://localhost:1313/post/xor/</link>
+      <pubDate>Sun, 07 Nov 2021 00:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/xor/</guid>
+      <description>一个数组中，存在两个只出现一次的数字，其余的数字均出现两次，求这两个数字是多少 1 2 3 4 5 6 #求解步骤: #假设两个数分别是a, b c = arr[0] xor arr[1] xor arr[2]</description>
+    </item>
     
     <item>
       <title>Tree</title>

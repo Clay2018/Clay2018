@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>BTC开发资料 - Even - A super concise theme for Hugo</title>
+  <title>求解数组中唯二的两个数字 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Resources RPC API Reference: https://developer.bitcoin.org/reference/rpc/index.html btc explorer https://www.oklink.com/btc/address/33WswvHHQMVYUQQiuoN4MYXRrjTh8zuKbq tron api doc: https://developers.tron.network/reference#tronweb-object-1 eos testnet: https://www.alohaeos.com/zh/tools/testnets sign bitcoin cash/sv/abc transaction: https://apexpl.github.io/bitcoin_cash_sv_abc_transaction_signatures.html" /><meta name="keywords" content="" />
+<meta name="author" content="Clayton" /><meta name="description" content="一个数组中，存在两个只出现一次的数字，其余的数字均出现两次，求这两个数字是多少 1 2 3 4 5 6 #求解步骤: #假设两个数分别是a, b c = arr[0] xor arr[1] xor arr[2]" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/btc/" />
+<link rel="canonical" href="http://localhost:1313/post/xor/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="BTC开发资料" />
-<meta property="og:description" content="Resources RPC API Reference: https://developer.bitcoin.org/reference/rpc/index.html btc explorer https://www.oklink.com/btc/address/33WswvHHQMVYUQQiuoN4MYXRrjTh8zuKbq tron api doc: https://developers.tron.network/reference#tronweb-object-1 eos testnet: https://www.alohaeos.com/zh/tools/testnets sign bitcoin cash/sv/abc transaction: https://apexpl.github.io/bitcoin_cash_sv_abc_transaction_signatures.html" />
+<meta property="og:title" content="求解数组中唯二的两个数字" />
+<meta property="og:description" content="一个数组中，存在两个只出现一次的数字，其余的数字均出现两次，求这两个数字是多少 1 2 3 4 5 6 #求解步骤: #假设两个数分别是a, b c = arr[0] xor arr[1] xor arr[2]" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/btc/" />
-<meta property="article:published_time" content="2021-10-26T00:47:44+08:00" />
-<meta property="article:modified_time" content="2021-10-26T00:47:44+08:00" />
-<meta itemprop="name" content="BTC开发资料">
-<meta itemprop="description" content="Resources RPC API Reference: https://developer.bitcoin.org/reference/rpc/index.html btc explorer https://www.oklink.com/btc/address/33WswvHHQMVYUQQiuoN4MYXRrjTh8zuKbq tron api doc: https://developers.tron.network/reference#tronweb-object-1 eos testnet: https://www.alohaeos.com/zh/tools/testnets sign bitcoin cash/sv/abc transaction: https://apexpl.github.io/bitcoin_cash_sv_abc_transaction_signatures.html">
-<meta itemprop="datePublished" content="2021-10-26T00:47:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-10-26T00:47:44&#43;08:00" />
-<meta itemprop="wordCount" content="20">
+<meta property="og:url" content="http://localhost:1313/post/xor/" />
+<meta property="article:published_time" content="2021-11-07T00:05:24+08:00" />
+<meta property="article:modified_time" content="2021-11-07T00:05:24+08:00" />
+<meta itemprop="name" content="求解数组中唯二的两个数字">
+<meta itemprop="description" content="一个数组中，存在两个只出现一次的数字，其余的数字均出现两次，求这两个数字是多少 1 2 3 4 5 6 #求解步骤: #假设两个数分别是a, b c = arr[0] xor arr[1] xor arr[2]">
+<meta itemprop="datePublished" content="2021-11-07T00:05:24&#43;08:00" />
+<meta itemprop="dateModified" content="2021-11-07T00:05:24&#43;08:00" />
+<meta itemprop="wordCount" content="144">
 
 
 
-<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BTC开发资料"/>
-<meta name="twitter:description" content="Resources RPC API Reference: https://developer.bitcoin.org/reference/rpc/index.html btc explorer https://www.oklink.com/btc/address/33WswvHHQMVYUQQiuoN4MYXRrjTh8zuKbq tron api doc: https://developers.tron.network/reference#tronweb-object-1 eos testnet: https://www.alohaeos.com/zh/tools/testnets sign bitcoin cash/sv/abc transaction: https://apexpl.github.io/bitcoin_cash_sv_abc_transaction_signatures.html"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="求解数组中唯二的两个数字"/>
+<meta name="twitter:description" content="一个数组中，存在两个只出现一次的数字，其余的数字均出现两次，求这两个数字是多少 1 2 3 4 5 6 #求解步骤: #假设两个数分别是a, b c = arr[0] xor arr[1] xor arr[2]"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -122,14 +122,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">BTC开发资料</h1>
+      <h1 class="post-title">求解数组中唯二的两个数字</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-10-26 </span>
+        <span class="post-time"> 2021-11-07 </span>
         <div class="post-category">
-            <a href="/categories/blockchain/"> blockchain </a>
+            <a href="/categories/algorithm/"> algorithm </a>
             </div>
-          <span class="more-meta"> 20 words </span>
+          <span class="more-meta"> 144 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -138,38 +138,32 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#resources">Resources</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <h3 id="resources">Resources</h3>
-<ul>
+      <ul>
 <li>
-<p>RPC API Reference: <a href="https://developer.bitcoin.org/reference/rpc/index.html">https://developer.bitcoin.org/reference/rpc/index.html</a></p>
-</li>
-<li>
-<p>btc explorer</p>
-<ul>
-<li><a href="https://www.oklink.com/btc/address/33WswvHHQMVYUQQiuoN4MYXRrjTh8zuKbq">https://www.oklink.com/btc/address/33WswvHHQMVYUQQiuoN4MYXRrjTh8zuKbq</a></li>
-</ul>
-</li>
-<li>
-<p>tron api doc: <a href="https://developers.tron.network/reference#tronweb-object-1">https://developers.tron.network/reference#tronweb-object-1</a></p>
-</li>
-<li>
-<p>eos testnet: <a href="https://www.alohaeos.com/zh/tools/testnets">https://www.alohaeos.com/zh/tools/testnets</a></p>
-</li>
-<li>
-<p>sign bitcoin cash/sv/abc transaction: <a href="https://apexpl.github.io/bitcoin_cash_sv_abc_transaction_signatures.html">https://apexpl.github.io/bitcoin_cash_sv_abc_transaction_signatures.html</a></p>
-</li>
+<p>一个数组中，存在两个只出现一次的数字，其余的数字均出现两次，求这两个数字是多少</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#求解步骤:
+#假设两个数分别是a, b
+c = arr[0] xor arr[1] xor arr[2] xor ... xor arr[n]
+#获取c的二进制表示中1的最低一位，根据此位将原数组划分为两个数组，此时a,b分别在两个数组arr1, arr2中
+a = arr1[0] xor ... xor arr1[n1]
+b = arr2[-] xor ... xor arr2[n2]
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 
     </div>
@@ -182,7 +176,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-10-26
+        2021-11-07
         
     </span>
   </p>
@@ -204,17 +198,15 @@
       </label>
   </div>
 </div><footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags//"></a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/xor/">
+        <a class="prev" href="/post/guess_game/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">求解数组中唯二的两个数字</span>
+            <span class="prev-text nav-default">Guessing Game</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/some_estimate_method/">
-            <span class="next-text nav-default">估算的一些方法</span>
+        <a class="next" href="/post/btc/">
+            <span class="next-text nav-default">BTC开发资料</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
