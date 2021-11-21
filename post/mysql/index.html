@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一致性:" /><meta name="keywords" content="mysql" />
+<meta name="author" content="Clayton" /><meta name="description" content="InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg order by: https://mp.weixin.qq.com/s/F2KkRnimpAUnQ4K8qaQJVg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一" /><meta name="keywords" content="mysql" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="MySQL" />
-<meta property="og:description" content="InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一致性:" />
+<meta property="og:description" content="InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg order by: https://mp.weixin.qq.com/s/F2KkRnimpAUnQ4K8qaQJVg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/mysql/" />
 <meta property="article:published_time" content="2021-05-06T00:00:44+08:00" />
 <meta property="article:modified_time" content="2021-05-06T00:00:44+08:00" />
 <meta itemprop="name" content="MySQL">
-<meta itemprop="description" content="InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一致性:">
+<meta itemprop="description" content="InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg order by: https://mp.weixin.qq.com/s/F2KkRnimpAUnQ4K8qaQJVg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一">
 <meta itemprop="datePublished" content="2021-05-06T00:00:44&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-06T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="127">
+<meta itemprop="wordCount" content="130">
 
 
 
 <meta itemprop="keywords" content="mysql," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MySQL"/>
-<meta name="twitter:description" content="InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一致性:"/>
+<meta name="twitter:description" content="InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg order by: https://mp.weixin.qq.com/s/F2KkRnimpAUnQ4K8qaQJVg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/components/"> components </a>
             </div>
-          <span class="more-meta"> 127 words </span>
+          <span class="more-meta"> 130 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -162,6 +162,9 @@
 </li>
 <li>
 <p>InnoDB并发为何如此高: <a href="https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg">https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg</a></p>
+</li>
+<li>
+<p>order by: <a href="https://mp.weixin.qq.com/s/F2KkRnimpAUnQ4K8qaQJVg">https://mp.weixin.qq.com/s/F2KkRnimpAUnQ4K8qaQJVg</a></p>
 </li>
 <li>
 <p>缓存: <a href="https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ">https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ</a></p>

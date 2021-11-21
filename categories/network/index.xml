@@ -6,10 +6,19 @@
     <description>Recent content in network on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Oct 2021 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Nov 2021 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/network/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VLAN</title>
+      <link>http://localhost:1313/post/vlan/</link>
+      <pubDate>Sun, 21 Nov 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/vlan/</guid>
+      <description>Resources 图文并茂VLAN详解: https://blog.51cto.com/u_6930123/2115373 VLAN详解: https://www.jb51.net/network/774813.html</description>
+    </item>
     
     <item>
       <title>Linux内核网络</title>

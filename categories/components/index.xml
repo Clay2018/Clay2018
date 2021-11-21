@@ -35,7 +35,7 @@
       <pubDate>Thu, 06 May 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/mysql/</guid>
-      <description>InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一致性:</description>
+      <description>InnoDB索引 InnoDB索引，终于懂了: https://mp.weixin.qq.com/s/39XgTTC2VUVGq0EIlpb3WA 数据库索引，为什么设计成这样: https://mp.weixin.qq.com/s/0x5T-wbAoNVHkKTT61lIUQ InnoDB并发为何如此高: https://mp.weixin.qq.com/s/fmzaIobOihKKZ7kyZQInTg order by: https://mp.weixin.qq.com/s/F2KkRnimpAUnQ4K8qaQJVg 缓存: https://mp.weixin.qq.com/s/4oGRpNyD9ZhNvvJuvFOUXQ 数据库、缓存双写一</description>
     </item>
     
     <item>
