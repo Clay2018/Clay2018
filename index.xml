@@ -6,7 +6,7 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Nov 2021 10:06:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Dec 2021 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,26 @@
       
       <guid>http://localhost:1313/post/search/</guid>
       <description>/* 手机适配 */ @media screen and (max-width: 500px) { .search{ padding-right: 25px; } .search input{ width: 100%; } .search button{ display: none; } } /* 电脑适配 */ @media screen and (min-width: 500px) { .search{ width: 500px; } .search input{ width: 444px; } } /* 通用样式 */ .search{ margin: auto; } .search input{ outline: none; border: 2px solid #c05b4d; height: 32px; padding:</description>
+    </item>
+    
+    <item>
+      <title>blockchain website</title>
+      <link>http://localhost:1313/post/blockchain_website/</link>
+      <pubDate>Sun, 19 Dec 2021 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/blockchain_website/</guid>
+      <description>Resources   The most trusted platform to manage digital assets on Ethereum: https://gnosis-safe.io/#getting-started
+  Community funding for people and projects: https://juicebox.money/#/
+  </description>
+    </item>
+    
+    <item>
+      <title>container</title>
+      <link>http://localhost:1313/post/container/</link>
+      <pubDate>Sun, 19 Dec 2021 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/container/</guid>
+      <description>容器和虚拟机区别 容器是将进程有效划分的一个独立空间，以便在独立的空间之间平衡资源使用冲突的技术。本质上容器是一种特殊的进程，其核心功能是通过</description>
     </item>
     
     <item>
@@ -716,6 +736,15 @@
     </item>
     
     <item>
+      <title>Cloud Storage</title>
+      <link>http://localhost:1313/post/cloud_storage/</link>
+      <pubDate>Sat, 19 Dec 2020 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/cloud_storage/</guid>
+      <description>unkonw 云原生与微服务 云原生本质上是一套知道软件架构涉及的思想，建立在&amp;quot;未来的软件一定生长于云&amp;quot;的核心假设之上。 云原生包括容器</description>
+    </item>
+    
+    <item>
       <title>Channel在Go中运用</title>
       <link>http://localhost:1313/post/the_usage_of_channel_in_go/</link>
       <pubDate>Thu, 10 Dec 2020 21:05:24 +0800</pubDate>
@@ -731,15 +760,6 @@
       
       <guid>http://localhost:1313/post/celerynote/</guid>
       <description>Getting Started celery is flexible. Almost every part of Celry can be extended or used on its own, Custom pool implementations, serializers, compression schemes, logging, schedulers, consumers, producers, broker transports, and much more. celery中current_app的指向 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # main.py</description>
-    </item>
-    
-    <item>
-      <title>Distributed Cloud Storage</title>
-      <link>http://localhost:1313/post/cloud_storage/</link>
-      <pubDate>Sat, 05 Sep 2020 10:28:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/cloud_storage/</guid>
-      <description>unkonw </description>
     </item>
     
     <item>
