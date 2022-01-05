@@ -8,6 +8,27 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/top/</loc>
+    <lastmod>2022-01-03T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/cpu/</loc>
+    <lastmod>2022-01-03T00:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/code_writing/</loc>
+    <lastmod>2022-01-03T00:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/blockchain_website/</loc>
     <lastmod>2021-12-19T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -610,14 +631,35 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/blockchain/</loc>
-    <lastmod>2021-12-19T00:28:00+08:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2022-01-03T14:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2022-01-03T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/linux/</loc>
+    <lastmod>2022-01-03T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2022-01-03T14:47:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/blockchain/</loc>
     <lastmod>2021-12-19T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -626,27 +668,6 @@
   <url>
     <loc>http://localhost:1313/categories/cloud/</loc>
     <lastmod>2021-12-19T00:28:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2021-12-19T00:28:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2021-12-19T00:28:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/linux/</loc>
-    <lastmod>2021-11-21T10:06:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

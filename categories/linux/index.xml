@@ -6,10 +6,37 @@
     <description>Recent content in linux on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Nov 2021 10:06:24 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jan 2022 14:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>top command</title>
+      <link>http://localhost:1313/post/top/</link>
+      <pubDate>Mon, 03 Jan 2022 14:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/top/</guid>
+      <description>top命令 进程的优先级 cpu利用率和负载 cpu利用率是对一个时间段内CPU使用情况的统计,通过这个指标可以看出某一个时间段内CPU被占用的情</description>
+    </item>
+    
+    <item>
+      <title>CPU核数</title>
+      <link>http://localhost:1313/post/cpu/</link>
+      <pubDate>Mon, 03 Jan 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/cpu/</guid>
+      <description>计算机系统架构 SMP, NUMA, MPP是目前主流得计算机系统架构 SMP 对称多处理架构。在这样得系统中，多个CPU对称工作，无主从关系。所有的CPU共享全部资源</description>
+    </item>
+    
+    <item>
+      <title>code writing</title>
+      <link>http://localhost:1313/post/code_writing/</link>
+      <pubDate>Mon, 03 Jan 2022 00:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/code_writing/</guid>
+      <description>Resources  my logging best practices: https://tuhrig.de/my-logging-best-practices/  </description>
+    </item>
     
     <item>
       <title>Computer Architecture</title>

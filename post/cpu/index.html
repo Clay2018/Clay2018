@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CPU核数 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="计算机系统架构 SMP, NUMA, MPP是目前主流得计算机系统架构 SMP 对称多处理架构。在这样得系统中，多个CPU对称工作，无主从关系。所有的CPU共享全部资源" /><meta name="keywords" content="" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/cpu/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="CPU核数" />
+<meta property="og:description" content="计算机系统架构 SMP, NUMA, MPP是目前主流得计算机系统架构 SMP 对称多处理架构。在这样得系统中，多个CPU对称工作，无主从关系。所有的CPU共享全部资源" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/cpu/" />
+<meta property="article:published_time" content="2022-01-03T00:47:44+08:00" />
+<meta property="article:modified_time" content="2022-01-03T00:47:44+08:00" />
+<meta itemprop="name" content="CPU核数">
+<meta itemprop="description" content="计算机系统架构 SMP, NUMA, MPP是目前主流得计算机系统架构 SMP 对称多处理架构。在这样得系统中，多个CPU对称工作，无主从关系。所有的CPU共享全部资源">
+<meta itemprop="datePublished" content="2022-01-03T00:47:44&#43;08:00" />
+<meta itemprop="dateModified" content="2022-01-03T00:47:44&#43;08:00" />
+<meta itemprop="wordCount" content="1493">
+
+
+
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CPU核数"/>
+<meta name="twitter:description" content="计算机系统架构 SMP, NUMA, MPP是目前主流得计算机系统架构 SMP 对称多处理架构。在这样得系统中，多个CPU对称工作，无主从关系。所有的CPU共享全部资源"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/post/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/search/">搜索</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">CPU核数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-01-03 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta"> 1493 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#计算机系统架构">计算机系统架构</a></li>
+        <li><a href="#查看cpu参数">查看CPU参数</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="计算机系统架构">计算机系统架构</h3>
+<p>SMP, NUMA, MPP是目前主流得计算机系统架构</p>
+<ul>
+<li>
+<p>SMP</p>
+<p>对称多处理架构。在这样得系统中，多个CPU对称工作，无主从关系。所有的CPU共享全部资源，如总线，内存和I/O系统等，多个CPU之间没有区别，平等地访问内存、外设。每个CPU访问内存任何地址所需时间是相同地，因此SMP也被称为一致性存储器访问架构(UMA: Uniform Memory Access)。操作系统管理着一个队列，每个处理器依次处理队列中的进程。如果两个处理器同时请求访问一个资源，由硬件、软件的锁机制去解决资源争用的问题</p>
+<p>SMP 服务器的主要特征是共享，系统中所有资源 (CPU 、内存、 I/O 等 ) 都是共享的。也正是由于这种特征，导致了 SMP 服务器的主要问题，那就是它的扩展能力非常有限。对于 SMP 服务器而言，每一个共享的环节都可能造成 SMP 服务器扩展时的瓶颈，而最受限制的则是内存。由于每个 CPU 必须通过相同的内存总线访问相同的内存资源，因此随着 CPU 数量的增加，内存访问冲突将迅速增加，最终会造成 CPU 资源的浪费，使 CPU 性能的有效性大大降低。实验证明， SMP 服务器 CPU 利用率最好的情况是 2 至 4 个 CPU 。</p>
+</li>
+<li>
+<p>NUMA</p>
+<p>Non-Uniform Memory Access。非一致性存储访问结构.NUMA服务器的基本特征是具有多个CPU模块，每个CPU模块由多个CPU组成，并且具有独立的本地内存、I/O槽口等。其节点之间通过互联模块(crossbar switch)进行连接和信息交互，因此每个CPU可以访问整个系统的内存(这是NUMA系统和MPP系统的重要差别)。显然，访问本地内存的速度将远远高于访问remote memory的速度.为了更好的发挥系统性能，开发应用程序时需要尽量减少不同CPU模块之间的信息交互</p>
+<p>NUMA 技术同样有一定缺陷，由于访问远地内存的延时远远超过本地内存，因此当 CPU 数量增加时，系统性能无法线性增加。</p>
+</li>
+<li>
+<p>MPP</p>
+<p>海量并行处理架构(Massive Parallel Processing).MPP提供了另外一种进行系统扩展的方式，它由多个SMP服务器通过一定的节点互联网络进行连接，协同工作，完成相同的任务，从用户的角度来看是一个服务器系统。MPP的节点互联机制是在不同的SMP服务器外部通过I/O实现的，每个节点只访问本地内存和存储，节点之间的信息交互与节点本身的处理是并行进行的。其基本特征是由多个SMP服务器通过节点互联网络连接而成，每个节点只访问自己的本地资源(内存、存储等)，是一种完全无共享结构，因扩展能力最好，理论上扩展无限制</p>
+</li>
+</ul>
+<h3 id="查看cpu参数">查看CPU参数</h3>
+<p>超线程: Hyper-threading就是在一个CPU Core上集成了两个逻辑处理器单元，即Logical Processor</p>
+<p>NUMA node包括一个或多个Socket，以及与之相连的local memory</p>
+<p>一个多核的socket有多个Core</p>
+<p>如果CPU支持HT, OS还会把这个Core看成2个Logical Processor</p>
+<ul>
+<li>
+<p>lscpu</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">lscpu
+
+Architecture:          x86_64           #处理器架构
+CPU op-mode(s):        32-bit, 64-bit   #CPU工作模式
+Byte Order:            Little Endian
+CPU(s):                1                #逻辑CPU核数      
+On-line CPU(s) list:   0                
+Thread(s) per core:    1                #每个逻辑核上的超线程数
+Core(s) per socket:    1                #一个物理核上的逻辑核数
+Socket(s):             1                #物理CPU个数
+NUMA node(s):          1                #NUMA节点个数
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Platinum 8255C  CPU @ 2.50GHz
+Stepping:              5
+CPU MHz:               2494.140
+BogoMIPS:              4988.28
+Hypervisor vendor:     KVM
+Virtualization type:   full             #虚拟化类型支持
+L1d cache:             32K              #1级数据缓存
+L1i cache:             32K              #1级指令缓存
+L2 cache:              4096K
+L3 cache:              36608K
+NUMA node0 CPU(s):     0
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat avx512_vnni
+
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查看物理CPU个数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cat /proc/cpuinfo |grep &#34;physical id&#34;|sort |uniq|wc -l
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查看逻辑CPU个数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cat /proc/cpuinfo| grep &#34;processor&#34;| wc -l
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查看linux系统内存信息</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cat /proc/meminfo
+free -h
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+<li>NUMA技术以及uumactl命令: <a href="https://www.codenong.com/cs109360467/">https://www.codenong.com/cs109360467/</a></li>
+<li>lscpu命令详解: <a href="https://www.cnblogs.com/machangwei-8/p/10398902.html">https://www.cnblogs.com/machangwei-8/p/10398902.html</a></li>
+<li>linux查看机器cpu核数: <a href="https://www.cnblogs.com/hurry-up/p/9564064.html">https://www.cnblogs.com/hurry-up/p/9564064.html</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-01-03
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/top/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">top command</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/code_writing/">
+            <span class="next-text nav-default">code writing</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

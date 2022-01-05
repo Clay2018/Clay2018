@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>golang中的defer - Even - A super concise theme for Hugo</title>
+  <title>top command - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Reference defer分析: https://studygolang.com/articles/742" /><meta name="keywords" content="defer" />
+<meta name="author" content="Clayton" /><meta name="description" content="top命令 进程的优先级 cpu利用率和负载 cpu利用率是对一个时间段内CPU使用情况的统计,通过这个指标可以看出某一个时间段内CPU被占用的情" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/defer_in_golang/" />
+<link rel="canonical" href="http://localhost:1313/post/top/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="golang中的defer" />
-<meta property="og:description" content="Reference defer分析: https://studygolang.com/articles/742" />
+<meta property="og:title" content="top command" />
+<meta property="og:description" content="top命令 进程的优先级 cpu利用率和负载 cpu利用率是对一个时间段内CPU使用情况的统计,通过这个指标可以看出某一个时间段内CPU被占用的情" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/defer_in_golang/" />
-<meta property="article:published_time" content="2021-04-02T01:01:00+08:00" />
-<meta property="article:modified_time" content="2021-04-02T01:01:00+08:00" />
-<meta itemprop="name" content="golang中的defer">
-<meta itemprop="description" content="Reference defer分析: https://studygolang.com/articles/742">
-<meta itemprop="datePublished" content="2021-04-02T01:01:00&#43;08:00" />
-<meta itemprop="dateModified" content="2021-04-02T01:01:00&#43;08:00" />
-<meta itemprop="wordCount" content="10">
+<meta property="og:url" content="http://localhost:1313/post/top/" />
+<meta property="article:published_time" content="2022-01-03T14:47:44+08:00" />
+<meta property="article:modified_time" content="2022-01-03T14:47:44+08:00" />
+<meta itemprop="name" content="top command">
+<meta itemprop="description" content="top命令 进程的优先级 cpu利用率和负载 cpu利用率是对一个时间段内CPU使用情况的统计,通过这个指标可以看出某一个时间段内CPU被占用的情">
+<meta itemprop="datePublished" content="2022-01-03T14:47:44&#43;08:00" />
+<meta itemprop="dateModified" content="2022-01-03T14:47:44&#43;08:00" />
+<meta itemprop="wordCount" content="153">
 
 
 
-<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="golang中的defer"/>
-<meta name="twitter:description" content="Reference defer分析: https://studygolang.com/articles/742"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="top command"/>
+<meta name="twitter:description" content="top命令 进程的优先级 cpu利用率和负载 cpu利用率是对一个时间段内CPU使用情况的统计,通过这个指标可以看出某一个时间段内CPU被占用的情"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -122,14 +122,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">golang中的defer</h1>
+      <h1 class="post-title">top command</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-04-02 </span>
+        <span class="post-time"> 2022-01-03 </span>
         <div class="post-category">
-            <a href="/categories/language/"> language </a>
+            <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 10 words </span>
+          <span class="more-meta"> 153 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -142,7 +142,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#reference">Reference</a></li>
+        <li><a href="#top命令">top命令</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </li>
   </ul>
@@ -150,9 +151,21 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="reference">Reference</h3>
+      <h3 id="top命令">top命令</h3>
 <ul>
-<li>defer分析: <a href="https://studygolang.com/articles/742">https://studygolang.com/articles/742</a></li>
+<li>
+<p>进程的优先级</p>
+</li>
+<li>
+<p>cpu利用率和负载</p>
+<p>cpu利用率是对一个时间段内CPU使用情况的统计,通过这个指标可以看出某一个时间段内CPU被占用的情况</p>
+<p>CPU负载是在一段时间内CPU正在处理以及等待CPU处理的进程数之和的统计信息，也就是CPU使用队列的长度的统计信息</p>
+</li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+<li>top命令详解: <a href="https://www.cnblogs.com/ggjucheng/archive/2012/01/08/2316399.html">https://www.cnblogs.com/ggjucheng/archive/2012/01/08/2316399.html</a></li>
+<li>深入linux进程优先级: <a href="https://linux.cn/article-7325-1.html">https://linux.cn/article-7325-1.html</a></li>
 </ul>
 
     </div>
@@ -165,7 +178,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-04-02
+        2022-01-03
         
     </span>
   </p>
@@ -187,17 +200,15 @@
       </label>
   </div>
 </div><footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/golang/">golang</a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/redis/">
+        <a class="prev" href="/post/search/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">redis集锦</span>
+            <span class="prev-text nav-default">搜索</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/error_in_goalng/">
-            <span class="next-text nav-default">golang中的error</span>
+        <a class="next" href="/post/cpu/">
+            <span class="next-text nav-default">CPU核数</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
