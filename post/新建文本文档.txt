@@ -1,0 +1,47 @@
+---
+title: "pprof in golang"
+date: 2022-01-09T00:45:44+08:00
+weight: 70
+keywords: []
+tags: []
+categories: ["golang"]
+author: "Clayton"
+draft: false
+---
+
+### CPU pprof
+
+```
+package main
+
+import (
+    "fmt"
+    "net/http"
+    _ "net/http/pprof"
+    "time"
+)
+func main() {
+    go func() {
+        ticker := time.NewTicker(time.Second)
+        for {
+            select {
+            case t := <- ticker.C:
+                fmt.Println("Current time:", t)
+            default:
+            }
+        }
+    }()
+    http.ListenAndServe(":8080", nil)
+}
+```
+
+```
+#cmdline
+go run main.go
+go tool pprof http://127.0.0.1:8080/debug/pprof/profile?seconds=10
+
+```
+
+### Resources
+
+- pprof: https://go.dev/blog/pprof

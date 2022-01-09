@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 03 Jan 2022 14:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jan 2022 00:45:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,24 @@
       
       <guid>http://localhost:1313/post/search/</guid>
       <description>/* 手机适配 */ @media screen and (max-width: 500px) { .search{ padding-right: 25px; } .search input{ width: 100%; } .search button{ display: none; } } /* 电脑适配 */ @media screen and (min-width: 500px) { .search{ width: 500px; } .search input{ width: 444px; } } /* 通用样式 */ .search{ margin: auto; } .search input{ outline: none; border: 2px solid #c05b4d; height: 32px; padding:</description>
+    </item>
+    
+    <item>
+      <title>io.WriteString()分析</title>
+      <link>http://localhost:1313/post/io_write_string_analysis/</link>
+      <pubDate>Sun, 09 Jan 2022 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/io_write_string_analysis/</guid>
+      <description>问题 内存管理在Golang中是棘手的，我们可能相信golang本身已具备内存自动管理功能，可以从此解放出来。但上周的某个功能测试结果让我改变</description>
+    </item>
+    
+    <item>
+      <title>pprof in golang</title>
+      <link>http://localhost:1313/post/pprof_in_golang/</link>
+      <pubDate>Sun, 09 Jan 2022 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pprof_in_golang/</guid>
+      <description>CPU pprof 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;net/http&amp;#34; _ &amp;#34;net/http/pprof&amp;#34; &amp;#34;time&amp;#34; ) func main() { go func() { ticker := time.NewTicker(time.Second) for { select { case t := &amp;lt;- ticker.C: fmt.Println(&amp;#34;Current time:&amp;#34;, t) default: } } }() http.ListenAndServe(&amp;#34;:8080&amp;#34;, nil) } 1 2 3 4 #cmdline go run main.go go</description>
     </item>
     
     <item>
