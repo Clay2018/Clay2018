@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jan 2022 00:45:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jan 2022 00:45:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,33 @@
       
       <guid>http://localhost:1313/post/search/</guid>
       <description>/* 手机适配 */ @media screen and (max-width: 500px) { .search{ padding-right: 25px; } .search input{ width: 100%; } .search button{ display: none; } } /* 电脑适配 */ @media screen and (min-width: 500px) { .search{ width: 500px; } .search input{ width: 444px; } } /* 通用样式 */ .search{ margin: auto; } .search input{ outline: none; border: 2px solid #c05b4d; height: 32px; padding:</description>
+    </item>
+    
+    <item>
+      <title>Difference between atomic and mutex</title>
+      <link>http://localhost:1313/post/difference_between_atomic_and_mutex/</link>
+      <pubDate>Tue, 11 Jan 2022 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/difference_between_atomic_and_mutex/</guid>
+      <description>Resources 原子操作和互斥锁的区别: https://cloud.tencent.com/developer/article/1645697</description>
+    </item>
+    
+    <item>
+      <title>Difference between atomic and mutex</title>
+      <link>http://localhost:1313/post/split_db_practice/</link>
+      <pubDate>Tue, 11 Jan 2022 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/split_db_practice/</guid>
+      <description>Resources: 大众点评订单系统分库分表实践: https://tech.meituan.com/2016/11/18/dianping-order-db-sharding.html</description>
+    </item>
+    
+    <item>
+      <title>zero copy in linux</title>
+      <link>http://localhost:1313/post/zero_copy_in_linux/</link>
+      <pubDate>Tue, 11 Jan 2022 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/zero_copy_in_linux/</guid>
+      <description>Resources 深入剖析linux IO原理和几种零拷贝的实现: https://zhuanlan.zhihu.com/p/83398714 Go语言中的零拷贝优化: https://strikefreedom.top/pipe-pool-for-splice-in-go linux io and zero copy: https://strikefreedom.top/linux-io-and-zero-copy</description>
     </item>
     
     <item>

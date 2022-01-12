@@ -6,10 +6,28 @@
     <description>Recent content in linux on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 03 Jan 2022 14:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jan 2022 00:45:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Difference between atomic and mutex</title>
+      <link>http://localhost:1313/post/difference_between_atomic_and_mutex/</link>
+      <pubDate>Tue, 11 Jan 2022 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/difference_between_atomic_and_mutex/</guid>
+      <description>Resources 原子操作和互斥锁的区别: https://cloud.tencent.com/developer/article/1645697</description>
+    </item>
+    
+    <item>
+      <title>zero copy in linux</title>
+      <link>http://localhost:1313/post/zero_copy_in_linux/</link>
+      <pubDate>Tue, 11 Jan 2022 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/zero_copy_in_linux/</guid>
+      <description>Resources 深入剖析linux IO原理和几种零拷贝的实现: https://zhuanlan.zhihu.com/p/83398714 Go语言中的零拷贝优化: https://strikefreedom.top/pipe-pool-for-splice-in-go linux io and zero copy: https://strikefreedom.top/linux-io-and-zero-copy</description>
+    </item>
     
     <item>
       <title>top command</title>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>system_design · Even - A super concise theme for Hugo</title>
+  <title>zero copy in linux - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Clayton Blog site." /><meta name="keywords" content="Clayton, Blog, even" />
+<meta name="author" content="Clayton" /><meta name="description" content="Resources 深入剖析linux IO原理和几种零拷贝的实现: https://zhuanlan.zhihu.com/p/83398714 Go语言中的零拷贝优化: https://strikefreedom.top/pipe-pool-for-splice-in-go linux io and zero copy: https://strikefreedom.top/linux-io-and-zero-copy" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/categories/system_design/" />
-  <link href="http://localhost:1313/categories/system_design/index.xml" rel="alternate" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
-  <link href="http://localhost:1313/categories/system_design/index.xml" rel="feed" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+<link rel="canonical" href="http://localhost:1313/post/zero_copy_in_linux/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,15 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="system_design" />
-<meta property="og:description" content="Clayton Blog site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/categories/system_design/" />
-<meta property="og:updated_time" content="2022-01-11T00:45:44+08:00" />
-<meta itemprop="name" content="system_design">
-<meta itemprop="description" content="Clayton Blog site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="system_design"/>
-<meta name="twitter:description" content="Clayton Blog site."/>
+<meta property="og:title" content="zero copy in linux" />
+<meta property="og:description" content="Resources 深入剖析linux IO原理和几种零拷贝的实现: https://zhuanlan.zhihu.com/p/83398714 Go语言中的零拷贝优化: https://strikefreedom.top/pipe-pool-for-splice-in-go linux io and zero copy: https://strikefreedom.top/linux-io-and-zero-copy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/zero_copy_in_linux/" />
+<meta property="article:published_time" content="2022-01-11T00:45:44+08:00" />
+<meta property="article:modified_time" content="2022-01-11T00:45:44+08:00" />
+<meta itemprop="name" content="zero copy in linux">
+<meta itemprop="description" content="Resources 深入剖析linux IO原理和几种零拷贝的实现: https://zhuanlan.zhihu.com/p/83398714 Go语言中的零拷贝优化: https://strikefreedom.top/pipe-pool-for-splice-in-go linux io and zero copy: https://strikefreedom.top/linux-io-and-zero-copy">
+<meta itemprop="datePublished" content="2022-01-11T00:45:44&#43;08:00" />
+<meta itemprop="dateModified" content="2022-01-11T00:45:44&#43;08:00" />
+<meta itemprop="wordCount" content="44">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="zero copy in linux"/>
+<meta name="twitter:description" content="Resources 深入剖析linux IO原理和几种零拷贝的实现: https://zhuanlan.zhihu.com/p/83398714 Go语言中的零拷贝优化: https://strikefreedom.top/pipe-pool-for-splice-in-go linux io and zero copy: https://strikefreedom.top/linux-io-and-zero-copy"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -113,128 +119,103 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="archive" class="archive">
-  <div class="archive-title category">
-        <h2 class="archive-name">system_design</h2>
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">zero copy in linux</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-01-11 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta"> 44 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
       </div>
+    </header>
 
-  <div class="archive-post">
-      <span class="archive-post-time">
-        2022-01-11
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/split_db_practice/" class="archive-post-link">
-          Difference between atomic and mutex
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-10-26
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/some_estimate_method/" class="archive-post-link">
-          估算的一些方法
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-09-16
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/microservice/" class="archive-post-link">
-          microservice
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-09-06
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/delay_queue/" class="archive-post-link">
-          Delay Queue
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-06-27
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/rate_limiter/" class="archive-post-link">
-          限流器
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-06-27
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/scheduling_system_design/" class="archive-post-link">
-          调度系统设计
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-06-27
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/data_fragment/" class="archive-post-link">
-          数据分片
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-06-27
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/distributed_transaction/" class="archive-post-link">
-          分布式事务之底层原理揭秘
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-06-27
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/build_backend_from_zero/" class="archive-post-link">
-          从零开始搭建创业公司后台技术栈
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-05-06
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/system_design/" class="archive-post-link">
-          system design
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-05-06
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/microservice_gateway/" class="archive-post-link">
-          microservice
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2021-04-19
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/distributed_lock/" class="archive-post-link">
-          分布式锁
-        </a>
-      </span>
-    </div>
-</section>
-
-<nav class="pagination">
-  
-  
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="resources">Resources</h3>
+<ul>
+<li>
+<p>深入剖析linux IO原理和几种零拷贝的实现: <a href="https://zhuanlan.zhihu.com/p/83398714">https://zhuanlan.zhihu.com/p/83398714</a></p>
+</li>
+<li>
+<p>Go语言中的零拷贝优化: <a href="https://strikefreedom.top/pipe-pool-for-splice-in-go">https://strikefreedom.top/pipe-pool-for-splice-in-go</a></p>
+</li>
+<li>
+<p>linux io and zero copy: <a href="https://strikefreedom.top/linux-io-and-zero-copy">https://strikefreedom.top/linux-io-and-zero-copy</a></p>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-01-11
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/split_db_practice/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Difference between atomic and mutex</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/io_write_string_analysis/">
+            <span class="next-text nav-default">io.WriteString()分析</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>
