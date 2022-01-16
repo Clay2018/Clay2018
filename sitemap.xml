@@ -8,6 +8,20 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/disruptor/</loc>
+    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/log_framework/</loc>
+    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/difference_between_atomic_and_mutex/</loc>
     <lastmod>2022-01-11T00:45:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -667,34 +681,34 @@
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2022-01-11T00:45:44+08:00</lastmod>
+    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2022-01-11T00:45:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/linux/</loc>
-    <lastmod>2022-01-11T00:45:44+08:00</lastmod>
+    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2022-01-11T00:45:44+08:00</lastmod>
+    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/system_design/</loc>
+    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/linux/</loc>
     <lastmod>2022-01-11T00:45:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
