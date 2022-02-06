@@ -49,11 +49,11 @@
 <meta itemprop="description" content="RabbitMQ作用及其出现背景 作用: 削峰，解耦，异步调用 RabbitMQ特性和好处: 开源 轻量级 面向大多数现代语言的客户端开发库 灵活控制消息">
 <meta itemprop="datePublished" content="2022-02-04T00:00:44&#43;08:00" />
 <meta itemprop="dateModified" content="2022-02-04T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="2269">
+<meta itemprop="wordCount" content="5649">
 
 
 
-<meta itemprop="keywords" content="rabbitmq," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="mq," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="RabbitMQ"/>
 <meta name="twitter:description" content="RabbitMQ作用及其出现背景 作用: 削峰，解耦，异步调用 RabbitMQ特性和好处: 开源 轻量级 面向大多数现代语言的客户端开发库 灵活控制消息"/>
 
@@ -129,8 +129,8 @@
         <div class="post-category">
             <a href="/categories/components/"> components </a>
             </div>
-          <span class="more-meta"> 2269 words </span>
-          <span class="more-meta"> 5 mins read </span>
+          <span class="more-meta"> 5649 words </span>
+          <span class="more-meta"> 12 mins read </span>
         
       </div>
     </header>
@@ -149,6 +149,7 @@
         <li><a href="#消费消息">消费消息</a></li>
         <li><a href="#队列">队列</a></li>
         <li><a href="#集群">集群</a></li>
+        <li><a href="#实战指南">实战指南</a></li>
         <li><a href="#resource">Resource</a></li>
       </ul>
     </li>
@@ -264,6 +265,61 @@
 </ul>
 </li>
 </ul>
+<h3 id="实战指南">实战指南</h3>
+<p>消息是指在应用间传送的数据，消息可以非常简单.</p>
+<p>消息队列中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。</p>
+<p>一般有两种传递模式:p2p, pub/sub</p>
+<p>消息中间件的作用:</p>
+<ul>
+<li>解耦</li>
+<li>冗余</li>
+<li>削峰</li>
+<li>异步</li>
+</ul>
+<p>vhost</p>
+<p>Erlang在运行时使用线程池来异步执行I/O操作。线程池的大小可以通过环境变量来调节</p>
+<p>大部分操作系统都限制了同一时间可以打开的文件句柄数。在优化并发连接数的时候，需确保系统有足够的文件句柄数来支撑客户端和Broker的交互。增大TCP缓冲区大小可以提高吞吐量，如果减少TCP缓冲区就可以减少每个连接上的内存使用量(并发更重要可修改此值)</p>
+<ul>
+<li>
+<p>存储机制</p>
+<p>持久层实际包含两个部分.rabbit_queue_index和rabbit_msg_store。rabbit_queue_index负责维护队列中落盘消息，包括消息的存储地点，是否已被交付给消费者、是否已被消费者ack等。每个队列都有与之对应的一个rabbit_queue_index. rabbitmq_msg_store以键值对的形式存储消息，它被所有队列共享，在每个节点有且只有一个. rabbit_msg_store分为msg_store_persistent和msg_store_transient。</p>
+<p>消息可以直接存储在rabbit_queue_index中，也可以保存在rabbit_msg_store中。消息大小的界定queue_index_embed_msgs_below(默认4096B)</p>
+<p>rabbit queue index 中以顺序（文件名从 开始累加〉的段文件来进行存储，后缀为&rsquo; . idx ”，每个段文件中包含固定的 SEGMENT ENTRY COUNT 条记录，SEGMENT_ENTRY_COUNT 默认值为 1638 。每个 rabbit_queue_index 从磁盘中读取消息的时候至少要在内存中维护一个段文件，所以设置 queue index embed msgs below 值的时候要格外谨慎，一点点增大也可能会引起内存爆炸式的增长</p>
+<p>经过 rabbit msg store 处理的所有消息都会以追加的方式写入到文件中，当 个文件的大小超过指定的限制（ file size limit ）后，关闭这个文件再创建一个新的文件以供新的消息写入。文件名（文件后缀是“ .rdq ”）从 开始进行累加，因此文件名最小的文件也是最老的文件。在进行消息的存储时， bb itM 会在 ET (Erlang Term storage ）表中记录消息在文件中的位置映射（ Index ）和文件的相关信息（ File Summary ）。</p>
+<p>在读取消息的时候，先根据消息的 ID Cmsg id ）找到对应存储的文件，如果文件存在并且未被锁住，则直接打开文件，从指定位置读取消息的内容。如果文件不存在或者被锁住了，则发送请求由 rabbit_msg_store 进行处理。</p>
+<p>消息的删除只是从 ETS 表删除指定消息的相关信息 同时更新消息对应的存储文件的相关信息。执行消息删除操作时，井不立即对在文件中的消息进行删除，也就是说消息依然在文件中。仅仅是标记为垃圾数据而已。当一个文件中都是垃圾数据时可以将这个文件删除。当检测到前后两个文件中的有效数据可以合并在一个文件中。并且所有的垃圾数据的大小和所有文件的数据大小比值超过gc阈值进行文件合并</p>
+<p>执行合并的两个文件一定是逻辑上相邻的两个文件。执行合并时首先锁定这两个文件，并先对前面文件中的有效数据进行整理，再将后面的文件的有效数据写入到前面的文件，同时更新消息在ETS表的记录，最后删除后面的文件。</p>
+</li>
+<li>
+<p>队列的结构</p>
+<p>通常队列由rabbit_amqqueue_process和backing_queue这两部分组成，rabbit_amqqueue_process负责协议相关的消息处理，即接收生产者发布的消息、向消费者交付消息，处理消息的确认等。backing_queue是消息存储的具体形式和引擎，并向rabbitmq_amqqueue_process提供相关的接口以供调用.</p>
+<p>如果消息投递的目的队列是空的，并且有消费者订阅了这个队列，那么消息会直接发送给消费者，不会经过队列这一步.而当消息无法直接投给消费者时，需要暂时将消息存入队列，以便重新投递。消息存入队列后，不是固定不变的，它会随着系统的负载在队列中不断地流动，消息的状态会不断发生变化。</p>
+<ul>
+<li>alpha: 消息内容和消息索引都存储在内容中</li>
+<li>beta: 消息内容保存在磁盘中，消息索引保存在内存中</li>
+<li>gamma: 消息内容保存在磁盘中, 消息索引在磁盘和内存中都有</li>
+<li>delta: 消息内容和索引都在磁盘中</li>
+</ul>
+<p>对于持久化的消息，消息内容和消息索引都必须先保存在磁盘上，才会处于上述状态中的一种，而gamma状态的消息是只有持久化的消息才会有的状态.</p>
+<p>RabbitMQ 在运行时会根据统计的消息传送速度定期计算一个当前内存中能够保存的最大消息数量 （target_ram_count），如果 alpha 状态的消息数量大于此值时，就会引起消息的状态转换，多余的消息可能会转换到 beta 状态、 gamma 状态或者 delta 状态。区分这状态的主要作用是满足不同的内存和 CPU 需求。 alpha 状态最耗内存，但很少消耗 CPU。 delta状态基本不消耗内存，但是需要消耗更多的 CPU 和磁盘 I/O 操作。 delta 状态需要执行两次I/O 操作才能读取到消息， 一次是读消息索引（从 rabbit queue index 中）， 一次是读消息内容（从 rabbit_msg_store 中）； beta gamma 状态都只需要一次 I/O 操作就可以读取到消息（从 rabbit msg store 中）。</p>
+</li>
+<li>
+<p>内存告警和磁盘告警</p>
+<p>当内存使用超过配置的阈值或者磁盘剩余空间低于配置的阈值时，RabbitMQ都会暂时阻塞客户端的连接并停止接收从客户端发来的消息，避免服务崩溃。与此同时，客户端与服务端的心跳检测也会失效。被阻塞的connection状态是blocking,要么是blocked。前者对应于并不是试图发送消息的connection。比如消费者关联的connection，这种状态的connection可以继续运行。如果一个broker节点的内存或者磁盘受限，都会引起整个集群中所有的connection被阻塞.</p>
+<p>理想情况是当发生阻塞时可以在阻止生产者的同时而又不影响消费者的运行。</p>
+<p>默认情况下RabbitMQ所使用的内存阈值设置为40%.在最坏情况下，Erlang的垃圾回收机制会导致两倍的内存消耗，也就是80%的使用占比</p>
+<p>流控: 一个连接触发流控会处于&quot;flow&quot;的状态，也就意味着connection的状态每秒在blocked和unblocked之间来回切换数次，这样可以将消息发送的速率控制在服务器能支撑的范围之内。流控机制不只是作用于connection，同样作用于channel和队列。</p>
+</li>
+<li>
+<p>镜像队列</p>
+<p>slave会准确地按照master执行命令的顺序进行动作，故slave与master上维护的状态应该是相同的。如果master由于某种原因失效，那么&quot;资历最老&quot;的slave会被提升为新的master。根据slave加入的时间排序，时间最长的slave即为&quot;资历最老&rdquo;。发送到镜像队列的所有消息被同时发往master和所有的slave上，如果此时master挂掉了，消息还会在slave上，这样slave提升为master的时候消息也不会丢失。除发送消息(Basic.Publish)外所有动作都只会向master发送，然后再由master将命令执行的结果广播给各个slave.</p>
+<p>master和slave是针对队列而言，而队列可以均匀地散落在集群地各个Broker节点中达到负载均衡地目的，因为真正地负载还是对实际物理机器而言地，而不是内存中驻留地队列进程.只要确保队列的master节点均匀散落在集群中的各个Broker节点即可确保很大程度的负载均衡(每个队列的流量会有不同，因此均匀散落各个队列的master也无法确保绝对的负载均衡)。读写分离得不到更好的收益，即读写分离并不能进一步优化负载，却会增加编码实现的复杂度。</p>
+<p>GM模块实现的是一种可靠的组播通信协议，该协议能够保证组播消息的原子性，即保证组中活着的节点要么都收到消息要么都收不到。它的实现大致为:将所有节点形成一个循环链表，每个节点都会监控位于自己左右两边的节点，当有节点新增时，相邻的节点保证当前广播的消息会复制到新的节点上；当有节点失效时，相邻的节点会接管以保证本次广播的消息会复制到所有的节点。gm_group的信息会记录在mnesia中，不同的镜像队列形成不同的组。操作命令从 master 对应的 GM 发出后，顺着链表传送到所有的节点。由于所有节点组成了一个循环链表， master 对应的 GM 最终会收到自己发送的操作命令，这个时候 master 就知道该操作命令同步到了所有的 slave</p>
+</li>
+<li>
+<p>网络分区</p>
+</li>
+</ul>
 <h3 id="resource">Resource</h3>
 <ul>
 <li>RabbitMQ集群原理和完善: <a href="https://www.cnblogs.com/xishuai/p/rabbitmq-cluster.html">https://www.cnblogs.com/xishuai/p/rabbitmq-cluster.html</a></li>
@@ -305,7 +361,7 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/rabbitmq/">rabbitmq</a>
+          <a href="/tags/mq/">mq</a>
           </div>
       <nav class="post-nav">
         <a class="prev" href="/post/about_configuration_center_metadata_center_and_registry/">

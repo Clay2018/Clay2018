@@ -21,12 +21,30 @@
     </item>
     
     <item>
+      <title>Bug in etcd</title>
+      <link>http://localhost:1313/post/bug_in_etcd/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/bug_in_etcd/</guid>
+      <description>记一次ETCD watch问题导致缓存不一致: https://zhuanlan.zhihu.com/p/332618994</description>
+    </item>
+    
+    <item>
       <title>MQ</title>
       <link>http://localhost:1313/post/mq/</link>
       <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/mq/</guid>
-      <description>Resources MQ详解及四大MQ比较: https://www.cnblogs.com/duanxz/p/3143570.html</description>
+      <description>Resources MQ详解及四大MQ比较: https://www.cnblogs.com/duanxz/p/3143570.html 技术选型 RocketMQ or Kaflka: https://zhuanlan.zhihu.com/p/60196818</description>
+    </item>
+    
+    <item>
+      <title>optimization in golang</title>
+      <link>http://localhost:1313/post/optimization_in_golang/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/optimization_in_golang/</guid>
+      <description>Resource 聊聊Go内存优化和相关底层机制: https://wudaijun.com/2019/09/go-performance-optimization/</description>
     </item>
     
     <item>
@@ -35,7 +53,7 @@
       <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/rocketmq/</guid>
-      <description>Resources RocketMQ原理&amp;amp;复杂分布式事务解法: https://www.jianshu.com/p/2838890f3284</description>
+      <description>Resources RocketMQ原理&amp;amp;复杂分布式事务解法: https://www.jianshu.com/p/2838890f3284 rocketMQ消息发送流程: https://www.jianshu.com/p/3779291d8344 RocketMQ: https://www.cnblogs.com/weifeng1463/p/12889300.html</description>
     </item>
     
     <item>

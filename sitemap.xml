@@ -8,7 +8,21 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/bug_in_etcd/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/mq/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/optimization_in_golang/</loc>
     <lastmod>2022-02-06T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -708,6 +722,13 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tags/bug/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2022-02-06T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -736,6 +757,13 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tags/optimization/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2022-02-06T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -752,13 +780,6 @@
   <url>
     <loc>http://localhost:1313/categories/system_design/</loc>
     <lastmod>2022-02-05T00:00:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/rabbitmq/</loc>
-    <lastmod>2022-02-04T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -850,13 +871,6 @@
   <url>
     <loc>http://localhost:1313/tags/etcd/</loc>
     <lastmod>2021-07-31T00:00:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/bug/</loc>
-    <lastmod>2021-06-27T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

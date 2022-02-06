@@ -17,7 +17,7 @@
       <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/mq/</guid>
-      <description>Resources MQ详解及四大MQ比较: https://www.cnblogs.com/duanxz/p/3143570.html</description>
+      <description>Resources MQ详解及四大MQ比较: https://www.cnblogs.com/duanxz/p/3143570.html 技术选型 RocketMQ or Kaflka: https://zhuanlan.zhihu.com/p/60196818</description>
     </item>
     
     <item>
@@ -26,7 +26,16 @@
       <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/rocketmq/</guid>
-      <description>Resources RocketMQ原理&amp;amp;复杂分布式事务解法: https://www.jianshu.com/p/2838890f3284</description>
+      <description>Resources RocketMQ原理&amp;amp;复杂分布式事务解法: https://www.jianshu.com/p/2838890f3284 rocketMQ消息发送流程: https://www.jianshu.com/p/3779291d8344 RocketMQ: https://www.cnblogs.com/weifeng1463/p/12889300.html</description>
+    </item>
+    
+    <item>
+      <title>RabbitMQ</title>
+      <link>http://localhost:1313/post/rabbitmq/</link>
+      <pubDate>Fri, 04 Feb 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/rabbitmq/</guid>
+      <description>RabbitMQ作用及其出现背景 作用: 削峰，解耦，异步调用 RabbitMQ特性和好处: 开源 轻量级 面向大多数现代语言的客户端开发库 灵活控制消息</description>
     </item>
     
   </channel>
