@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>RabbitMQ - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="RabbitMQ作用及其出现背景 作用: 削峰，解耦，异步调用 RabbitMQ特性和好处: 开源 轻量级 面向大多数现代语言的客户端开发库 灵活控制消息" /><meta name="keywords" content="rabbitmq" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/rabbitmq/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="RabbitMQ" />
+<meta property="og:description" content="RabbitMQ作用及其出现背景 作用: 削峰，解耦，异步调用 RabbitMQ特性和好处: 开源 轻量级 面向大多数现代语言的客户端开发库 灵活控制消息" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/rabbitmq/" />
+<meta property="article:published_time" content="2022-02-04T00:00:44+08:00" />
+<meta property="article:modified_time" content="2022-02-04T00:00:44+08:00" />
+<meta itemprop="name" content="RabbitMQ">
+<meta itemprop="description" content="RabbitMQ作用及其出现背景 作用: 削峰，解耦，异步调用 RabbitMQ特性和好处: 开源 轻量级 面向大多数现代语言的客户端开发库 灵活控制消息">
+<meta itemprop="datePublished" content="2022-02-04T00:00:44&#43;08:00" />
+<meta itemprop="dateModified" content="2022-02-04T00:00:44&#43;08:00" />
+<meta itemprop="wordCount" content="2269">
+
+
+
+<meta itemprop="keywords" content="rabbitmq," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RabbitMQ"/>
+<meta name="twitter:description" content="RabbitMQ作用及其出现背景 作用: 削峰，解耦，异步调用 RabbitMQ特性和好处: 开源 轻量级 面向大多数现代语言的客户端开发库 灵活控制消息"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/post/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/search/">搜索</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">RabbitMQ</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-02-04 </span>
+        <div class="post-category">
+            <a href="/categories/components/"> components </a>
+            </div>
+          <span class="more-meta"> 2269 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#rabbitmq作用及其出现背景">RabbitMQ作用及其出现背景</a></li>
+        <li><a href="#rabbitmq架构">RabbitMQ架构</a></li>
+        <li><a href="#消息属性">消息属性</a></li>
+        <li><a href="#消息发布">消息发布</a></li>
+        <li><a href="#消费消息">消费消息</a></li>
+        <li><a href="#队列">队列</a></li>
+        <li><a href="#集群">集群</a></li>
+        <li><a href="#resource">Resource</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="rabbitmq作用及其出现背景">RabbitMQ作用及其出现背景</h3>
+<p>作用: 削峰，解耦，异步调用</p>
+<p>RabbitMQ特性和好处:</p>
+<ul>
+<li>开源</li>
+<li>轻量级</li>
+<li>面向大多数现代语言的客户端开发库</li>
+<li>灵活控制消息通信的平衡性</li>
+<li>高延迟性环境插件&mdash;-因为不是所有的网络拓扑和架构都是一样的，RabbitMQ既支持在低延迟环境下的消息通信机制，也提供了针对互联网的高延迟环境下的插件</li>
+<li>第三方插件系统&mdash;&ndash;作为应用集成的一个关键要素，RabbitMQ提供了灵活的插件系统。当需要</li>
+</ul>
+<h3 id="rabbitmq架构">RabbitMQ架构</h3>
+<p>producer, consumer, broker</p>
+<ul>
+<li>
+<p>AMQP协议</p>
+<ul>
+<li>exchange</li>
+<li>queue</li>
+<li>route-key/bind-key</li>
+</ul>
+<p>一个AMQP连接可以有多个信道,允许客户端和服务器之间进行多次会话，从技术上讲，这被称为多路复用。</p>
+<p>在创建客户端庄用程序时，不要使用过多的信道使事情变得复杂。在编组帧的线路上，信道不过是分配给服务器和客户端之间所传递消息的一个整数值；而在 RabbitMQ 服务器和客户端中，它们代表更多的含义 因为会为每个信道设置内存结构和对象，连接中的信道越多， RabbitMQ 用于管理该连接的消息流所需的内存也就越多 如果你能合理地使用它们，你将会有一个更健康的 RabbitMQ服务器和一个更简洁的客户端应用程序</p>
+<p>AMQP帧由五个不同组件组成: 帧类型，信道编号，帧大小，帧有效载荷，结束字节标记。</p>
+<p>AMQP帧: 协议头帧，方法帧，内容头帧，消息体帧以及心跳帧，使用方法帧，内容头帧，消息体帧向broker发布消息</p>
+<ul>
+<li>协议头帧用于连接RabbitMQ，仅使用一次</li>
+<li>方法帧携带发送给RabbitMQ或从RabbitMQ接收的RPC请求或响应</li>
+<li>内容头帧包含一条消息的大小和属性</li>
+<li>消息体帧包含消息的内容</li>
+</ul>
+<p>mandatory标志(属于方法帧)告知RabbitMQ必须完成消息路由，否则它应该发送一个Basic.Ruturn帧用于指明消息无法路由。</p>
+</li>
+</ul>
+<h3 id="消息属性">消息属性</h3>
+<ul>
+<li>
+<p>content-type</p>
+</li>
+<li>
+<p>expiration</p>
+</li>
+<li>
+<p>reply-to</p>
+</li>
+<li>
+<p>content-encoding</p>
+</li>
+<li>
+<p>delivery-mode</p>
+<p>1表示非持久化消息，2表示持久化消息</p>
+</li>
+<li>
+<p>message-id</p>
+</li>
+<li>
+<p>priority</p>
+</li>
+<li>
+<p>correlation-id</p>
+</li>
+</ul>
+<h3 id="消息发布">消息发布</h3>
+<p><img src="/image/rabbitmq/rabbitmq_publish.jpg" alt=""></p>
+<p>金发姑娘原则:</p>
+<ul>
+<li>消费者发布时保证消息进入队列的重要性有多高？</li>
+<li>如果消息无法路由，是否应将消息返回给发布者？</li>
+<li>如果消息无法路由，是否应该将其发送到其他地方稍后进行重新路由？</li>
+<li>如果RabbitMQ服务器崩溃，可以接收信息丢失吗？</li>
+<li>RabbitMQ在处理新消息时是否应该确认它已经为发布者执行了所有请求的路由和持久化任务？</li>
+<li>消息发布者是否可以批量投递消息，然后从RabbitMQ收到一个确认用于表明所有请求的路由和持久化任务已经批量应用到所有的消息中？</li>
+<li>如果你要批量发布消息，而这些消息需要确认路由和持久化，那么对每一条消息是否需要对目标队列实现真正意义上的原子提交？</li>
+<li>在可靠投递方面是否有可接受的平衡性，你的发布者可以使用它来实现更高的性能和消息吞吐量吗？</li>
+<li>消息发布还有哪些方面会影响消息吞吐量和性能？</li>
+</ul>
+<p>RabbitMQ与原子事务: 原子性确保事务中所有操作的完成都将作为事务提交的 部分。在 AMQP 中，这意味着直到事务中的所有操作都完成为止，你的客户端将不会收到 TX.CornmitOk响应帧。不幸的是，对于那些寻求真正原子性的人来说， RabbitMQ 只在每个发出的命令作用于单个队列时才执行原子事务。如果不止一个队列受到事务中任何命令的影响，则提交就不具备原子性。尽管当事务中的所有命令仅影响同一个队列时 RabbitMQ 会执行原子事务，但发布者通常不能很好地控制消息是否被投递到多个队列。使用 RabbitMQ 高级路由方法，很容易想象一个应用程序在发布消息到单个队列时启动原子提交，然后有人可能使用同一个路由键绑定一个新的队列。这样任何使用该路由键的发布事务将不再具备原子性。还值得指出的是，当将delivery-mode值设置为2从而对消息进行持久化时，真正的原子事务可能会导致发布者的性能问题。如果在发送TX.CommitOK之前，RabbitMQ正在等待服务器I/O密集型写入操作的完成，那么客户端可能比命令没有被包装在事务中的场景需要等待更长的时间。</p>
+<p>HA队列</p>
+<p><del>Channel.Flow</del>和Backpressure机制(停止接受TCP套接字上的数据)</p>
+<h3 id="消费消息">消费消息</h3>
+<p>为什么你应该避免拉取消息，而应该倾向于消费消息？Basic.Get会导致每条消息都会产生与RabbitMQ同步通信的开销;由于Basic.Get的临时性，RabbitMQ不能以任何方式优化投递过程</p>
+<p>如何平衡消息的投递的可靠性与性能？</p>
+<p><img src="/image/rabbitmq/rabbitmq_consume.jpg" alt=""></p>
+<p>增加Linux操作系统接收套接字缓冲区的数量</p>
+<p>Qos:预拉取数量</p>
+<p>dead-letter exchange。死信交换器与备用交换器不同，过期或被拒绝的消息通过死信交换器进行投递，而备用交换器则路由那些无法由RabbitMQ路由的消息</p>
+<h3 id="队列">队列</h3>
+<p>队列的行为有:自动删除自己，只允许一个消费者进行消费，自动过期的消息，保持有限数量的消息，将旧消息推出堆栈</p>
+<h3 id="集群">集群</h3>
+<p>RabbitMQ提高了队列高可。节点类型和消息持久化，</p>
+<ul>
+<li>
+<p>erlang分布式</p>
+<p>erlang的分布式特性在语言层面支持，可以使用语言内置的API函数。、</p>
+<p>erlang的分布式是以erlang的两个基本特性为基础:</p>
+<ul>
+<li>
+<p>复制式进程通信</p>
+<p>Erlang的进程间通信采用的是严格的异步消息传递（发送消息后无须等待网络上的确认），接受方收到数    据时实际上获取了数据的一份独立的副本；此后接收方将无法感知发送方对数据所做的任何操作，反之亦    然。后续的任何通信都必须借助额外的消息才能进行。无论是运行在同一台机器上的进程，还是运行在不    同机器上并通过网络互联的进程，这种模型都非常奏效.</p>
+</li>
+<li>
+<p>位置透明性</p>
+<p>erlang会确定进程标识符在多机网络上的唯一性，erlang的pid是一个结构化的对象，包含node id, process id, serial三个元素</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="resource">Resource</h3>
+<ul>
+<li>RabbitMQ集群原理和完善: <a href="https://www.cnblogs.com/xishuai/p/rabbitmq-cluster.html">https://www.cnblogs.com/xishuai/p/rabbitmq-cluster.html</a></li>
+<li>&lt;深入RabbitMQ&gt;</li>
+<li>惰性队列: <a href="https://blog.csdn.net/u013256816/article/details/77987216">https://blog.csdn.net/u013256816/article/details/77987216</a></li>
+<li>普通队列和镜像队列: <a href="https://blog.csdn.net/u013256816/article/details/71097186">https://blog.csdn.net/u013256816/article/details/71097186</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-02-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/rabbitmq/">rabbitmq</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/about_configuration_center_metadata_center_and_registry/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">关于配置中心、元数据中心和注册中心</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/disruptor/">
+            <span class="next-text nav-default">disruptor</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

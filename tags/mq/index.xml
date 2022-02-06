@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mq on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/mq/</link>
+    <description>Recent content in mq on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Feb 2022 00:00:44 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/mq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MQ</title>
+      <link>http://localhost:1313/post/mq/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/mq/</guid>
+      <description>Resources MQ详解及四大MQ比较: https://www.cnblogs.com/duanxz/p/3143570.html</description>
+    </item>
+    
+    <item>
+      <title>rocketmq</title>
+      <link>http://localhost:1313/post/rocketmq/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/rocketmq/</guid>
+      <description>Resources RocketMQ原理&amp;amp;复杂分布式事务解法: https://www.jianshu.com/p/2838890f3284</description>
+    </item>
+    
+  </channel>
+</rss>

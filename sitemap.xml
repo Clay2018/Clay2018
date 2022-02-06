@@ -8,6 +8,34 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/mq/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/rocketmq/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/about_configuration_center_metadata_center_and_registry/</loc>
+    <lastmod>2022-02-05T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/rabbitmq/</loc>
+    <lastmod>2022-02-04T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/disruptor/</loc>
     <lastmod>2022-01-14T00:05:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -681,28 +709,56 @@
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/components/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/mq/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2022-02-06T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/system_design/</loc>
-    <lastmod>2022-01-14T00:05:24+08:00</lastmod>
+    <lastmod>2022-02-05T00:00:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/rabbitmq/</loc>
+    <lastmod>2022-02-04T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -764,13 +820,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2021-10-16T00:00:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/tags/origin/</loc>
     <lastmod>2021-10-06T00:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -794,13 +843,6 @@
   <url>
     <loc>http://localhost:1313/categories/language/</loc>
     <lastmod>2021-09-05T00:47:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/components/</loc>
-    <lastmod>2021-07-31T00:00:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

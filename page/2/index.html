@@ -45,7 +45,7 @@
 <meta property="og:description" content="Clayton Blog site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/" />
-<meta property="og:updated_time" content="2022-01-14T00:05:24+08:00" />
+<meta property="og:updated_time" content="2022-02-06T00:00:44+08:00" />
 <meta itemprop="name" content="Even - A super concise theme for Hugo">
 <meta itemprop="description" content="Clayton Blog site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
@@ -114,6 +114,98 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/io_write_string_analysis/">io.WriteString()分析</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-01-09 </span>
+      <div class="post-category">
+          <a href="/categories/golang/"> golang </a>
+          </div>
+        <span class="more-meta"> 732 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      问题 内存管理在Golang中是棘手的，我们可能相信golang本身已具备内存自动管理功能，可以从此解放出来。但上周的某个功能测试结果让我改变
+    </div>
+    <div class="read-more">
+      <a href="/post/io_write_string_analysis/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/pprof_in_golang/">pprof in golang</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-01-09 </span>
+      <div class="post-category">
+          <a href="/categories/golang/"> golang </a>
+          </div>
+        <span class="more-meta"> 117 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      CPU pprof 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 package main import ( &#34;fmt&#34; &#34;net/http&#34; _ &#34;net/http/pprof&#34; &#34;time&#34; ) func main() { go func() { ticker := time.NewTicker(time.Second) for { select { case t := &lt;- ticker.C: fmt.Println(&#34;Current time:&#34;, t) default: } } }() http.ListenAndServe(&#34;:8080&#34;, nil) } 1 2 3 4 #cmdline go run main.go go
+    </div>
+    <div class="read-more">
+      <a href="/post/pprof_in_golang/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/top/">top command</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-01-03 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> linux </a>
+          </div>
+        <span class="more-meta"> 170 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      top命令 进程的优先级 cpu利用率和负载 cpu利用率是对一个时间段内CPU使用情况的统计,通过这个指标可以看出某一个时间段内CPU被占用的情
+    </div>
+    <div class="read-more">
+      <a href="/post/top/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/cpu/">CPU核数</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-01-03 </span>
+      <div class="post-category">
+          <a href="/categories/linux/"> linux </a>
+          </div>
+        <span class="more-meta"> 1504 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      计算机系统架构 SMP, NUMA, MPP是目前主流得计算机系统架构 SMP 对称多处理架构。在这样得系统中，多个CPU对称工作，无主从关系。所有的CPU共享全部资源
+    </div>
+    <div class="read-more">
+      <a href="/post/cpu/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/code_writing/">code writing</a></h1>
@@ -252,98 +344,6 @@
     </div>
     <div class="read-more">
       <a href="/post/guess_game/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/xor/">求解数组中唯二的两个数字</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-11-07 </span>
-      <div class="post-category">
-          <a href="/categories/algorithm/"> algorithm </a>
-          </div>
-        <span class="more-meta"> 144 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      一个数组中，存在两个只出现一次的数字，其余的数字均出现两次，求这两个数字是多少 1 2 3 4 5 6 #求解步骤: #假设两个数分别是a, b c = arr[0] xor arr[1] xor arr[2]
-    </div>
-    <div class="read-more">
-      <a href="/post/xor/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/btc/">BTC开发资料</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-10-26 </span>
-      <div class="post-category">
-          <a href="/categories/blockchain/"> blockchain </a>
-          </div>
-        <span class="more-meta"> 20 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Resources RPC API Reference: https://developer.bitcoin.org/reference/rpc/index.html btc explorer https://www.oklink.com/btc/address/33WswvHHQMVYUQQiuoN4MYXRrjTh8zuKbq tron api doc: https://developers.tron.network/reference#tronweb-object-1 eos testnet: https://www.alohaeos.com/zh/tools/testnets sign bitcoin cash/sv/abc transaction: https://apexpl.github.io/bitcoin_cash_sv_abc_transaction_signatures.html
-    </div>
-    <div class="read-more">
-      <a href="/post/btc/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/some_estimate_method/">估算的一些方法</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-10-26 </span>
-      <div class="post-category">
-          <a href="/categories/system_design/"> system_design </a>
-          </div>
-        <span class="more-meta"> 10 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Resources 估算的一些方法: https://mp.weixin.qq.com/s/fH-AJpE99ulSLbC_1jxlqw
-    </div>
-    <div class="read-more">
-      <a href="/post/some_estimate_method/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/floating_point/">Floating Point</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-10-16 </span>
-      <div class="post-category">
-          <a href="/categories/linux/"> linux </a>
-          </div>
-        <span class="more-meta"> 29 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Resources 15张图带你深入理解浮点数: https://mp.weixin.qq.com/s/DGP4rENdy-N1VyZLS_uV4g 浮点数精度丢失问题详解: https://mp.weixin.qq.com/s/yjEkZrpIOAUAEknKTxC3YQ
-    </div>
-    <div class="read-more">
-      <a href="/post/floating_point/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
