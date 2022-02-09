@@ -6,10 +6,19 @@
     <description>Recent content in linux on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Jan 2022 00:45:44 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 10 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux Kernel Map</title>
+      <link>http://localhost:1313/post/linux/</link>
+      <pubDate>Thu, 10 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux/</guid>
+      <description>Resource  Linux Kernel Map: https://blog.csdn.net/Rong_Toa/article/details/109430393  </description>
+    </item>
     
     <item>
       <title>Difference between atomic and mutex</title>
