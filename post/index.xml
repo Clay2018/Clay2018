@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>IPSEC Protocol</title>
+      <link>http://localhost:1313/post/ipsec_protocol/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/ipsec_protocol/</guid>
+      <description>Resource IPSEC介绍: https://blog.csdn.net/NEUChords/article/details/92968314</description>
+    </item>
+    
+    <item>
       <title>How to negotiate your package</title>
       <link>http://localhost:1313/post/how_to_negotiate_your_package/</link>
       <pubDate>Mon, 07 Feb 2022 00:47:44 +0800</pubDate>
@@ -444,7 +453,7 @@
       <pubDate>Sun, 01 Aug 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/lxc/</guid>
-      <description>源码安装lxc ``` ``` lxc创建容器 容器创建后存放目录 ~/.local/share/lxc/，如果是root，存放在 /var/lib/lxc ``` lxc-checkconfig lxc-create -n test -t none # 查看当前系</description>
+      <description>源码安装lxc ``` ``` lxc创建容器 lxc源码安装(./configure --prefix=/xx, 是其lxc-ls存放目录) 容器创建后存放目录 ~/.local/sha</description>
     </item>
     
     <item>
