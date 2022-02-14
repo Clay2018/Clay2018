@@ -6,10 +6,19 @@
     <description>Recent content in career on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/career/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Behavior question</title>
+      <link>http://localhost:1313/post/bq/</link>
+      <pubDate>Sat, 12 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/bq/</guid>
+      <description>Resource 什么是BQ行为问题？如何在大厂面试中搞定它？: http://www.360doc.com/content/21/0405/14/44716758_970691903.shtml</description>
+    </item>
     
     <item>
       <title>How to negotiate your package</title>

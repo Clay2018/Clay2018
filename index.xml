@@ -6,7 +6,7 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,24 @@
       
       <guid>http://localhost:1313/post/search/</guid>
       <description>/* 手机适配 */ @media screen and (max-width: 500px) { .search{ padding-right: 25px; } .search input{ width: 100%; } .search button{ display: none; } } /* 电脑适配 */ @media screen and (min-width: 500px) { .search{ width: 500px; } .search input{ width: 444px; } } /* 通用样式 */ .search{ margin: auto; } .search input{ outline: none; border: 2px solid #c05b4d; height: 32px; padding:</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;11 new feature</title>
+      <link>http://localhost:1313/post/c&#43;&#43;11_new_feature/</link>
+      <pubDate>Mon, 14 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/c&#43;&#43;11_new_feature/</guid>
+      <description>Resource c++11新特性，所有知识点都在这里了: https://mp.weixin.qq.com/s/kAH-402oYgAa3GAVgJ8EaQ</description>
+    </item>
+    
+    <item>
+      <title>Behavior question</title>
+      <link>http://localhost:1313/post/bq/</link>
+      <pubDate>Sat, 12 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/bq/</guid>
+      <description>Resource 什么是BQ行为问题？如何在大厂面试中搞定它？: http://www.360doc.com/content/21/0405/14/44716758_970691903.shtml</description>
     </item>
     
     <item>
@@ -976,6 +994,15 @@
       
       <guid>http://localhost:1313/post/tcp_kernel_optimize_option/</guid>
       <description>请求url</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/virtual_func_in_c_plus_plus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/virtual_func_in_c_plus_plus/</guid>
+      <description>Resource C++对象布局: https://mp.weixin.qq.com/s?__biz=MzkyODE5NjU2Mw==&amp;amp;mid=2247484758&amp;amp;idx=1&amp;amp;sn=4e614430f666f63ab135c13a716d07c1&amp;amp;chksm=c21d37eaf56abefc8d2a1dc3e09a8146d242475cb0900ee5a94ab6a94a991168a887f7351821&amp;amp;scene=178&amp;amp;cur_album_id=1667018561883570181#rd</description>
     </item>
     
   </channel>
