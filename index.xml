@@ -6,7 +6,7 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,12 +21,48 @@
     </item>
     
     <item>
+      <title>version change in golang</title>
+      <link>http://localhost:1313/post/version_change_in_golang/</link>
+      <pubDate>Tue, 15 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/version_change_in_golang/</guid>
+      <description>Go1.14 本次更新大多数变化在于工具链的实现，runtime和libraries defer性能提升 在Go1.14之前，Go中的每一个defer函数，</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 类</title>
+      <link>http://localhost:1313/post/virtual_func_in_c_plus_plus/</link>
+      <pubDate>Mon, 14 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/virtual_func_in_c_plus_plus/</guid>
+      <description>Resource C++对象布局: https://mp.weixin.qq.com/s?__biz=MzkyODE5NjU2Mw==&amp;amp;mid=2247484758&amp;amp;idx=1&amp;amp;sn=4e614430f666f63ab135c13a716d07c1&amp;amp;chksm=c21d37eaf56abefc8d2a1dc3e09a8146d242475cb0900ee5a94ab6a94a991168a887f7351821&amp;amp;scene=178&amp;amp;cur_album_id=1667018561883570181#rd</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43;11 new feature</title>
       <link>http://localhost:1313/post/c&#43;&#43;11_new_feature/</link>
       <pubDate>Mon, 14 Feb 2022 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/c&#43;&#43;11_new_feature/</guid>
       <description>Resource c++11新特性，所有知识点都在这里了: https://mp.weixin.qq.com/s/kAH-402oYgAa3GAVgJ8EaQ</description>
+    </item>
+    
+    <item>
+      <title>Stack in linux</title>
+      <link>http://localhost:1313/post/stack_in_linux/</link>
+      <pubDate>Mon, 14 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/stack_in_linux/</guid>
+      <description>Resource Linux中的各种栈: https://mp.weixin.qq.com/s?__biz=MzkyODE5NjU2Mw==&amp;amp;mid=2247490208&amp;amp;idx=1&amp;amp;sn=c920ca7b7449222f8dd80efcb88fc36f&amp;amp;chksm=c21d281cf56aa10a7f07ed93c49e334203c00cdfe83acd40c0fb0c7f28fbc8052447cb5d3b44&amp;amp;scene=178&amp;amp;cur_album_id=1667018561883570181#rd</description>
+    </item>
+    
+    <item>
+      <title>进程间通讯</title>
+      <link>http://localhost:1313/post/inter_process_communication/</link>
+      <pubDate>Mon, 14 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/inter_process_communication/</guid>
+      <description>Resource 进程间通信: https://www.jianshu.com/p/c1015f5ffa74</description>
     </item>
     
     <item>
@@ -994,15 +1030,6 @@
       
       <guid>http://localhost:1313/post/tcp_kernel_optimize_option/</guid>
       <description>请求url</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/virtual_func_in_c_plus_plus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/virtual_func_in_c_plus_plus/</guid>
-      <description>Resource C++对象布局: https://mp.weixin.qq.com/s?__biz=MzkyODE5NjU2Mw==&amp;amp;mid=2247484758&amp;amp;idx=1&amp;amp;sn=4e614430f666f63ab135c13a716d07c1&amp;amp;chksm=c21d37eaf56abefc8d2a1dc3e09a8146d242475cb0900ee5a94ab6a94a991168a887f7351821&amp;amp;scene=178&amp;amp;cur_album_id=1667018561883570181#rd</description>
     </item>
     
   </channel>

@@ -45,7 +45,7 @@
 <meta property="og:description" content="Clayton Blog site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/" />
-<meta property="og:updated_time" content="2022-02-14T00:47:44+08:00" />
+<meta property="og:updated_time" content="2022-02-15T00:47:44+08:00" />
 <meta itemprop="name" content="Even - A super concise theme for Hugo">
 <meta itemprop="description" content="Clayton Blog site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
@@ -114,6 +114,98 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/defer_in_golang/">golang中的defer</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-04-02 </span>
+      <div class="post-category">
+          <a href="/categories/language/"> language </a>
+          </div>
+        <span class="more-meta"> 10 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Reference defer分析: https://studygolang.com/articles/742
+    </div>
+    <div class="read-more">
+      <a href="/post/defer_in_golang/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/error_in_goalng/">golang中的error</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-04-02 </span>
+      <div class="post-category">
+          <a href="/categories/language/"> language </a>
+          </div>
+        <span class="more-meta"> 11 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Reference wrapp error解析: https://studygolang.com/articles/23346?fr=sidebar
+    </div>
+    <div class="read-more">
+      <a href="/post/error_in_goalng/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/select_in_golang/">golang中的select</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-04-02 </span>
+      <div class="post-category">
+          <a href="/categories/language/"> language </a>
+          </div>
+        <span class="more-meta"> 12 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Reference: select关键字: https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-select/
+    </div>
+    <div class="read-more">
+      <a href="/post/select_in_golang/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/hashmap_in_golang/">golang哈希表</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-03-31 </span>
+      <div class="post-category">
+          <a href="/categories/language/"> language </a>
+          </div>
+        <span class="more-meta"> 54 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Reference 理解Golang哈希表的原理： https://juejin.cn/post/6844903793927143438 golang哈希表： https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-hashmap/ golang的for-range(哈希表的遍历): https://draveness.me/golang/docs/part2-foundation/ch05-keyword/golang-for-range/
+    </div>
+    <div class="read-more">
+      <a href="/post/hashmap_in_golang/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/sort_algorithm/">sort algorithm</a></h1>
@@ -248,98 +340,6 @@
     </div>
     <div class="read-more">
       <a href="/post/huffman_coding/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/deadlock_in_goroutine/">一道关于gorotine的死锁问题</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-01-18 </span>
-      <div class="post-category">
-          <a href="/categories/language/"> language </a>
-          </div>
-        <span class="more-meta"> 385 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { ch := make(chan int) go fmt.Println(&lt;-ch) ch &lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关
-    </div>
-    <div class="read-more">
-      <a href="/post/deadlock_in_goroutine/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/btc_devguide_3/">BTC devguide(3)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-12-30 </span>
-      <div class="post-category">
-          <a href="/categories/blockchain/"> blockchain </a>
-          </div>
-        <span class="more-meta"> 2008 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Operating Modes 比特币软件具有不同级别的安全性和权衡，以验证区块链 Introduction 当前，有两种主要的方法来验证区块链作为客户端：完整节点和SPV客户端。 由于不建议使用
-    </div>
-    <div class="read-more">
-      <a href="/post/btc_devguide_3/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/btc_devguide_2/">BTC devguide(2)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-12-30 </span>
-      <div class="post-category">
-          <a href="/categories/blockchain/"> blockchain </a>
-          </div>
-        <span class="more-meta"> 7188 words </span>
-        <span class="more-meta"> 15 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Transactions 交易让用户花了satoshis。 每笔交易都由几部分组成，既可以进行简单的直接付款，也可以进行复杂的交易。 Introduction 本节将描述每个部分并演示如何一起
-    </div>
-    <div class="read-more">
-      <a href="/post/btc_devguide_2/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/btc_devguide_1/">BTC devguide(1)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-12-29 </span>
-      <div class="post-category">
-          <a href="/categories/blockchain/"> blockchain </a>
-          </div>
-        <span class="more-meta"> 4029 words </span>
-        <span class="more-meta"> 9 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Block Chain 区块链系统提供了公共分类帐，有序且带有时间戳记的交易记录。 该系统用于防止重复支出和修改以前的交易记录。 Introduction 比特币网络中的每个完整节点都独立
-    </div>
-    <div class="read-more">
-      <a href="/post/btc_devguide_1/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

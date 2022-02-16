@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>language</title>
       <link>http://localhost:1313/categories/language/</link>
-      <pubDate>Mon, 14 Feb 2022 00:47:44 +0800</pubDate>
+      <pubDate>Tue, 15 Feb 2022 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://localhost:1313/categories/linux/</link>
+      <pubDate>Mon, 14 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/linux/</guid>
       <description></description>
     </item>
     
@@ -26,15 +35,6 @@
       <pubDate>Sat, 12 Feb 2022 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/career/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>http://localhost:1313/categories/linux/</link>
-      <pubDate>Thu, 10 Feb 2022 00:47:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/linux/</guid>
       <description></description>
     </item>
     
@@ -62,15 +62,6 @@
       <pubDate>Sat, 05 Feb 2022 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/system_design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>http://localhost:1313/categories/golang/</link>
-      <pubDate>Sun, 09 Jan 2022 00:45:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/golang/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>version change in golang - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clayton" /><meta name="description" content="Go1.14 本次更新大多数变化在于工具链的实现，runtime和libraries defer性能提升 在Go1.14之前，Go中的每一个defer函数，" /><meta name="keywords" content="" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/version_change_in_golang/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="version change in golang" />
+<meta property="og:description" content="Go1.14 本次更新大多数变化在于工具链的实现，runtime和libraries defer性能提升 在Go1.14之前，Go中的每一个defer函数，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/version_change_in_golang/" />
+<meta property="article:published_time" content="2022-02-15T00:47:44+08:00" />
+<meta property="article:modified_time" content="2022-02-15T00:47:44+08:00" />
+<meta itemprop="name" content="version change in golang">
+<meta itemprop="description" content="Go1.14 本次更新大多数变化在于工具链的实现，runtime和libraries defer性能提升 在Go1.14之前，Go中的每一个defer函数，">
+<meta itemprop="datePublished" content="2022-02-15T00:47:44&#43;08:00" />
+<meta itemprop="dateModified" content="2022-02-15T00:47:44&#43;08:00" />
+<meta itemprop="wordCount" content="2170">
+
+
+
+<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="version change in golang"/>
+<meta name="twitter:description" content="Go1.14 本次更新大多数变化在于工具链的实现，runtime和libraries defer性能提升 在Go1.14之前，Go中的每一个defer函数，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/post/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/search/">搜索</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">version change in golang</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-02-15 </span>
+        <div class="post-category">
+            <a href="/categories/language/"> language </a>
+            </div>
+          <span class="more-meta"> 2170 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#go114">Go1.14</a></li>
+        <li><a href="#go115">Go1.15</a></li>
+        <li><a href="#go116">Go1.16</a></li>
+        <li><a href="#go117">Go1.17</a></li>
+        <li><a href="#resource">Resource</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="go114">Go1.14</h3>
+<pre><code>本次更新大多数变化在于工具链的实现，runtime和libraries
+</code></pre>
+<ul>
+<li>
+<p>defer性能提升</p>
+<p>在Go1.14之前，Go中的每一个defer函数，会在编译期在defer位置生成一个runtime.deferproc调用，并且在包含defer函数退出时生成一个runtime.deferreturn调用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">go build main.go &amp;&amp; objdump -S main
+</code></pre></td></tr></table>
+</div>
+</div><p>这使得使用defer时增加了go runtime函数掉哦那个开销。另外值得一提的是，Go runtime中使用了先进后出的栈管理着一个函数中多个defer调用，这也意味着defer越多，开销越大</p>
+<p>这使得部分Go程序员在高性能编程场景下，舍弃了defer的使用。但是不使用defer，容易导致代码可读性下降，资源忘记释放问题。</p>
+<p>性能测试</p>
+<p>优化原理:在Go1.14，编译器会在某些场景下尝试在函数返回处直接调用被defer的函数，从而使得使用defer的开销就像一个常规函数调用一样</p>
+</li>
+<li>
+<p>goroutine支持异步抢占</p>
+<p>Go语言调度其的性能随着版本越来越优异，我们来了解一下调度器使用的G-M-P模型，</p>
+<ul>
+<li>G: goroutine,由关键字go创建</li>
+<li>M: 在Go中称为工作线程，由内核调度</li>
+<li>P: 处理器P是线程M和Goroutine之间的中间层，主要是为了处理内核进行系统调用</li>
+</ul>
+<p>Go语言调度器的工作原理就是处理器P从本地队列依次选择G放到M上调度执行，任务偷窃</p>
+<p>在Go1.1版本中，调度器还不支持抢占式调度，只能依靠goroutine主动让出CPU资源，存在非常严重的调度问题</p>
+<ul>
+<li>单独的goroutine可以一直占用线程运行，不会切换到其它的goroutine，造成饥饿问题</li>
+<li>垃圾回收需要暂停整个程序，如果没有抢占可能需要等待几分钟的时间，导致整个程序无法工作
+在Go1.12中编译器在特定时机插入函数，通过函数调用作为入口触发抢占，实现了协作式的抢占调度，但是这种需要函数调用主动配合的调度方式存在一些边缘情况，比如:协作式的调度不会使一个没有主动放弃执行权，且不参与任何函数调用的goroutine被抢占</li>
+</ul>
+<p>Go1.14实现了基于信号的真抢占式调度，runtime.sighandler注册信号SIGURG函数runtime.doSigPreempt，在出发垃圾回收的栈扫描时，调用函数挂起goroutine并向M发送信号，M收到信号后，会让当前goroutine陷入休眠继续执行其它的G</p>
+<ul>
+<li>
+<p>preempt时机</p>
+<p>一方面，Go进程启动时，会开启一个后台线程sysmon,监控执行时间过长的goroutine，另一方面，STW时会让所有的goroutine停止，两者都会调用preemptone()</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">preemptone() -&gt; preemptM -&gt; signalM -&gt; sighanlder
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#doSigPreempt()
+if ok, newpc := isAsyncSafePoint(gp, ctxt.sigpc(), ctxc.sigsp(), ctxt.siglr()); ok {
+    //Adjust the PC inject a call to asyncPreempt
+    ctxt.pushCall(funcPC(asyncPreempt), newpc)
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>isAsyncSafePoint()返回当前goroutine能否被抢占，以及从哪一条指定开始抢占，返回的newpc表示安全的抢占地址</p>
+<p>当执行完sighandler，执行流再次回到线程，由于sighandler插入了一个asyncPreempt函数调用，原来的函数流程就暂停了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">asyncPreempt -&gt; asyncPreempt2 -&gt; mcall(gopreempt_m) -&gt; goschedImp1 -&gt; schedule
+</code></pre></td></tr></table>
+</div>
+</div><p>mcall(fn)的作用是切换到g0栈去执行函数fn,fn永不返回；gopreempt_m直接调用goschedImp1</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">func goschedImp1(gp *g) {
+    casgstatus(gp, _Grunning, _Grunnable)
+    dropg() //解绑m, g
+    lock(&amp;sched.lock)
+    golabrunqput(gp) //将goroutine丢到全局队列
+    unlock(&amp;sched.lock)
+    shcedule()
+}
+
+func dropg() {
+    _g_ := getg()
+    setMNOWB(&amp;_g_.m.curg.m, nil)
+    setGNOWB(&amp;_g_.m.curg, nil)
+}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>timer定时器性能得到巨幅提升</p>
+<p>Go1.14做到了直接在每个P上维护自己的timer堆，像维护本地队列runq一样</p>
+</li>
+</ul>
+<h3 id="go115">Go1.15</h3>
+<ul>
+<li>
+<p>小整数缓存</p>
+<p>xxx/go1.17.5/go/src/runtime/iface.go:522(convT64)</p>
+<p>原理: staticuint64s预分配优化避免了小整数转换为interface{}的内存分配</p>
+</li>
+<li>
+<p>linker</p>
+<p>先说下golang编译过程.(/usr/local/go/src/cmd/compile/internal/gc/main.go:132 Main())</p>
+<ul>
+<li>
+<p>词法分析</p>
+<p>调用parseFile()解析,获取抽象语法树</p>
+</li>
+<li>
+<p>类型检查</p>
+<p>静态类型检查，动态类型检查</p>
+<ul>
+<li>常量、类型和函数名及类型(重写OMAKE节点)</li>
+<li>变量的复制和初始化</li>
+<li>函数和闭包的主体</li>
+<li>决定如何捕获变量</li>
+<li>检查内联函数的类型</li>
+<li>进行逃逸分析</li>
+<li>将闭包主体转换为引用的捕获变量</li>
+<li>编译顶层函数</li>
+<li>检查外部依赖声明</li>
+</ul>
+</li>
+<li>
+<p>中间代码生成</p>
+<p>SSA配置初始化</p>
+<ul>
+<li>常数传播</li>
+<li>值域传播</li>
+<li>稀疏有条件的常数传播</li>
+<li>消除无用的程式码</li>
+<li>全域数值编号</li>
+<li>消除部分冗余</li>
+<li>寄存器分配</li>
+</ul>
+<p>遍历和替换，堆AST中节点的一些元素进行替换(walk系列函数对关键词进行遍历和改写，转换成函数调用，compileSSA函数将AST转换为中间代码)</p>
+</li>
+<li>
+<p>最终机器码生成</p>
+<p>编译器将一些值重写成目标CPU架构的特定值，将SSA中间代码降级，汇编器将这些指令转换为机器码</p>
+</li>
+</ul>
+<p>go1.15完全重写了linker</p>
+<p>新链接器变化</p>
+<ul>
+<li>移动许多工作从编译期到链接器，这个是为了使其paralleization,充分利用多核</li>
+<li>优化关键数据结构，主要是string，当前linker使用一个很大的符号表索引来替代symbo-number编码</li>
+<li>避免马上加载input object files,这将使少量的内存就能编译large program</li>
+</ul>
+</li>
+</ul>
+<h3 id="go116">Go1.16</h3>
+<ul>
+<li>
+<p>metrics</p>
+<p>字段意义: <a href="https://pkg.go.dev/runtime/metrics#example-Read-ReadingAllMetrics">https://pkg.go.dev/runtime/metrics#example-Read-ReadingAllMetrics</a></p>
+</li>
+<li>
+<p>释放内存给OS</p>
+<p>释放内存给OS，MADV_DONTNEED（man madvise)</p>
+</li>
+<li>
+<p>native embedding of static files</p>
+</li>
+</ul>
+<h3 id="go117">Go1.17</h3>
+<ul>
+<li>
+<p>调用约定更改</p>
+<p>程序性能提升about 5%,二进制大小减少2%</p>
+<p>影响unsafe.Pointer</p>
+</li>
+<li>
+<p>包含闭包的函数可以被内联</p>
+<p>这个变化影响使一个闭包可能产生不同的闭包函数指针</p>
+</li>
+</ul>
+<h3 id="resource">Resource</h3>
+<ul>
+<li>Go1.16 Release Notes: <a href="https://go.dev/doc/go1.16">https://go.dev/doc/go1.16</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-02-15
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/golang/">golang</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/search/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">搜索</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/virtual_func_in_c_plus_plus/">
+            <span class="next-text nav-default">C&#43;&#43; 类</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
