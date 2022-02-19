@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tecent.com/developer/article/1551687 蚂蚁集团万级规模k" /><meta name="keywords" content="etcd" />
+<meta name="author" content="Clayton" /><meta name="description" content="Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tencent.com/developer/article/1551687 蚂蚁集团万级规模k" /><meta name="keywords" content="etcd" />
 
 
 
@@ -40,13 +40,13 @@
 
 
 <meta property="og:title" content="ETCD" />
-<meta property="og:description" content="Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tecent.com/developer/article/1551687 蚂蚁集团万级规模k" />
+<meta property="og:description" content="Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tencent.com/developer/article/1551687 蚂蚁集团万级规模k" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/etcd/" />
 <meta property="article:published_time" content="2021-07-31T00:00:44+08:00" />
 <meta property="article:modified_time" content="2021-07-31T00:00:44+08:00" />
 <meta itemprop="name" content="ETCD">
-<meta itemprop="description" content="Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tecent.com/developer/article/1551687 蚂蚁集团万级规模k">
+<meta itemprop="description" content="Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tencent.com/developer/article/1551687 蚂蚁集团万级规模k">
 <meta itemprop="datePublished" content="2021-07-31T00:00:44&#43;08:00" />
 <meta itemprop="dateModified" content="2021-07-31T00:00:44&#43;08:00" />
 <meta itemprop="wordCount" content="87">
@@ -55,7 +55,7 @@
 
 <meta itemprop="keywords" content="etcd," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ETCD"/>
-<meta name="twitter:description" content="Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tecent.com/developer/article/1551687 蚂蚁集团万级规模k"/>
+<meta name="twitter:description" content="Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tencent.com/developer/article/1551687 蚂蚁集团万级规模k"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,7 +169,7 @@
 <p>只读请求优化: <a href="https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/">https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/</a></p>
 </li>
 <li>
-<p>关于etcd的一些谣言: <a href="https://cloud.tecent.com/developer/article/1551687">https://cloud.tecent.com/developer/article/1551687</a></p>
+<p>关于etcd的一些谣言: <a href="https://cloud.tencent.com/developer/article/1551687">https://cloud.tencent.com/developer/article/1551687</a></p>
 </li>
 <li>
 <p>蚂蚁集团万级规模k8s集群etcd高可用建设之路: <a href="https://mp.weixin.qq.com/s/1A2GFwXlk6xua7vfqAaOlg">https://mp.weixin.qq.com/s/1A2GFwXlk6xua7vfqAaOlg</a></p>

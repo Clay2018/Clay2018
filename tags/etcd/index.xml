@@ -17,7 +17,7 @@
       <pubDate>Sat, 31 Jul 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/etcd/</guid>
-      <description>Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tecent.com/developer/article/1551687 蚂蚁集团万级规模k</description>
+      <description>Resource 基于etcd的分布式锁: https://www.jianshu.com/p/8a4dc6d900cf etcd的watch机制 https://blog.csdn.net/zl1zl2zl3/article/details/79627412 https://www.lixueduan.com/post/etcd/05-watch/ etcd读写请求流程: https://blog.csdn.net/wohu1104/article/details/116244730 只读请求优化: https://mrcroxx.github.io/posts/code-reading/etcdraft-made-simple/6-readonly/ 关于etcd的一些谣言: https://cloud.tencent.com/developer/article/1551687 蚂蚁集团万级规模k</description>
     </item>
     
   </channel>
