@@ -6,10 +6,19 @@
     <description>Recent content in system_design on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Feb 2022 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 20 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/system_design/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Monitor system</title>
+      <link>http://localhost:1313/post/monitor_system/</link>
+      <pubDate>Sun, 20 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/monitor_system/</guid>
+      <description>Resource 大型互联网海量监控系统设计: https://cloud.tencent.com/developer/article/1037231 支付系统设计(六):支付系统的监控与报警: https://toutiao.io/posts/caeqfr/preview 如何设计一个监控平台: https://juejin.cn/post/6957957796088250405 美团外卖自动化业务运维系统建设: https://tech.meituan.com/2017/11/14/digger-share.html</description>
+    </item>
     
     <item>
       <title>关于配置中心、元数据中心和注册中心</title>

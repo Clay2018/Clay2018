@@ -6,10 +6,37 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Feb 2022 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 26 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>language</title>
+      <link>http://localhost:1313/categories/language/</link>
+      <pubDate>Sat, 26 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>http://localhost:1313/categories/network/</link>
+      <pubDate>Sat, 26 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system_design</title>
+      <link>http://localhost:1313/categories/system_design/</link>
+      <pubDate>Sun, 20 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/system_design/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>linux</title>
@@ -17,15 +44,6 @@
       <pubDate>Sat, 19 Feb 2022 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>language</title>
-      <link>http://localhost:1313/categories/language/</link>
-      <pubDate>Tue, 15 Feb 2022 00:47:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/language/</guid>
       <description></description>
     </item>
     
@@ -39,29 +57,11 @@
     </item>
     
     <item>
-      <title>network</title>
-      <link>http://localhost:1313/categories/network/</link>
-      <pubDate>Thu, 10 Feb 2022 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>components</title>
       <link>http://localhost:1313/categories/components/</link>
       <pubDate>Sun, 06 Feb 2022 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/components/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>system_design</title>
-      <link>http://localhost:1313/categories/system_design/</link>
-      <pubDate>Sat, 05 Feb 2022 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/system_design/</guid>
       <description></description>
     </item>
     

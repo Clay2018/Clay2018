@@ -6,10 +6,19 @@
     <description>Recent content in language on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 26 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/language/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>runtime in golang</title>
+      <link>http://localhost:1313/post/runtime_in_golang/</link>
+      <pubDate>Sat, 26 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/runtime_in_golang/</guid>
+      <description>Resource 聊聊什么是Go runtime.KeepAlive: https://developer.51cto.com/article/692468.html runtime.SetFinalizer https://zhuanlan.zhihu.com/p/76504936 https://www.cnblogs.com/binHome/p/12901392.html</description>
+    </item>
     
     <item>
       <title>version change in golang</title>
@@ -71,7 +80,7 @@
       <pubDate>Sun, 05 Sep 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/sync_in_golang/</guid>
-      <description>Resources sync.Once()的妙用: https://mp.weixin.qq.com/s/7QyQS9DQj1czA6BVR6ywYA</description>
+      <description>Resources sync.Once sync.Once()的妙用: https://mp.weixin.qq.com/s/7QyQS9DQj1czA6BVR6ywYA sync.Once()实现原理: https://segmentfault.com/a/1190000039294152 sync.WaitGroup()的实现原理: https://zhuanlan.zhihu.com/p/344973865</description>
     </item>
     
     <item>
@@ -161,7 +170,7 @@
       <pubDate>Fri, 02 Apr 2021 01:01:00 +0800</pubDate>
       
       <guid>http://localhost:1313/post/defer_in_golang/</guid>
-      <description>Reference defer分析: https://studygolang.com/articles/742</description>
+      <description>Reference defer分析: https://studygolang.com/articles/742 defer实现原理: https://segmentfault.com/a/1190000020614493 defer优化: https://zhuanlan.zhihu.com/p/401339057 deferreturn函数: https://www.modb.pro/db/88823</description>
     </item>
     
     <item>

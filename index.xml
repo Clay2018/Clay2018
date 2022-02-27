@@ -6,7 +6,7 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Feb 2022 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 26 Feb 2022 00:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,33 @@
       
       <guid>http://localhost:1313/post/search/</guid>
       <description>/* 手机适配 */ @media screen and (max-width: 500px) { .search{ padding-right: 25px; } .search input{ width: 100%; } .search button{ display: none; } } /* 电脑适配 */ @media screen and (min-width: 500px) { .search{ width: 500px; } .search input{ width: 444px; } } /* 通用样式 */ .search{ margin: auto; } .search input{ outline: none; border: 2px solid #c05b4d; height: 32px; padding:</description>
+    </item>
+    
+    <item>
+      <title>Network</title>
+      <link>http://localhost:1313/post/network/</link>
+      <pubDate>Sat, 26 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/network/</guid>
+      <description>Resource 网络书籍: https://www.zhihu.com/question/19774914</description>
+    </item>
+    
+    <item>
+      <title>runtime in golang</title>
+      <link>http://localhost:1313/post/runtime_in_golang/</link>
+      <pubDate>Sat, 26 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/runtime_in_golang/</guid>
+      <description>Resource 聊聊什么是Go runtime.KeepAlive: https://developer.51cto.com/article/692468.html runtime.SetFinalizer https://zhuanlan.zhihu.com/p/76504936 https://www.cnblogs.com/binHome/p/12901392.html</description>
+    </item>
+    
+    <item>
+      <title>Monitor system</title>
+      <link>http://localhost:1313/post/monitor_system/</link>
+      <pubDate>Sun, 20 Feb 2022 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/monitor_system/</guid>
+      <description>Resource 大型互联网海量监控系统设计: https://cloud.tencent.com/developer/article/1037231 支付系统设计(六):支付系统的监控与报警: https://toutiao.io/posts/caeqfr/preview 如何设计一个监控平台: https://juejin.cn/post/6957957796088250405 美团外卖自动化业务运维系统建设: https://tech.meituan.com/2017/11/14/digger-share.html</description>
     </item>
     
     <item>
@@ -80,7 +107,7 @@
       <pubDate>Sat, 12 Feb 2022 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/bq/</guid>
-      <description>Resource 什么是BQ行为问题？如何在大厂面试中搞定它？: http://www.360doc.com/content/21/0405/14/44716758_970691903.shtml</description>
+      <description>Resource 什么是BQ行为问题？如何在大厂面试中搞定它？: http://www.360doc.com/content/21/0405/14/44716758_970691903.shtml 应对100道行为面试题，只需3各小故事: https://www.myopt.org/post/%E5%BA%94%E5%AF%B9100%E9%81%93%E8%A1%8C%E4%B8%BA%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%8C%E5%8F%AA%E9%9C%803%E4%B8%AA%E5%B0%8F%E6%95%85%E4%BA%8B</description>
     </item>
     
     <item>
@@ -435,7 +462,7 @@
       <pubDate>Sun, 05 Sep 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/sync_in_golang/</guid>
-      <description>Resources sync.Once()的妙用: https://mp.weixin.qq.com/s/7QyQS9DQj1czA6BVR6ywYA</description>
+      <description>Resources sync.Once sync.Once()的妙用: https://mp.weixin.qq.com/s/7QyQS9DQj1czA6BVR6ywYA sync.Once()实现原理: https://segmentfault.com/a/1190000039294152 sync.WaitGroup()的实现原理: https://zhuanlan.zhihu.com/p/344973865</description>
     </item>
     
     <item>
@@ -840,7 +867,7 @@
       <pubDate>Fri, 02 Apr 2021 01:01:00 +0800</pubDate>
       
       <guid>http://localhost:1313/post/defer_in_golang/</guid>
-      <description>Reference defer分析: https://studygolang.com/articles/742</description>
+      <description>Reference defer分析: https://studygolang.com/articles/742 defer实现原理: https://segmentfault.com/a/1190000020614493 defer优化: https://zhuanlan.zhihu.com/p/401339057 deferreturn函数: https://www.modb.pro/db/88823</description>
     </item>
     
     <item>
@@ -1030,6 +1057,15 @@
       
       <guid>http://localhost:1313/post/build_hugo_site/</guid>
       <description>搭建Hugo博客网站 1 测试语法 1 测试图片 API bbb 发布文章 hugo new post/xxxx.md 发布github hugo -t even Reference https://segmentfault.com/a/1190000012975914?utm_source=tag-newest https://juejin.im/post/5e9cf8bd51882538083fec4c#heading-1 https://www.jianshu.com/p/475110a1c811 同even博客: https://edward852.github.io/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/dns/</guid>
+      <description>Resource 为什么DNS协议使用UDP？只使用了UDP吗？: https://cloud.tencent.com/developer/article/1818152</description>
     </item>
     
     <item>
