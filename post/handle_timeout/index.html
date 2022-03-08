@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>golang中的context - Even - A super concise theme for Hugo</title>
+  <title>Handle timeout - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Reference: goroutine如何退出: https://geektutu.com/post/hpg-exit-goroutine.html context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;amp;mid=2247486310&amp;amp;idx=1&amp;amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;amp;scene=21#wechat_redirect" /><meta name="keywords" content="context" />
+<meta name="author" content="Clayton" /><meta name="description" content="超时处理 我们要探讨的问题是:如果我们遇到一个非常非常慢的API调用最终超时，并且我们假设(a)它成功或(b)失败，我们就会遇到错误。超时(或" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/context_in_golang/" />
+<link rel="canonical" href="http://localhost:1313/post/handle_timeout/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="golang中的context" />
-<meta property="og:description" content="Reference: goroutine如何退出: https://geektutu.com/post/hpg-exit-goroutine.html context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;mid=2247486310&amp;idx=1&amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;scene=21#wechat_redirect" />
+<meta property="og:title" content="Handle timeout" />
+<meta property="og:description" content="超时处理 我们要探讨的问题是:如果我们遇到一个非常非常慢的API调用最终超时，并且我们假设(a)它成功或(b)失败，我们就会遇到错误。超时(或" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/context_in_golang/" />
-<meta property="article:published_time" content="2021-04-27T00:00:44+08:00" />
-<meta property="article:modified_time" content="2021-04-27T00:00:44+08:00" />
-<meta itemprop="name" content="golang中的context">
-<meta itemprop="description" content="Reference: goroutine如何退出: https://geektutu.com/post/hpg-exit-goroutine.html context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;mid=2247486310&amp;idx=1&amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;scene=21#wechat_redirect">
-<meta itemprop="datePublished" content="2021-04-27T00:00:44&#43;08:00" />
-<meta itemprop="dateModified" content="2021-04-27T00:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="28">
+<meta property="og:url" content="http://localhost:1313/post/handle_timeout/" />
+<meta property="article:published_time" content="2022-03-08T00:00:44+08:00" />
+<meta property="article:modified_time" content="2022-03-08T00:00:44+08:00" />
+<meta itemprop="name" content="Handle timeout">
+<meta itemprop="description" content="超时处理 我们要探讨的问题是:如果我们遇到一个非常非常慢的API调用最终超时，并且我们假设(a)它成功或(b)失败，我们就会遇到错误。超时(或">
+<meta itemprop="datePublished" content="2022-03-08T00:00:44&#43;08:00" />
+<meta itemprop="dateModified" content="2022-03-08T00:00:44&#43;08:00" />
+<meta itemprop="wordCount" content="275">
 
 
 
-<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="golang中的context"/>
-<meta name="twitter:description" content="Reference: goroutine如何退出: https://geektutu.com/post/hpg-exit-goroutine.html context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;mid=2247486310&amp;idx=1&amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;scene=21#wechat_redirect"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Handle timeout"/>
+<meta name="twitter:description" content="超时处理 我们要探讨的问题是:如果我们遇到一个非常非常慢的API调用最终超时，并且我们假设(a)它成功或(b)失败，我们就会遇到错误。超时(或"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -122,14 +122,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">golang中的context</h1>
+      <h1 class="post-title">Handle timeout</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-04-27 </span>
+        <span class="post-time"> 2022-03-08 </span>
         <div class="post-category">
-            <a href="/categories/language/"> language </a>
+            <a href="/categories/system_design/"> system_design </a>
             </div>
-          <span class="more-meta"> 28 words </span>
+          <span class="more-meta"> 275 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -142,7 +142,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#reference">Reference:</a></li>
+        <li><a href="#超时处理">超时处理</a></li>
+        <li><a href="#resource">Resource</a></li>
       </ul>
     </li>
   </ul>
@@ -150,10 +151,38 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="reference">Reference:</h3>
+      <h3 id="超时处理">超时处理</h3>
+<p>我们要探讨的问题是:如果我们遇到一个非常非常慢的API调用最终超时，并且我们假设(a)它成功或(b)失败，我们就会遇到错误。超时(或更糟糕的是，无限长的等待)是分布式系统的一个基本事实，我们需要如何处理它们</p>
 <ul>
-<li>goroutine如何退出: <a href="https://geektutu.com/post/hpg-exit-goroutine.html">https://geektutu.com/post/hpg-exit-goroutine.html</a></li>
-<li>context包解析: <a href="https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;mid=2247486310&amp;idx=1&amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;mid=2247486310&amp;idx=1&amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;scene=21#wechat_redirect</a></li>
+<li>
+<p>解决方法:</p>
+<ul>
+<li>假设成功</li>
+<li>使用默认值</li>
+<li>假设远程操作失败，然后自动重试
+<ul>
+<li>重试是否安全</li>
+<li>同步重试还是异步重试</li>
+<li>同步重试会减慢您的速度</li>
+<li>重试多少次</li>
+<li>重试之间延迟策略(等间隔、指数退避、使用抖动)</li>
+<li>如果远程服务出现性能问题，重试是否会使他们的情况变得更差</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>检查请求是否成功，如果安全再试一次</p>
+</li>
+<li>
+<p>让用户知道这个结果</p>
+</li>
+</ul>
+<h3 id="resource">Resource</h3>
+<ul>
+<li>microservices aren&rsquo;t magic handing timeout: <a href="https://8thlight.com/blog/colin-jones/2018/09/18/microservices-arent-magic-handling-timeouts.html">https://8thlight.com/blog/colin-jones/2018/09/18/microservices-arent-magic-handling-timeouts.html</a></li>
+<li>超时、重试和抖动回退: <a href="https://aws.amazon.com/cn/builders-library/timeouts-retries-and-backoff-with-jitter/">https://aws.amazon.com/cn/builders-library/timeouts-retries-and-backoff-with-jitter/</a></li>
+<li>微服务调用超时处理: <a href="https://www.jianshu.com/p/d68d572b0613">https://www.jianshu.com/p/d68d572b0613</a></li>
 </ul>
 
     </div>
@@ -166,7 +195,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-04-27
+        2022-03-08
         
     </span>
   </p>
@@ -188,17 +217,15 @@
       </label>
   </div>
 </div><footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/golang/">golang</a>
-          </div>
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/write_an_rpc_from_scratch/">
+        <a class="prev" href="/post/search/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">write an rpc from scratch</span>
+            <span class="prev-text nav-default">搜索</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/distributed_lock/">
-            <span class="next-text nav-default">分布式锁</span>
+        <a class="next" href="/post/inventory_system_design/">
+            <span class="next-text nav-default">Inventory system design</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

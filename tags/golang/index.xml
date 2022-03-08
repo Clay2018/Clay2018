@@ -116,7 +116,7 @@
       <pubDate>Tue, 27 Apr 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/context_in_golang/</guid>
-      <description>Reference: context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;amp;mid=2247486310&amp;amp;idx=1&amp;amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;amp;scene=21#wechat_redirect</description>
+      <description>Reference: goroutine如何退出: https://geektutu.com/post/hpg-exit-goroutine.html context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;amp;mid=2247486310&amp;amp;idx=1&amp;amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;amp;scene=21#wechat_redirect</description>
     </item>
     
     <item>

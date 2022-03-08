@@ -6,10 +6,37 @@
     <description>Recent content in system_design on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/system_design/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Handle timeout</title>
+      <link>http://localhost:1313/post/handle_timeout/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/handle_timeout/</guid>
+      <description>超时处理 我们要探讨的问题是:如果我们遇到一个非常非常慢的API调用最终超时，并且我们假设(a)它成功或(b)失败，我们就会遇到错误。超时(或</description>
+    </item>
+    
+    <item>
+      <title>Inventory system design</title>
+      <link>http://localhost:1313/post/inventory_system_design/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/inventory_system_design/</guid>
+      <description>库存服务设计 需求收集 方案评审 浏览器优化, 限流器使用，监控告警提前预报 设计难点在于库存更新和超时处理 库存更新, mysql+redis: 先更新，再删除缓存 超时处理，m</description>
+    </item>
+    
+    <item>
+      <title>Timer设计</title>
+      <link>http://localhost:1313/post/timer/</link>
+      <pubDate>Mon, 07 Mar 2022 00:07:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/timer/</guid>
+      <description>定时任务设计 任务队列 + 轮询, cpu耗费较大+空转问题; 四叉堆 + 轮询, 空转问题; 单独时间轮 + tick轮询, cpu耗费+空转问题; 多个时间轮 + t</description>
+    </item>
     
     <item>
       <title>Monitor system</title>
@@ -80,7 +107,7 @@
       <pubDate>Mon, 06 Sep 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/delay_queue/</guid>
-      <description>Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw</description>
+      <description>Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw 延迟队列rabbitmq实现: https://mp.weixin.qq.com/s/I8I5PJMfDSsLkmLHiuIavw</description>
     </item>
     
     <item>

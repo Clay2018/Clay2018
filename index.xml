@@ -6,7 +6,7 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,33 @@
       
       <guid>http://localhost:1313/post/search/</guid>
       <description>/* 手机适配 */ @media screen and (max-width: 500px) { .search{ padding-right: 25px; } .search input{ width: 100%; } .search button{ display: none; } } /* 电脑适配 */ @media screen and (min-width: 500px) { .search{ width: 500px; } .search input{ width: 444px; } } /* 通用样式 */ .search{ margin: auto; } .search input{ outline: none; border: 2px solid #c05b4d; height: 32px; padding:</description>
+    </item>
+    
+    <item>
+      <title>Handle timeout</title>
+      <link>http://localhost:1313/post/handle_timeout/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/handle_timeout/</guid>
+      <description>超时处理 我们要探讨的问题是:如果我们遇到一个非常非常慢的API调用最终超时，并且我们假设(a)它成功或(b)失败，我们就会遇到错误。超时(或</description>
+    </item>
+    
+    <item>
+      <title>Inventory system design</title>
+      <link>http://localhost:1313/post/inventory_system_design/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/inventory_system_design/</guid>
+      <description>库存服务设计 需求收集 方案评审 浏览器优化, 限流器使用，监控告警提前预报 设计难点在于库存更新和超时处理 库存更新, mysql+redis: 先更新，再删除缓存 超时处理，m</description>
+    </item>
+    
+    <item>
+      <title>Timer设计</title>
+      <link>http://localhost:1313/post/timer/</link>
+      <pubDate>Mon, 07 Mar 2022 00:07:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/timer/</guid>
+      <description>定时任务设计 任务队列 + 轮询, cpu耗费较大+空转问题; 四叉堆 + 轮询, 空转问题; 单独时间轮 + tick轮询, cpu耗费+空转问题; 多个时间轮 + t</description>
     </item>
     
     <item>
@@ -444,7 +471,7 @@
       <pubDate>Mon, 06 Sep 2021 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/delay_queue/</guid>
-      <description>Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw</description>
+      <description>Resources delay queue的几种实现简介: https://mp.weixin.qq.com/s/zjmVoj0nM2FZDelYaebdDw 延迟队列rabbitmq实现: https://mp.weixin.qq.com/s/I8I5PJMfDSsLkmLHiuIavw</description>
     </item>
     
     <item>
@@ -498,7 +525,7 @@
       <pubDate>Fri, 06 Aug 2021 00:05:24 +0800</pubDate>
       
       <guid>http://localhost:1313/post/git/</guid>
-      <description>Resources git仓库操作: https://mp.weixin.qq.com/s/s_pNeT1lMlVDbjO37Fys4A</description>
+      <description>Resources git仓库操作: https://mp.weixin.qq.com/s/s_pNeT1lMlVDbjO37Fys4A git仓库过大, clone不下来解决方法: https://www.cnblogs.com/ZhaoWeiNotes/p/13920660.html git只下载最新代码: https://zhuanlan.zhihu.com/p/413110403</description>
     </item>
     
     <item>
@@ -840,7 +867,7 @@
       <pubDate>Tue, 27 Apr 2021 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/context_in_golang/</guid>
-      <description>Reference: context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;amp;mid=2247486310&amp;amp;idx=1&amp;amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;amp;scene=21#wechat_redirect</description>
+      <description>Reference: goroutine如何退出: https://geektutu.com/post/hpg-exit-goroutine.html context包解析: https://mp.weixin.qq.com/s?__biz=MzUxMDI4MDc1NA==&amp;amp;mid=2247486310&amp;amp;idx=1&amp;amp;sn=e1d998f35293e1bf259bf51f2f7ef6bd&amp;amp;scene=21#wechat_redirect</description>
     </item>
     
     <item>
