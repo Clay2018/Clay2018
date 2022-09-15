@@ -17,7 +17,7 @@
       <pubDate>Sat, 26 Feb 2022 00:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/network/</guid>
-      <description>Resource 网络书籍: https://www.zhihu.com/question/19774914</description>
+      <description>Resource 网络书籍: https://www.zhihu.com/question/19774914 Utils cat /proc/net/bonding/bondx 查看bond状态: https://blog.csdn.net/sdd220/article/details/77199166 bond模式: https://blog.csdn.net/qq_34870631/article/details/80625217 一个网卡配置多个IP: https://blog.csdn.net/qq_34870631/article/details/80625217 配置VLAN 1 2 3 4 5 6 7 8 #ifcfg-bond0 DEVICE=bond0 NAME=bond0 TYPE=BOND NM_CONTROLLED=no USERCTL=no BONDING_MASTER=yes BOOTPROTO=none 1 2 3 4 5 6 7 8</description>
     </item>
     
     <item>

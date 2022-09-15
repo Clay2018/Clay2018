@@ -6,10 +6,28 @@
     <description>Recent content in language on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 May 2022 00:05:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/language/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go mod</title>
+      <link>http://localhost:1313/post/go_mod/</link>
+      <pubDate>Mon, 02 May 2022 00:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/go_mod/</guid>
+      <description>Resource go mod使用: https://www.jianshu.com/p/760c97ff644c 发展历史 GOPATH 1 2 3 4 5 6 7 8 go env -w GO111MODULE=&amp;#34;off&amp;#34; GOROOT=/usr/local/go GOPATH=/home/dev/project/go /* 按如下路径+导包路径寻找所需要的包 /usr/local/go/src/ */ go build main.go go编译项目时，只会在GOROOT和G</description>
+    </item>
+    
+    <item>
+      <title>GC in golang</title>
+      <link>http://localhost:1313/post/gc_in_golang/</link>
+      <pubDate>Wed, 06 Apr 2022 01:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/gc_in_golang/</guid>
+      <description>Resource Golang什么时候会触发GC: https://www.jianshu.com/p/96a52a8127d9</description>
+    </item>
     
     <item>
       <title>runtime in golang</title>
@@ -147,12 +165,21 @@
     </item>
     
     <item>
-      <title>Go中的内存分配</title>
-      <link>http://localhost:1313/post/new_and_malloc_in_go/</link>
+      <title>alloc in golang</title>
+      <link>http://localhost:1313/post/alloc_in_golang/</link>
       <pubDate>Sat, 05 Jun 2021 00:00:44 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/new_and_malloc_in_go/</guid>
-      <description>Resource Go内存管理: https://mp.weixin.qq.com/s/PNRhtdS_gZVTtrkkRmx7yA</description>
+      <guid>http://localhost:1313/post/alloc_in_golang/</guid>
+      <description>Resource Go内存管理: https://mp.weixin.qq.com/s/PNRhtdS_gZVTtrkkRmx7yA Go内存管理和分配: https://mp.weixin.qq.com/s/6jAVPSnw5UPotCg40CAB8Q</description>
+    </item>
+    
+    <item>
+      <title>escape in golang</title>
+      <link>http://localhost:1313/post/escape_in_golang/</link>
+      <pubDate>Sat, 05 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/escape_in_golang/</guid>
+      <description>Resource 通过Golang内存逃逸分析讨论GC的压力: https://www.jianshu.com/p/10e83dc6cd64?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io</description>
     </item>
     
     <item>

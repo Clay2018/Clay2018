@@ -6,10 +6,19 @@
     <description>Recent content in components on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Feb 2022 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Apr 2022 14:51:03 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/components/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Prometheus</title>
+      <link>http://localhost:1313/post/prometheus/</link>
+      <pubDate>Thu, 07 Apr 2022 14:51:03 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/prometheus/</guid>
+      <description>Resource prometheus docs: https://prometheus.io/docs/introduction/overview/ pushgateway数据上报: https://www.cnblogs.com/xiaobaozi-95/p/10684524.html</description>
+    </item>
     
     <item>
       <title>Bug in etcd</title>
