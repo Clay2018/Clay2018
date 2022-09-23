@@ -45,7 +45,7 @@
 <meta property="og:description" content="Clayton Blog site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/" />
-<meta property="og:updated_time" content="2022-08-23T00:28:00+08:00" />
+<meta property="og:updated_time" content="2022-09-23T00:28:00+08:00" />
 <meta itemprop="name" content="Even - A super concise theme for Hugo">
 <meta itemprop="description" content="Clayton Blog site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
@@ -137,23 +137,46 @@
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/cft/">contract security</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/library_in_solidity/">library in solidity</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-08-23 </span>
+      <span class="post-time"> 2022-09-23 </span>
       <div class="post-category">
           <a href="/categories/blockchain/"> blockchain </a>
           </div>
-        <span class="more-meta"> 24 words </span>
+        <span class="more-meta"> 83 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      WCTF  BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4  BelluminarBank.deploy(&#34;123456&#34;, 1, {&#39;from&#39;:accounts[0], &#39;value&#39;:10}) BelluminarBank[0].invest(1, &#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&#34;, {&#39;from&#39;:accounts[1], &#39;value&#39;: 1}) BelluminarBank[0].invest(2, 0, {&#39;from&#39;:accounts[1], &#39;value&#39;: 0}) BelluminarBank[0].confiscate(1, &#34;123456&#34;, {&#39;from&#39;:accounts[1]})     
+      this变量 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 library MathLib { function multiply(uint a, uint b) public view returns (uint, address) { return (a * b, address(this)); } } contract Example { using MathLib for uint; address public owner = address(this); address public retAddr; function multiplyExample(uint _a, uint _b) public view returns (uint,
     </div>
     <div class="read-more">
-      <a href="/post/cft/" class="read-more-link">Read more...</a>
+      <a href="/post/library_in_solidity/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/contract_security/">contract security</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-08-23 </span>
+      <div class="post-category">
+          <a href="/categories/blockchain/"> blockchain </a>
+          </div>
+        <span class="more-meta"> 58 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&#34;123456&#34;, 1, {&#39;from&#39;:accounts[0], &#39;value&#39;:10}) BelluminarBank[0].invest(1, &#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&#34;, {&#39;from&#39;:accounts[1], &#39;value&#39;: 1}) BelluminarBank[0].invest(2, 0, {&#39;from&#39;:accounts[1], &#39;value&#39;: 0}) BelluminarBank[0].confiscate(1, &#34;123456&#34;, {&#39;from&#39;:accounts[1]})
+    </div>
+    <div class="read-more">
+      <a href="/post/contract_security/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -166,14 +189,14 @@
       <div class="post-category">
           <a href="/categories/blockchain/"> blockchain </a>
           </div>
-        <span class="more-meta"> 17 words </span>
+        <span class="more-meta"> 93 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Resources solidity寻址: https://www.whatsblockchain.com/posts/c052872a.html https://blog.51cto.com/shijianfeng/5151269 self destruct: https://solidity-by-example.org/hacks/self-destruct/
+      gas优化 gas优化: https://www.theblockbeats.info/news/31602 Resources solidity寻址: https://www.whatsblockchain.com/posts/c052872a.html https://blog.51cto.com/shijianfeng/5151269 self destruct: https://solidity-by-example.org/hacks/self-destruct/ 逆向decompile代码: https://ethervm.io/decompile fallback,receive规则: https://www.theblockbeats.info/news/31602 合约大小优化
     </div>
     <div class="read-more">
       <a href="/post/solidity/" class="read-more-link">Read more...</a>
@@ -315,29 +338,6 @@
     </div>
     <div class="read-more">
       <a href="/post/inventory_system_design/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/timer/">Timer设计</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-03-07 </span>
-      <div class="post-category">
-          <a href="/categories/system_design/"> system_design </a>
-          </div>
-        <span class="more-meta"> 93 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      定时任务设计 任务队列 + 轮询, cpu耗费较大+空转问题; 四叉堆 + 轮询, 空转问题; 单独时间轮 + tick轮询, cpu耗费+空转问题; 多个时间轮 + t
-    </div>
-    <div class="read-more">
-      <a href="/post/timer/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

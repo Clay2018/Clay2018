@@ -6,10 +6,48 @@
     <description>Recent content in solidity on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Jun 2021 00:00:44 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Sep 2022 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/solidity/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>library in solidity</title>
+      <link>http://localhost:1313/post/library_in_solidity/</link>
+      <pubDate>Fri, 23 Sep 2022 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/library_in_solidity/</guid>
+      <description>this变量 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 library MathLib { function multiply(uint a, uint b) public view returns (uint, address) { return (a * b, address(this)); } } contract Example { using MathLib for uint; address public owner = address(this); address public retAddr; function multiplyExample(uint _a, uint _b) public view returns (uint,</description>
+    </item>
+    
+    <item>
+      <title>contract security</title>
+      <link>http://localhost:1313/post/contract_security/</link>
+      <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/contract_security/</guid>
+      <description>合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&amp;#34;123456&amp;#34;, 1, {&amp;#39;from&amp;#39;:accounts[0], &amp;#39;value&amp;#39;:10}) BelluminarBank[0].invest(1, &amp;#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 1}) BelluminarBank[0].invest(2, 0, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 0}) BelluminarBank[0].confiscate(1, &amp;#34;123456&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1]})</description>
+    </item>
+    
+    <item>
+      <title>solidity doc</title>
+      <link>http://localhost:1313/post/solidity/</link>
+      <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/solidity/</guid>
+      <description>gas优化 gas优化: https://www.theblockbeats.info/news/31602 Resources solidity寻址: https://www.whatsblockchain.com/posts/c052872a.html https://blog.51cto.com/shijianfeng/5151269 self destruct: https://solidity-by-example.org/hacks/self-destruct/ 逆向decompile代码: https://ethervm.io/decompile fallback,receive规则: https://www.theblockbeats.info/news/31602 合约大小优化</description>
+    </item>
+    
+    <item>
+      <title>Guessing Game</title>
+      <link>http://localhost:1313/post/guess_game/</link>
+      <pubDate>Sun, 07 Nov 2021 00:05:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/guess_game/</guid>
+      <description>Build a Failr, Oracle-Free(no oracles allowed) Guessing Game in solidity which pits two players against each other in a game where each player tries to guess whether a randomly generated number is high or low.
+  answer
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173  /** ### reference - random optimize - https://www.</description>
+    </item>
     
     <item>
       <title>Inheritance in solidity</title>
@@ -27,6 +65,15 @@
       
       <guid>http://localhost:1313/post/upgradable_contract/</guid>
       <description>Resource 可升级合约: https://www.dtmao.cc/news_show_1340999.shtml 如何实现可升级合约: https://juejin.cn/post/6844903685776998407</description>
+    </item>
+    
+    <item>
+      <title>币安研究院：硬核解析智能合约常见漏洞原理及攻击模式</title>
+      <link>http://localhost:1313/post/contract_bug/</link>
+      <pubDate>Mon, 14 Jun 2021 00:00:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/contract_bug/</guid>
+      <description>Resource 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.htm</description>
     </item>
     
   </channel>
