@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Optimizer in solidity - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clay" /><meta name="description" content="Optimizer in solidity 合约设计及实现变迁 v1.x版本实现，每次创建同样的合约 v2.x版本实现, 逻辑单独抽象成library,每次创建合约仅包含storage" /><meta name="keywords" content="Clayton, Blog, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/optimizer_in_solidity/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Optimizer in solidity" />
+<meta property="og:description" content="Optimizer in solidity 合约设计及实现变迁 v1.x版本实现，每次创建同样的合约 v2.x版本实现, 逻辑单独抽象成library,每次创建合约仅包含storage" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/optimizer_in_solidity/" />
+<meta property="article:published_time" content="2022-09-25T00:28:00+08:00" />
+<meta property="article:modified_time" content="2022-09-25T00:28:00+08:00" />
+<meta itemprop="name" content="Optimizer in solidity">
+<meta itemprop="description" content="Optimizer in solidity 合约设计及实现变迁 v1.x版本实现，每次创建同样的合约 v2.x版本实现, 逻辑单独抽象成library,每次创建合约仅包含storage">
+<meta itemprop="datePublished" content="2022-09-25T00:28:00&#43;08:00" />
+<meta itemprop="dateModified" content="2022-09-25T00:28:00&#43;08:00" />
+<meta itemprop="wordCount" content="1172">
+
+
+
+<meta itemprop="keywords" content="solidity," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Optimizer in solidity"/>
+<meta name="twitter:description" content="Optimizer in solidity 合约设计及实现变迁 v1.x版本实现，每次创建同样的合约 v2.x版本实现, 逻辑单独抽象成library,每次创建合约仅包含storage"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/post/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/search/">搜索</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Optimizer in solidity</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-09-25 </span>
+        <div class="post-category">
+            <a href="/categories/blockchain/"> blockchain </a>
+            </div>
+          <span class="more-meta"> 1172 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#optimizer-in-solidity">Optimizer in solidity</a></li>
+        <li><a href="#resources">resources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="optimizer-in-solidity">Optimizer in solidity</h3>
+<ul>
+<li>
+<p>合约设计及实现变迁</p>
+<p>v1.x版本实现，每次创建同样的合约</p>
+<!-- raw HTML omitted -->
+<p>v2.x版本实现, 逻辑单独抽象成library,每次创建合约仅包含<code>storage variables</code></p>
+<!-- raw HTML omitted -->
+<p>v3.x版本实现, 分为代理合约和逻辑合约,每次创建代理合约（不包含逻辑和<code>storage variables</code>)</p>
+<!-- raw HTML omitted -->
+<p>summary: 如果某个合约需要部署很多次，可以采用library或proxy来部署合约，每个合约仅是初始化值不同，采用proxy模式更好</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">contract Table is Proxy {
+
+    bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;
+
+    constructor(
+        address _implAddr
+    ) {
+        _setImplementation(_implAddr);
+    }
+
+    function _implementation() internal view override returns (address) {
+        return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;
+    }
+
+    function _setImplementation(address newImplementation) private {
+        require(Address.isContract(newImplementation), &#34;ERC1967: new implementation is not a contract&#34;);
+        StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;
+    }
+
+}
+  
+constract Logic {
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">contract Table {
+    using TableLogic for TableLogic.TableInfo;
+    TableLogic.TableInfo tableInfo;
+}
+
+library TableLogic {
+}    
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>solidity中的optimizer</p>
+<p>大部分论述来自<strong><a href="https://docs.soliditylang.org/en/v0.8.17/internals/optimizer.html">https://docs.soliditylang.org/en/v0.8.17/internals/optimizer.html</a></strong></p>
+<p>solidity使用两种编译器:The opcode-based optimizer 和 The Yul-based optimizer.</p>
+<p>solidity产生EVM bytecode有两种方式: solidity语言直接翻译成<code>evm opcode</code>, 或先翻译成<code>Yul</code>后再翻译成<code>evm opcode(IR-based code generator)</code>.</p>
+<p><code>The IR-based code generator</code>不仅更透明和可审计的，而且可以跨函数优化<code>code</code>。同样的solidity代码可能产生不同的语义变化(<a href="https://docs.soliditylang.org/en/v0.8.17/ir-breaking-changes.html)">https://docs.soliditylang.org/en/v0.8.17/ir-breaking-changes.html)</a>.</p>
+<ul>
+<li>
+<p>The opcode-based optimizer</p>
+<p>这个优化器主要是简化相同的代码，删除无用的代码. 简化规则参考(<a href="https://github.com/ethereum/solidity/blob/develop/libevmasm/RuleList.h">https://github.com/ethereum/solidity/blob/develop/libevmasm/RuleList.h</a>)</p>
+</li>
+<li>
+<p>The Yul-based optimizer</p>
+<ul>
+<li>
+<p>优化组件</p>
+<ul>
+<li>SSA Transform</li>
+<li>Common Subexpression Eliminator</li>
+<li>Expression Simplifier</li>
+<li>Redundant Assign Eliminator</li>
+<li>Full Inliner</li>
+</ul>
+</li>
+<li>
+<p>Optimization Step Sequence: <a href="https://docs.soliditylang.org/en/v0.8.17/yul.html#optimization-step-sequence">https://docs.soliditylang.org/en/v0.8.17/yul.html#optimization-step-sequence</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Optimizer Parameter Runs</p>
+<p>这个参数指定了部署代码在合约生命周期内执行的频率，是code size(deploy cost)和code execution(cost after deployment)的权衡</p>
+<p>参数范围: [1, 2^32-1]</p>
+</li>
+<li>
+<p>使用编译器配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34;optimizer&#34;: {
+  // Disabled by default.
+  // NOTE: enabled=false still leaves some optimizations on. See comments below.
+  // WARNING: Before version 0.8.6 omitting the &#39;enabled&#39; key was not equivalent to setting
+  // it to false and would actually disable all the optimizations.
+  &#34;enabled&#34;: true,
+  // Optimize for how many times you intend to run the code.
+  // Lower values will optimize more for initial deployment cost, higher
+  // values will optimize more for high-frequency usage.
+  &#34;runs&#34;: 200,
+  // Switch optimizer components on or off in detail.
+  // The &#34;enabled&#34; switch above provides two defaults which can be
+  // tweaked here. If &#34;details&#34; is given, &#34;enabled&#34; can be omitted.
+  &#34;details&#34;: {
+    // The peephole optimizer is always on if no details are given,
+    // use details to switch it off.
+    &#34;peephole&#34;: true,
+    // The inliner is always on if no details are given,
+    // use details to switch it off.
+    &#34;inliner&#34;: true,
+    // The unused jumpdest remover is always on if no details are given,
+    // use details to switch it off.
+    &#34;jumpdestRemover&#34;: true,
+    // Sometimes re-orders literals in commutative operations.
+    &#34;orderLiterals&#34;: false,
+    // Removes duplicate code blocks
+    &#34;deduplicate&#34;: false,
+    // Common subexpression elimination, this is the most complicated step but
+    // can also provide the largest gain.
+    &#34;cse&#34;: false,
+    // Optimize representation of literal numbers and strings in code.
+    &#34;constantOptimizer&#34;: false,
+    // The new Yul optimizer. Mostly operates on the code of ABI coder v2
+    // and inline assembly.
+    // It is activated together with the global optimizer setting
+    // and can be deactivated here.
+    // Before Solidity 0.6.0 it had to be activated through this switch.
+    &#34;yul&#34;: false,
+    // Tuning options for the Yul optimizer.
+    &#34;yulDetails&#34;: {
+      // Improve allocation of stack slots for variables, can free up stack slots early.
+      // Activated by default if the Yul optimizer is activated.
+      &#34;stackAllocation&#34;: true,
+      // Select optimization steps to be applied.
+      // Optional, the optimizer will use the default sequence if omitted.
+      &#34;optimizerSteps&#34;: &#34;dhfoDgvulfnTUtnIf...&#34;
+    }
+  }
+}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Peephole optimization: <a href="https://en.wikipedia.org/wiki/Peephole_optimization">https://en.wikipedia.org/wiki/Peephole_optimization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="resources">resources</h3>
+<ul>
+<li>gas calculate: <a href="https://github.com/wolflo/evm-opcodes/blob/main/gas.md">https://github.com/wolflo/evm-opcodes/blob/main/gas.md</a></li>
+<li>gas optimization in solidity: <a href="https://yamenmerhi.medium.com/gas-optimization-in-solidity-75945e12322f">https://yamenmerhi.medium.com/gas-optimization-in-solidity-75945e12322f</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clay</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-09-25
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/solidity/">solidity</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/search/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">搜索</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/library_in_solidity/">
+            <span class="next-text nav-default">library in solidity</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
