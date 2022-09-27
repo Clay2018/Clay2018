@@ -8,6 +8,13 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/pos/</loc>
+    <lastmod>2022-09-27T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/optimizer_in_solidity/</loc>
     <lastmod>2022-09-25T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -898,28 +905,28 @@
   
   <url>
     <loc>http://localhost:1313/categories/blockchain/</loc>
-    <lastmod>2022-09-25T00:28:00+08:00</lastmod>
+    <lastmod>2022-09-27T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2022-09-25T00:28:00+08:00</lastmod>
+    <lastmod>2022-09-27T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2022-09-25T00:28:00+08:00</lastmod>
+    <lastmod>2022-09-27T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2022-09-25T00:28:00+08:00</lastmod>
+    <lastmod>2022-09-27T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

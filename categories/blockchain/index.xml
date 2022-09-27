@@ -6,10 +6,19 @@
     <description>Recent content in blockchain on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Sep 2022 00:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 27 Sep 2022 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/blockchain/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>POS</title>
+      <link>http://localhost:1313/post/pos/</link>
+      <pubDate>Tue, 27 Sep 2022 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pos/</guid>
+      <description>POS POW的出块属性是无过程性的，不论试多少次，它都不会影响挖出下个块的概率。下一个块的出块者，还是需要经历大量的计算。影响当前这个区块的哈希</description>
+    </item>
     
     <item>
       <title>Optimizer in solidity</title>
