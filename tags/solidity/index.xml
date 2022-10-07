@@ -6,10 +6,19 @@
     <description>Recent content in solidity on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Sep 2022 00:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Oct 2022 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/solidity/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Understanding Bytecode on Ethereum</title>
+      <link>http://localhost:1313/post/bytecode_in_solidity/</link>
+      <pubDate>Fri, 07 Oct 2022 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/bytecode_in_solidity/</guid>
+      <description>Understanding Bytecode on Ethereum  https://medium.com/authereum/bytecode-and-init-code-and-runtime-code-oh-my-7bcd89065904  </description>
+    </item>
     
     <item>
       <title>Optimizer in solidity</title>
@@ -73,7 +82,7 @@
       <pubDate>Mon, 14 Jun 2021 14:47:44 +0800</pubDate>
       
       <guid>http://localhost:1313/post/upgradable_contract/</guid>
-      <description>Resource 可升级合约: https://www.dtmao.cc/news_show_1340999.shtml 如何实现可升级合约: https://juejin.cn/post/6844903685776998407</description>
+      <description>Resource 可升级合约: https://www.dtmao.cc/news_show_1340999.shtml 如何实现可升级合约: https://juejin.cn/post/6844903685776998407 create2实现可升级可约: https://mirror.xyz/franx.eth/LwJvDwe3z-T5VscKrBfnOxZPc3wxhCXaooiSoxA7f5k</description>
     </item>
     
     <item>
