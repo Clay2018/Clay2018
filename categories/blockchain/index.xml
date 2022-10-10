@@ -71,7 +71,7 @@
       <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
       
       <guid>http://localhost:1313/post/solidity/</guid>
-      <description>tools Solidity Visual Developer: https://consensys.net/diligence/blog/2019/10/solidity-visual-auditor-extension-for-vs-code/ gas优化 gas优化: https://www.theblockbeats.info/news/31602 Resources solidity寻址: https://www.whatsblockchain.com/posts/c052872a.html https://blog.51cto.com/shijianfeng/5151269 self destruct: https://solidity-by-example.org/hacks/self-destruct/ 逆向decompile代码: https://ethervm.io/decompile fallback,receive规则: https://www.theblockbeats.info/news/31602 合</description>
+      <description>tools Solidity Visual Developer: https://consensys.net/diligence/blog/2019/10/solidity-visual-auditor-extension-for-vs-code/ sliter gas优化 gas优化: https://www.theblockbeats.info/news/31602 Resources solidity寻址: https://www.whatsblockchain.com/posts/c052872a.html https://blog.51cto.com/shijianfeng/5151269 self destruct: https://solidity-by-example.org/hacks/self-destruct/ 逆向decompile代码: https://ethervm.io/decompile fallback,receive规则: https://www.theblockbeats.info/news/31602</description>
     </item>
     
     <item>
