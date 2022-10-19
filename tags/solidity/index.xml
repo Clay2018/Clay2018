@@ -6,10 +6,19 @@
     <description>Recent content in solidity on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Oct 2022 00:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Oct 2022 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/solidity/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Yul language</title>
+      <link>http://localhost:1313/post/yul_in_solidity/</link>
+      <pubDate>Wed, 19 Oct 2022 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/yul_in_solidity/</guid>
+      <description>Resources  All About Data Location: https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471 All About Solidity Data Locations - Storage: https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad All About Memory: https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4  </description>
+    </item>
     
     <item>
       <title>Understanding Bytecode on Ethereum</title>

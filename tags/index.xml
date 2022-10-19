@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Oct 2022 00:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Oct 2022 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>solidity</title>
       <link>http://localhost:1313/tags/solidity/</link>
-      <pubDate>Fri, 07 Oct 2022 00:28:00 +0800</pubDate>
+      <pubDate>Wed, 19 Oct 2022 00:28:00 +0800</pubDate>
       
       <guid>http://localhost:1313/tags/solidity/</guid>
       <description></description>

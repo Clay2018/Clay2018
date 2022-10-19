@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Lend and Borrow - Even - A super concise theme for Hugo</title>
+  <title>Yul language - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clay" /><meta name="description" content="Lend and Borrow NFT借贷协议的3种模式 借贷协议主要解决三个问题: 一是高效地匹配、撮合资金供求双方；二是安全地保管抵押品；三是借款人违约时按约定处置抵" /><meta name="keywords" content="Clayton, Blog, even" />
+<meta name="author" content="Clay" /><meta name="description" content="Resources  All About Data Location: https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471 All About Solidity Data Locations - Storage: https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad All About Memory: https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4  " /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/lend_and_borrow/" />
+<link rel="canonical" href="http://localhost:1313/post/yul_in_solidity/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Lend and Borrow" />
-<meta property="og:description" content="Lend and Borrow NFT借贷协议的3种模式 借贷协议主要解决三个问题: 一是高效地匹配、撮合资金供求双方；二是安全地保管抵押品；三是借款人违约时按约定处置抵" />
+<meta property="og:title" content="Yul language" />
+<meta property="og:description" content="Resources  All About Data Location: https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471 All About Solidity Data Locations - Storage: https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad All About Memory: https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/lend_and_borrow/" />
-<meta property="article:published_time" content="2022-10-17T00:28:00+08:00" />
-<meta property="article:modified_time" content="2022-10-17T00:28:00+08:00" />
-<meta itemprop="name" content="Lend and Borrow">
-<meta itemprop="description" content="Lend and Borrow NFT借贷协议的3种模式 借贷协议主要解决三个问题: 一是高效地匹配、撮合资金供求双方；二是安全地保管抵押品；三是借款人违约时按约定处置抵">
-<meta itemprop="datePublished" content="2022-10-17T00:28:00&#43;08:00" />
-<meta itemprop="dateModified" content="2022-10-17T00:28:00&#43;08:00" />
-<meta itemprop="wordCount" content="1512">
+<meta property="og:url" content="http://localhost:1313/post/yul_in_solidity/" />
+<meta property="article:published_time" content="2022-10-19T00:28:00+08:00" />
+<meta property="article:modified_time" content="2022-10-19T00:28:00+08:00" />
+<meta itemprop="name" content="Yul language">
+<meta itemprop="description" content="Resources  All About Data Location: https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471 All About Solidity Data Locations - Storage: https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad All About Memory: https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4  ">
+<meta itemprop="datePublished" content="2022-10-19T00:28:00&#43;08:00" />
+<meta itemprop="dateModified" content="2022-10-19T00:28:00&#43;08:00" />
+<meta itemprop="wordCount" content="18">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Lend and Borrow"/>
-<meta name="twitter:description" content="Lend and Borrow NFT借贷协议的3种模式 借贷协议主要解决三个问题: 一是高效地匹配、撮合资金供求双方；二是安全地保管抵押品；三是借款人违约时按约定处置抵"/>
+<meta itemprop="keywords" content="solidity," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Yul language"/>
+<meta name="twitter:description" content="Resources  All About Data Location: https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471 All About Solidity Data Locations - Storage: https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad All About Memory: https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4  "/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -122,15 +122,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Lend and Borrow</h1>
+      <h1 class="post-title">Yul language</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-10-17 </span>
+        <span class="post-time"> 2022-10-19 </span>
         <div class="post-category">
             <a href="/categories/blockchain/"> blockchain </a>
             </div>
-          <span class="more-meta"> 1512 words </span>
-          <span class="more-meta"> 4 mins read </span>
+          <span class="more-meta"> 18 words </span>
+          <span class="more-meta"> 1 min read </span>
         
       </div>
     </header>
@@ -142,7 +142,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#lend-and-borrow">Lend and Borrow</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </li>
   </ul>
@@ -150,34 +150,11 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="lend-and-borrow">Lend and Borrow</h3>
+      <h3 id="resources">Resources</h3>
 <ul>
-<li>
-<p>NFT借贷协议的3种模式</p>
-<p>借贷协议主要解决三个问题: 一是高效地匹配、撮合资金供求双方；二是安全地保管抵押品；三是借款人违约时按约定处置抵押品。现有的Peer-to-Pool模式和Peer-to-Peer模式没能解决好第一个问题，它们的撮合效率都不高，要么隐性资金成本高，要么时间成本高</p>
-<p>Peer-to-Pool模式的优点在于时间成本低，能够实现[Instant Borrowing],缺点在于隐性资金成本高且依赖预言机报价。Peer-to-Peer模式的优点在于隐性资金成本低且无需预言机报价，缺点在于时间成本高.</p>
-<p>基于Peer-to-Pool模式和Peer-to-Peer模式的前车之鉴，可以设想一种兼顾两者优点的Peer-to-Orderbook模式，可以将抵押品、可贷金额上限和期限相同，但利率不同的订单集中到一个订单簿上，让借贷双方在不同利率水平上竞价并进行撮合，从而降低隐性资金成本和时间成本，实现更高匹配效率。</p>
-<ul>
-<li>
-<p>Peer-to-Pool模式</p>
-<p>这一模式主要代表是AAVE, 缺点是资金利用率不高；借贷利率存在较大利差；依赖预言机报价来判断是否达到触发清算的条件。</p>
-<p>由于利率曲线的设置，贷款人存入的资金基本不会被全部借出，实际的资金利用率往往低于50%, 而这一问题又进一步导致了借贷利率存在较大利差，因为借款人支付的利息需要分给所有的贷款人。这大大地增加了匹配借贷双方的隐性资金成本。例如，本来贷款人愿意为市场提供 100,000 枚 ETH 的流动性，但借款人实际只愿意借出 50,000 枚（再多将无法承受高利率）；本来借款人愿意支付 36% 的年利率，但贷款人平均只能收到 12%。</p>
-<p>在匹配资金供求双方时，协议代替贷款人做了决策，贷款人并不能决定哪些是被贷出资金的抵押品，也无法控制贷款的利率和期限。于是乎，为了控制系统的风险、保障贷款人利益，Peer-to-Pool 模式需要引入外部预言机报价，实时确保抵押品能够偿付贷出资金。</p>
-<p>然而，由于为 NFT 评估公允价格仍是一大难题，依赖预言机报价的缺点在 NFT 借贷中被放大了。例如，对于不成熟的外部预言机的依赖可能导致协议错误地估计市场中的流动性，为后续清算环节埋下流动性风险的隐患。</p>
-<p>综合而言，目前的 Peer-to-Pool 模式并不高效，借贷双方隐含支付的匹配成本较高，且存在依赖预言机的风险，并不是理想的模式。</p>
-</li>
-<li>
-<p>Peer-to-Peer模式</p>
-<p>的确如此，在以 NFTf 为代表的 Peer-to-Peer 模式中，由于接受哪个 NFT 作为抵押品、借贷金额的上限、期限、利率和清算条件与方式等关键参数都是由借款人与贷款人双方共识过的，所以贷款人提供多少资金，借款人就能借出多少资金；借款人支付多高利率，贷款人就能得到多高利率。并且，只要借款人能够在到期日前偿付本息，就不会触发清算，也就不需要依赖预言机。</p>
-<p>尽管以 NFTfi  为代表的 Peer-to-Peer 模式解决了 Peer-to-Pool 模式的问题，但这种解决方法也是有所牺牲的，同样不是完美的方案。</p>
-<p>Peer-to-Peer 模式的缺点在于，匹配过程的时间较长，借贷双方达成共识往往需要来回好几轮的报价；并且，由于目前尚未支持一个借款人向多个贷款人借款（Peer-to-multiPeer），阻挡了资金体量较小的潜在贷款人进入市场。</p>
-</li>
-<li>
-<p>Peer-to-Orderbook模式</p>
-<p>如果将这些分散的订单集中到一个公开的订单簿上，就能够在保留 Peer-to-Peer 模式优点的前提下，降低匹配的时间成本。因为，在借贷前，双方是在一个 Pool（Orderbook）里寻找对手方，有 Peer-to-Pool 模式的优点；借贷后，实际的借贷关系是精准的、点对点的，也就有 Peer-to-Peer 模式的优点。例如，可以将抵押品、可贷金额上限和期限相同，但利率不同的订单集中到一个订单簿上，让多个贷款人在不同利率水平上提供流动性，借款人则能够随时从订单簿上提取他们愿意接受的资金，实现所谓的「Instant Borrowing」。</p>
-</li>
-</ul>
-</li>
+<li>All About Data Location: <a href="https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471">https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471</a></li>
+<li>All About Solidity Data Locations - Storage: <a href="https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad">https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad</a></li>
+<li>All About Memory: <a href="https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4">https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4</a></li>
 </ul>
 
     </div>
@@ -190,7 +167,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2022-10-17
+        2022-10-19
         
     </span>
   </p>
@@ -212,15 +189,17 @@
       </label>
   </div>
 </div><footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/solidity/">solidity</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/yul_in_solidity/">
+        <a class="prev" href="/post/search/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Yul language</span>
+            <span class="prev-text nav-default">搜索</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/transaction_price_mechanism/">
-            <span class="next-text nav-default">Transaction Price mechanism</span>
+        <a class="next" href="/post/lend_and_borrow/">
+            <span class="next-text nav-default">Lend and Borrow</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
