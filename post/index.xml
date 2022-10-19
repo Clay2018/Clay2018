@@ -469,6 +469,7 @@
       <guid>http://localhost:1313/post/blockchain_website/</guid>
       <description>Resources   The most trusted platform to manage digital assets on Ethereum: https://gnosis-safe.io/#getting-started
   ECDSA algorithm: https://zhuanlan.zhihu.com/p/97953640
+  https://medium.com/swlh/create-raw-bitcoin-transaction-and-sign-it-with-golang-96b5e10c30aa
   </description>
     </item>
     
@@ -944,11 +945,11 @@
     
     <item>
       <title>brownie使用</title>
-      <link>http://localhost:1313/post/brownie_use/</link>
+      <link>http://localhost:1313/post/brownie/</link>
       <pubDate>Sun, 06 Jun 2021 10:28:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/brownie_use/</guid>
-      <description>Resource brownie使用: https://betterprogramming.pub/part-1-brownie-smart-contracts-framework-for-ethereum-basics-5efc80205413#:~:text=Brownie%20is%20a%20robust%2C%20easy,to%20initialize%20or%20integrate%20them.</description>
+      <guid>http://localhost:1313/post/brownie/</guid>
+      <description>Resource brownie networks add development attack20221019 cmd=ganache-cli host=&amp;quot;http://127.0.0.1&amp;rdquo; fork=&amp;quot;https://mainnet.infura.io/v3/$WEB3_INFURA_PROJECT_ID@15780866&amp;rdquo; accounts=10 mnemonic=$MNEMONIC port=8545 brownie使用: https://betterprogramming.pub/part-1-brownie-smart-contracts-framework-for-ethereum-basics-5efc80205413#:~:text=Brownie%20is%20a%20robust%2C%20easy,to%20initialize%20or%20integrate%20them.</description>
     </item>
     
     <item>
