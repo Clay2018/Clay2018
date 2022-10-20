@@ -48,12 +48,12 @@
     </item>
     
     <item>
-      <title>Ethereum Node</title>
-      <link>http://localhost:1313/post/ethereum_node/</link>
+      <title>Ethereum</title>
+      <link>http://localhost:1313/post/eth/</link>
       <pubDate>Thu, 13 Oct 2022 00:28:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/ethereum_node/</guid>
-      <description>Ethereum Node 以太坊协议是以太坊节点运行的一组规则，这些节点体现了数千个去中心化应用程序的核心基础设施。 以太坊上的交易由全节点签署，它们将签名的交易广</description>
+      <guid>http://localhost:1313/post/eth/</guid>
+      <description>Ethereum Ethereum Node 搭建节点 1 2 ./geth --syncmode full --ws --http --mainnet --datadir &amp;#34;/data/ethereum&amp;#34; --authrpc.jwtsecret /root/tt/jwtsecret ./prysm.sh beacon-chain --execution-endpoint=http://localhost:8551 --jwt-secret=/root/tt/jwtsecret --checkpoint-sync-url https://sync.invis.tools 节点论述 以太坊协议是以太坊节点运行的一组规则，这些节点体现了数千个去中心化应用程序的核心基</description>
     </item>
     
     <item>
