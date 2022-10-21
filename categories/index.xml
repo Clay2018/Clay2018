@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Oct 2022 00:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Oct 2022 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>blockchain</title>
       <link>http://localhost:1313/categories/blockchain/</link>
-      <pubDate>Wed, 19 Oct 2022 00:28:00 +0800</pubDate>
+      <pubDate>Fri, 21 Oct 2022 00:28:00 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>career</title>
+      <link>http://localhost:1313/categories/career/</link>
+      <pubDate>Fri, 21 Oct 2022 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/career/</guid>
       <description></description>
     </item>
     
@@ -62,15 +71,6 @@
       <pubDate>Sat, 19 Feb 2022 00:00:44 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>career</title>
-      <link>http://localhost:1313/categories/career/</link>
-      <pubDate>Sat, 12 Feb 2022 00:47:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/career/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,19 @@
     <description>Recent content in career on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Feb 2022 00:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Oct 2022 00:28:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/career/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Defence</title>
+      <link>http://localhost:1313/post/defence/</link>
+      <pubDate>Fri, 21 Oct 2022 00:28:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/defence/</guid>
+      <description>Defence T族(技术研发)通道晋升答辩: https://cloud.tencent.com/developer/article/1786861</description>
+    </item>
     
     <item>
       <title>Behavior question</title>

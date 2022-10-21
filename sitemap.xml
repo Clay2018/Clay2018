@@ -8,6 +8,20 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/defence/</loc>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/reentrancy_in_solidity/</loc>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/yul_in_solidity/</loc>
     <lastmod>2022-10-19T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -961,42 +975,49 @@
   
   <url>
     <loc>http://localhost:1313/categories/blockchain/</loc>
-    <lastmod>2022-10-19T00:28:00+08:00</lastmod>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/career/</loc>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2022-10-19T00:28:00+08:00</lastmod>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2022-10-19T00:28:00+08:00</lastmod>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2022-10-19T00:28:00+08:00</lastmod>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/solidity/</loc>
-    <lastmod>2022-10-19T00:28:00+08:00</lastmod>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2022-10-19T00:28:00+08:00</lastmod>
+    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1046,13 +1067,6 @@
   <url>
     <loc>http://localhost:1313/tags/c&#43;&#43;/</loc>
     <lastmod>2022-02-14T00:47:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/career/</loc>
-    <lastmod>2022-02-12T00:47:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
