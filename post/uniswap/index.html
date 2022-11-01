@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Uniswap - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Clay" /><meta name="description" content="uniswap uniswapv2 resources https://docs.uniswap.org/protocol/V2/introduction whitepaper: https://uniswap.org/whitepaper.pdf uniswapv2-core uniswapv2-core 架构图: uniswapv2-periphery tips uniswapv2的Oracle uniswapv2版本起，就已经提供了预言机功能，用来计算交易对的时间加权平均价" /><meta name="keywords" content="Clayton, Blog, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.72.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/uniswap/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Uniswap" />
+<meta property="og:description" content="uniswap uniswapv2 resources https://docs.uniswap.org/protocol/V2/introduction whitepaper: https://uniswap.org/whitepaper.pdf uniswapv2-core uniswapv2-core 架构图: uniswapv2-periphery tips uniswapv2的Oracle uniswapv2版本起，就已经提供了预言机功能，用来计算交易对的时间加权平均价" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/uniswap/" />
+<meta property="article:published_time" content="2022-11-01T00:28:00+08:00" />
+<meta property="article:modified_time" content="2022-11-01T00:28:00+08:00" />
+<meta itemprop="name" content="Uniswap">
+<meta itemprop="description" content="uniswap uniswapv2 resources https://docs.uniswap.org/protocol/V2/introduction whitepaper: https://uniswap.org/whitepaper.pdf uniswapv2-core uniswapv2-core 架构图: uniswapv2-periphery tips uniswapv2的Oracle uniswapv2版本起，就已经提供了预言机功能，用来计算交易对的时间加权平均价">
+<meta itemprop="datePublished" content="2022-11-01T00:28:00&#43;08:00" />
+<meta itemprop="dateModified" content="2022-11-01T00:28:00&#43;08:00" />
+<meta itemprop="wordCount" content="719">
+
+
+
+<meta itemprop="keywords" content="solidity," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Uniswap"/>
+<meta name="twitter:description" content="uniswap uniswapv2 resources https://docs.uniswap.org/protocol/V2/introduction whitepaper: https://uniswap.org/whitepaper.pdf uniswapv2-core uniswapv2-core 架构图: uniswapv2-periphery tips uniswapv2的Oracle uniswapv2版本起，就已经提供了预言机功能，用来计算交易对的时间加权平均价"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Clayton Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/post/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Clayton Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/search/">搜索</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Uniswap</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-11-01 </span>
+        <div class="post-category">
+            <a href="/categories/blockchain/"> blockchain </a>
+            </div>
+          <span class="more-meta"> 719 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#uniswap">uniswap</a>
+      <ul>
+        <li><a href="#uniswapv2">uniswapv2</a></li>
+        <li><a href="#uniswap-v3">uniswap-v3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="uniswap">uniswap</h2>
+<h3 id="uniswapv2">uniswapv2</h3>
+<ul>
+<li>
+<p>resources</p>
+<ul>
+<li><a href="https://docs.uniswap.org/protocol/V2/introduction">https://docs.uniswap.org/protocol/V2/introduction</a></li>
+<li>whitepaper: <a href="https://uniswap.org/whitepaper.pdf">https://uniswap.org/whitepaper.pdf</a></li>
+</ul>
+</li>
+<li>
+<p>uniswapv2-core</p>
+<p>uniswapv2-core 架构图:</p>
+<p><img src="/image/uniswap/uniswapv2-core.png" alt=""></p>
+</li>
+<li>
+<p>uniswapv2-periphery</p>
+<p><img src="/image/uniswap/uniswapv2-periphery.png" alt=""></p>
+</li>
+<li>
+<p>tips</p>
+<ul>
+<li>
+<p>uniswapv2的Oracle</p>
+<p>uniswapv2版本起，就已经提供了预言机功能，用来计算交易对的时间加权平均价(TWAP, Time Weighted Average Price), 但是存在下面几个问题:</p>
+<ul>
+<li>v2版本的预言机使用门槛比较高，官方合约中只提供了最新的价格累积值，开发者需要自己实现历史价格的记录和抓取</li>
+<li>在使用DEX预言机时，但是在v2版本我们无法通过简单的方式获取交易对深度变化的历史数据</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">At = P1 + P2 + ... + Pi(i=t)
+</code></pre></td></tr></table>
+</div>
+</div><p>通过访问不同时间点的价格时间累积值，我们可以计算一个交易对在过去一段时间内的价格平均值。假设当前时间为t1, 5min前的时间为t2，那么可以计算过去5min交易对的平均价格:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Pt2,t1 = (At2 - At1) / (t2- t1)
+</code></pre></td></tr></table>
+</div>
+</div><p>这会开发者带来一个问题是: 开发者需要自己记录历史时间点中的价格累积值At, 而这些工作是相对复杂的。Github中有人开源通用的 <a href="https://github.com/Keydonix/uniswap-oracle">Uniswap v2 Oracle</a>, Uniswap v2官方也给出了一个相对简单的<a href="https://github.com/Uniswap/v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol">Oracle 合约实现</a>, Fei Protocol中使用的Oracle就是参考这个样例实现的.</p>
+</li>
+<li>
+<p>Router2合约相对Router1合约的更改</p>
+<p>getAmountIn()函数计算</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># UniswapV2Router01
+function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) public pure override returns (uint amountIn) {
+    return UniswapV2Library.getAmountOut(amountOut, reserveIn, reserveOut);
+}
+
+# UniswapV2Router02
+function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut)
+    public
+    pure
+    virtual
+    override
+    returns (uint amountIn)
+{
+    return UniswapV2Library.getAmountIn(amountOut, reserveIn, reserveOut);
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>router1方式导致计算有稍微误差</p>
+</li>
+<li>
+<p>Router合约exploit</p>
+<p>因为合约本身持有erc20，导致某些合约对持有人发放holder_profit时发放在router地址，而不是用户地址</p>
+<p>如果pair上有lp，直接调用<code>burn()</code>可以获取对应交易对</p>
+<p>通缩和通胀代币对uniswap有一定影响</p>
+<ul>
+<li>添加流动性时transfrom(msg.sender, pair, amount)</li>
+<li>移除流动性时transfer(to, amount);msg.sender = pair</li>
+</ul>
+<p>Uniswap router2 Fee事件: <a href="https://zhuanlan.zhihu.com/p/403487991">https://zhuanlan.zhihu.com/p/403487991</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="uniswap-v3">uniswap-v3</h3>
+<ul>
+<li>
+<p>resources</p>
+<ul>
+<li><a href="https://liaoph.com/uniswap-v3-1/">https://liaoph.com/uniswap-v3-1/</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clay</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-11-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/solidity/">solidity</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/search/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">搜索</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/defence/">
+            <span class="next-text nav-default">Defence</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="wuvhui@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://clay2018.github.io" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Clayton</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
