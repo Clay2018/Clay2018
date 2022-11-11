@@ -50,13 +50,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/eth/</loc>
-    <lastmod>2022-10-13T00:28:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/post/mev/</loc>
     <lastmod>2022-10-13T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1227,6 +1220,12 @@
   
   <url>
     <loc>http://localhost:1313/post/dns/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/eth/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
