@@ -21,12 +21,12 @@
     </item>
     
     <item>
-      <title>GC in golang</title>
-      <link>http://localhost:1313/post/gc_in_golang/</link>
+      <title>mem alloc in golang</title>
+      <link>http://localhost:1313/post/mem_alloc_in_golang/</link>
       <pubDate>Wed, 06 Apr 2022 01:01:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/gc_in_golang/</guid>
-      <description>Resource Golang什么时候会触发GC: https://www.jianshu.com/p/96a52a8127d9</description>
+      <guid>http://localhost:1313/post/mem_alloc_in_golang/</guid>
+      <description>memory allocate in golang Resource https://tonybai.com/2020/03/10/visualizing-memory-management-in-golang/ Golang什么时候会触发GC: https://www.jianshu.com/p/96a52a8127d9</description>
     </item>
     
     <item>

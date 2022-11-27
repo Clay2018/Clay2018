@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Nov 2022 00:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Nov 2022 01:47:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>http://localhost:1313/post/search/</guid>
       <description>/* 手机适配 */ @media screen and (max-width: 500px) { .search{ padding-right: 25px; } .search input{ width: 100%; } .search button{ display: none; } } /* 电脑适配 */ @media screen and (min-width: 500px) { .search{ width: 500px; } .search input{ width: 444px; } } /* 通用样式 */ .search{ margin: auto; } .search input{ outline: none; border: 2px solid #c05b4d; height: 32px; padding:</description>
+    </item>
+    
+    <item>
+      <title>分布式任务调度</title>
+      <link>http://localhost:1313/post/distributed_scheduler/</link>
+      <pubDate>Sun, 27 Nov 2022 01:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/distributed_scheduler/</guid>
+      <description>分布式任务调度 Resources 扫盲篇-什么是分布式任务调度: https://cloud.tencent.com/developer/article/1828830</description>
     </item>
     
     <item>
@@ -205,12 +214,12 @@ Reentrancy exploit allows B to call back into A before A finished execution.
     </item>
     
     <item>
-      <title>GC in golang</title>
-      <link>http://localhost:1313/post/gc_in_golang/</link>
+      <title>mem alloc in golang</title>
+      <link>http://localhost:1313/post/mem_alloc_in_golang/</link>
       <pubDate>Wed, 06 Apr 2022 01:01:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/gc_in_golang/</guid>
-      <description>Resource Golang什么时候会触发GC: https://www.jianshu.com/p/96a52a8127d9</description>
+      <guid>http://localhost:1313/post/mem_alloc_in_golang/</guid>
+      <description>memory allocate in golang Resource https://tonybai.com/2020/03/10/visualizing-memory-management-in-golang/ Golang什么时候会触发GC: https://www.jianshu.com/p/96a52a8127d9</description>
     </item>
     
     <item>

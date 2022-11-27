@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>EIP - Even - A super concise theme for Hugo</title>
+  <title>分布式任务调度 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clay" /><meta name="description" content="EIP EIP1153  https://eips.ethereum.org/EIPS/eip-1153  EIP4844  https://eips.ethereum.org/EIPS/eip-4844 https://www.eip4844.com/  " /><meta name="keywords" content="Clayton, Blog, even" />
+<meta name="author" content="Clayton" /><meta name="description" content="分布式任务调度 Resources 扫盲篇-什么是分布式任务调度: https://cloud.tencent.com/developer/article/1828830" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/eip/" />
+<link rel="canonical" href="http://localhost:1313/post/distributed_scheduler/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="EIP" />
-<meta property="og:description" content="EIP EIP1153  https://eips.ethereum.org/EIPS/eip-1153  EIP4844  https://eips.ethereum.org/EIPS/eip-4844 https://www.eip4844.com/  " />
+<meta property="og:title" content="分布式任务调度" />
+<meta property="og:description" content="分布式任务调度 Resources 扫盲篇-什么是分布式任务调度: https://cloud.tencent.com/developer/article/1828830" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/eip/" />
-<meta property="article:published_time" content="2022-11-22T00:28:00+08:00" />
-<meta property="article:modified_time" content="2022-11-22T00:28:00+08:00" />
-<meta itemprop="name" content="EIP">
-<meta itemprop="description" content="EIP EIP1153  https://eips.ethereum.org/EIPS/eip-1153  EIP4844  https://eips.ethereum.org/EIPS/eip-4844 https://www.eip4844.com/  ">
-<meta itemprop="datePublished" content="2022-11-22T00:28:00&#43;08:00" />
-<meta itemprop="dateModified" content="2022-11-22T00:28:00&#43;08:00" />
-<meta itemprop="wordCount" content="6">
+<meta property="og:url" content="http://localhost:1313/post/distributed_scheduler/" />
+<meta property="article:published_time" content="2022-11-27T01:47:44+08:00" />
+<meta property="article:modified_time" content="2022-11-27T01:47:44+08:00" />
+<meta itemprop="name" content="分布式任务调度">
+<meta itemprop="description" content="分布式任务调度 Resources 扫盲篇-什么是分布式任务调度: https://cloud.tencent.com/developer/article/1828830">
+<meta itemprop="datePublished" content="2022-11-27T01:47:44&#43;08:00" />
+<meta itemprop="dateModified" content="2022-11-27T01:47:44&#43;08:00" />
+<meta itemprop="wordCount" content="24">
 
 
 
-<meta itemprop="keywords" content="solidity," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="EIP"/>
-<meta name="twitter:description" content="EIP EIP1153  https://eips.ethereum.org/EIPS/eip-1153  EIP4844  https://eips.ethereum.org/EIPS/eip-4844 https://www.eip4844.com/  "/>
+<meta itemprop="keywords" content="distributed," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="分布式任务调度"/>
+<meta name="twitter:description" content="分布式任务调度 Resources 扫盲篇-什么是分布式任务调度: https://cloud.tencent.com/developer/article/1828830"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -122,14 +122,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">EIP</h1>
+      <h1 class="post-title">分布式任务调度</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-11-22 </span>
+        <span class="post-time"> 2022-11-27 </span>
         <div class="post-category">
-            <a href="/categories/blockchain/"> blockchain </a>
+            <a href="/categories/system_design/"> system_design </a>
             </div>
-          <span class="more-meta"> 6 words </span>
+          <span class="more-meta"> 24 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -140,10 +140,9 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#eip">EIP</a>
+    <li><a href="#分布式任务调度">分布式任务调度</a>
       <ul>
-        <li><a href="#eip1153">EIP1153</a></li>
-        <li><a href="#eip4844">EIP4844</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </li>
   </ul>
@@ -151,15 +150,10 @@
   </div>
 </div>
     <div class="post-content">
-      <h2 id="eip">EIP</h2>
-<h3 id="eip1153">EIP1153</h3>
+      <h2 id="分布式任务调度">分布式任务调度</h2>
+<h3 id="resources">Resources</h3>
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-1153">https://eips.ethereum.org/EIPS/eip-1153</a></li>
-</ul>
-<h3 id="eip4844">EIP4844</h3>
-<ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-4844">https://eips.ethereum.org/EIPS/eip-4844</a></li>
-<li><a href="https://www.eip4844.com/">https://www.eip4844.com/</a></li>
+<li>扫盲篇-什么是分布式任务调度: <a href="https://cloud.tencent.com/developer/article/1828830">https://cloud.tencent.com/developer/article/1828830</a></li>
 </ul>
 
     </div>
@@ -167,12 +161,12 @@
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Clay</span>
+    <span class="item-content">Clayton</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2022-11-22
+        2022-11-27
         
     </span>
   </p>
@@ -195,16 +189,16 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/solidity/">solidity</a>
+          <a href="/tags/distributed/">distributed</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/distributed_scheduler/">
+        <a class="prev" href="/post/search/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">分布式任务调度</span>
+            <span class="prev-text nav-default">搜索</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        <a class="next" href="/post/uniswap/">
-            <span class="next-text nav-default">Uniswap</span>
+        <a class="next" href="/post/eip/">
+            <span class="next-text nav-default">EIP</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

@@ -45,7 +45,7 @@
 <meta property="og:description" content="Clayton Blog site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:1313/" />
-<meta property="og:updated_time" content="2022-11-22T00:28:00+08:00" />
+<meta property="og:updated_time" content="2022-11-27T01:47:44+08:00" />
 <meta itemprop="name" content="Even - A super concise theme for Hugo">
 <meta itemprop="description" content="Clayton Blog site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
@@ -114,6 +114,29 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/deadlock_in_goroutine/">一道关于gorotine的死锁问题</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-01-18 </span>
+      <div class="post-category">
+          <a href="/categories/language/"> language </a>
+          </div>
+        <span class="more-meta"> 385 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { ch := make(chan int) go fmt.Println(&lt;-ch) ch &lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关
+    </div>
+    <div class="read-more">
+      <a href="/post/deadlock_in_goroutine/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/btc_devguide_3/">BTC devguide(3)</a></h1>
@@ -317,29 +340,6 @@
     </div>
     <div class="read-more">
       <a href="/post/hashalgorithmandkeypreservation/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/compounddetectionofnucleicacidreagent/">核酸试剂的复合检测</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-07-05 </span>
-      <div class="post-category">
-          <a href="/categories/algorithm/"> algorithm </a>
-          </div>
-        <span class="more-meta"> 443 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      问题: 100个人，其中一个人是患者；一个人使用一支酸剂测试，患者产生反应，否则不产生反应，至少用几只酸剂可以测试出患者是谁？ 答: 1支酸剂测试
-    </div>
-    <div class="read-more">
-      <a href="/post/compounddetectionofnucleicacidreagent/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
