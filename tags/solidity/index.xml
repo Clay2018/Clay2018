@@ -84,7 +84,7 @@ Reentrancy exploit allows B to call back into A before A finished execution.
       <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
       
       <guid>http://localhost:1313/post/contract_security/</guid>
-      <description>合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 Transit Swap合约分析: https://rekt.news/transit-swap-rekt/ WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&amp;#34;123456&amp;#34;, 1, {&amp;#39;from&amp;#39;:accounts[0], &amp;#39;value&amp;#39;:10}) BelluminarBank[0].invest(1, &amp;#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 1}) BelluminarBank[0].invest(2, 0, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 0}) BelluminarBank[0].confiscate(1, &amp;#34;123456&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1]})</description>
+      <description>contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分</description>
     </item>
     
     <item>
@@ -123,15 +123,6 @@ Reentrancy exploit allows B to call back into A before A finished execution.
       
       <guid>http://localhost:1313/post/upgradable_contract/</guid>
       <description>Resource 可升级合约: https://www.dtmao.cc/news_show_1340999.shtml 如何实现可升级合约: https://juejin.cn/post/6844903685776998407 create2实现可升级可约: https://mirror.xyz/franx.eth/LwJvDwe3z-T5VscKrBfnOxZPc3wxhCXaooiSoxA7f5k</description>
-    </item>
-    
-    <item>
-      <title>币安研究院：硬核解析智能合约常见漏洞原理及攻击模式</title>
-      <link>http://localhost:1313/post/contract_bug/</link>
-      <pubDate>Mon, 14 Jun 2021 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/contract_bug/</guid>
-      <description>Resource 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.htm</description>
     </item>
     
   </channel>

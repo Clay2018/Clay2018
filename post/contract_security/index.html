@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clay" /><meta name="description" content="合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 Transit Swap合约分析: https://rekt.news/transit-swap-rekt/ WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&amp;#34;123456&amp;#34;, 1, {&amp;#39;from&amp;#39;:accounts[0], &amp;#39;value&amp;#39;:10}) BelluminarBank[0].invest(1, &amp;#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 1}) BelluminarBank[0].invest(2, 0, {&amp;#39;from&amp;#39;:accounts[1], &amp;#39;value&amp;#39;: 0}) BelluminarBank[0].confiscate(1, &amp;#34;123456&amp;#34;, {&amp;#39;from&amp;#39;:accounts[1]})" /><meta name="keywords" content="Clayton, Blog, even" />
+<meta name="author" content="Clay" /><meta name="description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="contract security" />
-<meta property="og:description" content="合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 Transit Swap合约分析: https://rekt.news/transit-swap-rekt/ WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&#34;123456&#34;, 1, {&#39;from&#39;:accounts[0], &#39;value&#39;:10}) BelluminarBank[0].invest(1, &#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&#34;, {&#39;from&#39;:accounts[1], &#39;value&#39;: 1}) BelluminarBank[0].invest(2, 0, {&#39;from&#39;:accounts[1], &#39;value&#39;: 0}) BelluminarBank[0].confiscate(1, &#34;123456&#34;, {&#39;from&#39;:accounts[1]})" />
+<meta property="og:description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/contract_security/" />
 <meta property="article:published_time" content="2022-08-23T00:28:00+08:00" />
 <meta property="article:modified_time" content="2022-08-23T00:28:00+08:00" />
 <meta itemprop="name" content="contract security">
-<meta itemprop="description" content="合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 Transit Swap合约分析: https://rekt.news/transit-swap-rekt/ WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&#34;123456&#34;, 1, {&#39;from&#39;:accounts[0], &#39;value&#39;:10}) BelluminarBank[0].invest(1, &#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&#34;, {&#39;from&#39;:accounts[1], &#39;value&#39;: 1}) BelluminarBank[0].invest(2, 0, {&#39;from&#39;:accounts[1], &#39;value&#39;: 0}) BelluminarBank[0].confiscate(1, &#34;123456&#34;, {&#39;from&#39;:accounts[1]})">
+<meta itemprop="description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分">
 <meta itemprop="datePublished" content="2022-08-23T00:28:00&#43;08:00" />
 <meta itemprop="dateModified" content="2022-08-23T00:28:00&#43;08:00" />
-<meta itemprop="wordCount" content="69">
+<meta itemprop="wordCount" content="108">
 
 
 
 <meta itemprop="keywords" content="solidity," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="contract security"/>
-<meta name="twitter:description" content="合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分析: https://learnblockchain.cn/article/4441 Transit Swap合约分析: https://rekt.news/transit-swap-rekt/ WCTF BelluminarBank: https://learnblockchain.cn/article/1989 1 2 3 4 BelluminarBank.deploy(&#34;123456&#34;, 1, {&#39;from&#39;:accounts[0], &#39;value&#39;:10}) BelluminarBank[0].invest(1, &#34;0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffe1ecc80&#34;, {&#39;from&#39;:accounts[1], &#39;value&#39;: 1}) BelluminarBank[0].invest(2, 0, {&#39;from&#39;:accounts[1], &#39;value&#39;: 0}) BelluminarBank[0].confiscate(1, &#34;123456&#34;, {&#39;from&#39;:accounts[1]})"/>
+<meta name="twitter:description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/blockchain/"> blockchain </a>
             </div>
-          <span class="more-meta"> 69 words </span>
+          <span class="more-meta"> 108 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -140,8 +140,9 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#contract-security">contract security</a>
       <ul>
+        <li><a href="#合约安全常见原理">合约安全常见原理</a></li>
         <li><a href="#合约事故">合约事故</a></li>
         <li><a href="#wctf">WCTF</a></li>
       </ul>
@@ -151,7 +152,17 @@
   </div>
 </div>
     <div class="post-content">
-      <h3 id="合约事故">合约事故</h3>
+      <h2 id="contract-security">contract security</h2>
+<h3 id="合约安全常见原理">合约安全常见原理</h3>
+<ul>
+<li>
+<p>币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: <a href="https://www.chainnews.com/articles/896074917877.html">https://www.chainnews.com/articles/896074917877.html</a></p>
+</li>
+<li>
+<p>AbiReencodingHeadOverflowWithStaticArrayCleanup: <a href="https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup">https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup</a></p>
+</li>
+</ul>
+<h3 id="合约事故">合约事故</h3>
 <ul>
 <li>可升级合约漏洞-Web3音乐平台Audius被黑事件分析: <a href="https://learnblockchain.cn/article/4441">https://learnblockchain.cn/article/4441</a></li>
 <li>Transit Swap合约分析: <a href="https://rekt.news/transit-swap-rekt/">https://rekt.news/transit-swap-rekt/</a></li>
