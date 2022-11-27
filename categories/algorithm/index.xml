@@ -6,10 +6,19 @@
     <description>Recent content in algorithm on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Nov 2021 00:05:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Nov 2022 00:45:44 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>概率算法</title>
+      <link>http://localhost:1313/post/probability_algorithm/</link>
+      <pubDate>Sun, 27 Nov 2022 00:45:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/probability_algorithm/</guid>
+      <description>概率算法 一个经典概率算法(用于抽奖等场景) https://www.cnblogs.com/liulangmao/p/4533293.html</description>
+    </item>
     
     <item>
       <title>求解数组中唯二的两个数字</title>
