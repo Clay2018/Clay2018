@@ -75,7 +75,7 @@ Reentrancy exploit allows B to call back into A before A finished execution.
       <pubDate>Mon, 17 Oct 2022 00:28:00 +0800</pubDate>
       
       <guid>http://localhost:1313/post/lend_and_borrow/</guid>
-      <description>Lend and Borrow NFT借贷协议的3种模式 借贷协议主要解决三个问题: 一是高效地匹配、撮合资金供求双方；二是安全地保管抵押品；三是借款人违约时按约定处置抵</description>
+      <description>Lend and Borrow 借贷协议方式 NFT借贷协议的3种模式 借贷协议主要解决三个问题: 一是高效地匹配、撮合资金供求双方；二是安全地保管抵押品；三是借款人违约时</description>
     </item>
     
     <item>
