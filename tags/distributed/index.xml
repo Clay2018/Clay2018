@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>redis on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/redis/</link>
-    <description>Recent content in redis on Even - A super concise theme for Hugo</description>
+    <title>distributed on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/distributed/</link>
+    <description>Recent content in distributed on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Apr 2021 01:47:44 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Jun 2021 00:47:44 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/distributed/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>分布式事务之底层原理揭秘</title>
+      <link>http://localhost:1313/post/distributed_transaction/</link>
+      <pubDate>Sun, 27 Jun 2021 00:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/distributed_transaction/</guid>
+      <description>Resource 分布式事务之底层原理揭秘: https://mp.weixin.qq.com/s/jJBlSHLTvxNPl3maYMpccQ</description>
+    </item>
     
     <item>
       <title>Distributed System</title>
@@ -27,15 +36,6 @@
       
       <guid>http://localhost:1313/post/distributed_lock/</guid>
       <description>实现 分布式锁redis锁和zookeeper锁: https://mp.weixin.qq.com/s/lrSQBK-Kihkj6994kQFpUQ 未分类 企业级高可用分布式锁原理剖析及设计实践 分布式锁应用场景 掌握分布式锁设计核心要点 能够根</description>
-    </item>
-    
-    <item>
-      <title>Redis</title>
-      <link>http://localhost:1313/post/redis/</link>
-      <pubDate>Thu, 15 Apr 2021 00:00:44 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/redis/</guid>
-      <description>Redis架构 Redis系统架构中各个处理模块是干什么的?: https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/300%E5%88%86%E9%92%9F%E5%90%83%E9%80%8F%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%98-%E5%AE%8C/19%20Redis%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E4%B8%AD%E5%90%84%E4%B8%AA%E5%A4%84%E7%90%86%E6%A8%A1%E5%9D%97%E6%98%AF%E5%B9%B2%E4%BB%80%E4%B9%88%E7%9A%84%EF%BC%9F.md Redis命令 redis命令目录: http://doc.redisfans.com/ 数据结构和对象 动态字符串 常数复杂度获取字符</description>
     </item>
     
   </channel>

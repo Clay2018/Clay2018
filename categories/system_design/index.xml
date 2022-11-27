@@ -183,6 +183,15 @@
     </item>
     
     <item>
+      <title>Distributed System</title>
+      <link>http://localhost:1313/post/distributed_system/</link>
+      <pubDate>Mon, 19 Apr 2021 01:47:44 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/distributed_system/</guid>
+      <description>分布式系统 分布式事务 大致论述： https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html</description>
+    </item>
+    
+    <item>
       <title>分布式锁</title>
       <link>http://localhost:1313/post/distributed_lock/</link>
       <pubDate>Mon, 19 Apr 2021 01:47:44 +0800</pubDate>

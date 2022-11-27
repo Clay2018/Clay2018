@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Even - A super concise theme for Hugo</title>
+  <title>Distributed System - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clayton" /><meta name="description" content="Clayton Blog site." /><meta name="keywords" content="Clayton, Blog, even" />
+<meta name="author" content="Clayton" /><meta name="description" content="分布式系统 分布式事务 大致论述： https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html" /><meta name="keywords" content="distributed" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/" />
-  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
-  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="Even - A super concise theme for Hugo" />
+<link rel="canonical" href="http://localhost:1313/post/distributed_system/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,15 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Even - A super concise theme for Hugo" />
-<meta property="og:description" content="Clayton Blog site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/" />
-<meta property="og:updated_time" content="2022-11-22T00:28:00+08:00" />
-<meta itemprop="name" content="Even - A super concise theme for Hugo">
-<meta itemprop="description" content="Clayton Blog site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Even - A super concise theme for Hugo"/>
-<meta name="twitter:description" content="Clayton Blog site."/>
+<meta property="og:title" content="Distributed System" />
+<meta property="og:description" content="分布式系统 分布式事务 大致论述： https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/distributed_system/" />
+<meta property="article:published_time" content="2021-04-19T01:47:44+08:00" />
+<meta property="article:modified_time" content="2021-04-19T01:47:44+08:00" />
+<meta itemprop="name" content="Distributed System">
+<meta itemprop="description" content="分布式系统 分布式事务 大致论述： https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html">
+<meta itemprop="datePublished" content="2021-04-19T01:47:44&#43;08:00" />
+<meta itemprop="dateModified" content="2021-04-19T01:47:44&#43;08:00" />
+<meta itemprop="wordCount" content="16">
+
+
+
+<meta itemprop="keywords" content="redis,distributed," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Distributed System"/>
+<meta name="twitter:description" content="分布式系统 分布式事务 大致论述： https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -113,83 +119,99 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/build_hugo_site/">Build_hugo_site</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-07-04 </span>
-      <div class="post-category">
-          <a href="/categories/pages/"> pages </a>
-          </div>
-        <span class="more-meta"> 72 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      搭建Hugo博客网站 1 测试语法 1 测试图片 API bbb 发布文章 hugo new post/xxxx.md 发布github hugo -t even Reference https://segmentfault.com/a/1190000012975914?utm_source=tag-newest https://juejin.im/post/5e9cf8bd51882538083fec4c#heading-1 https://www.jianshu.com/p/475110a1c811 同even博客: https://edward852.github.io/ hugo添加Algolia搜索支持
-    </div>
-    <div class="read-more">
-      <a href="/post/build_hugo_site/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/dns/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-        <span class="more-meta"> 26 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Resource 为什么DNS协议使用UDP？只使用了UDP吗？: https://cloud.tencent.com/developer/article/1818152
-    </div>
-    <div class="read-more">
-      <a href="/post/dns/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/tcp_kernel_optimize_option/"></a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 0001-01-01 </span>
-      
-        <span class="more-meta"> 5 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      请求url
-    </div>
-    <div class="read-more">
-      <a href="/post/tcp_kernel_optimize_option/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/page/14/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">Prev</span>
-      </a>
+          <article class="post">
     
-  </nav>
+    <header class="post-header">
+      <h1 class="post-title">Distributed System</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-04-19 </span>
+        <div class="post-category">
+            <a href="/categories/system_design/"> system_design </a>
+            </div>
+          <span class="more-meta"> 16 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#分布式系统">分布式系统</a>
+      <ul>
+        <li><a href="#分布式事务">分布式事务</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="分布式系统">分布式系统</h2>
+<h3 id="分布式事务">分布式事务</h3>
+<ul>
+<li>大致论述： <a href="https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html">https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Clayton</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-04-19
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/wechat_qrcode.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/image/alipay_qrcode.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/redis/">redis</a>
+          <a href="/tags/distributed/">distributed</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/context_in_golang/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">golang中的context</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/distributed_lock/">
+            <span class="next-text nav-default">分布式锁</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>
