@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clay" /><meta name="description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分" /><meta name="keywords" content="Clayton, Blog, even" />
+<meta name="author" content="Clay" /><meta name="description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 正确使用assert(), require()和revert()" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="contract security" />
-<meta property="og:description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分" />
+<meta property="og:description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 正确使用assert(), require()和revert()" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/contract_security/" />
 <meta property="article:published_time" content="2022-08-23T00:28:00+08:00" />
 <meta property="article:modified_time" content="2022-08-23T00:28:00+08:00" />
 <meta itemprop="name" content="contract security">
-<meta itemprop="description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分">
+<meta itemprop="description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 正确使用assert(), require()和revert()">
 <meta itemprop="datePublished" content="2022-08-23T00:28:00&#43;08:00" />
 <meta itemprop="dateModified" content="2022-08-23T00:28:00&#43;08:00" />
-<meta itemprop="wordCount" content="208">
+<meta itemprop="wordCount" content="583">
 
 
 
 <meta itemprop="keywords" content="solidity," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="contract security"/>
-<meta name="twitter:description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分"/>
+<meta name="twitter:description" content="contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 正确使用assert(), require()和revert()"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,8 +129,8 @@
         <div class="post-category">
             <a href="/categories/blockchain/"> blockchain </a>
             </div>
-          <span class="more-meta"> 208 words </span>
-          <span class="more-meta"> 1 min read </span>
+          <span class="more-meta"> 583 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
@@ -160,6 +160,43 @@
 </li>
 <li>
 <p>AbiReencodingHeadOverflowWithStaticArrayCleanup: <a href="https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup">https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup</a></p>
+</li>
+<li>
+<p>正确使用assert(), require()和revert()</p>
+</li>
+<li>
+<p>内置函数可能会被隐藏</p>
+<p>msg和revert()可能被隐藏</p>
+</li>
+<li>
+<p>避免使用tx.origin</p>
+</li>
+<li>
+<p>多重继承</p>
+</li>
+<li>
+<p>避免使用extcodesize用于检查外部拥有的账户</p>
+</li>
+<li>
+<p>避免使用时间戳</p>
+<p>矿工实际上可以在区块被验证后的15秒内发布一个时间戳，从而获利</p>
+</li>
+<li>
+<p>重入漏洞</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>contract A and B.</p>
+<p>Reentrancy exploit allows B to call back into A before A finished execution.</p>
+</li>
+<li>
+<p>Preventative Tech:</p>
+<ul>
+<li>Ensure all state changes happen before calling external contracts</li>
+<li>Use funtion modifers that prevent re-entrancy</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="合约事故">合约事故</h3>
@@ -191,6 +228,61 @@ BelluminarBank[0].confiscate(1, &#34;123456&#34;, {&#39;from&#39;:accounts[1]})
 <li>Storage Pointer: 函数声明的临时变量&quot;指针&quot;默认存储位置slot位置都为0, 所以临时变量的位置和全局变量重叠</li>
 <li>selfdestruct(addr)调整合约addr余额</li>
 </ul>
+</li>
+<li>
+<p>The_Association_Sales: <a href="https://cn.etherscan.com/address/0xdd5a649fc076886dfd4b9ad6acfc9b5eb882e83c#code">https://cn.etherscan.com/address/0xdd5a649fc076886dfd4b9ad6acfc9b5eb882e83c#code</a></p>
+<p>数字签名重放:</p>
+<ul>
+<li>普通重放: 将本该使用一次的签名多次使用。NBA官方发布的<!-- raw HTML omitted -->系列NFT因为这类攻击被免费铸造了上万枚</li>
+<li>跨链重放: 将本该在一条链上使用的签名，在另一条链上重复使用。做市商Wintermute因为跨链重放攻击被盗2000万枚OP</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">function mint_approved(
+    vData memory info,
+    uint256 number_of_items_requested,
+    uint16 _batchNumber
+) external {
+    require(batchNumber == _batchNumber, &#34;!batch&#34;);
+    address from = msg.sender;
+    require(verify(info), &#34;Unauthorised access secret&#34;);
+    _discountedClaimedPerWallet[msg.sender] += 1;
+    require(
+        _discountedClaimedPerWallet[msg.sender] &lt;= 1,
+        &#34;Number exceeds max discounted per address&#34;
+    );
+    presold[from] = 1;
+    _mintCards(number_of_items_requested, from);
+    emit batchWhitelistMint(_batchNumber, msg.sender);
+}
+
+# dusty.sol:100
+
+</code></pre></td></tr></table>
+</div>
+</div><p>op重放事件分析: <a href="https://learnblockchain.cn/article/4214">https://learnblockchain.cn/article/4214</a></p>
 </li>
 </ul>
 
@@ -236,7 +328,7 @@ BelluminarBank[0].confiscate(1, &#34;123456&#34;, {&#39;from&#39;:accounts[1]})
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         <a class="next" href="/post/solidity/">
-            <span class="next-text nav-default">solidity doc</span>
+            <span class="next-text nav-default">solidity</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

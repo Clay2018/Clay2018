@@ -30,19 +30,6 @@
     </item>
     
     <item>
-      <title>Reentrancy in solidity</title>
-      <link>http://localhost:1313/post/reentrancy_in_solidity/</link>
-      <pubDate>Fri, 21 Oct 2022 00:28:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/reentrancy_in_solidity/</guid>
-      <description>Reentrancy in solidity   Definition
-contract A and B.
-Reentrancy exploit allows B to call back into A before A finished execution.
-  Preventative Tech:
- Ensure all state changes happen before calling external contracts Use funtion modifers that prevent re-entrancy    </description>
-    </item>
-    
-    <item>
       <title>Yul language</title>
       <link>http://localhost:1313/post/yul_in_solidity/</link>
       <pubDate>Wed, 19 Oct 2022 00:28:00 +0800</pubDate>
@@ -84,11 +71,11 @@ Reentrancy exploit allows B to call back into A before A finished execution.
       <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
       
       <guid>http://localhost:1313/post/contract_security/</guid>
-      <description>contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 合约事故 可升级合约漏洞-Web3音乐平台Audius被黑事件分</description>
+      <description>contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 正确使用assert(), require()和revert()</description>
     </item>
     
     <item>
-      <title>solidity doc</title>
+      <title>solidity</title>
       <link>http://localhost:1313/post/solidity/</link>
       <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
       

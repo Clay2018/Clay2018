@@ -43,13 +43,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/reentrancy_in_solidity/</loc>
-    <lastmod>2022-10-21T00:28:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/post/yul_in_solidity/</loc>
     <lastmod>2022-10-19T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
