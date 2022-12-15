@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Clay" /><meta name="description" content="EIP EIP1153 https://eips.ethereum.org/EIPS/eip-1153 EIP4844 https://eips.ethereum.org/EIPS/eip-4844 https://www.eip4844.com/ dankshard and eip-4844: https://www.8btc.com/article/6737384 EIP3651 https://eips.ethereum.org/EIPS/eip-3651 更温暖的COINBASE. coinbase即區塊中的第一筆交易是筆特殊交易，稱為創幣交易或者coinbase交易，這" /><meta name="keywords" content="Clayton, Blog, even" />
+<meta name="author" content="Clay" /><meta name="description" content="EIP EIP1153 https://eips.ethereum.org/EIPS/eip-1153 EIP2612 通过permit(r, s, v)来控制权限 https://eips.ethereum.org/EIPS/eip-2612 EIP3651 https://eips.ethereum.org/EIPS/eip-3651 更温暖的COINBASE. coinbase即區塊中的第一筆交易是筆特殊交易，稱為創幣交易" /><meta name="keywords" content="Clayton, Blog, even" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="EIP" />
-<meta property="og:description" content="EIP EIP1153 https://eips.ethereum.org/EIPS/eip-1153 EIP4844 https://eips.ethereum.org/EIPS/eip-4844 https://www.eip4844.com/ dankshard and eip-4844: https://www.8btc.com/article/6737384 EIP3651 https://eips.ethereum.org/EIPS/eip-3651 更温暖的COINBASE. coinbase即區塊中的第一筆交易是筆特殊交易，稱為創幣交易或者coinbase交易，這" />
+<meta property="og:description" content="EIP EIP1153 https://eips.ethereum.org/EIPS/eip-1153 EIP2612 通过permit(r, s, v)来控制权限 https://eips.ethereum.org/EIPS/eip-2612 EIP3651 https://eips.ethereum.org/EIPS/eip-3651 更温暖的COINBASE. coinbase即區塊中的第一筆交易是筆特殊交易，稱為創幣交易" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/eip/" />
 <meta property="article:published_time" content="2022-11-22T00:28:00+08:00" />
 <meta property="article:modified_time" content="2022-11-22T00:28:00+08:00" />
 <meta itemprop="name" content="EIP">
-<meta itemprop="description" content="EIP EIP1153 https://eips.ethereum.org/EIPS/eip-1153 EIP4844 https://eips.ethereum.org/EIPS/eip-4844 https://www.eip4844.com/ dankshard and eip-4844: https://www.8btc.com/article/6737384 EIP3651 https://eips.ethereum.org/EIPS/eip-3651 更温暖的COINBASE. coinbase即區塊中的第一筆交易是筆特殊交易，稱為創幣交易或者coinbase交易，這">
+<meta itemprop="description" content="EIP EIP1153 https://eips.ethereum.org/EIPS/eip-1153 EIP2612 通过permit(r, s, v)来控制权限 https://eips.ethereum.org/EIPS/eip-2612 EIP3651 https://eips.ethereum.org/EIPS/eip-3651 更温暖的COINBASE. coinbase即區塊中的第一筆交易是筆特殊交易，稱為創幣交易">
 <meta itemprop="datePublished" content="2022-11-22T00:28:00&#43;08:00" />
 <meta itemprop="dateModified" content="2022-11-22T00:28:00&#43;08:00" />
-<meta itemprop="wordCount" content="581">
+<meta itemprop="wordCount" content="602">
 
 
 
 <meta itemprop="keywords" content="solidity," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="EIP"/>
-<meta name="twitter:description" content="EIP EIP1153 https://eips.ethereum.org/EIPS/eip-1153 EIP4844 https://eips.ethereum.org/EIPS/eip-4844 https://www.eip4844.com/ dankshard and eip-4844: https://www.8btc.com/article/6737384 EIP3651 https://eips.ethereum.org/EIPS/eip-3651 更温暖的COINBASE. coinbase即區塊中的第一筆交易是筆特殊交易，稱為創幣交易或者coinbase交易，這"/>
+<meta name="twitter:description" content="EIP EIP1153 https://eips.ethereum.org/EIPS/eip-1153 EIP2612 通过permit(r, s, v)来控制权限 https://eips.ethereum.org/EIPS/eip-2612 EIP3651 https://eips.ethereum.org/EIPS/eip-3651 更温暖的COINBASE. coinbase即區塊中的第一筆交易是筆特殊交易，稱為創幣交易"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/blockchain/"> blockchain </a>
             </div>
-          <span class="more-meta"> 581 words </span>
+          <span class="more-meta"> 602 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -143,10 +143,11 @@
     <li><a href="#eip">EIP</a>
       <ul>
         <li><a href="#eip1153">EIP1153</a></li>
-        <li><a href="#eip4844">EIP4844</a></li>
+        <li><a href="#eip2612">EIP2612</a></li>
         <li><a href="#eip3651">EIP3651</a></li>
         <li><a href="#eip3855">EIP3855</a></li>
         <li><a href="#eip-3860">EIP-3860</a></li>
+        <li><a href="#eip4844">EIP4844</a></li>
       </ul>
     </li>
   </ul>
@@ -159,11 +160,10 @@
 <ul>
 <li><a href="https://eips.ethereum.org/EIPS/eip-1153">https://eips.ethereum.org/EIPS/eip-1153</a></li>
 </ul>
-<h3 id="eip4844">EIP4844</h3>
+<h3 id="eip2612">EIP2612</h3>
+<p>通过permit(r, s, v)来控制权限</p>
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-4844">https://eips.ethereum.org/EIPS/eip-4844</a></li>
-<li><a href="https://www.eip4844.com/">https://www.eip4844.com/</a></li>
-<li>dankshard and eip-4844: <a href="https://www.8btc.com/article/6737384">https://www.8btc.com/article/6737384</a></li>
+<li><a href="https://eips.ethereum.org/EIPS/eip-2612">https://eips.ethereum.org/EIPS/eip-2612</a></li>
 </ul>
 <h3 id="eip3651">EIP3651</h3>
 <ul>
@@ -198,6 +198,12 @@
 <p><a href="https://eips.ethereum.org/EIPS/eip-3860">https://eips.ethereum.org/EIPS/eip-3860</a></p>
 <p>合約部署時候，有個初始化代碼的大小，基於EIP170是限製了initcode大小為24576，而如今則是將 initcode 的最大大小限製提升為 49152即翻倍，並為每 32 字節的 initcode 塊應用 2 的額外氣體成本</p>
 </li>
+</ul>
+<h3 id="eip4844">EIP4844</h3>
+<ul>
+<li><a href="https://eips.ethereum.org/EIPS/eip-4844">https://eips.ethereum.org/EIPS/eip-4844</a></li>
+<li><a href="https://www.eip4844.com/">https://www.eip4844.com/</a></li>
+<li>dankshard and eip-4844: <a href="https://www.8btc.com/article/6737384">https://www.8btc.com/article/6737384</a></li>
 </ul>
 
     </div>
