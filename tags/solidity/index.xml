@@ -66,21 +66,12 @@
     </item>
     
     <item>
-      <title>contract security</title>
-      <link>http://localhost:1313/post/contract_security/</link>
-      <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/contract_security/</guid>
-      <description>contract security 合约安全常见原理 币安研究院：硬核解析智能合约常见漏洞原理及攻击模式: https://www.chainnews.com/articles/896074917877.html AbiReencodingHeadOverflowWithStaticArrayCleanup: https://etherscan.io/solcbuginfo?a=AbiReencodingHeadOverflowWithStaticArrayCleanup 正确使用assert(), require()和revert()</description>
-    </item>
-    
-    <item>
       <title>solidity</title>
       <link>http://localhost:1313/post/solidity/</link>
       <pubDate>Tue, 23 Aug 2022 00:28:00 +0800</pubDate>
       
       <guid>http://localhost:1313/post/solidity/</guid>
-      <description>abi https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding tools Solidity Visual Developer: https://consensys.net/diligence/blog/2019/10/solidity-visual-auditor-extension-for-vs-code/ sliter gas优化 gas优化: https://www.theblockbeats.info/news/31602 Resources solidity寻址: https://www.whatsblockchain.com/posts/c052872a.html https://blog.51cto.com/shijianfeng/5151269 self destruct: https://solidity-by-example.org/hacks/self-destruct/ 逆向decompile代码: https://ethervm.io/decompile fallback,receive规则</description>
+      <description>abi how to cal contract-address by create: https://ethereum.stackexchange.com/questions/24248/how-to-calculate-an-ethereum-contracts-address-during-its-creation-using-the-so https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding tools Solidity Visual Developer: https://consensys.net/diligence/blog/2019/10/solidity-visual-auditor-extension-for-vs-code/ sliter gas优化 gas优化: https://www.theblockbeats.info/news/31602 Resources solidity寻址: https://www.whatsblockchain.com/posts/c052872a.html https://blog.51cto.com/shijianfeng/5151269 self destruct: https://solidity-by-example.org/hacks/self-destruct/ 逆向decompile代码: https://ethervm.io/decompile fallback,re</description>
     </item>
     
     <item>

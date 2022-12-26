@@ -116,29 +116,6 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/defer_in_golang/">golang中的defer</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-04-02 </span>
-      <div class="post-category">
-          <a href="/categories/language/"> language </a>
-          </div>
-        <span class="more-meta"> 45 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Reference defer分析: https://studygolang.com/articles/742 defer实现原理: https://segmentfault.com/a/1190000020614493 defer优化: https://zhuanlan.zhihu.com/p/401339057 deferreturn函数: https://www.modb.pro/db/88823
-    </div>
-    <div class="read-more">
-      <a href="/post/defer_in_golang/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/error_in_goalng/">golang中的error</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2021-04-02 </span>
@@ -340,6 +317,29 @@
     </div>
     <div class="read-more">
       <a href="/post/huffman_coding/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/deadlock_in_goroutine/">一道关于gorotine的死锁问题</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-01-18 </span>
+      <div class="post-category">
+          <a href="/categories/language/"> language </a>
+          </div>
+        <span class="more-meta"> 385 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      一道关于goroutine死锁 1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { ch := make(chan int) go fmt.Println(&lt;-ch) ch &lt;- 5 time.Sleep(2 * time.Second) } 上述结果我选择输出5，分析如下。go关
+    </div>
+    <div class="read-more">
+      <a href="/post/deadlock_in_goroutine/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

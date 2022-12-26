@@ -120,13 +120,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/contract_security/</loc>
-    <lastmod>2022-08-23T00:28:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/post/solidity/</loc>
     <lastmod>2022-08-23T00:28:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1242,6 +1235,12 @@
   <url>
     <loc>http://localhost:1313/categories/pages/</loc>
     <lastmod>2020-07-04T14:51:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/contract_security/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
