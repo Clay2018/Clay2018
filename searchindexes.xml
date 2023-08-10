@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>blockchain</title><url>/post/blockchain/</url><categories><category>blockchain</category></categories><tags/><content type="html">Blockchain 区块链当前是六层架构：数据层，网络层，共识层，激励层，合约层，应用层
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>Contract Audit</title><url>/post/contract_audit/</url><categories><category>blockchain</category></categories><tags><tag>solidity</tag></tags><content type="html">Contract Audit Gas Optimization</content></entry><entry><title>Solidity Language description</title><url>/post/solidity_language_description/</url><categories><category>blockchain</category></categories><tags><tag>solidity</tag></tags><content type="html"><![CDATA[Solidity Language Description contract functions
+receive()和fallback()
+proxy
+Metamorphic合约本质,create2
+size
+如何缩减合约大小:
+一个是合并同类项，将相同逻辑部分作为一个内部函数存在
+使用库
+使用代理合约
+避免额外的变量
+缩短错误信息
+runs调整
+默认值为 200，表示它试图在一个函数被调用 200 次的情况下优化字节码。 如果您将其改为 1，相当于告诉优化器针对每个函数只运行一次的情况进行优化。 一个仅运行一次的优化函数意味着它对部署本身进行了优化。 请注意，这将会增加运行函数的 gas 成本，所以，您可能不想这样做。
+bytecode
+Name Decription bytecode hardhat编译时文件, 同creationCode creationCode 同type(C).creationCode , transaction的input deployBytecode hardhat编译时文件, 存储在区块链中的code，type(C).runtimeCode At a high level, the wallet deploying the contract sends a transaction to the null address with the transaction data laid out in three parts:
+&lt;init code&gt;&lt;creation code&gt;&lt;constructor paramters&gt; creationcode:
+&lt;init code&gt;&lt;runtimecode&gt; There are two types of code for smart contracts, as show below: the creation code: this is the contract&rsquo;s bytecode that includes the instruction for deploying the contract and running the constructor logic.the runtime code: this is the final bytecode of the contract once it has been deployed on the blockchain.
+The runtime bytecode for a contract can be retrieved on-chain by using an assembly block and calling excodecopy(a).The hash of the runtime bytecode is returned from excodehash(a). web3.eth.getCode(B[0].address)
+solidity存储变量寻址计算 Resources bytecode
+https://www.rareskills.io/post/ethereum-contract-creation-code All About Data Location: https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471 All About Solidity Data Locations - Storage: https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad All About Memory: https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4 https://blog.51cto.com/shijianfeng/5151269 https://www.whatsblockchain.com/posts/c052872a.html stateDB: https://learnblockchain.cn/books/geth/part3/statedb.html ]]></content></entry><entry><title>blockchain</title><url>/post/blockchain/</url><categories><category>blockchain</category></categories><tags/><content type="html">Blockchain 区块链当前是六层架构：数据层，网络层，共识层，激励层，合约层，应用层
 区块链的不可能三角是: 去中心化，安全性和可扩展性
 Layer0, 1, 2 Lyaer0
 使不同的区块链网络组件能够交流和交换数据。其中代表layerZero
@@ -47,8 +66,7 @@ Router合约exploit
 通缩和通胀代币对uniswap有一定影响
 添加流动性时transfrom(msg.sender, pair, amount) 移除流动性时transfer(to, amount);msg.sender = pair Uniswap router2 Fee事件: https://zhuanlan.zhihu.com/p/403487991 uniswap-v3 https://learnblockchain.cn/article/3055( 有部分未写明)
 https://uniswap.org/whitepaper-v3.pdf resources
-https://mirror.xyz/adshao.eth/tgZjDXOtL999iuPjXWrolR7Ns1nTZDADA6NLJaJpJJM</content></entry><entry><title>Defence</title><url>/post/defence/</url><categories><category>career</category></categories><tags/><content type="html">Defence T族(技术研发)通道晋升答辩: https://cloud.tencent.com/developer/article/1786861</content></entry><entry><title>byte code in solidity</title><url>/post/byte_code_in_solidity/</url><categories><category>blockchain</category></categories><tags><tag>solidity</tag></tags><content type="html"><![CDATA[byte code in solidity 理解不同的bytecode Name Decription bytecode hardhat编译时文件 creationCode 同type(C).creationCode , transaction的input deployBytecode hardhat编译时文件, 存储在区块链中的code，type(C).runtimeCode At a high level, the wallet deploying the contract sends a transaction to the null address with the transaction data laid out in three parts:
-&lt;init code&gt;&lt;runtime code&gt;&lt;constructor paramters&gt; 内存分布 All About Data Location: https://betterprogramming.pub/solidity-tutorial-all-about-data-locations-dabd33212471 All About Solidity Data Locations - Storage: https://betterprogramming.pub/all-about-solidity-data-locations-part-i-storage-e50604bfc1ad All About Memory: https://betterprogramming.pub/solidity-tutorial-all-about-memory-1e1696d71ee4 Resources https://www.rareskills.io/post/ethereum-contract-creation-code ]]></content></entry><entry><title>Lend and Borrow</title><url>/post/lend_and_borrow/</url><categories><category>blockchain</category></categories><tags/><content type="html">Lend and Borrow 借贷协议方式 NFT借贷协议的3种模式
+https://mirror.xyz/adshao.eth/tgZjDXOtL999iuPjXWrolR7Ns1nTZDADA6NLJaJpJJM</content></entry><entry><title>Defence</title><url>/post/defence/</url><categories><category>career</category></categories><tags/><content type="html">Defence T族(技术研发)通道晋升答辩: https://cloud.tencent.com/developer/article/1786861</content></entry><entry><title>Lend and Borrow</title><url>/post/lend_and_borrow/</url><categories><category>blockchain</category></categories><tags/><content type="html">Lend and Borrow 借贷协议方式 NFT借贷协议的3种模式
 借贷协议主要解决三个问题: 一是高效地匹配、撮合资金供求双方；二是安全地保管抵押品；三是借款人违约时按约定处置抵押品。现有的Peer-to-Pool模式和Peer-to-Peer模式没能解决好第一个问题，它们的撮合效率都不高，要么隐性资金成本高，要么时间成本高
 Peer-to-Pool模式的优点在于时间成本低，能够实现[Instant Borrowing],缺点在于隐性资金成本高且依赖预言机报价。Peer-to-Peer模式的优点在于隐性资金成本低且无需预言机报价，缺点在于时间成本高.
 基于Peer-to-Pool模式和Peer-to-Peer模式的前车之鉴，可以设想一种兼顾两者优点的Peer-to-Orderbook模式，可以将抵押品、可贷金额上限和期限相同，但利率不同的订单集中到一个订单簿上，让借贷双方在不同利率水平上竞价并进行撮合，从而降低隐性资金成本和时间成本，实现更高匹配效率。
@@ -133,7 +151,7 @@ https://www.coindesk.com/learn/what-are-rollups-zk-rollups-and-optimistic-rollup
 Mixhash is a hash of the index, nonce, content, and previous node’s hash. This is unique, non-reversible, and of fixed length. It serves to encrypt the data of a particular block.
 Nonce stands for the Number used only once. It is a unique whole number that shall be used only once in the blockchain. The purpose of this number is to make the hash of the current cell conform to a certain standard as is set by the blockchain. The mining of the nonce represents the Proof of Work that miners display in order to get the block reward.
 Used in tandem, these values are instrumental in providing the resistance to the mutation that the concept of blockchain is known for.
-Randomness and RANDAO: https://twitter.com/SalomonCrypto/status/1576951211659390981 BLS签名: https://learnblockchain.cn/2019/08/29/bls Resources eip-4399: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4399.md randomness-blockchain: https://soliditydeveloper.com/2019-06-23-randomness-blockchain</content></entry><entry><title>Understanding Bytecode on Ethereum</title><url>/post/bytecode_in_solidity/</url><categories><category>blockchain</category></categories><tags><tag>solidity</tag></tags><content type="html">Understanding Bytecode on Ethereum https://medium.com/authereum/bytecode-and-init-code-and-runtime-code-oh-my-7bcd89065904</content></entry><entry><title>POS</title><url>/post/pos/</url><categories><category>blockchain</category></categories><tags/><content type="html">POS POW的出块属性是无过程性的，不论试多少次，它都不会影响挖出下个块的概率。下一个块的出块者，还是需要经历大量的计算。影响当前这个区块的哈希值，对下一个区块的区块难度实际上没有任何帮助。
+Randomness and RANDAO: https://twitter.com/SalomonCrypto/status/1576951211659390981 BLS签名: https://learnblockchain.cn/2019/08/29/bls Resources eip-4399: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4399.md randomness-blockchain: https://soliditydeveloper.com/2019-06-23-randomness-blockchain</content></entry><entry><title>POS</title><url>/post/pos/</url><categories><category>blockchain</category></categories><tags/><content type="html">POS POW的出块属性是无过程性的，不论试多少次，它都不会影响挖出下个块的概率。下一个块的出块者，还是需要经历大量的计算。影响当前这个区块的哈希值，对下一个区块的区块难度实际上没有任何帮助。
 但在PoS里，大家都要使用以往历史的区块来作为随机数源头，也就用一个随机数的源头来生产一个随机数，用这个随机数来决定下一个出块是由谁出，或者下十个块分别由谁出，它就损失了无过程性的特点。
 这意味着什么？意味着当前谁挖出了这个区块，挖出了这个区块数据上的特征，就可以决定接下来一个块甚至十个块的出块者。
 那么大家会做一个事情是什么？是虽然我在这个时间点，比如本来这十秒钟之内只能有一块，但其实我自己在偷偷挖，已经算了 100 个区块，我就看哪个区块能够让我在下一个区块依然是出块者，或者是找哪一个区块，能够最大化我在接下来链条当中出块的机会，这就叫做权益研磨攻击。它会不断尝试在任何一个区块点位上挖矿，并且试图干预未来出块者的选择
@@ -207,10 +225,56 @@ TransferHelper.safeTransferFrom( path[0], msg.sender, UniswapV2Library.pairFor(f
 如果sucess=false, 调用失败revert 如果sucess=true且没有返回数据，调用成功 如果success=true但有数据返回(数据类型解析成bool) 数据解析为true, 调用成功 数据解析为false, 调用失败 Flash swap
 ``` function uniswapV2Call(address sender, uint amount0, uint amount1, bytes calldata data) external; ``` EIP-3156(Flash Loans): https://eips.ethereum.org/EIPS/eip-3156 借贷callback参数: - msg.sender: 作为认证使用 - token: 告诉借贷的币种 - amount: 借贷的数量 - fee: 借贷手续费 - data: 闪电贷中执行的其它操作 Oralce
 [t1,t2]之间的价格平均数为$P_{t1,t2} = \frac {(A_{t2} - A_{t1})}{(t_2 - t_1)}$
-abi how to cal contract-address by create: https://ethereum.stackexchange.com/questions/24248/how-to-calculate-an-ethereum-contracts-address-during-its-creation-using-the-so https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding tools Solidity Visual Developer: https://consensys.net/diligence/blog/2019/10/solidity-visual-auditor-extension-for-vs-code/ sliter gas优化 gas优化: https://www.theblockbeats.info/news/31602 Resources https://learnblockchain.cn/article/4800 solidity寻址:
-https://www.whatsblockchain.com/posts/c052872a.html https://blog.51cto.com/shijianfeng/5151269 self destruct: https://solidity-by-example.org/hacks/self-destruct/ 逆向decompile代码: https://ethervm.io/decompile fallback,receive规则: https://www.theblockbeats.info/news/31602 合约大小优化: https://ethereum.org/zh/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/ stateDB: https://learnblockchain.cn/books/geth/part3/statedb.html 替换init code(合约升级):
-https://mirror.xyz/franx.eth/LwJvDwe3z-T5VscKrBfnOxZPc3wxhCXaooiSoxA7f5k https://ethereum-blockchain-developer.com/110-upgrade-smart-contracts/12-metamorphosis-create2/ 可升级合约: https://mirror.xyz/xyyme.eth/VSyU0JfmVrcqN-F28tX5mzYjxFFAosl8tDAQX3vB5Dg EIP EIP-4337: Account Abstraction via Entry Point Contract specfication https://eips.ethereum.org/EIPS/eip-4337 https://github.com/stackupfinance/stackup bico: https://www.biconomy.io/ GSN: https://opengsn.org/ Resources permit2
-https://github.com/dragonfly-xyz/useful-solidity-patterns/tree/main/patterns/permit2 https://github.com/Uniswap/permit2 permit2: https://learnblockchain.cn/article/5161 uniswapv2: https://uniswap.org/whitepaper.pdf ]]></content></entry><entry><title>Go mod</title><url>/post/go_mod/</url><categories><category>language</category></categories><tags><tag>golang</tag></tags><content type="html"><![CDATA[Resource go mod使用: https://www.jianshu.com/p/760c97ff644c https://liujiacai.net/blog/2019/10/24/go-modules/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io 发展历史 GOPATH
+本身交易造成的滑点与池子流动性关系
+x = 100, y = 1000 , k = 100,000; x = 10, y = 100, k = 1,000
+使用x = 1兑换y, 计算兑换后x的价格 x_before = 1000/100 = 10, x_after = 990.099 / 101 = 9.80296; x_before = 100/10 = 10, x_after = 90.90909 / 11 = 8.264;
+显然，池子流动性越大，当前交易造成的滑点越小. 在稳定币交易中，期望在一定范围内滑点趋向于0.
+当滑点=0, 一笔交易对当前价格无影响. 价格 = y/x, 即斜率k不变. 斜率k不变的公式有x+y=k.
+价格影响
+价格滑点是指外部大盘走势引起的价格变化（与当前交易无关)，价格影响是指当前交易对池子中价格影响`
+Poo info
+USDC = 2,000,000 ETH = 1,000 constant = 2,000,000,000 price = 2,000 10,000 USDC for ETH
+USDC = 2,010,000 constant = 2,000,000,000 ETH = 995.024(constat / USDC) ETH receive = 4.976 price = 2009.64 price impact = 0.48%
+无常损失
+impermanent_loss = 2 * sqrt(price_ratio) / (1+price_ratio) -1; prce_ratio &gt; 1
+Curve Curve is an exchange liquidity pool on Ethereum. Curve is designed for extremely efficient stablecoin trading and low risk supplemental fee income for liquidity providers, without an opportunity cost.
+curve曲线
+Curve引入一因子X, 用来调整恒定总和等式影响占比, 值越大，则曲线更加倾向于零滑点直线；值越小，则曲线更加倾向于高滑点的恒定乘积曲线
+池子分类
+Plain Pools: 两个或多个稳定币交易流动性池，用于交易的流动性池, 目前3CRV和其他稳定币的池子 Lending Pools: 这个交易池中，对原生的代币进行了一个再包装(wrapped token)，例如用户质押的是DAI，但流动性池里是cDAI，这样做的目的是为了可以将流动性池中的代币再借贷出去赚取利润，而用于交易的流动性池中实际保存的是wrapped token. Meta Pools: 与另外一个流动性池中的流动性代币(LP)组成的流动性池，这样做的目的是为了给用户重新质押的机会，例如用户质押DAI到一个Plain pool获得LP，然后又将LP质押到metapool继续赚取收益，就像是买了一个债券，然后又用另一个债券换了一个理财. veCRV机制
+veCRV = CRV * T/4, 质押CRV的时间越长，收到的veCRV就越多, 选择CRV锁仓4年才能获得1:1的veCRV。该质押锁仓行为不可逆转且veCRV不可流通 `
+收取Curve协议50%的交易手续费，收取手续费比例按照veCRV占比均分 vote Power. veCRV的投票权机制非常简单，投票权跟锁仓时间成正比，投票权会随着时间衰退的, 所以如果为了保持足够的投票权要一直刷新锁仓的时间 Boost机制, 流动性挖矿的基数只有40%, 通过足够量级的veCRV，才能获得boost倍速增加，最高2.5x，是一个线性增加机制. Convex: 解决收益和流动性矛盾
+Convex协议解决的是crv散户无法获取加速的事情.
+Convex的协议token是CVX, 最大供应量1亿, 其中50%分配给Convex平台LP, 25%向CVX/ETH, cvxCRV/CRV提供流动性挖矿奖励(用户质押CRV获取cvxCRV, 1:1).
+Convex本身像一个大银行，用户把钱存在这里，获取比Curve高一点的收益. Convex本身把所有的CRV都锁了四年.
+Convex模式之所以可以良好的运行，本质上无法脱离CVX的价格支撑，因为一旦CVX价格过低，将导致收益率下降。所以Convex需要一些措施来减少CVX与cvxCRV的流通盘&ndash;Convex收取加速协议收益的16%作为平台费，并以此为基础，激励CVX与cvxCRV的持有者质押手中的token.
+veCRV资金量少的散户无法获取足够的veCRV用以提高流动性池收益.使得用户不需要锁仓CRV即可享受加速后的收益.
+Cow Protocol Cow Protocol is fully permissionless trading protocol that leverages Batch Auctions as its price finding mechanism.
+cow协议和其它AMM交易不一样的是, 用户提交一笔交易是off-chain交易，这笔交易进入一个私有池，由solver去进行提交到链上.
+solver通过对链下交易撮合或者从链上dex拿流动性，批量拍卖来减少用户的gas消耗和滑点
+Cow Protocol use batch auctions as a core mechanism to facilitate CoWs.
+cow面向用户有两种交易方式，一种是swap;一种是limit(price, expiration)
+Benefits of Cow Protocol
+First implementation of batch auctions promoting fair uniform clearing prices; Trades are protected from different sorts of MEV Cow协议中一笔完整的交易流程
+Users need to approve the contract allowance manager to enable trading for a desired token. Users can place limit sell/buy orders off-chain at any time by simply signing a message that contains their trade details. Users don&rsquo;t pay a gas fee for posting and canceling orders. Off-chain orders are picked up by the solvers who settle them in a batch auction The protocol select the solvers order settlement solution that maximize trader welfare the most and provides the best clearing prices for the orders in that batch All matched orders within a batch can either be settled off-chain via the liquidity found in the coincidence of wants(CoWs) across orders, or on-chain against AMM/aggregator liquidity. Batch Auctions
+The two main reasons behind our development of batch auctions into a trading mechanism are:
+Give the DeFi space in Ethereum a chance to establish the same price of any token pair in the same block. Improve the DEX trading price offering by combining new economic mechanisms together such as Uniform Clearing Prices and Coincidence of Wants. Batch Auctions allow the trades within a batch to have the same uniform clearing price.
+Velodrome velodrome采用ve(3,3)模式: https://news.marsbit.co/20230508164914069116.html Uniswapv3 AAVE Seaport Aggregator Universal Router
+The Universal Router is an ETH, ERC20, and NFT swap router
+Resources permit2
+https://github.com/dragonfly-xyz/useful-solidity-patterns/tree/main/patterns/permit2 https://github.com/Uniswap/permit2 permit2: https://learnblockchain.cn/article/5161 uniswapv2
+https://uniswap.org/whitepaper.pdf https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns Curve
+https://mirror.xyz/0x54c5Bd849c170f3Cbd5618D6f7B316B38f5729C4/2p6X1DoNJWPxf8w9D8pYBTz2eo-zefSI1M1ZeMviENY Cow
+https://docs.cow.fi/ 孵化一些代币
+FractonX
+X NFT,不太一样的功能。 碎片化权限, fracton, 用户自己
+fractonX gateway,
+FractonDAO Address
+直接在NFT碎片化里面引入碎片化功能
+发型自己的第一个NFT,
+GMP
+web3. usdt你也不用切换网络，打包操作. 每个网络上有自己的钱包。打包成一个order出去，一个是管理员性质的节点, 转发到各个网络上
+]]></content></entry><entry><title>Go mod</title><url>/post/go_mod/</url><categories><category>language</category></categories><tags><tag>golang</tag></tags><content type="html"><![CDATA[Resource go mod使用: https://www.jianshu.com/p/760c97ff644c https://liujiacai.net/blog/2019/10/24/go-modules/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io 发展历史 GOPATH
 go env -w GO111MODULE=&#34;off&#34; GOROOT=/usr/local/go GOPATH=/home/dev/project/go /* 按如下路径+导包路径寻找所需要的包 /usr/local/go/src/ */ go build main.go go编译项目时，只会在GOROOT和GOPATH下找包，这限制了项目只能在GOPATH路径下(一般不放GOROOT).而且所有项目共用一份包，导致某些包需要升级后导致其它包引用失败；对于多个项目，只能引用某个包的同一版本
 vendor
 vendor将引用的包放在项目自身路径下，使得多个项目都有自己单独维护的包。项目只能在GOPATH路径下，但会在vendor目录下找包
