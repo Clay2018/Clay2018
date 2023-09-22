@@ -307,14 +307,52 @@ First implementation of batch auctions promoting fair uniform clearing prices; T
 Users need to approve the contract allowance manager to enable trading for a desired token. Users can place limit sell/buy orders off-chain at any time by simply signing a message that contains their trade details. Users don&rsquo;t pay a gas fee for posting and canceling orders. Off-chain orders are picked up by the solvers who settle them in a batch auction The protocol select the solvers order settlement solution that maximize trader welfare the most and provides the best clearing prices for the orders in that batch All matched orders within a batch can either be settled off-chain via the liquidity found in the coincidence of wants(CoWs) across orders, or on-chain against AMM/aggregator liquidity. Batch Auctions
 The two main reasons behind our development of batch auctions into a trading mechanism are:
 Give the DeFi space in Ethereum a chance to establish the same price of any token pair in the same block. Improve the DEX trading price offering by combining new economic mechanisms together such as Uniform Clearing Prices and Coincidence of Wants. Batch Auctions allow the trades within a batch to have the same uniform clearing price.
-Velodrome velodrome采用ve(3,3)模式: https://news.marsbit.co/20230508164914069116.html Uniswapv3 Compound Compound III is an EVM compatible protocol that enables supplying of crypto assets as collateral in order to borrow the base asset. Accounts can also earn interest by supplying the base asset to the protocol. The initial deployment of Compound III is on Ethereum and the base asset is USDC. --- 这几个如何计算 Oracle Price Collateral Factor Liquidation Factor Compound池子资产隔离吗？借贷利率如何计算，利息如何计算 --- AAVE Seaport Aggregator Universal Router
+Velodrome velodrome采用ve(3,3)模式: https://news.marsbit.co/20230508164914069116.html Uniswapv3 Compound Compound III is an EVM compatible protocol that enables supplying of crypto assets as collateral in order to borrow the base asset. Accounts can also earn interest by supplying the base asset to the protocol. The initial deployment of Compound III is on Ethereum and the base asset is USDC. --- 这几个如何计算 Oracle Price Collateral Factor Liquidation Factor Compound池子资产隔离吗？借贷利率如何计算，利息如何计算 --- CompoundII
+// todo // 抵押借稳定币，稳定币哪里来
+Compound是一个借贷协议，pool to peer。协议基于a floating interest rate. 每一个借贷市场是一个ERC20 token.
+Supplying Tokens
+不像p2p借贷，需要用户之间进行匹配和利率协商。Compound协议聚合the suply of each user;当用户supplies a token,它变成一个fungible resources.用户可以随时进行提现.
+balances在a money market自然积累利率, 用户可以实时查看balance; update balance in (supply, transfer, withdraw).
+Borrowing Tokens
+Compound允许用户无摩擦贷款从协议中, using collateralized line of credit.
+collateral ratio = user supply / user borrow
+用户可以全部返还资产或部分返还资产.
+Risk &amp; Liquidation
+当用户CR低于某一位置，用户的抵押品(supply)可以被purchase.
+清算会有激励给予, 减少协议风险.
+Use Case
+获取被动收入: 满足长期持有数字资产又希望能够产生额外收益的 通过贷eth用户可以为ICO融资 交易者看空某一个token, 融券卖出 Leger System
+Cash_a + Borrows_a = Supply_a + Equity_a
+Cash_a : 池子中余额
+资金利用率 = Borrow_a / Cash_a + Borroow_a
+贷款利率 = 10% + Ua*30%
+supply interest Rate_a = 贷款利率 * U_a * (1-S), S 是 代表协议的经济利润
+The history of each interest rate, for money market, is captured by Interest Rate Index
+Index_a,n = Index_a,n-1 * (1 + r * t)
+一个账户拥有的存储变量是(uint256 balance, uint256 index). global index. 每次发生一笔交易时, supply rate 和 borrow rate发生更新
+从产品层面的问题
+借贷逻辑如何实现？借款利率和存款利率计算？利息如何计算和分配？如何清算？存取款合约接口？展示的数据从哪里查询？
+supply, 我要知道supply的利率，当前CR率，资金利用率, 协议费
+池子是否隔离(单币资产在一个池，多币资产在同一池)
+合约
+COMP
+一个COMP代币合约，具备delegate功能
+Timelock
+一个执行交易合约
+Comptroller
+启用抵押: Enter Market(address[]) eth:0xc2998238000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000010000000000000000000000004ddc2d193948926d02f9b1fe9e1daa0718270ed5 (CETH)
+dai: 0xc2998238000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000010000000000000000000000005d3a536e4d6dbd6114cc1ead35777bab948e3643 (CDAI)
+CToken
+Governanace
+AAVE Seaport Aggregator Universal Router
 The Universal Router is an ETH, ERC20, and NFT swap router.
 The flexible command stytle allows us to provide users with:
 splitting and interleaving of Uniswap trades Purchases of NFTs across 8 marketplaces Partial fills of trades Wrapping and Uniswapping of ETH Time-bound, signature controlled token approvals using Permit2 Resources permit2
 https://github.com/dragonfly-xyz/useful-solidity-patterns/tree/main/patterns/permit2 https://github.com/Uniswap/permit2 permit2: https://learnblockchain.cn/article/5161 uniswapv2
 https://uniswap.org/whitepaper.pdf https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns Curve
 https://mirror.xyz/0x54c5Bd849c170f3Cbd5618D6f7B316B38f5729C4/2p6X1DoNJWPxf8w9D8pYBTz2eo-zefSI1M1ZeMviENY Cow
-https://docs.cow.fi/ CDP: https://blog.decurity.io/typical-vulnerabilities-in-lending-and-cdp-protocols-e778e540e215 ]]></content></entry><entry><title>Go mod</title><url>/post/go_mod/</url><categories><category>language</category></categories><tags><tag>golang</tag></tags><content type="html"><![CDATA[Resource go mod使用: https://www.jianshu.com/p/760c97ff644c https://liujiacai.net/blog/2019/10/24/go-modules/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io 发展历史 GOPATH
+https://docs.cow.fi/ CDP: https://blog.decurity.io/typical-vulnerabilities-in-lending-and-cdp-protocols-e778e540e215 Compound
+https://github.com/compound-finance/compound-money-market/blob/master/docs/CompoundWhitepaper.pdf https://docs.compound.finance/v2/ 剖析DeFi借贷产品之Compound-概述篇: https://learnblockchain.cn/article/2593 ]]></content></entry><entry><title>Go mod</title><url>/post/go_mod/</url><categories><category>language</category></categories><tags><tag>golang</tag></tags><content type="html"><![CDATA[Resource go mod使用: https://www.jianshu.com/p/760c97ff644c https://liujiacai.net/blog/2019/10/24/go-modules/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io 发展历史 GOPATH
 go env -w GO111MODULE=&#34;off&#34; GOROOT=/usr/local/go GOPATH=/home/dev/project/go /* 按如下路径+导包路径寻找所需要的包 /usr/local/go/src/ */ go build main.go go编译项目时，只会在GOROOT和GOPATH下找包，这限制了项目只能在GOPATH路径下(一般不放GOROOT).而且所有项目共用一份包，导致某些包需要升级后导致其它包引用失败；对于多个项目，只能引用某个包的同一版本
 vendor
 vendor将引用的包放在项目自身路径下，使得多个项目都有自己单独维护的包。项目只能在GOPATH路径下，但会在vendor目录下找包
