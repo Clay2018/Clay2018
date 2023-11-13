@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>Crypto</title><url>/post/crypto/</url><categories><category>Crypto</category></categories><tags><tag/></tags><content type="html">Crypto Digital Signature v,r,s是用于数字签名的创建和验证.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>Chainlink</title><url>/post/chainlink/</url><categories><category>blockchain</category></categories><tags/><content type="html">Chainlink Price Feed (0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419).latestRoundData()
+VRF</content></entry><entry><title>Crypto</title><url>/post/crypto/</url><categories><category>Crypto</category></categories><tags><tag/></tags><content type="html">Crypto Digital Signature v,r,s是用于数字签名的创建和验证.
 私钥是一整串随机生成的整数, 通过sepc256k1算法产生公钥.(算法曲线x轴对称)
 pubKey是椭圆曲线上的一点, 意味着它是满足椭圆曲线方程的一个(x,y)坐标. 用于计算这些点的椭圆曲线算法是单向函数.
 Signature = Fsig(Fkeccak256(m), k); k是privKey, m是 message. ECDSA签名算法将{r,s}作为输出
@@ -657,7 +658,9 @@ Resources iproute2和net-tools比较: https://www.cnblogs.com/anliven/p/6041246.
 自我反思
 如何获得更好的绩效: 方向正确、方法得当、提升核心竞争力、善于总结、主动沟通
 新人成长心态: 空杯心态. 绩效排名结果不是由工作资历决定，而是由工作成果决定
-新人成长行动: 看、信、思考、行动、分享</content></entry><entry><title>git</title><url>/post/git/</url><categories><category>linux</category></categories><tags/><content type="html">Resources 工作中Git的使用： https://mp.weixin.qq.com/s/mje4XVyuDzspttWdOFC02g git仓库操作: https://mp.weixin.qq.com/s/s_pNeT1lMlVDbjO37Fys4A git仓库过大, clone不下来解决方法: https://www.cnblogs.com/ZhaoWeiNotes/p/13920660.html git只下载最新代码: https://zhuanlan.zhihu.com/p/413110403</content></entry><entry><title>职业要求</title><url>/post/requirements/</url><categories><category>career</category></categories><tags/><content type="html"><![CDATA[P9 P5、P6被要求独立完成任务;P7要求前瞻性,能把不同点的事情串在一起，变成一条线;P8则需要有结构化的思维，能把不同的事、交错的线，变成一张网。到了P9，则需要&quot;无中生有&quot;，自己从头拉起一个业务摊子。比如淘系的&quot;逛逛&quot;改版中，高层确定了电商内容化的方向,他们定规划、拉资源。分解到P9这里，就是具体的战术:内容是什么样的形式，从内容做还是从产品类型做？内容怎么来？来了以后给它什么样一个机制?
+新人成长行动: 看、信、思考、行动、分享</content></entry><entry><title>git</title><url>/post/git/</url><categories><category>linux</category></categories><tags/><content type="html">git submodule add module
+git submodule add git@github.com:transmissions11/solmate.git lib/solmate cat .gitmodules cat .git/config cat .git/modules git rm --cached remove module
+git submodule deinit lib/solmate git rm lib/solmate Resources 工作中Git的使用： https://mp.weixin.qq.com/s/mje4XVyuDzspttWdOFC02g git仓库操作: https://mp.weixin.qq.com/s/s_pNeT1lMlVDbjO37Fys4A git仓库过大, clone不下来解决方法: https://www.cnblogs.com/ZhaoWeiNotes/p/13920660.html git只下载最新代码: https://zhuanlan.zhihu.com/p/413110403</content></entry><entry><title>职业要求</title><url>/post/requirements/</url><categories><category>career</category></categories><tags/><content type="html"><![CDATA[P9 P5、P6被要求独立完成任务;P7要求前瞻性,能把不同点的事情串在一起，变成一条线;P8则需要有结构化的思维，能把不同的事、交错的线，变成一张网。到了P9，则需要&quot;无中生有&quot;，自己从头拉起一个业务摊子。比如淘系的&quot;逛逛&quot;改版中，高层确定了电商内容化的方向,他们定规划、拉资源。分解到P9这里，就是具体的战术:内容是什么样的形式，从内容做还是从产品类型做？内容怎么来？来了以后给它什么样一个机制?
 董易也是一名空降P9，他讲述了从头拉起一个业务的常规步骤。首先，作为业务的1号位要先确立终局和目标，&ldquo;你能想三年就三年，能想两年就两年，尽你所能看到最远&rdquo;.然后与现实情况做对照，其中的差距能指引接下来的业务路径.确定好业务路径后，接下来就是画组织的行动路径。类似地，看达成业务终局需要什么样能力结构地人，比如需要懂财务地、懂数据分析地、懂商业BD地，懂销售运营地。再对照现有组织成员地能力，缺什么补什么。
 这明确对应了阿里在&quot;管理三板斧&quot;里对中层的要求:懂战略、搭班资、做导演.
 换句话说,在组织结构的金字塔里，以阿里P9为代表的中层可以成为内部创业者，也有可能获得一定躺平的空间，这不是个体或群体的问题，而是大公司结构本身隐含的问题
